@@ -1,4 +1,3 @@
-const PDF_PATH = 'assets/kk-staff-notation.pdf';
 const searchInput = document.querySelector('#search');
 const clearBtn = document.querySelector('#clearBtn');
 const resultsEl = document.querySelector('#results');
@@ -49,7 +48,7 @@ function escapeHtml(s) {
 }
 
 function notationHref(song) {
-  return `${PDF_PATH}#page=${song.pdfPage}`;
+  return song.notationFile;
 }
 
 function songCard(song) {

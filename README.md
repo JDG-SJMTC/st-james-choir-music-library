@@ -32,3 +32,7 @@ Users can search by:
 - aliases/common spellings from the catalogue
 
 Opening a result points the browser PDF viewer to the stored PDF page using `#page=N`.
+
+
+## Optimized notation PDFs
+The public website uses one small PDF per song in `notation/`. The catalogue retains the original master-PDF page number in `pdfPage` for traceability. Song 427 includes master pages 656-657; page 658 starts Doxologies and is intentionally excluded from this collection.
