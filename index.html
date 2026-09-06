@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#173b57" />
+  <meta name="description" content="Searchable Kristheeya Keerthanangal Malayalam staff notation library for St James Mar Thoma Church, London." />
+  <title>St James Choir Music Library</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <p class="eyebrow">St James Mar Thoma Church, London</p>
+        <h1>Choir Music Library</h1>
+        <p class="subtitle">Kristheeya Keerthanangal · Malayalam Staff Notation</p>
+      </div>
+      <span class="verified-pill">427 verified songs</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="finder-section" aria-labelledby="finder-title">
+      <div class="wrap">
+        <div class="finder-card">
+          <div class="finder-copy">
+            <p class="section-kicker">Kristheeya Keerthanangal</p>
+            <h2 id="finder-title">Find a song. Open the notation.</h2>
+            <p>Enter a song number, Malayalam title, or English transliteration. Results update as you type.</p>
+          </div>
+
+          <div class="search-box">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
+            <input id="search" type="search" inputmode="search" autocomplete="off"
+              placeholder="Song number or title — e.g. 253, Yeshu, യേശു"
+              aria-label="Search songs" />
+            <button id="clearBtn" class="clear-btn" type="button" hidden>Clear</button>
+          </div>
+
+          <div class="finder-help">
+            <span>Number</span>
+            <span>English</span>
+            <span>Malayalam</span>
+            <span class="enter-hint">Press Enter to open the best match</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalogue-section wrap" aria-labelledby="results-title">
+      <div class="results-header">
+        <div>
+          <p class="section-kicker">Catalogue</p>
+          <h2 id="results-title">All songs</h2>
+        </div>
+        <p id="resultCount" class="result-count" aria-live="polite">Loading catalogue…</p>
+      </div>
+
+      <div id="results" class="results"></div>
+
+      <div id="empty" class="empty-state" hidden>
+        <div class="empty-icon" aria-hidden="true">♪</div>
+        <h3>No matching song found</h3>
+        <p>Try the hymn number, a shorter phrase, or another English spelling.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>St James Choir Music Library · Kristheeya Keerthanangal</p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
