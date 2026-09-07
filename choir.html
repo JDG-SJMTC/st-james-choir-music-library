@@ -1,6 +1,7 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Choir View</title><link rel="stylesheet" href="choir.css"></head><body>
 <header class="cv-header"><div><small>ST JAMES CHOIR VIEW</small><h1 id="title">Choir View</h1><p id="subtitle"></p></div><div class="cv-tools"><a href="index.html">Library</a><button id="full">Full screen</button></div></header>
 <main class="cv-main"><section class="cv-notation"><div class="pane-label">STAFF NOTATION</div><div id="notationNav" class="notation-nav"></div><img id="notationImg" alt="Staff notation"></section>
+<div id="paneDivider" class="cv-divider" role="separator" aria-orientation="vertical" aria-label="Resize Staff Notation and Lyrics panels" aria-valuemin="45" aria-valuemax="75" aria-valuenow="64" tabindex="0"><span></span></div>
 <aside class="cv-lyrics"><nav class="language-nav"><a href="#malayalam">മലയാളം</a><a href="#manglish">Manglish</a></nav><section id="malayalam" class="language-section"><div class="mal-heading"><h2>മലയാളം</h2><div class="mal-zoom" role="group" aria-label="Malayalam zoom"><button id="malZoomOut" type="button" aria-label="Decrease Malayalam size">−</button><span id="malZoomLabel">100%</span><button id="malZoomIn" type="button" aria-label="Increase Malayalam size">+</button></div></div><p class="hint">Continuation lyrics from the staff-notation source</p><div id="malImages"></div></section><section id="manglish" class="language-section manglish"><h2>Manglish</h2><p class="hint">Transliterated lyrics</p><pre id="manglishText" class="manglish-text"></pre></section></aside></main>
 <script src="data-embedded.js"></script><script src="choir-data.js"></script><script>
 const id=new URLSearchParams(location.search).get('id')||'KK-0016'; const song=EMBEDDED_SONGS.find(x=>x.id===id); const d=CHOIR_DATA[id];
@@ -15,6 +16,17 @@ const malBox=document.getElementById('malImages'), malLabel=document.getElementB
 function applyMalZoom(){malBox.style.setProperty('--mal-zoom',`${malZoom}%`);malLabel.textContent=`${malZoom}%`;document.getElementById('malZoomOut').disabled=malZoom===MAL_ZOOMS[0];document.getElementById('malZoomIn').disabled=malZoom===MAL_ZOOMS[MAL_ZOOMS.length-1];localStorage.setItem(MAL_ZOOM_KEY,String(malZoom));}
 document.getElementById('malZoomOut').onclick=()=>{const i=MAL_ZOOMS.indexOf(malZoom);if(i>0){malZoom=MAL_ZOOMS[i-1];applyMalZoom();}};
 document.getElementById('malZoomIn').onclick=()=>{const i=MAL_ZOOMS.indexOf(malZoom);if(i<MAL_ZOOMS.length-1){malZoom=MAL_ZOOMS[i+1];applyMalZoom();}};
-applyMalZoom(); if(d.qaStatus!=='PASS'){const q=document.createElement('div');q.className='qa-note';q.textContent=`QA review flag: ${d.qaIssues.join(', ')} — visual check requested.`;document.querySelector('.cv-lyrics').prepend(q);}}
+applyMalZoom();
+const SPLIT_KEY='stJamesChoirPanelSplit'; const SPLIT_MIN=45, SPLIT_MAX=75; const main=document.querySelector('.cv-main'), divider=document.getElementById('paneDivider');
+let split=Number(localStorage.getItem(SPLIT_KEY))||64; split=Math.min(SPLIT_MAX,Math.max(SPLIT_MIN,split));
+function applySplit(value,save=true){split=Math.min(SPLIT_MAX,Math.max(SPLIT_MIN,Math.round(value)));main.style.setProperty('--staff-width',`${split}%`);divider.setAttribute('aria-valuenow',String(split));if(save)localStorage.setItem(SPLIT_KEY,String(split));}
+function splitFromPointer(clientX){const r=main.getBoundingClientRect();return ((clientX-r.left)/r.width)*100;}
+let dragging=false;
+divider.addEventListener('pointerdown',e=>{if(matchMedia('(max-width:800px)').matches)return;dragging=true;divider.setPointerCapture?.(e.pointerId);document.body.classList.add('is-resizing');e.preventDefault();});
+divider.addEventListener('pointermove',e=>{if(!dragging)return;applySplit(splitFromPointer(e.clientX),false);});
+divider.addEventListener('pointerup',e=>{if(!dragging)return;dragging=false;divider.releasePointerCapture?.(e.pointerId);document.body.classList.remove('is-resizing');applySplit(split,true);});
+divider.addEventListener('pointercancel',()=>{dragging=false;document.body.classList.remove('is-resizing');applySplit(split,true);});
+divider.addEventListener('keydown',e=>{if(matchMedia('(max-width:800px)').matches)return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();applySplit(split+(e.key==='ArrowRight'?2:-2),true);}else if(e.key==='Home'){e.preventDefault();applySplit(SPLIT_MIN,true);}else if(e.key==='End'){e.preventDefault();applySplit(SPLIT_MAX,true);}});
+applySplit(split,false); if(d.qaStatus!=='PASS'){const q=document.createElement('div');q.className='qa-note';q.textContent=`QA review flag: ${d.qaIssues.join(', ')} — visual check requested.`;document.querySelector('.cv-lyrics').prepend(q);}}
 document.getElementById('full').onclick=()=>document.documentElement.requestFullscreen?.();
 </script></body></html>
