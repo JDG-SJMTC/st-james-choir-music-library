@@ -14,9 +14,9 @@
       <div class="brand">
         <p class="eyebrow">St James Mar Thoma Church, London</p>
         <h1>Choir Music Library</h1>
-        <p class="subtitle">Kristheeya Keerthanangal · Malayalam Staff Notation</p>
+        <p class="subtitle">Kristheeya Keerthanangal · Doxologies · Malayalam Staff Notation</p>
       </div>
-      <span class="verified-pill">427 verified songs</span>
+      <span class="verified-pill">427 songs · 13 doxologies</span>
     </div>
   </header>
 
@@ -25,52 +25,65 @@
       <div class="wrap">
         <div class="finder-card">
           <div class="finder-copy">
-            <p class="section-kicker">Kristheeya Keerthanangal</p>
-            <h2 id="finder-title">Find a song. Open the notation.</h2>
-            <p>Enter a song number, Malayalam title, or English transliteration. Results update as you type.</p>
+            <p class="section-kicker">St James Choir Music Library</p>
+            <h2 id="finder-title">Find a song or Doxology. Open notation or Choir View.</h2>
+            <p>Search by number, Malayalam title, or English transliteration. Open the original notation, or use Choir View where lyric mapping has been verified.</p>
           </div>
 
           <div class="search-box">
             <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z"/></svg>
             <input id="search" type="search" inputmode="search" autocomplete="off"
-              placeholder="Song number or title — e.g. 253, Yeshu, യേശു"
-              aria-label="Search songs" />
+              placeholder="Song, Doxology, or title — e.g. 253, Doxology IV, Yeshu"
+              aria-label="Search songs and Doxologies" />
             <button id="clearBtn" class="clear-btn" type="button" hidden>Clear</button>
           </div>
 
           <div class="finder-help">
-            <span>Number</span>
-            <span>English</span>
-            <span>Malayalam</span>
+            <span>Number</span><span>English</span><span>Malayalam</span>
             <span class="enter-hint">Press Enter to open the best match</span>
+          </div>
+          <div class="collection-tabs" aria-label="Browse collection">
+            <button type="button" class="collection-tab active" data-collection="songs">Songs <strong>427</strong></button>
+            <button type="button" class="collection-tab" data-collection="doxologies">Doxologies <strong>13</strong></button>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="catalogue-section wrap" aria-labelledby="results-title">
-      <div class="results-header">
-        <div>
-          <p class="section-kicker">Catalogue</p>
-          <h2 id="results-title">All songs</h2>
+    <div class="library-content wrap">
+      <section class="catalogue-section" aria-labelledby="results-title">
+        <div class="results-header">
+          <div>
+            <p class="section-kicker">Catalogue</p>
+            <h2 id="results-title">Kristheeya Keerthanangal</h2>
+          </div>
+          <p id="resultCount" class="result-count" aria-live="polite">Loading catalogue…</p>
         </div>
-        <p id="resultCount" class="result-count" aria-live="polite">Loading catalogue…</p>
-      </div>
 
-      <div id="results" class="results"></div>
+        <div id="results" class="results"></div>
 
-      <div id="empty" class="empty-state" hidden>
-        <div class="empty-icon" aria-hidden="true">♪</div>
-        <h3>No matching song found</h3>
-        <p>Try the hymn number, a shorter phrase, or another English spelling.</p>
-      </div>
-    </section>
+        <div id="empty" class="empty-state" hidden>
+          <div class="empty-icon" aria-hidden="true">♪</div>
+          <h3>No matching item found</h3>
+          <p>Try a song number, Doxology number, shorter phrase, or another English spelling.</p>
+        </div>
+      </section>
+
+      <aside id="recent-section" class="recent-section" aria-labelledby="recent-title" hidden>
+        <div class="results-header recent-header">
+          <div><p class="section-kicker">This device</p><h2 id="recent-title">Recently Viewed</h2></div>
+          <button id="recent-clear" class="recent-clear" type="button">Clear</button>
+        </div>
+        <div id="recent-results" class="recent-results"></div>
+      </aside>
+    </div>
   </main>
 
   <footer class="wrap footer">
-    <p>St James Choir Music Library · Kristheeya Keerthanangal</p>
+    <p>St James Choir Music Library · Kristheeya Keerthanangal · Doxologies</p>
   </footer>
 
+  <script src="data-embedded.js"></script>
   <script src="app.js" defer></script>
 </body>
 </html>
