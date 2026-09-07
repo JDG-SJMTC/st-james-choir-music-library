@@ -55,7 +55,7 @@ function renderRecent(){
 }
 function compactCard(item){
   const ml=item.malayalam?`<span class="recent-ml" lang="ml">${escapeHtml(item.malayalam)}</span>`:'';
-  return `<button class="recent-card" type="button" data-open-notation="${escapeHtml(item.id)}">
+  return `<button class="recent-card" type="button" data-open-recent="${escapeHtml(item.id)}">
     <span class="recent-no">${escapeHtml(displayNumber(item))}</span><span>${ml}<span class="recent-en">${escapeHtml(item.english)}</span></span>
   </button>`;
 }
@@ -93,9 +93,9 @@ function byId(id){return catalogue.find(x=>x.id===id);}
 document.addEventListener('click',e=>{
   const notation=e.target.closest('[data-notation-id]'); if(notation){saveRecent(byId(notation.dataset.notationId)); return;}
   const choir=e.target.closest('[data-choir-id]'); if(choir){saveRecent(byId(choir.dataset.choirId)); return;}
-  const recent=e.target.closest('[data-open-notation]'); if(recent){const item=byId(recent.dataset.openNotation); if(item){saveRecent(item);window.open(item.notationFile,'_blank','noopener');} return;}
+  const recent=e.target.closest('[data-open-recent]'); if(recent){const item=byId(recent.dataset.openRecent); if(item){saveRecent(item); if(item.choirView){window.location.href=item.choirView;} else if(item.notationFile){window.open(item.notationFile,'_blank','noopener');}} return;}
   const unavailable=e.target.closest('[data-choir-unavailable]'); if(unavailable){
-    alert('Choir View is fully wired for Song 16 in this local V2 test. Other songs are deliberately held back until their Malayalam and Manglish lyric mapping is verified.');
+    alert('Choir View is not available for this item.');
   }
 });
 searchInput.addEventListener('input',e=>render(e.target.value));
