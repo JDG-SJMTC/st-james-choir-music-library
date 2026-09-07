@@ -63,7 +63,7 @@ function compactCard(item){
 function actionButtons(item){
   if(!item.notationFile) return `<span class="open-btn disabled">Not mapped</span>`;
   const choir = item.choirView
-    ? `<a class="action-btn choir-btn" href="${item.choirView}">Choir View</a>`
+    ? `<a class="action-btn choir-btn" href="${item.choirView}" data-choir-id="${escapeHtml(item.id)}">Choir View</a>`
     : `<button class="action-btn choir-btn disabled-action" type="button" data-choir-unavailable="${escapeHtml(item.id)}" title="Choir View lyric mapping has not yet been verified for this item">Choir View</button>`;
   return `<div class="actions"><a class="action-btn notation-btn" href="${item.notationFile}" target="_blank" rel="noopener" data-notation-id="${escapeHtml(item.id)}">Open Notation</a>${choir}</div>`;
 }
@@ -92,6 +92,7 @@ function byId(id){return catalogue.find(x=>x.id===id);}
 
 document.addEventListener('click',e=>{
   const notation=e.target.closest('[data-notation-id]'); if(notation){saveRecent(byId(notation.dataset.notationId)); return;}
+  const choir=e.target.closest('[data-choir-id]'); if(choir){saveRecent(byId(choir.dataset.choirId)); return;}
   const recent=e.target.closest('[data-open-notation]'); if(recent){const item=byId(recent.dataset.openNotation); if(item){saveRecent(item);window.open(item.notationFile,'_blank','noopener');} return;}
   const unavailable=e.target.closest('[data-choir-unavailable]'); if(unavailable){
     alert('Choir View is fully wired for Song 16 in this local V2 test. Other songs are deliberately held back until their Malayalam and Manglish lyric mapping is verified.');
