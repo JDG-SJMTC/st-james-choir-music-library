@@ -2,3 +2,216 @@
 .notation-nav{position:absolute;top:10px;right:10px;z-index:3;display:flex;gap:5px;flex-wrap:wrap}.notation-nav button{border:1px solid #b7c8d3;background:#fff;border-radius:7px;padding:6px 9px;font-weight:700}.notation-nav button.active{background:#173b57;color:#fff}.manglish-text{white-space:pre-wrap;font:inherit;font-size:clamp(15px,1.15vw,19px);line-height:1.5}.qa-note{position:sticky;top:52px;z-index:4;background:#fff4d6;border:1px solid #e2c36b;border-radius:7px;padding:8px 10px;margin:8px 0;font-size:13px}.mal-page+.mal-page{margin-top:12px}
 
 .mal-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.mal-heading h2{margin-right:auto}.mal-zoom{display:flex;align-items:center;gap:6px;flex:0 0 auto}.mal-zoom button{width:34px;height:34px;border:1px solid #b7c8d3;background:#fff;color:#173b57;border-radius:8px;font-size:20px;font-weight:800;line-height:1;cursor:pointer}.mal-zoom button:disabled{opacity:.35;cursor:default}.mal-zoom span{min-width:48px;text-align:center;font-size:13px;font-weight:800;color:#435563}.mal-zoom button:focus-visible{outline:3px solid #9bc3dd;outline-offset:2px}#malImages{overflow-x:auto;max-width:100%;padding-bottom:2px}.mal-page{width:var(--mal-zoom,100%);max-width:none;margin-left:0;margin-right:0}@media(max-width:800px){.mal-zoom button{width:38px;height:38px}.mal-zoom span{font-size:14px}}
+
+
+/* PASS 1 — responsive practice UX */
+.pass1-staff-panel,.pass1-lyrics-panel{position:relative;overflow:auto}
+.floating-zoom{position:sticky;top:8px;z-index:30;margin-left:auto;width:max-content;display:flex;align-items:center;gap:4px;padding:5px 7px;background:rgba(255,255,255,.94);border:1px solid #cbd3dc;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+.floating-zoom span{font-size:11px;font-weight:700}.floating-zoom button{min-width:32px;min-height:32px;border:0;border-radius:16px;background:#eef1f5;font-weight:700}
+.zoom-value{min-width:52px!important}.panel-max{position:sticky;top:8px;left:8px;z-index:31;border:1px solid #cbd3dc;background:rgba(255,255,255,.94);border-radius:8px;min-width:34px;min-height:34px}
+.pass1-mobile-tabs{display:none}.pass1-lyric-switch{display:none;position:sticky;top:8px;z-index:29;width:max-content;margin:0 auto 6px;background:#fff;border:1px solid #cbd3dc;border-radius:999px;padding:3px}
+.pass1-lyric-switch button,.pass1-mobile-tabs button{border:0;background:transparent;padding:8px 10px;border-radius:999px;font-weight:700}.pass1-lyric-switch button.active,.pass1-mobile-tabs button.active{background:#e8edf3}
+.pass1-hidden-lyric{display:none!important}
+.focus-mode body{position:fixed;inset:0;width:100vw;height:100dvh;overflow:auto;background:#fff;z-index:99999}
+.fullscreen-btn{min-height:38px}
+@media (orientation:landscape) and (max-height:600px){
+  .pass1-lyric-switch{display:flex}
+  body{height:100dvh;overflow:hidden}
+  main{height:calc(100dvh - 52px);overflow:hidden}
+  .pass1-staff-panel,.pass1-lyrics-panel{height:100%;min-height:0}
+  html[data-max-panel="staff"] .pass1-lyrics-panel{display:none!important}
+  html[data-max-panel="lyrics"] .pass1-staff-panel{display:none!important}
+  html[data-max-panel="staff"] .pass1-staff-panel,html[data-max-panel="lyrics"] .pass1-lyrics-panel{width:100%!important;flex:1 1 100%!important}
+}
+@media (orientation:portrait) and (max-width:800px){
+  .pass1-mobile-tabs{display:flex;position:sticky;top:0;z-index:40;background:#fff;justify-content:center;gap:3px;padding:5px;border-bottom:1px solid #d8dde4}
+  .pass1-lyric-switch{display:none!important}
+  html[data-active-panel="notation"] .pass1-lyrics-panel{display:none!important}
+  html[data-active-panel="malayalam"] .pass1-staff-panel,html[data-active-panel="manglish"] .pass1-staff-panel{display:none!important}
+  html[data-active-panel="malayalam"] .manglish,html[data-active-panel="malayalam"] .manglish-lyrics,html[data-active-panel="malayalam"] [data-lyrics="manglish"]{display:none!important}
+  html[data-active-panel="manglish"] .malayalam,html[data-active-panel="manglish"] .malayalam-lyrics,html[data-active-panel="manglish"] [data-lyrics="malayalam"],html[data-active-panel="manglish"] img[src*="malayalam"]{display:none!important}
+  .pass1-staff-panel,.pass1-lyrics-panel{width:100%!important;max-width:none!important;height:calc(100dvh - 110px);overflow:auto}
+  .panel-max{display:none}
+}
+
+/* PASS 1 v2 exact Choir View controls */
+.cv-notation{overflow:auto!important;align-items:flex-start!important}
+.cv-notation #notationImg{flex:0 0 auto;margin:auto}
+.p1zoom{position:sticky;top:8px;z-index:50;margin-left:auto;width:max-content;display:flex;align-items:center;gap:4px;padding:5px 7px;background:rgba(255,255,255,.96);border:1px solid #cbd3dc;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.14)}
+.p1zoom-staff{position:absolute;right:10px;bottom:10px;top:auto}.p1zoom b{font-size:11px}.p1zoom button{border:0;background:#edf1f5;border-radius:16px;min-width:32px;min-height:32px;font-weight:800}.p1zoom .p1val{min-width:52px}
+.p1switch{position:sticky;top:0;z-index:45;background:#fff;padding:8px 0;display:flex;gap:5px;justify-content:center;border-bottom:1px solid #e2e5e9}.p1switch button,.p1tabs button{border:1px solid #b7c8d3;background:#fff;border-radius:999px;padding:7px 11px;font-weight:800}.p1switch button.active,.p1tabs button.active{background:#173b57;color:#fff}
+.p1tabs{display:none}.p1max{position:absolute;left:10px;bottom:10px;z-index:50;border:1px solid #b7c8d3;background:#fff;border-radius:8px;min-width:36px;min-height:36px;font-weight:800}
+[hidden]{display:none!important}
+@media (orientation:landscape) and (max-height:650px){
+ .cv-main{grid-template-columns:minmax(0,var(--staff-width)) 18px minmax(0,1fr)!important}
+ .cv-divider{display:flex!important}.cv-notation{height:auto!important;position:relative!important;top:auto!important}
+ html[data-p1max="staff"] .cv-lyrics{display:none!important} html[data-p1max="staff"] .cv-divider{display:none!important} html[data-p1max="staff"] .cv-main{grid-template-columns:1fr!important}
+ html[data-p1max="lyrics"] .cv-notation{display:none!important} html[data-p1max="lyrics"] .cv-divider{display:none!important} html[data-p1max="lyrics"] .cv-main{grid-template-columns:1fr!important}
+}
+@media (orientation:portrait) and (max-width:800px){
+ .p1tabs{display:flex;grid-column:1/-1;position:sticky;top:0;z-index:60;background:#fff;justify-content:center;gap:4px;padding:5px}
+ html[data-p1tab="notation"] .cv-lyrics{display:none!important}
+ html[data-p1tab="malayalam"] .cv-notation,html[data-p1tab="manglish"] .cv-notation{display:none!important}
+ .cv-notation,.cv-lyrics{height:calc(100dvh - 120px)!important;overflow:auto!important;position:relative!important;top:auto!important}
+ .p1max{display:none}
+}
+
+
+/* PASS 1 v3 — pin zoom controls to the visible top-right of each panel.
+   They no longer consume document space or travel with image/text content. */
+.cv-notation,.cv-lyrics{position:relative!important}
+.p1zoom{
+  position:sticky!important;
+  top:8px!important;
+  right:8px!important;
+  float:right;
+  z-index:80!important;
+  margin:8px 8px -52px 0!important;
+  width:max-content!important;
+}
+.p1zoom-staff{
+  position:sticky!important;
+  top:8px!important;
+  right:8px!important;
+  bottom:auto!important;
+  float:right;
+  margin:8px 8px -52px 0!important;
+}
+/* Keep the lyric mode selector separate so it doesn't push zoom controls down. */
+.p1switch{
+  position:sticky!important;
+  top:0!important;
+  z-index:70!important;
+  min-height:42px;
+}
+.cv-lyrics .p1zoom{top:50px!important}
+@media (orientation:landscape) and (max-height:650px){
+  .p1zoom,.p1zoom-staff{top:6px!important;margin-top:6px!important}
+  .cv-lyrics .p1zoom{top:48px!important}
+}
+@media (orientation:portrait) and (max-width:800px){
+  .p1zoom,.p1zoom-staff{top:8px!important}
+  .cv-lyrics .p1zoom{top:8px!important}
+}
+
+/* PASS 1 v4 fixes from visual QA */
+/* Remove legacy duplicate Malayalam/Manglish selector. */
+.lyrics-tabs,.lyric-tabs,.language-tabs,.language-toggle,
+#lyricsTabs,#languageTabs,#lyricsToggle,
+.cv-lyrics > .tabs:not(.p1switch),
+.cv-lyrics > [role="tablist"]:not(.p1switch){display:none!important}
+
+/* Staff must never be clipped by zoom or panel geometry.
+   Anchor image at top-left and allow both-axis scrolling. */
+.cv-notation{
+  overflow:auto!important;
+  display:block!important;
+  padding-top:0!important;
+}
+.cv-notation #notationImg{
+  display:block!important;
+  margin:0 auto!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:top center!important;
+}
+/* Floating zoom overlays panel; it must not alter image origin/flow. */
+.p1zoom-staff{
+  position:sticky!important;
+  float:right!important;
+  top:8px!important;
+  right:8px!important;
+  margin:8px 8px -50px 0!important;
+  pointer-events:auto!important;
+}
+
+/* PASS 1 v5 — true top-right overlay hosts */
+.cv-notation,.cv-lyrics{position:relative!important}
+.p1zoom-host{
+ position:sticky!important;
+ top:0!important;
+ right:0!important;
+ height:0!important;
+ overflow:visible!important;
+ z-index:120!important;
+ pointer-events:none!important;
+ display:flex!important;
+ justify-content:flex-end!important;
+ width:100%!important;
+}
+.p1zoom-host .p1zoom{
+ position:relative!important;
+ top:8px!important;
+ right:8px!important;
+ bottom:auto!important;
+ float:none!important;
+ margin:0!important;
+ z-index:121!important;
+ pointer-events:auto!important;
+}
+.cv-lyrics .p1zoom-host .p1zoom{top:8px!important}
+
+/* PASS 1 v6 — compact zoom + distraction-free fullscreen */
+.p1zoom{padding:4px 5px!important;gap:3px!important}
+.p1zoom button{min-width:30px!important;min-height:30px!important}
+.p1zoom .p1val{min-width:48px!important}
+
+/* In fullscreen/focus mode remove the large Choir View header entirely. */
+html.p1-is-fullscreen .cv-header,
+html.p1-is-fullscreen header{
+  display:none!important;
+}
+html.p1-is-fullscreen .cv-main,
+html.p1-is-fullscreen main{
+  height:100dvh!important;
+  max-height:100dvh!important;
+  margin-top:0!important;
+}
+
+/* One unobtrusive exit control, always reachable. */
+#p1FloatingExit{
+  position:fixed;
+  top:10px;
+  right:10px;
+  z-index:10000;
+  border:1px solid #b9c5cf;
+  background:rgba(255,255,255,.94);
+  color:#173b57;
+  border-radius:999px;
+  padding:8px 12px;
+  font-weight:800;
+  box-shadow:0 2px 10px rgba(0,0,0,.16);
+}
+#p1FloatingExit[hidden]{display:none!important}
+
+@media (orientation:portrait) and (max-width:800px){
+  html.p1-is-fullscreen .cv-main,
+  html.p1-is-fullscreen main{
+    height:100dvh!important;
+  }
+  #p1FloatingExit{
+    top:8px;
+    right:8px;
+    padding:7px 10px;
+    font-size:12px;
+  }
+}
+/* PASS1 504 v3: touch interaction. One-finger drag uses native panel scrolling;
+   two-finger pinch adjusts the same zoom state as the +/- controls. */
+.cv-notation,#malImages,#manglishText{touch-action:pan-x pan-y;overscroll-behavior:contain}
+
+/* Maramon Convention 2026 — full-width bilingual Choir View */
+html.maramon-reader .cv-main{display:block!important;height:calc(100dvh - 112px);max-width:none!important;padding:0!important}
+html.maramon-reader .mc-reader-panel{height:100%;position:relative;display:flex;flex-direction:column;background:#fff;overflow:hidden}
+html.maramon-reader .mc-switch{position:sticky!important;top:0;z-index:90;display:flex!important;justify-content:center;gap:6px;padding:7px;background:rgba(255,255,255,.96);border-bottom:1px solid #d9e2e8}
+html.maramon-reader .mc-switch button{border:1px solid #b8c8d3;background:#fff;color:#173b57;border-radius:999px;padding:7px 16px;font-weight:800}
+html.maramon-reader .mc-switch button.active{background:#173b57;color:#fff}
+html.maramon-reader .mc-viewport{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;touch-action:pan-x pan-y;padding:16px 12px 28px;text-align:center}
+html.maramon-reader .mc-viewport img{display:block;height:auto;margin:0 auto;object-position:top center}
+html.maramon-reader .mc-original{position:absolute;left:12px;bottom:10px;z-index:85}
+html.maramon-reader .mc-original a{display:inline-block;border:1px solid #b8c8d3;background:rgba(255,255,255,.94);border-radius:999px;padding:7px 11px;color:#173b57;text-decoration:none;font-weight:800;font-size:12px}
+html.maramon-reader .p1zoom-host{position:absolute!important;top:52px!important;right:8px!important;width:auto!important;z-index:100!important}
+html.maramon-reader .p1zoom-mc{position:relative!important;top:0!important;right:0!important;margin:0!important}
+html.maramon-reader.p1-is-fullscreen .cv-main{height:100dvh!important}
+@media(max-width:800px){html.maramon-reader .cv-main{height:calc(100dvh - 105px)}html.maramon-reader .mc-viewport{padding:12px 6px 26px}}
