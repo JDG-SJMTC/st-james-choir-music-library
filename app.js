@@ -66,9 +66,10 @@ function actionButtons(item){
   if(item.collection==='Maramon Convention 2026'){
     return `<div class="actions"><a class="action-btn choir-btn" href="choir.html?id=${encodeURIComponent(item.id)}" data-choir-id="${escapeHtml(item.id)}">Choir View</a><a class="action-btn notation-btn" href="${item.notationFile}" target="_blank" rel="noopener" data-notation-id="${escapeHtml(item.id)}">Original Sheet</a></div>`;
   }
-  const choir = item.choirView
-    ? `<a class="action-btn choir-btn" href="${item.choirView}" data-choir-id="${escapeHtml(item.id)}">Choir View</a>`
-    : `<button class="action-btn choir-btn disabled-action" type="button" data-choir-unavailable="${escapeHtml(item.id)}" title="Choir View lyric mapping has not yet been verified for this item">Choir View</button>`;
+  const hasChoirView = item.id.startsWith('KK-') && typeof CHOIR_DATA !== 'undefined' && CHOIR_DATA[item.id];
+  const choir = hasChoirView
+    ? `<a class="action-btn choir-btn" href="choir.html?id=${encodeURIComponent(item.id)}" data-choir-id="${escapeHtml(item.id)}">Choir View</a>`
+    : `<button class="action-btn choir-btn disabled-action" type="button" data-choir-unavailable="${escapeHtml(item.id)}" title="Choir View is not available for this item">Choir View</button>`;
   return `<div class="actions"><a class="action-btn notation-btn" href="${item.notationFile}" target="_blank" rel="noopener" data-notation-id="${escapeHtml(item.id)}">Open Notation</a>${choir}</div>`;
 }
 function itemCard(item){
