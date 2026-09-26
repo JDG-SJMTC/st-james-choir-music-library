@@ -1,9 +1,11 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Choir View</title><link rel="stylesheet" href="choir.css"></head><body>
-<header class="cv-header"><div><small>ST JAMES CHOIR VIEW</small><h1 id="title">Choir View</h1><p id="subtitle"></p></div><div class="cv-tools"><a href="index.html">Library</a><button id="full">Full screen</button></div></header>
+<header class="cv-header"><div><small>ST JAMES CHOIR VIEW</small><h1 id="title">Choir View</h1><p id="subtitle"></p></div><div class="cv-tools"><a href="index.html">Library</a><button id="full">Full screen</button></div>  <button id="fullscreenBtn" class="fullscreen-btn" type="button">⛶ Fullscreen</button>
+</header>
 <main class="cv-main"><section class="cv-notation"><div class="pane-label">STAFF NOTATION</div><div id="notationNav" class="notation-nav"></div><img id="notationImg" alt="Staff notation"></section>
 <div id="paneDivider" class="cv-divider" role="separator" aria-orientation="vertical" aria-label="Resize Staff Notation and Lyrics panels" aria-valuemin="45" aria-valuemax="75" aria-valuenow="64" tabindex="0"><span aria-hidden="true">↔</span></div>
 <aside class="cv-lyrics"><nav class="language-nav"><a href="#malayalam">മലയാളം</a><a href="#manglish">Manglish</a></nav><section id="malayalam" class="language-section"><div class="mal-heading"><h2>മലയാളം</h2><div class="mal-zoom" role="group" aria-label="Malayalam zoom"><button id="malZoomOut" type="button" aria-label="Decrease Malayalam size">−</button><span id="malZoomLabel">100%</span><button id="malZoomIn" type="button" aria-label="Increase Malayalam size">+</button></div></div><p class="hint">Continuation lyrics from the staff-notation source</p><div id="malImages"></div></section><section id="manglish" class="language-section manglish"><h2>Manglish</h2><p class="hint">Transliterated lyrics</p><pre id="manglishText" class="manglish-text"></pre></section></aside></main>
-<script src="data-embedded.js"></script><script src="choir-data.js"></script><script>
+<script src="data-embedded.js"></script><script src="choir-data.js"></script><script src="maramon-reader.js"></script><script>
+if(!(new URLSearchParams(location.search).get('id')||'').startsWith('MC26-')){
 const id=new URLSearchParams(location.search).get('id')||'KK-0016'; const song=EMBEDDED_SONGS.find(x=>x.id===id); const d=CHOIR_DATA[id];
 if(!song||!d){document.body.innerHTML='<p>Choir View data not found.</p>';} else {document.title=`Choir View · ${song.number}`; title.textContent=`${song.number}. ${song.english}`; subtitle.textContent=song.malayalam||'';
 const img=document.getElementById('notationImg'), nav=document.getElementById('notationNav'); function show(i){img.src=d.notation[i].file;[...nav.children].forEach((b,j)=>b.classList.toggle('active',i===j));}
@@ -29,4 +31,211 @@ divider.addEventListener('pointercancel',()=>{dragging=false;document.body.class
 divider.addEventListener('keydown',e=>{if(matchMedia('(max-width:800px)').matches)return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();applySplit(split+(e.key==='ArrowRight'?2:-2),true);}else if(e.key==='Home'){e.preventDefault();applySplit(SPLIT_MIN,true);}else if(e.key==='End'){e.preventDefault();applySplit(SPLIT_MAX,true);}});
 applySplit(split,false); if(d.qaStatus!=='PASS'){const q=document.createElement('div');q.className='qa-note';q.textContent=`QA review flag: ${d.qaIssues.join(', ')} — visual check requested.`;document.querySelector('.cv-lyrics').prepend(q);}}
 document.getElementById('full').onclick=()=>document.documentElement.requestFullscreen?.();
-</script></body></html>
+}
+</script>
+
+
+
+<script>
+(function(){
+  if((new URLSearchParams(location.search).get('id')||'').startsWith('MC26-'))return;
+  const staff=document.querySelector('.cv-notation');
+  const lyrics=document.querySelector('.cv-lyrics');
+  const notationImg=document.getElementById('notationImg');
+  const malImages=document.getElementById('malImages');
+  const manglishSection=document.getElementById('manglish');
+  const manglishText=document.getElementById('manglishText');
+  if(!staff||!lyrics||!notationImg||!malImages||!manglishSection||!manglishText)return;
+
+  const K='sj-pass1-';
+  const S={
+    staff:+localStorage.getItem(K+'staffZoom')||100,
+    mal:+localStorage.getItem(K+'malZoom')||100,
+    man:+localStorage.getItem(K+'manZoom')||100,
+    lyric:sessionStorage.getItem(K+'lyric')||'malayalam',
+    tab:sessionStorage.getItem(K+'tab')||'notation',
+    max:null
+  };
+  const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+
+  // Retire the old Malayalam-only zoom control; unified floating controls replace it.
+  const oldMal=document.querySelector('.mal-heading .mal-zoom');
+  if(oldMal) oldMal.style.display='none';
+
+  function pill(kind,label){
+    const p=document.createElement('div'); p.className='p1zoom p1zoom-'+kind;
+    p.innerHTML=`<b>${label}</b><button data-d="-">−</button><button class="p1val" title="Reset to 100%">100%</button><button data-d="+">+</button>`;
+    p.addEventListener('click',e=>{
+      const b=e.target.closest('button'); if(!b)return;
+      const key=kind, step=kind==='man'?20:25, min=kind==='man'?80:75;
+      S[key]=b.classList.contains('p1val')?100:clamp(S[key]+(b.dataset.d==='+'?step:-step),min,200);
+      localStorage.setItem(K+key+'Zoom',S[key]); applyZoom();
+    });
+    return p;
+  }
+  const staffZoom=pill('staff','Staff');
+  const malZoom=pill('mal','Malayalam');
+  const manZoom=pill('man','Manglish');
+  staff.appendChild(staffZoom); lyrics.appendChild(malZoom); lyrics.appendChild(manZoom);
+
+  function applyZoom(){
+    notationImg.style.width=S.staff+'%';
+    notationImg.style.height='auto';
+    notationImg.style.maxWidth='none';
+    notationImg.style.objectFit='initial';
+    [...malImages.querySelectorAll('img')].forEach(x=>{x.style.width=S.mal+'%';x.style.maxWidth='none';x.style.height='auto';});
+    manglishText.style.fontSize=(17*S.man/100)+'px';
+    document.querySelector('.p1zoom-staff .p1val').textContent=S.staff+'%';
+    document.querySelector('.p1zoom-mal .p1val').textContent=S.mal+'%';
+    document.querySelector('.p1zoom-man .p1val').textContent=S.man+'%';
+  }
+
+  const sw=document.createElement('div'); sw.className='p1switch';
+  sw.innerHTML='<button data-l="malayalam">Malayalam</button><button data-l="manglish">Manglish</button>';
+  lyrics.prepend(sw);
+  sw.addEventListener('click',e=>{const b=e.target.closest('[data-l]');if(!b)return;S.lyric=b.dataset.l;sessionStorage.setItem(K+'lyric',S.lyric);applyMode();});
+
+  const tabs=document.createElement('nav');tabs.className='p1tabs';
+  tabs.innerHTML='<button data-t="notation">Notation</button><button data-t="malayalam">Malayalam</button><button data-t="manglish">Manglish</button>';
+  document.querySelector('.cv-main').prepend(tabs);
+  tabs.addEventListener('click',e=>{const b=e.target.closest('[data-t]');if(!b)return;S.tab=b.dataset.t;if(S.tab!=='notation')S.lyric=S.tab;sessionStorage.setItem(K+'tab',S.tab);sessionStorage.setItem(K+'lyric',S.lyric);applyMode();});
+
+  [staff,lyrics].forEach((p,i)=>{
+    const b=document.createElement('button');b.className='p1max';b.type='button';b.textContent='↗';b.title='Maximise / restore panel';
+    b.onclick=()=>{const v=i?'lyrics':'staff';S.max=S.max===v?null:v;applyMode();};p.appendChild(b);
+  });
+
+  function applyMode(){
+    const mal=document.getElementById('malayalam');
+    mal.hidden=S.lyric!=='malayalam';
+    manglishSection.hidden=S.lyric!=='manglish';
+    malZoom.hidden=S.lyric!=='malayalam';
+    manZoom.hidden=S.lyric!=='manglish';
+    sw.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.l===S.lyric));
+    tabs.querySelectorAll('button').forEach(b=>b.classList.toggle('active',b.dataset.t===S.tab));
+    document.documentElement.dataset.p1tab=S.tab;
+    document.documentElement.dataset.p1max=S.max||'';
+  }
+
+  const fs=document.getElementById('fullscreenBtn');
+  function fsLabel(){if(fs)fs.textContent=(document.fullscreenElement||document.documentElement.classList.contains('focus-mode'))?'× Exit Fullscreen':'⛶ Fullscreen';}
+  if(fs)fs.onclick=async()=>{
+    if(document.fullscreenElement){await document.exitFullscreen();return;}
+    if(document.documentElement.classList.contains('focus-mode')){document.documentElement.classList.remove('focus-mode');fsLabel();return;}
+    try{await document.documentElement.requestFullscreen();}catch(e){document.documentElement.classList.add('focus-mode');fsLabel();}
+  };
+  document.addEventListener('fullscreenchange',fsLabel);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.documentElement.classList.contains('focus-mode')){document.documentElement.classList.remove('focus-mode');fsLabel();}});
+
+  applyZoom();applyMode();
+})();
+</script>
+
+
+<script>
+(function(){
+  function pass1v4Fix(){
+    const lyrics=document.querySelector('.cv-lyrics');
+    if(lyrics){
+      [...lyrics.querySelectorAll('button')].forEach(b=>{
+        if(b.closest('.p1switch')||b.closest('.p1zoom')) return;
+        const t=(b.textContent||'').trim().toLowerCase();
+        if(t==='malayalam'||t==='manglish'||t==='മലയാളം') {
+          const row=b.parentElement;
+          if(row && row.querySelectorAll('button').length>=2) row.style.display='none';
+        }
+      });
+    }
+    const img=document.getElementById('notationImg');
+    if(img){
+      img.style.maxHeight='none';
+      img.style.objectPosition='top center';
+    }
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',pass1v4Fix);
+  else pass1v4Fix();
+  setTimeout(pass1v4Fix,400);
+})();
+</script>
+
+
+<script>
+(function(){
+ function cleanLegacyAndPin(){
+   const lyrics=document.querySelector('.cv-lyrics');
+   if(lyrics){
+     const groups=[...lyrics.querySelectorAll('div,nav,section')];
+     groups.forEach(g=>{
+       if(g.classList.contains('p1switch')||g.closest('.p1switch')||g.classList.contains('p1zoom')||g.closest('.p1zoom')) return;
+       const direct=[...g.children].filter(x=>x.tagName==='BUTTON'||x.tagName==='A');
+       const labels=direct.map(x=>(x.textContent||'').trim().toLowerCase());
+       const hasMal=labels.some(t=>t==='malayalam'||t==='മലയാളം');
+       const hasMan=labels.some(t=>t==='manglish');
+       if(hasMal&&hasMan&&direct.length<=4) g.remove();
+     });
+   }
+   // Move our zoom widgets to dedicated overlay hosts anchored to each panel's top-right.
+   const staff=document.querySelector('.cv-notation'), lyr=document.querySelector('.cv-lyrics');
+   const sz=document.querySelector('.p1zoom-staff');
+   const mz=document.querySelector('.p1zoom-mal');
+   const nz=document.querySelector('.p1zoom-man');
+   if(staff&&sz){
+     let h=staff.querySelector(':scope > .p1zoom-host');
+     if(!h){h=document.createElement('div');h.className='p1zoom-host';staff.prepend(h);}
+     h.appendChild(sz);
+   }
+   if(lyr&&(mz||nz)){
+     let h=lyr.querySelector(':scope > .p1zoom-host');
+     if(!h){h=document.createElement('div');h.className='p1zoom-host';lyr.prepend(h);}
+     if(mz)h.appendChild(mz); if(nz)h.appendChild(nz);
+   }
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',cleanLegacyAndPin); else cleanLegacyAndPin();
+ setTimeout(cleanLegacyAndPin,250); setTimeout(cleanLegacyAndPin,750);
+})();
+</script>
+
+
+<script>
+(function(){
+ function pass1v6(){
+   // Compact zoom controls: -, percentage, + only.
+   document.querySelectorAll('.p1zoom > b').forEach(x=>x.remove());
+
+   const fs=document.getElementById('fullscreenBtn');
+   if(!fs)return;
+
+   let exit=document.getElementById('p1FloatingExit');
+   if(!exit){
+     exit=document.createElement('button');
+     exit.id='p1FloatingExit';
+     exit.type='button';
+     exit.textContent='× Exit Fullscreen';
+     exit.addEventListener('click',async()=>{
+       if(document.fullscreenElement) await document.exitFullscreen();
+       else document.documentElement.classList.remove('focus-mode');
+       sync();
+     });
+     document.body.appendChild(exit);
+   }
+
+   function sync(){
+     const on=!!document.fullscreenElement||document.documentElement.classList.contains('focus-mode');
+     document.documentElement.classList.toggle('p1-is-fullscreen',on);
+     exit.hidden=!on;
+   }
+   document.addEventListener('fullscreenchange',sync);
+   document.addEventListener('keydown',e=>{
+     if(e.key==='Escape'&&document.documentElement.classList.contains('focus-mode')){
+       document.documentElement.classList.remove('focus-mode');sync();
+     }
+   });
+   sync();
+ }
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',pass1v6); else pass1v6();
+ setTimeout(pass1v6,300);
+})();
+</script>
+
+\n<script>\n(function(){\n  const dist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);\n  function bindPinch(el,kind){\n    if(!el||el.dataset.pinchBound)return; el.dataset.pinchBound='1';\n    let startD=0,startZ=100;\n    el.addEventListener('touchstart',e=>{\n      if(e.touches.length===2){\n        startD=dist(e.touches);\n        const v=document.querySelector('.p1zoom-'+kind+' .p1val');\n        startZ=parseFloat(v?.textContent)||100;\n      }\n    },{passive:true});\n    el.addEventListener('touchmove',e=>{\n      if(e.touches.length!==2||!startD)return;\n      e.preventDefault();\n      const min=kind==='man'?80:75, step=kind==='man'?20:25;\n      let z=Math.max(min,Math.min(200,startZ*dist(e.touches)/startD));\n      z=Math.round(z/step)*step;\n      const cur=parseFloat(document.querySelector('.p1zoom-'+kind+' .p1val')?.textContent)||100;\n      if(z===cur)return;\n      const btn=document.querySelector('.p1zoom-'+kind+' [data-d="'+(z>cur?'+':'-')+'"]');\n      if(btn) btn.click();\n    },{passive:false});\n    el.addEventListener('touchend',e=>{if(e.touches.length<2)startD=0},{passive:true});\n  }\n  function init(){\n    bindPinch(document.querySelector('.cv-notation'),'staff');\n    bindPinch(document.getElementById('malImages'),'mal');\n    bindPinch(document.getElementById('manglishText'),'man');\n  }\n  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();\n  setTimeout(init,400);\n})();\n</script>\n
+</body></html>
