@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Choir View</title><link rel="stylesheet" href="choir.css"></head><body>
-<header class="cv-header"><div><small>ST JAMES CHOIR VIEW</small><h1 id="title">Choir View</h1><p id="subtitle"></p></div><div class="cv-tools"><a href="index.html">Library</a><button id="full">Full screen</button></div>  <button id="fullscreenBtn" class="fullscreen-btn" type="button">⛶ Fullscreen</button>
+<header class="cv-header"><div><small>ST JAMES CHOIR VIEW</small><h1 id="title">Choir View</h1><p id="subtitle"></p></div><div class="cv-tools"><a href="index.html">Library</a><button id="fullscreenBtn" class="fullscreen-btn" type="button">⛶ Fullscreen</button></div>
 </header>
 <main class="cv-main"><section class="cv-notation"><div class="pane-label">STAFF NOTATION</div><div id="notationNav" class="notation-nav"></div><img id="notationImg" alt="Staff notation"></section>
 <div id="paneDivider" class="cv-divider" role="separator" aria-orientation="vertical" aria-label="Resize Staff Notation and Lyrics panels" aria-valuemin="45" aria-valuemax="75" aria-valuenow="64" tabindex="0"><span aria-hidden="true">↔</span></div>
@@ -30,7 +30,6 @@ divider.addEventListener('pointerup',e=>{if(!dragging)return;dragging=false;divi
 divider.addEventListener('pointercancel',()=>{dragging=false;document.body.classList.remove('is-resizing');applySplit(split,true);});
 divider.addEventListener('keydown',e=>{if(matchMedia('(max-width:800px)').matches)return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();applySplit(split+(e.key==='ArrowRight'?2:-2),true);}else if(e.key==='Home'){e.preventDefault();applySplit(SPLIT_MIN,true);}else if(e.key==='End'){e.preventDefault();applySplit(SPLIT_MAX,true);}});
 applySplit(split,false); if(d.qaStatus!=='PASS'){const q=document.createElement('div');q.className='qa-note';q.textContent=`QA review flag: ${d.qaIssues.join(', ')} — visual check requested.`;document.querySelector('.cv-lyrics').prepend(q);}}
-document.getElementById('full').onclick=()=>document.documentElement.requestFullscreen?.();
 }
 </script>
 

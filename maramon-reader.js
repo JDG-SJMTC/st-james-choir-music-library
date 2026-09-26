@@ -4,6 +4,27 @@
   const item=(window.EMBEDDED_MARAMON_2026||EMBEDDED_MARAMON_2026||[]).find(x=>x.id===id);
   if(!item) return;
   document.documentElement.classList.add('maramon-reader');
+  const fs=document.getElementById('fullscreenBtn');
+  function syncFullscreen(){
+    const on=!!document.fullscreenElement||document.documentElement.classList.contains('focus-mode');
+    document.documentElement.classList.toggle('p1-is-fullscreen',on);
+    if(fs) fs.textContent=on?'× Exit Fullscreen':'⛶ Fullscreen';
+  }
+  if(fs) fs.onclick=async()=>{
+    if(document.fullscreenElement){await document.exitFullscreen();return;}
+    if(document.documentElement.classList.contains('focus-mode')){
+      document.documentElement.classList.remove('focus-mode');syncFullscreen();return;
+    }
+    try{await document.documentElement.requestFullscreen();}
+    catch(e){document.documentElement.classList.add('focus-mode');syncFullscreen();}
+  };
+  document.addEventListener('fullscreenchange',syncFullscreen);
+  document.addEventListener('keydown',e=>{
+    if(e.key==='Escape'&&document.documentElement.classList.contains('focus-mode')){
+      document.documentElement.classList.remove('focus-mode');syncFullscreen();
+    }
+  });
+  syncFullscreen();
   document.title=`Maramon 2026 · ${item.number}`;
   const title=document.getElementById('title'), subtitle=document.getElementById('subtitle');
   title.textContent=`Maramon 2026 · ${item.number}. ${item.english}`; subtitle.textContent=item.malayalam||'';
