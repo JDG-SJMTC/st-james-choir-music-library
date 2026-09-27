@@ -168,7 +168,7 @@
     "notationFile": "notation/KK-0329.pdf",
     "referencedSong": 329,
     "status": "Verified",
-    "choirView": null
+    "choirView": "choir.html?id=KK-0329"
   },
   {
     "id": "DOX-011",
@@ -186,7 +186,7 @@
     "notationFile": "notation/KK-0328.pdf",
     "referencedSong": 328,
     "status": "Verified",
-    "choirView": null
+    "choirView": "choir.html?id=KK-0328"
   },
   {
     "id": "DOX-012",
@@ -204,14 +204,14 @@
     "notationFile": "notation/KK-0427.pdf",
     "referencedSong": 427,
     "status": "Verified",
-    "choirView": null
+    "choirView": "choir.html?id=KK-0427"
   },
   {
     "id": "DOX-013",
     "collection": "Doxologies",
     "number": "XIII",
     "arabicNumber": 13,
-    "malayalam": "",
+    "malayalam": "രക്ഷകന്റെ ദിവ്യ സ്നേഹത്താൽ",
     "english": "Rakshakante Divyasnehaththaal",
     "aliases": [
       "doxology 13",
@@ -223,6 +223,6 @@
     "notationFile": "notation/KK-0428.pdf",
     "referencedSong": 428,
     "status": "Verified",
-    "choirView": null
+    "choirView": "choir.html?id=KK-0428"
   }
 ]
