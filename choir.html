@@ -29,7 +29,7 @@ divider.addEventListener('pointermove',e=>{if(!dragging)return;applySplit(splitF
 divider.addEventListener('pointerup',e=>{if(!dragging)return;dragging=false;divider.releasePointerCapture?.(e.pointerId);document.body.classList.remove('is-resizing');applySplit(split,true);});
 divider.addEventListener('pointercancel',()=>{dragging=false;document.body.classList.remove('is-resizing');applySplit(split,true);});
 divider.addEventListener('keydown',e=>{if(matchMedia('(max-width:800px)').matches)return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();applySplit(split+(e.key==='ArrowRight'?2:-2),true);}else if(e.key==='Home'){e.preventDefault();applySplit(SPLIT_MIN,true);}else if(e.key==='End'){e.preventDefault();applySplit(SPLIT_MAX,true);}});
-applySplit(split,false); if(d.qaStatus!=='PASS'){const q=document.createElement('div');q.className='qa-note';q.textContent=`QA review flag: ${d.qaIssues.join(', ')} — visual check requested.`;document.querySelector('.cv-lyrics').prepend(q);}}
+applySplit(split,false);}
 }
 </script>
 
@@ -116,16 +116,6 @@ applySplit(split,false); if(d.qaStatus!=='PASS'){const q=document.createElement(
     document.documentElement.dataset.p1max=S.max||'';
   }
 
-  const fs=document.getElementById('fullscreenBtn');
-  function fsLabel(){if(fs)fs.textContent=(document.fullscreenElement||document.documentElement.classList.contains('focus-mode'))?'× Exit Fullscreen':'⛶ Fullscreen';}
-  if(fs)fs.onclick=async()=>{
-    if(document.fullscreenElement){await document.exitFullscreen();return;}
-    if(document.documentElement.classList.contains('focus-mode')){document.documentElement.classList.remove('focus-mode');fsLabel();return;}
-    try{await document.documentElement.requestFullscreen();}catch(e){document.documentElement.classList.add('focus-mode');fsLabel();}
-  };
-  document.addEventListener('fullscreenchange',fsLabel);
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.documentElement.classList.contains('focus-mode')){document.documentElement.classList.remove('focus-mode');fsLabel();}});
-
   applyZoom();applyMode();
 })();
 </script>
@@ -197,44 +187,62 @@ applySplit(split,false); if(d.qaStatus!=='PASS'){const q=document.createElement(
 
 <script>
 (function(){
- function pass1v6(){
-   // Compact zoom controls: -, percentage, + only.
-   document.querySelectorAll('.p1zoom > b').forEach(x=>x.remove());
-
-   const fs=document.getElementById('fullscreenBtn');
-   if(!fs)return;
-
-   let exit=document.getElementById('p1FloatingExit');
-   if(!exit){
-     exit=document.createElement('button');
-     exit.id='p1FloatingExit';
-     exit.type='button';
-     exit.textContent='× Exit Fullscreen';
-     exit.addEventListener('click',async()=>{
-       if(document.fullscreenElement) await document.exitFullscreen();
-       else document.documentElement.classList.remove('focus-mode');
-       sync();
-     });
-     document.body.appendChild(exit);
-   }
-
-   function sync(){
-     const on=!!document.fullscreenElement||document.documentElement.classList.contains('focus-mode');
-     document.documentElement.classList.toggle('p1-is-fullscreen',on);
-     exit.hidden=!on;
-   }
-   document.addEventListener('fullscreenchange',sync);
-   document.addEventListener('keydown',e=>{
-     if(e.key==='Escape'&&document.documentElement.classList.contains('focus-mode')){
-       document.documentElement.classList.remove('focus-mode');sync();
-     }
-   });
-   sync();
- }
+ function pass1v6(){ document.querySelectorAll('.p1zoom > b').forEach(x=>x.remove()); }
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',pass1v6); else pass1v6();
  setTimeout(pass1v6,300);
 })();
 </script>
 
-\n<script>\n(function(){\n  const dist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);\n  function bindPinch(el,kind){\n    if(!el||el.dataset.pinchBound)return; el.dataset.pinchBound='1';\n    let startD=0,startZ=100;\n    el.addEventListener('touchstart',e=>{\n      if(e.touches.length===2){\n        startD=dist(e.touches);\n        const v=document.querySelector('.p1zoom-'+kind+' .p1val');\n        startZ=parseFloat(v?.textContent)||100;\n      }\n    },{passive:true});\n    el.addEventListener('touchmove',e=>{\n      if(e.touches.length!==2||!startD)return;\n      e.preventDefault();\n      const min=kind==='man'?80:75, step=kind==='man'?20:25;\n      let z=Math.max(min,Math.min(200,startZ*dist(e.touches)/startD));\n      z=Math.round(z/step)*step;\n      const cur=parseFloat(document.querySelector('.p1zoom-'+kind+' .p1val')?.textContent)||100;\n      if(z===cur)return;\n      const btn=document.querySelector('.p1zoom-'+kind+' [data-d="'+(z>cur?'+':'-')+'"]');\n      if(btn) btn.click();\n    },{passive:false});\n    el.addEventListener('touchend',e=>{if(e.touches.length<2)startD=0},{passive:true});\n  }\n  function init(){\n    bindPinch(document.querySelector('.cv-notation'),'staff');\n    bindPinch(document.getElementById('malImages'),'mal');\n    bindPinch(document.getElementById('manglishText'),'man');\n  }\n  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();\n  setTimeout(init,400);\n})();\n</script>\n
+
+<script>
+(function(){\n  const dist=t=>Math.hypot(t[0].clientX-t[1].clientX,t[0].clientY-t[1].clientY);\n  function bindPinch(el,kind){\n    if(!el||el.dataset.pinchBound)return; el.dataset.pinchBound='1';\n    let startD=0,startZ=100;\n    el.addEventListener('touchstart',e=>{\n      if(e.touches.length===2){\n        startD=dist(e.touches);\n        const v=document.querySelector('.p1zoom-'+kind+' .p1val');\n        startZ=parseFloat(v?.textContent)||100;\n      }\n    },{passive:true});\n    el.addEventListener('touchmove',e=>{\n      if(e.touches.length!==2||!startD)return;\n      e.preventDefault();\n      const min=kind==='man'?80:75, step=kind==='man'?20:25;\n      let z=Math.max(min,Math.min(200,startZ*dist(e.touches)/startD));\n      z=Math.round(z/step)*step;\n      const cur=parseFloat(document.querySelector('.p1zoom-'+kind+' .p1val')?.textContent)||100;\n      if(z===cur)return;\n      const btn=document.querySelector('.p1zoom-'+kind+' [data-d="'+(z>cur?'+':'-')+'"]');\n      if(btn) btn.click();\n    },{passive:false});\n    el.addEventListener('touchend',e=>{if(e.touches.length<2)startD=0},{passive:true});\n  }\n  function init(){\n    bindPinch(document.querySelector('.cv-notation'),'staff');\n    bindPinch(document.getElementById('malImages'),'mal');\n    bindPinch(document.getElementById('manglishText'),'man');\n  }\n  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();\n  setTimeout(init,400);\n})();
+</script>
+
+<script>
+(function(){
+  function initProductionFullscreen(){
+    const fs=document.getElementById('fullscreenBtn');
+    if(!fs || fs.dataset.productionBound==='1') return;
+    fs.dataset.productionBound='1';
+    let exit=document.getElementById('p1FloatingExit');
+    if(!exit){
+      exit=document.createElement('button');
+      exit.id='p1FloatingExit';
+      exit.type='button';
+      exit.textContent='× Exit Fullscreen';
+      document.body.appendChild(exit);
+    }
+    const isOn=()=>!!document.fullscreenElement||document.documentElement.classList.contains('focus-mode');
+    function sync(){
+      const on=isOn();
+      document.documentElement.classList.toggle('p1-is-fullscreen',on);
+      fs.textContent=on?'× Exit Fullscreen':'⛶ Fullscreen';
+      exit.hidden=!on;
+    }
+    async function toggle(){
+      if(document.fullscreenElement){ await document.exitFullscreen(); return; }
+      if(document.documentElement.classList.contains('focus-mode')){
+        document.documentElement.classList.remove('focus-mode'); sync(); return;
+      }
+      try{
+        if(!document.documentElement.requestFullscreen) throw new Error('Fullscreen API unavailable');
+        await document.documentElement.requestFullscreen();
+      }catch(e){
+        document.documentElement.classList.add('focus-mode'); sync();
+      }
+    }
+    fs.addEventListener('click',toggle);
+    exit.addEventListener('click',toggle);
+    document.addEventListener('fullscreenchange',sync);
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape'&&document.documentElement.classList.contains('focus-mode')){
+        document.documentElement.classList.remove('focus-mode'); sync();
+      }
+    });
+    sync();
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initProductionFullscreen);
+  else initProductionFullscreen();
+})();
+</script>
 </body></html>

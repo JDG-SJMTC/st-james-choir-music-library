@@ -1,0 +1,13 @@
+ST JAMES CHOIR MUSIC LIBRARY — CLEAN PRODUCTION ROOT
+
+Built from known-good source packages, not from the live GitHub root.
+Baseline: PREPROD 504 + Maramon Choir View.
+Restored/normalized:
+- KK Choir View enabled consistently for KK-0001 through KK-0504.
+- Maramon reader retained.
+- Single shared fullscreen control for KK and Maramon.
+- Floating × Exit Fullscreen control in fullscreen/focus mode.
+- Internal QA banner and QA metadata removed from production root.
+- Song 16 no longer has special prototype behavior.
+
+Doxology content has not been guessed or rewritten in this build; it remains for the separate verified Doxology cleanup.
