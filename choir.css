@@ -215,3 +215,9 @@ html.maramon-reader .p1zoom-host{position:absolute!important;top:52px!important;
 html.maramon-reader .p1zoom-mc{position:relative!important;top:0!important;right:0!important;margin:0!important}
 html.maramon-reader.p1-is-fullscreen .cv-main{height:100dvh!important}
 @media(max-width:800px){html.maramon-reader .cv-main{height:calc(100dvh - 105px)}html.maramon-reader .mc-viewport{padding:12px 6px 26px}}
+
+
+/* FINAL PROD POLISH — centre Tune selector; keep zoom top-right */
+.notation-nav{left:50%!important;right:auto!important;transform:translateX(-50%);justify-content:center;flex-wrap:nowrap;z-index:110!important;}
+.notation-nav:empty{display:none!important;}
+/* Staff label intentionally removed from Choir View markup. */
