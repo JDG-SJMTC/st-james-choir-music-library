@@ -1,0 +1,11 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Choir View · Beta</title><link rel="stylesheet" href="choir.css"></head><body>
+<header class="cv-header"><div><small>ST JAMES CHOIR VIEW · BETA</small><h1 id="title">Choir View</h1><p id="subtitle">Interactive notation team preview</p></div><div class="cv-tools"><a href="index.html">Library</a><button id="fullscreenBtn" class="fullscreen-btn" type="button">⛶ Fullscreen</button></div></header>
+<main class="cv-main" id="main"><section class="cv-notation" aria-label="Interactive score, single panel"><iframe id="scoreFrame" class="beta-score" title="Musical notation with page, stanza, tune, language and zoom controls" loading="eager"></iframe></section></main>
+<script>
+const songs={'KK-0030':{name:'30. Anputhingum Dayaaparaney',src:'song-30/index.html'},'KK-0150':{name:'150. Mahathwa Prabhu Maricha',src:'song-150/index.html'}};
+const id=new URLSearchParams(location.search).get('id')||'KK-0030';const song=songs[id];
+if(song){document.title='Choir View · '+song.name+' · Beta';document.getElementById('title').textContent=song.name;document.getElementById('scoreFrame').src=song.src;}
+else{document.getElementById('title').textContent='Song not in beta';document.querySelector('.cv-notation').textContent='Only Songs 30 and 150 are available in this preview.';}
+const btn=document.getElementById('fullscreenBtn');btn.addEventListener('click',async()=>{try{if(document.fullscreenElement){await document.exitFullscreen()}else{await document.getElementById('main').requestFullscreen()}}catch(e){alert('Fullscreen is unavailable in this browser.')}});
+document.addEventListener('fullscreenchange',()=>{btn.textContent=document.fullscreenElement?'⤢ Exit fullscreen':'⛶ Fullscreen'});
+</script></body></html>
