@@ -36,6 +36,13 @@ main>h1,main>.note,main>.muted,main>.status,main>#status,main>.nav{display:none!
 .floating-tools label{font:600 11px system-ui;color:#43566a;margin:0 2px 0 0;white-space:nowrap}
 .floating-tools select{font:500 13px system-ui!important;min-height:36px;max-width:180px;padding:6px 7px!important;border-radius:8px!important;min-width:0!important}
 .floating-tools.top-tools > div:empty{display:none!important}
+/* v12: comfortable text and chevron clearance for all compact selectors */
+.floating-tools select{box-sizing:border-box!important;width:auto!important;min-width:112px!important;max-width:none!important;padding:7px 30px 7px 12px!important;font-size:14px!important;text-overflow:clip!important;flex-shrink:0!important}
+.floating-tools select#language,.floating-tools select#lang{min-width:135px!important}
+.floating-tools select#stanza{min-width:118px!important}
+.floating-tools select#tune{min-width:108px!important}
+.floating-tools #betaZoomReset{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-width:38px!important;min-height:38px!important;padding:6px!important}
+.floating-tools #betaZoomReset svg{display:block;pointer-events:none}
 .floating-tools .tool-field{display:flex;align-items:center;gap:4px;min-width:0}
 .floating-tools .drag-grip{flex:0 0 24px;align-self:stretch;min-height:35px;border:0!important;background:#e8f0f7!important;border-radius:8px!important;padding:0!important;font-size:19px!important;line-height:1!important;color:#49667c!important;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
 .floating-tools .drag-grip:active{cursor:grabbing}
@@ -68,7 +75,7 @@ main{max-width:100%!important;margin:0!important}
 <button type="button" id="betaZoomOut" aria-label="Zoom out">−</button>
 <output id="betaZoomLabel" aria-live="polite">100%</output>
 <button type="button" id="betaZoomIn" aria-label="Zoom in">+</button>
-<button type="button" class="reset" id="betaZoomReset">Reset</button>
+<button type="button" class="reset" id="betaZoomReset" aria-label="Reset zoom to fit width" title="Reset zoom to fit width"><svg aria-hidden="true" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/></svg></button>
 <span class="zoom-hint">25–300% · Double-tap / double-click score to reset · Swipe at 100%</span>
 </div><div class="score"><svg id="score" viewBox="112 0 680 1150" role="img" aria-label="Original music score with selected stanza added underneath"></svg></div>
 <div class="nav"><button id="prev">← Previous</button><strong id="progress"></strong><button id="next">Next →</button></div>
