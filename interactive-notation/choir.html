@@ -3,9 +3,35 @@
 <main class="cv-main" id="main"><section class="cv-notation" aria-label="Interactive score, single panel"><iframe id="scoreFrame" class="beta-score" title="Musical notation with page, stanza, tune, language and zoom controls" loading="eager"></iframe></section></main>
 <script>
 const songs={'KK-0030':{name:'30. Anputhingum Dayaaparaney',src:'song-30/index.html'},'KK-0150':{name:'150. Mahathwa Prabhu Maricha',src:'song-150/index.html'}};
-const id=new URLSearchParams(location.search).get('id')||'KK-0030';const song=songs[id];
+let id=new URLSearchParams(location.search).get('id')||'KK-0030';let song=songs[id];
 if(song){document.title='Choir View · '+song.name+' · Beta';document.getElementById('title').textContent=song.name;document.getElementById('scoreFrame').src=song.src;}
 else{document.getElementById('title').textContent='Song not in beta';document.querySelector('.cv-notation').textContent='Only Songs 30 and 150 are available in this preview.';}
 const btn=document.getElementById('fullscreenBtn');btn.addEventListener('click',async()=>{try{if(document.fullscreenElement){await document.exitFullscreen()}else{await document.getElementById('main').requestFullscreen()}}catch(e){alert('Fullscreen is unavailable in this browser.')}});
-document.addEventListener('fullscreenchange',()=>{btn.textContent=document.fullscreenElement?'⤢ Exit fullscreen':'⛶ Fullscreen'});
+window.addEventListener('message',e=>{
+ if(e.origin!==location.origin||e.source!==document.getElementById('scoreFrame').contentWindow)return;
+ const msg=e.data;
+ if(msg?.type==='sjmtc-beta-stanza'){
+   document.getElementById('subtitle').textContent='Stanza '+msg.stanza+' of 4 · Swipe left for next';
+ }
+ if(msg?.type==='sjmtc-beta-song-navigation'){
+   const order=['KK-0030','KK-0150'];const i=order.indexOf(id);
+   const next=i+(msg.direction==='next'?1:-1);
+   if(next<0||next>=order.length){
+     document.getElementById('subtitle').textContent=next>=order.length?'End of beta collection · 2 songs':'Beginning of beta collection';
+     return;
+   }
+   id=order[next];song=songs[id];
+   const url=new URL(location.href);url.searchParams.set('id',id);history.pushState({id},'',url);
+   document.getElementById('title').textContent=song.name;
+   document.title='Choir View · '+song.name+' · Beta';
+   document.getElementById('subtitle').textContent='Stanza '+(msg.direction==='previous'?4:1)+' of 4';
+   const frame=document.getElementById('scoreFrame');
+   frame.onload=()=>{if(msg.direction==='previous')frame.contentWindow.postMessage({type:'sjmtc-beta-set-stanza',stanza:4},location.origin);};
+   frame.src=song.src;
+ }
+});
+window.addEventListener('popstate',()=>{const chosen=new URLSearchParams(location.search).get('id')||'KK-0030';
+ if(!songs[chosen])return;id=chosen;song=songs[id];document.getElementById('title').textContent=song.name;
+ document.getElementById('scoreFrame').src=song.src;});
+document.addEventListener('fullscreenchange' ,()=>{btn.textContent=document.fullscreenElement?'⤢ Exit fullscreen':'⛶ Fullscreen'});
 </script></body></html>

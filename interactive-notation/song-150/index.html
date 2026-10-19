@@ -18,6 +18,13 @@ svg{width:100%;height:auto;display:block}.lyric{font:14px "DejaVu Sans",Arial,sa
 .beta-zoom .zoom-hint{font-size:.79rem;color:#64748b;margin-left:auto}
 .beta-zoom button:disabled{opacity:.4;cursor:default}
 @media(max-width:560px){.beta-zoom .zoom-hint{width:100%;margin-left:0}}
+</style><style id="beta-floating-navigation">
+/* Fixed overlay; no score pixel or syllable position is modified. */
+.beta-zoom,#betaZoomControls,.beta-zoom-controls,.zoom-controls{position:fixed!important;right:14px!important;bottom:calc(18px + env(safe-area-inset-bottom,0px))!important;top:auto!important;left:auto!important;z-index:9999!important;background:rgba(255,255,255,.97)!important;border:1px solid #bccbd9!important;border-radius:999px!important;padding:6px 10px!important;box-shadow:0 3px 18px rgba(15,32,48,.22)!important;display:flex!important;align-items:center!important;gap:5px!important;max-width:calc(100vw - 24px)!important}
+.beta-zoom button,#betaZoomControls button,.beta-zoom-controls button,.zoom-controls button{min-width:36px;min-height:36px;touch-action:manipulation}
+.beta-zoom output,#betaZoomControls output,.beta-zoom-controls output,.zoom-controls output{min-width:50px;text-align:center;font-weight:700}
+#betaSwipeHint{position:fixed;left:12px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:9998;background:rgba(23,59,87,.93);color:white;padding:9px 12px;border-radius:20px;font:600 12px system-ui;pointer-events:none}
+@media(max-width:480px){.beta-zoom,#betaZoomControls,.beta-zoom-controls,.zoom-controls{right:8px!important;bottom:calc(9px + env(safe-area-inset-bottom,0px))!important;padding:4px 6px!important}#betaSwipeHint{display:none}}
 </style></head><body><main><h1>KK 150 — Mahathwa Prabhu Maricha</h1>
 <p class="muted">Original notation and its Malayalam lyrics are always visible. Only the added lyric bands change.</p>
 <div class="controls">
@@ -31,7 +38,7 @@ svg{width:100%;height:auto;display:block}.lyric{font:14px "DejaVu Sans",Arial,sa
 <output id="betaZoomLabel" aria-live="polite">100%</output>
 <button type="button" id="betaZoomIn" aria-label="Zoom in">+</button>
 <button type="button" class="reset" id="betaZoomReset">Reset</button>
-<span class="zoom-hint">Zooms notation and lyrics together · scroll sideways when enlarged</span>
+<span class="zoom-hint">25–300% · Double-tap / double-click score to reset · Swipe at 100%</span>
 </div><div class="score"><svg id="score" viewBox="0 0 893 1150" role="img" aria-label="Original music score with selected stanza added underneath"></svg></div>
 <div class="nav"><button id="prev">← Previous</button><strong id="progress"></strong><button id="next">Next →</button></div>
 <p class="note"><strong>QA scope:</strong> The source staff and original Malayalam are preserved exactly; standalone verses below the score are trimmed in this interactive copy. Malayalam stanzas 2–4 are authentic image crops from the original sheet. For these stanzas, both Manglish and Malayalam are stretched syllable-by-syllable to the first-stanza musical anchors. <strong>These assignments are provisional and require sung-phrase verification</strong>. This is an interaction/layout review, not a fully aligned master.</p>
@@ -78,7 +85,7 @@ render();
 (()=>{
   'use strict';
   const key='sjmtcBetaNotationZoom';
-  const levels=[75,100,125,150,175,200];
+  const levels=Array.from({length:12},(_,i)=>25+i*25);
   const svg=document.getElementById('score');
   const frame=svg.closest('.score');
   const label=document.getElementById('betaZoomLabel');
@@ -104,6 +111,79 @@ render();
   out.addEventListener('click',()=>{current=levels[Math.max(0,levels.indexOf(current)-1)];apply()});
   plus.addEventListener('click',()=>{current=levels[Math.min(levels.length-1,levels.indexOf(current)+1)];apply()});
   reset.addEventListener('click',()=>{current=100;apply()});
+  // Double-click / double-tap the notation to restore 100%.
+  // Keep native browser pinch-zoom available.
+  frame.addEventListener('dblclick',e=>{
+    if(e.target.closest('button,select,input,a'))return;
+    e.preventDefault();current=100;apply();
+  });
+  let lastTap=0,lastTapX=0,lastTapY=0;
+  frame.addEventListener('touchend',e=>{
+    if(e.changedTouches.length!==1||e.touches.length)return;
+    const t=e.changedTouches[0];
+    const now=Date.now();
+    if(now-lastTap<330&&Math.hypot(t.clientX-lastTapX,t.clientY-lastTapY)<36){
+      current=100;apply();lastTap=0;
+    }else{lastTap=now;lastTapX=t.clientX;lastTapY=t.clientY;}
+  },{passive:true});
   apply();
+})();
+</script><script id="beta-swipe-navigation">
+(()=>{
+  'use strict';
+  const stanza=document.getElementById('stanza');
+  const score=document.getElementById('score');
+  const area=score?.closest('.score');
+  if(!stanza||!score||!area)return;
+  const MAX=4;
+  const changeTo=n=>{stanza.value=String(n);stanza.dispatchEvent(new Event('change',{bubbles:true}));
+    area.scrollTop=0;area.scrollLeft=0;window.scrollTo({top:0,behavior:'instant'});
+    window.parent.postMessage({type:'sjmtc-beta-stanza',stanza:n},location.origin);
+  };
+  const zoomIsDefault=()=>Number(document.getElementById('betaZoomLabel')?.textContent.replace('%',''))===100;
+  const move=direction=>{
+    if(!zoomIsDefault())return;
+    const n=Number(stanza.value);
+    if(direction==='next'){
+      if(n<MAX)changeTo(n+1);
+      else window.parent.postMessage({type:'sjmtc-beta-song-navigation',direction:'next'},location.origin);
+    }else{
+      if(n>1)changeTo(n-1);
+      else window.parent.postMessage({type:'sjmtc-beta-song-navigation',direction:'previous'},location.origin);
+    }
+  };
+  let start=null;
+  // Touch swipes on the notation area only; leave menus, zoom and buttons untouched.
+  area.addEventListener('touchstart',e=>{
+    if(e.touches.length!==1){start=null;return;}
+    const t=e.touches[0];start={x:t.clientX,y:t.clientY,time:Date.now(),scrollX:area.scrollLeft,
+      scrollable:area.scrollWidth>area.clientWidth+5};
+  },{passive:true});
+  area.addEventListener('touchcancel',()=>start=null,{passive:true});
+  area.addEventListener('touchend',e=>{
+    if(!start||e.changedTouches.length!==1){start=null;return;}
+    const t=e.changedTouches[0],dx=t.clientX-start.x,dy=t.clientY-start.y;
+    const old=start;start=null;
+    if(!zoomIsDefault()||Math.abs(dx)<75||Math.abs(dx)<Math.abs(dy)*1.6||Date.now()-old.time>1200)return;
+    // When the enlarged score can scroll horizontally, first allow normal panning.
+    // Navigate only after reaching the relevant horizontal edge.
+    if(old.scrollable){
+      const max=area.scrollWidth-area.clientWidth;
+      if(dx<0 && old.scrollX<max-12)return;
+      if(dx>0 && old.scrollX>12)return;
+    }
+    move(dx<0?'next':'previous');
+  },{passive:true});
+  // Keyboard arrows only when the score itself is focused, not in controls.
+  area.tabIndex=0;
+  area.setAttribute('aria-label','Notation. Swipe left for next stanza or song; swipe right for previous.');
+  area.addEventListener('keydown',e=>{if(e.target!==area)return;
+    if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();move(e.key==='ArrowRight'?'next':'previous');}
+  });
+  window.addEventListener('message',e=>{
+    if(e.origin!==location.origin||e.data?.type!=='sjmtc-beta-set-stanza')return;
+    const n=Number(e.data.stanza);if(n>=1&&n<=MAX)changeTo(n);
+  });
+  window.parent.postMessage({type:'sjmtc-beta-stanza',stanza:Number(stanza.value)},location.origin);
 })();
 </script></body></html>
