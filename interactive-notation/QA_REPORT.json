@@ -1,0 +1,38 @@
+{
+  "30": {
+    "changes": [
+      {
+        "stanza": "1",
+        "line": 2,
+        "token": 6,
+        "from": "thi",
+        "to": "thin"
+      },
+      {
+        "stanza": "1",
+        "line": 2,
+        "token": 12,
+        "from": "lh",
+        "to": "lha"
+      }
+    ],
+    "line2_boundaries": "pass",
+    "other_data_unchanged": true,
+    "javascript_syntax": "pass"
+  },
+  "150": {
+    "changes": [
+      {
+        "stanza": 4,
+        "line": 1,
+        "token": 6,
+        "from": "ne",
+        "to": "nè"
+      }
+    ],
+    "source_overlay_exact_match": true,
+    "mismatches": [],
+    "other_data_unchanged": true,
+    "javascript_syntax": "pass"
+  }
+}

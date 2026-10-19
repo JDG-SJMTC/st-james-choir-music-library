@@ -4,3 +4,5 @@ Unzip and upload the contents into the GitHub `interactive-notation/` directory 
 Do not overwrite the root production library.
 
 See QA_README.md and QA_REPORT.json for verified edits and outstanding checks.
+
+Version 16: shared links open directly to the service list. No song notation changes.
