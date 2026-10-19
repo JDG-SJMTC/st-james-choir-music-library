@@ -1,11 +1,6 @@
-# Beta v11 — automatic fit-width scores
+SJMTC beta v14 — QA correction candidate, NOT production-approved.
 
-Upload all files into the existing `interactive-notation/` folder, preserving `song-30/` and `song-150/`. The production root is not modified.
+Unzip and upload the contents into the GitHub `interactive-notation/` directory only.
+Do not overwrite the root production library.
 
-Changes to the two score viewers only:
-- Horizontal SVG viewport trimmed to ink bounds with safety margins, without altering any score image or lyric coordinates.
-- 100% now fits the available notation viewport width, including after resize/rotation.
-- 25–300% zoom remains relative to fitted width; swiping is still enabled only at 100%.
-- Floating toolbars, selections, double-tap reset, and navigation retained.
-
-Review on desktop and mobile. This is code-checked, not physical-device QA.
+See QA_README.md and QA_REPORT.json for verified edits and outstanding checks.
