@@ -47,10 +47,21 @@ main>h1,main>.note,main>.muted,main>.status,main>#status,main>.nav{display:none!
 @media(max-width:600px){.floating-tools.top-tools{gap:4px!important;max-width:calc(100vw - 12px)!important;flex-wrap:wrap;justify-content:center;padding:5px!important}
 .floating-tools label{font-size:10px}.floating-tools select{font-size:12px!important;max-width:132px;padding:5px!important}
 .beta-zoom.floating-tools{right:6px!important}}
-main{padding-top:0!important}main>.controls{margin-top:0!important}</style></head><body><main><div class="controls">
-<div><label for="tune">Musical setting</label><select id="tune"><option value="1">Tune 1 — E. Miller</option><option value="2">Tune 2 — Lowell Mason</option></select></div>
-<div><label for="lang">Added lyric language</label><select id="lang"><option value="manglish">Manglish (blue)</option><option value="malayalam">Malayalam</option></select></div>
-<div><label for="stanza">Selected stanza</label><select id="stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option></select></div>
+main{padding-top:0!important}main>.controls{margin-top:0!important}
+.floating-tools.top-tools{gap:7px!important;padding:6px 8px!important;align-items:center!important}
+.floating-tools.top-tools > div:empty{display:none!important}
+.floating-tools.top-tools .tool-field{gap:0!important}
+.floating-tools.top-tools select{min-height:38px!important}
+@media(max-width:600px){.floating-tools.top-tools{column-gap:5px!important;row-gap:5px!important}}</style><style id="beta-fit-width-v11">
+html,body{max-width:100%;overflow-x:hidden}
+main{max-width:100%!important;margin:0!important}
+.score{width:100%!important;box-sizing:border-box!important;padding:0!important;overflow-x:hidden}
+.score svg{display:block!important;max-width:none!important}
+@media(max-width:600px){body{padding:0!important}.score{border-radius:0!important;border-left:0!important;border-right:0!important}}
+</style></head><body><main><div class="controls">
+<div><select id="tune" aria-label="Tune"><option value="1">Tune 1 — E. Miller</option><option value="2">Tune 2 — Lowell Mason</option></select></div>
+<div><select id="lang" aria-label="Language"><option value="manglish">Manglish (blue)</option><option value="malayalam">Malayalam</option></select></div>
+<div><select id="stanza" aria-label="Stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option></select></div>
 </div><div id="status" class="status" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap"></div>
 <div class="beta-zoom" role="group" aria-label="Music score zoom">
 <strong>Score zoom</strong>
@@ -59,7 +70,7 @@ main{padding-top:0!important}main>.controls{margin-top:0!important}</style></hea
 <button type="button" id="betaZoomIn" aria-label="Zoom in">+</button>
 <button type="button" class="reset" id="betaZoomReset">Reset</button>
 <span class="zoom-hint">25–300% · Double-tap / double-click score to reset · Swipe at 100%</span>
-</div><div class="score"><svg id="score" viewBox="0 0 893 1150" role="img" aria-label="Original music score with selected stanza added underneath"></svg></div>
+</div><div class="score"><svg id="score" viewBox="112 0 680 1150" role="img" aria-label="Original music score with selected stanza added underneath"></svg></div>
 <div class="nav"><button id="prev">← Previous</button><strong id="progress"></strong><button id="next">Next →</button></div>
 <p class="note"><strong>QA scope:</strong> The source staff and original Malayalam are preserved exactly; standalone verses below the score are trimmed in this interactive copy. Malayalam stanzas 2–4 are authentic image crops from the original sheet. For these stanzas, both Manglish and Malayalam are stretched syllable-by-syllable to the first-stanza musical anchors. <strong>These assignments are provisional and require sung-phrase verification</strong>. This is an interaction/layout review, not a fully aligned master.</p>
 </main><script>
@@ -116,18 +127,27 @@ render();
   const baseWidth=Number(svg.getAttribute('viewBox').split(/\s+/)[2]);
   let current=100;
   try{const saved=Number(localStorage.getItem(key));if(levels.includes(saved))current=saved;}catch(e){}
-  // CSS pixel width preserves SVG coordinate-based alignment at all zoom levels.
-  // On narrow screens, 100% retains the song's original presentation.
+  // 100% is FIT WIDTH, not an intrinsic pixel size. Preserve all SVG coordinates.
+  // The cropped viewBox removes only unused left/right white margins.
+  // The whole SVG (original score and overlay lyrics) scales as a single unit.
   function apply(){
-    svg.style.width=(baseWidth*current/100)+'px';
+    const available=Math.max(1,frame.clientWidth - 2);
+    const fittedWidth=available;
+    svg.style.width=(fittedWidth*current/100)+'px';
     svg.style.maxWidth='none';
     svg.style.height='auto';
-    frame.style.overflowX='auto';
+    svg.style.margin='0 auto';
+    frame.style.overflowX=current===100?'hidden':'auto';
     label.textContent=current+'%';
     out.disabled=current===levels[0];plus.disabled=current===levels[levels.length-1];
     reset.disabled=current===100;
     try{localStorage.setItem(key,String(current));}catch(e){}
   }
+  // Refit after screen rotation, viewport resizing or embedding changes.
+  if(typeof ResizeObserver!=='undefined'){
+    const resizeObserver=new ResizeObserver(()=>apply());
+    resizeObserver.observe(frame);
+  }else{addEventListener('resize',apply)}
   out.addEventListener('click',()=>{current=levels[Math.max(0,levels.indexOf(current)-1)];apply()});
   plus.addEventListener('click',()=>{current=levels[Math.min(levels.length-1,levels.indexOf(current)+1)];apply()});
   reset.addEventListener('click',()=>{current=100;apply()});
@@ -219,7 +239,7 @@ render();
    const label=top.querySelector('label[for="'+sel.id+'"]');
    const wrap=document.createElement('span');wrap.className='tool-field';
    sel.parentNode.insertBefore(wrap,sel);
-   if(label)wrap.appendChild(label);
+   if(label){label.classList.add('visually-hidden');wrap.appendChild(label);}
    wrap.appendChild(sel);
    return wrap;
  });

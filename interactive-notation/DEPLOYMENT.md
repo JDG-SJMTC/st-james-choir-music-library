@@ -1,1 +1,11 @@
-Version 9 removes duplicate song heading and explanatory note from both embedded viewers, retaining the production-style Choir View header and all floating controls. Song 150 status remains available to screen readers but no longer occupies page space. Upload the contents to interactive-notation/, not repository root. No score, stanza, language, tune, swipe or zoom data was modified.
+# Beta v11 — automatic fit-width scores
+
+Upload all files into the existing `interactive-notation/` folder, preserving `song-30/` and `song-150/`. The production root is not modified.
+
+Changes to the two score viewers only:
+- Horizontal SVG viewport trimmed to ink bounds with safety margins, without altering any score image or lyric coordinates.
+- 100% now fits the available notation viewport width, including after resize/rotation.
+- 25–300% zoom remains relative to fitted width; swiping is still enabled only at 100%.
+- Floating toolbars, selections, double-tap reset, and navigation retained.
+
+Review on desktop and mobile. This is code-checked, not physical-device QA.
