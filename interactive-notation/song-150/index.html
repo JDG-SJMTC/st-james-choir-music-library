@@ -9,6 +9,15 @@ button{cursor:pointer}button:disabled{opacity:.4;cursor:default}.score{backgroun
 svg{width:100%;height:auto;display:block}.lyric{font:14px "DejaVu Sans",Arial,sans-serif;fill:#105bca;text-anchor:middle}
 .note{font-size:.86rem;line-height:1.55;color:#586477}.nav{display:flex;gap:12px;align-items:center;justify-content:center;margin:13px 0}
 .status{background:#fff8e7;border:1px solid #e7d7a9;border-radius:9px;padding:11px;margin:10px 0;font-size:.87rem}
+</style><style id="beta-zoom-style">
+.beta-zoom{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:#fff;border:1px solid #dae1ea;border-radius:10px;padding:9px 12px;margin:12px 0}
+.beta-zoom strong{margin-right:5px;font-size:.92rem}
+.beta-zoom button{min-width:38px;min-height:38px;font-weight:700;cursor:pointer}
+.beta-zoom output{font-variant-numeric:tabular-nums;min-width:52px;text-align:center;font-weight:650}
+.beta-zoom .reset{font-weight:500;min-width:auto}
+.beta-zoom .zoom-hint{font-size:.79rem;color:#64748b;margin-left:auto}
+.beta-zoom button:disabled{opacity:.4;cursor:default}
+@media(max-width:560px){.beta-zoom .zoom-hint{width:100%;margin-left:0}}
 </style></head><body><main><h1>KK 150 — Mahathwa Prabhu Maricha</h1>
 <p class="muted">Original notation and its Malayalam lyrics are always visible. Only the added lyric bands change.</p>
 <div class="controls">
@@ -16,7 +25,14 @@ svg{width:100%;height:auto;display:block}.lyric{font:14px "DejaVu Sans",Arial,sa
 <div><label for="lang">Added lyric language</label><select id="lang"><option value="manglish">Manglish (blue)</option><option value="malayalam">Malayalam</option></select></div>
 <div><label for="stanza">Selected stanza</label><select id="stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option></select></div>
 </div><div id="status" class="status" role="status"></div>
-<div class="score"><svg id="score" viewBox="0 0 893 1150" role="img" aria-label="Original music score with selected stanza added underneath"></svg></div>
+<div class="beta-zoom" role="group" aria-label="Music score zoom">
+<strong>Score zoom</strong>
+<button type="button" id="betaZoomOut" aria-label="Zoom out">−</button>
+<output id="betaZoomLabel" aria-live="polite">100%</output>
+<button type="button" id="betaZoomIn" aria-label="Zoom in">+</button>
+<button type="button" class="reset" id="betaZoomReset">Reset</button>
+<span class="zoom-hint">Zooms notation and lyrics together · scroll sideways when enlarged</span>
+</div><div class="score"><svg id="score" viewBox="0 0 893 1150" role="img" aria-label="Original music score with selected stanza added underneath"></svg></div>
 <div class="nav"><button id="prev">← Previous</button><strong id="progress"></strong><button id="next">Next →</button></div>
 <p class="note"><strong>QA scope:</strong> The source staff and original Malayalam are preserved exactly; standalone verses below the score are trimmed in this interactive copy. Malayalam stanzas 2–4 are authentic image crops from the original sheet. For these stanzas, both Manglish and Malayalam are stretched syllable-by-syllable to the first-stanza musical anchors. <strong>These assignments are provisional and require sung-phrase verification</strong>. This is an interaction/layout review, not a fully aligned master.</p>
 </main><script>
@@ -58,4 +74,36 @@ function render(){
 $('prev').onclick=()=>{stanza.value=String(Number(stanza.value)-1);render()};
 $('next').onclick=()=>{stanza.value=String(Number(stanza.value)+1);render()};
 render();
+</script><script id="beta-zoom-script">
+(()=>{
+  'use strict';
+  const key='sjmtcBetaNotationZoom';
+  const levels=[75,100,125,150,175,200];
+  const svg=document.getElementById('score');
+  const frame=svg.closest('.score');
+  const label=document.getElementById('betaZoomLabel');
+  const out=document.getElementById('betaZoomOut');
+  const plus=document.getElementById('betaZoomIn');
+  const reset=document.getElementById('betaZoomReset');
+  if(!svg||!frame||!label)return;
+  const baseWidth=Number(svg.getAttribute('viewBox').split(/\s+/)[2]);
+  let current=100;
+  try{const saved=Number(localStorage.getItem(key));if(levels.includes(saved))current=saved;}catch(e){}
+  // CSS pixel width preserves SVG coordinate-based alignment at all zoom levels.
+  // On narrow screens, 100% retains the song's original presentation.
+  function apply(){
+    svg.style.width=(baseWidth*current/100)+'px';
+    svg.style.maxWidth='none';
+    svg.style.height='auto';
+    frame.style.overflowX='auto';
+    label.textContent=current+'%';
+    out.disabled=current===levels[0];plus.disabled=current===levels[levels.length-1];
+    reset.disabled=current===100;
+    try{localStorage.setItem(key,String(current));}catch(e){}
+  }
+  out.addEventListener('click',()=>{current=levels[Math.max(0,levels.indexOf(current)-1)];apply()});
+  plus.addEventListener('click',()=>{current=levels[Math.min(levels.length-1,levels.indexOf(current)+1)];apply()});
+  reset.addEventListener('click',()=>{current=100;apply()});
+  apply();
+})();
 </script></body></html>

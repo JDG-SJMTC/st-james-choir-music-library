@@ -1,1 +1,45 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Choir Interactive Notation | Team Preview</title><style>*{box-sizing:border-box}body{font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif;background:#f5f7fb;color:#17253c;margin:0}.wrap{max-width:950px;margin:0 auto;padding:42px 20px}header{margin-bottom:28px}.eyebrow{color:#2057a3;font-weight:700;letter-spacing:.08em;font-size:.8rem;text-transform:uppercase}h1{font-size:clamp(1.8rem,4vw,2.7rem);margin:8px 0 12px;line-height:1.2}h2{font-size:1.2rem;margin:0 0 8px}p{margin:0 0 12px}.muted{color:#56647a}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin:26px 0}.card{background:#fff;border:1px solid #dbe2ee;border-radius:16px;padding:25px;box-shadow:0 3px 12px #243b5a0b}.tag{font-size:.78rem;color:#3b628d;background:#eaf2ff;border-radius:999px;padding:4px 10px;display:inline-block;margin-bottom:15px}a.cta{display:inline-block;background:#165cc5;color:white;text-decoration:none;padding:11px 17px;border-radius:9px;font-weight:650;margin-top:8px}a.cta:hover{background:#0d479c}.notice{border-left:4px solid #87a7d9;background:#edf3fc;padding:18px 20px;border-radius:8px;margin-top:20px}footer{font-size:.86rem;color:#67758a;margin-top:30px}</style></head><body><main class="wrap"><header><div class="eyebrow">SJMTC Choir · Team testing</div><h1>Interactive Music Notation</h1><p class="muted">Two early song previews for choir members to try before any changes are made to the main music library.</p></header><section class="cards"><article class="card"><span class="tag">KK Song 30</span><h2>Song 30 · Interactive Score</h2><p>Switch between four stanzas and Malayalam or Manglish. The original notation and printed lyrics remain visible.</p><a class="cta" href="song-30/index.html">Try Song 30 →</a></article><article class="card"><span class="tag">KK Song 150</span><h2>Song 150 · Interactive Score</h2><p>Explore two tunes, four stanzas, and Malayalam or Manglish, with lyrics stretched beneath the original score.</p><a class="cta" href="song-150/index.html">Try Song 150 →</a></article></section><section class="notice"><h2>We'd appreciate your feedback</h2><p>Is the text easy to read? Do the syllables follow the notation? Does switching stanzas and languages help during choir practice? Please share any errors, suggestions, or screenshots with the choir website team.</p><p><strong>Testing only:</strong> These are prototypes, not replacements for the current scores. The original score remains the reference.</p></section><footer>Standalone static HTML · No sign-in or data collection in these pages · For internal review</footer></main></body></html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#173b57"><title>Interactive Notation Beta | St James Choir</title>
+<link rel="stylesheet" href="styles.css"><style>
+.beta-strip{background:#e9f3ff;border:1px solid #b6d1eb;border-radius:12px;padding:16px 20px;margin:24px 0;color:#173b57}
+.beta-strip strong{display:block;margin-bottom:4px}.beta-strip p{margin:0;line-height:1.6}
+.pilot-search{display:flex;align-items:center;gap:10px;background:white;border:1px solid #ccd6df;border-radius:12px;padding:12px 16px}
+.pilot-search input{width:100%;border:0;outline:0;background:transparent;font-size:1rem}
+.pilot-count{font-weight:650;color:#50657a}.pilot-link{display:inline-block;padding:10px 15px;border-radius:8px;background:#173b57;color:#fff;text-decoration:none;font-weight:700}
+.pilot-link:hover{background:#245b80}.pilot-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.song-card{align-items:center}.pilot-empty{padding:30px;text-align:center;background:white;border-radius:12px}
+.backlink{color:#d9eaff}.beta-tag{display:inline-block;border-radius:30px;padding:5px 11px;background:#e2effa;color:#174365;font-weight:700;font-size:.8rem}
+</style></head><body>
+<header class="site-header"><div class="wrap header-inner"><div class="brand">
+<p class="eyebrow">St James Mar Thoma Church, London</p><h1>Choir Music Library</h1>
+<p class="subtitle">Interactive Notation · Team Testing</p>
+<p><a class="backlink" href="../">← Return to production library</a></p></div>
+<span class="verified-pill">2 songs · Beta preview</span></div></header>
+<main><section class="finder-section"><div class="wrap"><div class="finder-card"><div class="finder-copy">
+<p class="section-kicker">St James Choir Music Library</p><h2>Explore interactive notation</h2>
+<p>Try the same library-style experience with two test songs. Change stanzas, switch Malayalam and Manglish, and zoom the full score. The existing choir library is unchanged.</p>
+</div><label class="pilot-search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search 30, 150, Malayalam, Manglish or title" aria-label="Search beta songs"></label>
+<div class="finder-help"><span>Number</span><span>Interactive notation</span><span>Malayalam &amp; Manglish</span></div>
+</div></div></section>
+<div class="library-content wrap"><div class="beta-strip"><strong>Team testing only</strong>
+<p>These are draft interactive scores. Please report any missing syllables, notation alignment problems, mobile display issues or navigation feedback before production rollout.</p></div>
+<section class="catalogue-section"><div class="results-header"><div><p class="section-kicker">Beta catalogue</p>
+<h2>Kristheeya Keerthanangal</h2></div><p id="count" class="pilot-count" aria-live="polite">2 songs available</p></div>
+<div class="results" id="results">
+<article class="song-card" data-search="30 kk0030 anpu thingum dayaparane malayalam manglish">
+<div class="song-no">30</div><div class="song-title"><p class="malayalam" lang="ml">അൻപു തിങ്ങും ദയാപരനേ</p><p class="english">Song 30 · Interactive Notation <span class="beta-tag">Beta</span></p></div>
+<div class="pilot-actions"><a class="pilot-link" href="song-30/index.html">Choir View →</a></div></article>
+<article class="song-card" data-search="150 kk0150 mahathwa prabhu maricha malayalam manglish two tunes">
+<div class="song-no">150</div><div class="song-title"><p class="english">Song 150 · Mahathwa Prabhu Maricha <span class="beta-tag">Beta</span></p><p class="english">Two tunes · Four stanzas</p></div>
+<div class="pilot-actions"><a class="pilot-link" href="song-150/index.html">Choir View →</a></div></article>
+</div><p id="empty" class="pilot-empty" hidden>No beta songs match your search. Only Songs 30 and 150 are included.</p></section></div></main>
+<footer class="wrap footer"><p>St James Choir Music Library · Interactive Notation Team Preview · Not the production catalogue</p></footer>
+<script>
+const search=document.getElementById('search'), cards=[...document.querySelectorAll('.song-card')];
+search.addEventListener('input',()=>{const q=search.value.toLocaleLowerCase().trim();let n=0;
+cards.forEach(c=>{const ok=!q||c.dataset.search.includes(q)||c.textContent.toLocaleLowerCase().includes(q);c.hidden=!ok;if(ok)n++;});
+document.getElementById('count').textContent=n+' of 2 songs';
+document.getElementById('empty').hidden=n!==0;});
+search.addEventListener('keydown',e=>{if(e.key==='Enter'){const c=cards.find(x=>!x.hidden);if(c)location.href=c.querySelector('a').href;}});
+</script></body></html>
