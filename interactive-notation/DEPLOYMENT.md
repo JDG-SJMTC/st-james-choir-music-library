@@ -1,3 +1,1 @@
-Beta v7: zoom range 25%–300% in 25% steps. Double-click (desktop) or double-tap (touch) on the score resets zoom to 100%. Swipe left/right and keyboard arrow stanza/song navigation only work at 100%; at other zoom levels gestures pan the score. Original score/lyrics and production site remain unchanged.
-
-Upload this ZIP contents into the existing interactive-notation folder on the main branch. Do not overwrite files in repository root. Verify on a touch device.
+Version 9 removes duplicate song heading and explanatory note from both embedded viewers, retaining the production-style Choir View header and all floating controls. Song 150 status remains available to screen readers but no longer occupies page space. Upload the contents to interactive-notation/, not repository root. No score, stanza, language, tune, swipe or zoom data was modified.

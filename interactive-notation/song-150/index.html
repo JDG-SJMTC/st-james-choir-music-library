@@ -25,13 +25,33 @@ svg{width:100%;height:auto;display:block}.lyric{font:14px "DejaVu Sans",Arial,sa
 .beta-zoom output,#betaZoomControls output,.beta-zoom-controls output,.zoom-controls output{min-width:50px;text-align:center;font-weight:700}
 #betaSwipeHint{position:fixed;left:12px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:9998;background:rgba(23,59,87,.93);color:white;padding:9px 12px;border-radius:20px;font:600 12px system-ui;pointer-events:none}
 @media(max-width:480px){.beta-zoom,#betaZoomControls,.beta-zoom-controls,.zoom-controls{right:8px!important;bottom:calc(9px + env(safe-area-inset-bottom,0px))!important;padding:4px 6px!important}#betaSwipeHint{display:none}}
-</style></head><body><main><h1>KK 150 — Mahathwa Prabhu Maricha</h1>
-<p class="muted">Original notation and its Malayalam lyrics are always visible. Only the added lyric bands change.</p>
-<div class="controls">
+
+/* Beta v8: draggable, single-panel floating controls. */
+html,body{margin:0!important;padding:0!important;min-height:100%;}
+body{background:#f4f7fa!important}
+main{max-width:none!important;margin:0!important;padding:0!important}
+main>h1,main>.note,main>.muted,main>.status,main>#status,main>.nav{display:none!important}
+.score{margin:0!important;padding:0!important;border:0!important;border-radius:0!important;overflow:auto!important;min-height:100vh}
+.floating-tools{position:fixed!important;z-index:99999!important;background:rgba(255,255,255,.89)!important;backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);border:1px solid #b7c9d9!important;border-radius:13px!important;box-shadow:0 3px 16px rgba(16,42,67,.20)!important;display:flex!important;gap:7px!important;align-items:center!important;padding:7px!important;box-sizing:border-box!important;max-width:calc(100vw - 16px)!important;top:8px;left:50%;right:auto!important;bottom:auto!important;transform:translateX(-50%)}
+.floating-tools label{font:600 11px system-ui;color:#43566a;margin:0 2px 0 0;white-space:nowrap}
+.floating-tools select{font:500 13px system-ui!important;min-height:36px;max-width:180px;padding:6px 7px!important;border-radius:8px!important;min-width:0!important}
+.floating-tools.top-tools > div:empty{display:none!important}
+.floating-tools .tool-field{display:flex;align-items:center;gap:4px;min-width:0}
+.floating-tools .drag-grip{flex:0 0 24px;align-self:stretch;min-height:35px;border:0!important;background:#e8f0f7!important;border-radius:8px!important;padding:0!important;font-size:19px!important;line-height:1!important;color:#49667c!important;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none}
+.floating-tools .drag-grip:active{cursor:grabbing}
+.beta-zoom.floating-tools{left:auto;right:10px!important;top:38%!important;bottom:auto!important;transform:none!important;flex-direction:column!important;padding:6px!important;gap:5px!important;width:50px!important;border-radius:13px!important}
+.beta-zoom.floating-tools button:not(.drag-grip){display:block!important;min-width:36px!important;width:36px!important;height:38px!important;min-height:38px!important;padding:0!important;font-size:21px!important;font-weight:700!important;border-radius:8px!important}
+.beta-zoom.floating-tools .reset{font-size:11px!important;font-weight:650!important}
+.beta-zoom.floating-tools output{display:none!important}
+.beta-zoom.floating-tools strong,.beta-zoom.floating-tools .zoom-hint,#betaSwipeHint{display:none!important}
+@media(max-width:600px){.floating-tools.top-tools{gap:4px!important;max-width:calc(100vw - 12px)!important;flex-wrap:wrap;justify-content:center;padding:5px!important}
+.floating-tools label{font-size:10px}.floating-tools select{font-size:12px!important;max-width:132px;padding:5px!important}
+.beta-zoom.floating-tools{right:6px!important}}
+main{padding-top:0!important}main>.controls{margin-top:0!important}</style></head><body><main><div class="controls">
 <div><label for="tune">Musical setting</label><select id="tune"><option value="1">Tune 1 — E. Miller</option><option value="2">Tune 2 — Lowell Mason</option></select></div>
 <div><label for="lang">Added lyric language</label><select id="lang"><option value="manglish">Manglish (blue)</option><option value="malayalam">Malayalam</option></select></div>
 <div><label for="stanza">Selected stanza</label><select id="stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option></select></div>
-</div><div id="status" class="status" role="status"></div>
+</div><div id="status" class="status" role="status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap"></div>
 <div class="beta-zoom" role="group" aria-label="Music score zoom">
 <strong>Score zoom</strong>
 <button type="button" id="betaZoomOut" aria-label="Zoom out">−</button>
@@ -185,5 +205,53 @@ render();
     const n=Number(e.data.stanza);if(n>=1&&n<=MAX)changeTo(n);
   });
   window.parent.postMessage({type:'sjmtc-beta-stanza',stanza:Number(stanza.value)},location.origin);
+})();
+</script><script id="beta-floating-controls-v8">
+(()=>{
+ 'use strict';
+ const top=document.querySelector('main > .controls');
+ const zoom=document.querySelector('main > .beta-zoom');
+ if(!top||!zoom)return;
+ top.classList.add('floating-tools','top-tools');
+ zoom.classList.add('floating-tools','side-tools');
+ top.setAttribute('aria-label','Tune, language and stanza controls');
+ const topFields=[...top.querySelectorAll('select')].map(sel=>{
+   const label=top.querySelector('label[for="'+sel.id+'"]');
+   const wrap=document.createElement('span');wrap.className='tool-field';
+   sel.parentNode.insertBefore(wrap,sel);
+   if(label)wrap.appendChild(label);
+   wrap.appendChild(sel);
+   return wrap;
+ });
+ // Song 150 has its own label/select wrapper divs; avoid nesting extra layout widths.
+ topFields.forEach(w=>{if(w.parentElement!==top&&w.parentElement?.tagName==='DIV')top.insertBefore(w,top.lastElementChild?.nextSibling||null)});
+ const topGrip=document.createElement('button');topGrip.type='button';topGrip.className='drag-grip';topGrip.textContent='⠿';topGrip.setAttribute('aria-label','Drag stanza toolbar; double-click to reset position');top.prepend(topGrip);
+ const sideGrip=document.createElement('button');sideGrip.type='button';sideGrip.className='drag-grip';sideGrip.textContent='⠿';sideGrip.setAttribute('aria-label','Drag zoom toolbar; double-click to reset position');zoom.prepend(sideGrip);
+ const key='sjmtcBetaFloatingControlsV8';
+ const read=()=>{try{return JSON.parse(localStorage.getItem(key)||'{}')}catch(e){return {}}};
+ const save=(kind,el)=>{const all=read();all[kind]={left:el.offsetLeft,top:el.offsetTop};try{localStorage.setItem(key,JSON.stringify(all))}catch(e){}};
+ const clamp=(el,x,y)=>({x:Math.min(Math.max(6,x),Math.max(6,innerWidth-el.offsetWidth-6)),y:Math.min(Math.max(6,y),Math.max(6,innerHeight-el.offsetHeight-6))});
+ const place=(el,x,y)=>{el.style.setProperty('transform','none','important');el.style.setProperty('right','auto','important');el.style.setProperty('bottom','auto','important');el.style.setProperty('top','0px','important');el.style.setProperty('left','0px','important');const p=clamp(el,x,y);el.style.setProperty('left',p.x+'px','important');el.style.setProperty('top',p.y+'px','important')};
+ const defaults=(kind,el)=>kind==='top'?{x:(innerWidth-el.offsetWidth)/2,y:8}:{x:innerWidth-el.offsetWidth-10,y:Math.max(8,innerHeight*.38)};
+ function enable(kind,el,grip){
+   const stored=read()[kind];const initial=stored||defaults(kind,el);place(el,initial.left??initial.x,initial.top??initial.y);
+   let drag=null;
+   grip.addEventListener('pointerdown',e=>{if(e.button!==0&&e.pointerType==='mouse')return;
+     e.preventDefault();grip.setPointerCapture(e.pointerId);drag={id:e.pointerId,x:e.clientX,y:e.clientY,left:el.offsetLeft,top:el.offsetTop,moved:false};});
+   grip.addEventListener('pointermove',e=>{if(!drag||e.pointerId!==drag.id)return;
+     const dx=e.clientX-drag.x,dy=e.clientY-drag.y;
+     if(Math.abs(dx)+Math.abs(dy)>3)drag.moved=true;
+     place(el,drag.left+dx,drag.top+dy);});
+   const end=e=>{if(!drag||e.pointerId!==drag.id)return;
+     if(drag.moved){const x=el.offsetLeft,y=el.offsetTop;
+       const snapX=x<24?6:x+el.offsetWidth>innerWidth-24?innerWidth-el.offsetWidth-6:x;
+       place(el,snapX,y);save(kind,el)}drag=null;};
+   grip.addEventListener('pointerup',end);grip.addEventListener('pointercancel',end);
+   grip.addEventListener('dblclick',e=>{e.preventDefault();const p=defaults(kind,el);place(el,p.x,p.y);save(kind,el)});
+   // Touch double-tap on grip resets just that toolbar.
+   let last=0;grip.addEventListener('pointerup',e=>{if(e.pointerType!=='touch')return;const now=Date.now();if(now-last<340){const p=defaults(kind,el);place(el,p.x,p.y);save(kind,el)}last=now});
+ }
+ enable('top',top,topGrip);enable('side',zoom,sideGrip);
+ addEventListener('resize',()=>{for(const [kind,el] of [['top',top],['side',zoom]]){place(el,el.offsetLeft,el.offsetTop);save(kind,el)}});
 })();
 </script></body></html>
