@@ -46,3 +46,9 @@ KK 8 remains on beta as a **blocked engineering draft** with the original Malaya
 The local `sjmtc_skill_line_boundaries_v2/SKILL.md` explicitly requires full bilingual system transcripts **before rendering**, verified glyph bounding boxes, and user approval before website updates. Its `Tools` section refers to `render_verified.py`, but that file is **not present** in the extracted v2 skill directory. Therefore the documented workflow is not a complete executable conversion package. Reusing the skill requires recovering or implementing the renderer and its tests; a release validator alone cannot convert a score.
 
 The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not approved** (Malayalam/Manglish system boundary mismatch). Do not use that dataset as automatic training ground truth. KK30/150 interfaces may serve as UI references, not verified transcriptions.
+
+## PDF/source preflight (resume)
+- A reusable preflight CLI was added at `interactive-notation/tools/score_preflight.py` (requires PyMuPDF).
+- Applied to the original KK-0008 PDF and the locked 7-stanza source manifest: all 7 SHA-256 stanza checks passed, covering 28 lines.
+- PDF inspection confirmed one embedded raster score image (1729 × 1865 pixels) and legacy-encoded Malayalam text spans; extracted Malayalam cannot be trusted for glyph positioning.
+- **Implication:** exact Malayalam glyph boxes and note/syllable associations are still unavailable. No musical alignment or render approval is claimed. Existing beta remains blocked; production unchanged.
