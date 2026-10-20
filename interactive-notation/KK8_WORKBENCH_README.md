@@ -1,0 +1,1 @@
+KK 8 musical alignment workbench. Open `choir.html?id=KK-0008` or `song-8/index.html`. Blue syllables for stanzas 2–7 are AUTOMATIC GUESSES and NOT QA approved. Drag syllables to align and Export alignment JSON. The 7-stanza Manglish text matches production. Production website is unchanged.

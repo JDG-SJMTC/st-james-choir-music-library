@@ -1,0 +1,15 @@
+{
+  "song": "KK-0008",
+  "overall": "IN_PROGRESS_NOT_QA_APPROVED",
+  "checks": {
+    "seven_stanzas_exact_source": "PASS",
+    "source_line_count_28": "PASS",
+    "syllable_character_preservation": "PASS per-word automatic segmentation; musical syllabification NOT verified",
+    "stanza1_alignment": "EXISTING USER-REVIEWED REFERENCE; NOT INDEPENDENTLY VERIFIED",
+    "stanzas_2_to_7_alignment": "DRAFT AUTOMATIC POSITIONS ONLY; NOT VERIFIED",
+    "malayalam_characters": "PENDING",
+    "mobile_browser_render": "PENDING",
+    "production_deployment": "NOT DONE"
+  },
+  "notes": "Visual overlay exists for all 7 stanzas, but positions are approximate. Workbench lets QA editor adjust each token. Do not deploy as completed notation."
+}
