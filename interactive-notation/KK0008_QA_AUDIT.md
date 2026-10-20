@@ -35,3 +35,9 @@ This is a technical audit, **not** musical approval.
 
 ### Publication state
 KK 8 remains on beta as a **blocked engineering draft** with the original Malayalam score selected by default. No production-library files changed. KK 30/150 unchanged.
+
+## Implementation update
+- Shared fail-closed validator: `interactive-notation/notation-qa.js`.
+- KK8 beta now runs this validator and reports failed release checks in its QA diagnostics.
+- The validator deliberately does **not** infer staff boundaries or anchors; KK8 remains blocked until an independently checked musical-system transcript and glyph/note anchor data are supplied.
+- KK30/150 are reference implementations, not proof of a generalised conversion engine. Their differing HTML implementations remain a consolidation task.
