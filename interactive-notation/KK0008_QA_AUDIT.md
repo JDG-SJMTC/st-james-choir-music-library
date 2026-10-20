@@ -41,3 +41,8 @@ KK 8 remains on beta as a **blocked engineering draft** with the original Malaya
 - KK8 beta now runs this validator and reports failed release checks in its QA diagnostics.
 - The validator deliberately does **not** infer staff boundaries or anchors; KK8 remains blocked until an independently checked musical-system transcript and glyph/note anchor data are supplied.
 - KK30/150 are reference implementations, not proof of a generalised conversion engine. Their differing HTML implementations remain a consolidation task.
+
+## Original skill source inspected (20 October 2026)
+The local `sjmtc_skill_line_boundaries_v2/SKILL.md` explicitly requires full bilingual system transcripts **before rendering**, verified glyph bounding boxes, and user approval before website updates. Its `Tools` section refers to `render_verified.py`, but that file is **not present** in the extracted v2 skill directory. Therefore the documented workflow is not a complete executable conversion package. Reusing the skill requires recovering or implementing the renderer and its tests; a release validator alone cannot convert a score.
+
+The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not approved** (Malayalam/Manglish system boundary mismatch). Do not use that dataset as automatic training ground truth. KK30/150 interfaces may serve as UI references, not verified transcriptions.
