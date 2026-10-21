@@ -24,3 +24,9 @@ Status: engineering rules awaiting musical regression testing. This is the in-re
 ## Regression coverage
 
 Test the rules against KK 8, KK 30 and KK 150, including their differing stanza lengths and any previously documented QA exceptions. Do not claim regression passed until tests are actually executed.
+
+## Additional KK 8 rhythm transcription rule
+
+- Record the *observed notation symbol* (filled/open notehead, stem, flags, dot, tie, adjacent noteheads) separately from an interpreted rhythmic duration. A provisional quarter/half/whole classification is not a verified duration until clef, metre, ties and measure totals have been checked.
+- In KK 8 system 3, some adjacent open stemless noteheads need explicit review; do not silently reduce them to a single ordinary whole note or infer melismas.
+- Never populate a release-gate `duration` field with an unverified visual classification. Keep visual classes under `visualDurationClass` and leave verified `duration` null.
