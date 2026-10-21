@@ -90,3 +90,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Added `tools/kk8-notehead-verification-ledger.json`: 40 individual stanza-one lyric entries, each requiring visually verified notehead/chord onset, pitch, duration, and melisma assessment.
 - Inspected enlarged images of all three score systems. No notehead coordinate or melisma has yet been recorded as verified; the 40 provisional x values refer to printed lyric positions, **not** independently verified notehead coordinates.
 - Musical sign-off remains blocked until this ledger is completed and the resulting alignment is checked in the beta preview. Production root remains untouched.
+
+## Candidate notehead onsets from enlarged score images
+- Manually inspected 1710×300 crop images for all three systems; entered 40 approximate horizontal note/chord-onset candidates in `tools/kk8-notehead-verification-ledger.json` (commit `33f9a99`). Each candidate has a ±15 crop-pixel uncertainty estimate and is explicitly `CANDIDATE_ONSET_NEEDS_CONFIRMATION`.
+- **Verified musical associations: 0.** Candidate crop coordinates are not the original image coordinates and cannot yet be compared numerically with draft lyric anchors. Note durations, chord pitches, melismas and musical phrase verification are outstanding.
+- Release gate remains blocked; production root unchanged.
