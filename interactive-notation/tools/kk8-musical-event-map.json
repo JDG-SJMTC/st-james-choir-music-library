@@ -5279,5 +5279,215 @@
     ],
     "verifiedSungMelodyEvents": 0,
     "verifiedSyllableLinks": 0
+  },
+  "system2MeasureReconstruction": {
+    "status": "PROVISIONAL_NOT_MUSICALLY_VERIFIED",
+    "meter": "4/4",
+    "basis": "Visible upper staff in original KK8 score and enlarged system2 crop; existing candidate duration ledger",
+    "measureCount": 5,
+    "records": [
+      {
+        "eventId": "S2-E01",
+        "measure": 1,
+        "beatStart": 1,
+        "beats": 2,
+        "upperStaffPitchesDraft": [
+          "E♭4",
+          "C5"
+        ],
+        "printedGlyphCandidate": "S2-L01",
+        "manglish": "lhe",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E02",
+        "measure": 1,
+        "beatStart": 3,
+        "beats": 2,
+        "upperStaffPitchesDraft": [
+          "E♭4",
+          "B♭4"
+        ],
+        "printedGlyphCandidate": "S2-L02",
+        "manglish": "run",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E03",
+        "measure": 2,
+        "beatStart": 1,
+        "beats": 1,
+        "upperStaffPitchesDraft": [
+          "E♭4",
+          "A♭4"
+        ],
+        "printedGlyphCandidate": "S2-L03",
+        "manglish": "nu",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E04",
+        "measure": 2,
+        "beatStart": 2,
+        "beats": 1,
+        "upperStaffPitchesDraft": [
+          "F4"
+        ],
+        "printedGlyphCandidate": "S2-L04",
+        "manglish": "paar",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E05",
+        "measure": 2,
+        "beatStart": 3,
+        "beats": 1,
+        "upperStaffPitchesDraft": [
+          "E♭4",
+          "G4"
+        ],
+        "printedGlyphCandidate": "S2-L05",
+        "manglish": "kka",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E06",
+        "measure": 2,
+        "beatStart": 4,
+        "beats": 1,
+        "upperStaffPitchesDraft": [
+          "E♭4",
+          "A♮4"
+        ],
+        "printedGlyphCandidate": "S2-L06",
+        "manglish": "De",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E07",
+        "measure": 3,
+        "beatStart": 1,
+        "beats": 4,
+        "upperStaffPitchesDraft": [
+          "D4",
+          "B♭4"
+        ],
+        "printedGlyphCandidate": "S2-L07",
+        "manglish": "vaa",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E08",
+        "measure": 4,
+        "beatStart": 1,
+        "beats": 2,
+        "upperStaffPitchesDraft": [
+          "E♭4",
+          "G4"
+        ],
+        "printedGlyphCandidate": "S2-L08",
+        "manglish": "Aa",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E09",
+        "measure": 4,
+        "beatStart": 3,
+        "beats": 1,
+        "upperStaffPitchesDraft": [
+          "D4",
+          "G4"
+        ],
+        "printedGlyphCandidate": "S2-L09",
+        "manglish": "shra",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E10",
+        "measure": 4,
+        "beatStart": 4,
+        "beats": 1,
+        "upperStaffPitchesDraft": [
+          "D4",
+          "F4"
+        ],
+        "printedGlyphCandidate": "S2-L10",
+        "manglish": "yam",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E11",
+        "measure": 5,
+        "beatStart": 1,
+        "beats": 2,
+        "upperStaffPitchesDraft": [
+          "E♭4"
+        ],
+        "printedGlyphCandidate": "S2-L11",
+        "manglish": "ve",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      },
+      {
+        "eventId": "S2-E12",
+        "measure": 5,
+        "beatStart": 3,
+        "beats": 2,
+        "upperStaffPitchesDraft": [
+          "E♭4",
+          "B♭4"
+        ],
+        "printedGlyphCandidate": "S2-L12",
+        "manglish": "ri",
+        "melodyPitch": null,
+        "melodyVoice": null,
+        "lyricSyllableOnsetVerified": false,
+        "notes": "Chord tones are simultaneous, not extra syllable onsets. Voice assignment needs bass-staff and stem-continuity review."
+      }
+    ],
+    "checks": {
+      "eachMeasureBeats4": true,
+      "all12EventsCovered": true,
+      "verifiedSyllableOnsets": 0,
+      "verifiedMelodyVoice": 0
+    },
+    "reviewFocus": [
+      "Measure 2: single down-stem F4 among dyads may reflect independent stem direction or voice; do not infer rests or omitted syllable.",
+      "Measure 5: down-stem half E-flat4 followed by dyad; establish voice continuity from full two-staff score.",
+      "Use full bass staff and lyric underlay for independent confirmation before approving pitch and syllable onsets."
+    ],
+    "releaseGate": "FAIL_UNVERIFIED_MELODY_AND_LYRIC_ASSOCIATIONS"
   }
 }
