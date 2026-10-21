@@ -52,3 +52,9 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Applied to the original KK-0008 PDF and the locked 7-stanza source manifest: all 7 SHA-256 stanza checks passed, covering 28 lines.
 - PDF inspection confirmed one embedded raster score image (1729 × 1865 pixels) and legacy-encoded Malayalam text spans; extracted Malayalam cannot be trusted for glyph positioning.
 - **Implication:** exact Malayalam glyph boxes and note/syllable associations are still unavailable. No musical alignment or render approval is claimed. Existing beta remains blocked; production unchanged.
+
+## 21 October — phrase mapping workbench
+- Added `interactive-notation/tools/kk8-phrase-workbench.html` with locked seven-stanza source, complete score reference, three explicit musical-system transcript fields and a fail-closed exact-source round-trip check.
+- Integrated `tools/phrase-stretch.js` to show non-approved visual spacing proposals, without the fixed 40-slot mapping.
+- Workbench exports draft mapping JSON, but no system boundaries or musical associations are automatically approved. No new KK8 choir score is published.
+- Next required evidence: stanza 1 musical phrase boundary identification and manually verified note/lyric anchor mapping, then apply the same melody phrases to the other six stanzas.
