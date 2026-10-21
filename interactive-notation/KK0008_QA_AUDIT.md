@@ -130,3 +130,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Compared 12 treble note/chord groups against enlarged `kk8_system_2.png` with five staff lines approximately y=61,84,107,130,153 in crop pixels. Saved individual notehead-centre y observations and pitch interpretations in `tools/kk8-musical-event-map.json` (commit `89560a8`).
 - Event 6 includes an explicitly printed natural on A; key signature otherwise B-flat, E-flat, A-flat. Eight earlier E-natural errors had already been corrected to E-flat.
 - This is **one visual coordinate cross-check**, not an independent musical sign-off. `noteheadPitches` and lyric links remain empty, `verifiedEvents=0`, and beta release gate remains blocked. No production change.
+
+## Upper-staff pitch draft extended to systems 1 and 3
+- Inspected enlarged system-one and system-three treble notation; added provisional pitches for 13 and 15 events respectively (`ffce08e`, `833f2fb`). All 40 candidate upper-staff events now contain `visualPitchDraft`, but **none** are verified and `noteheadPitches` remains empty.
+- System three includes an E-natural accidental and two instances of side-by-side open noteheads at the same height; these may reflect separate voices sharing an onset and require careful inspection. They must not be treated as two lyric syllables.
+- Next QA gate is independent notehead-position, accidental-by-measure and voice review, followed by actual melody-to-printed-lyric association. Bass-staff transcription and phrase boundary sign-off remain outstanding. No production files changed.
