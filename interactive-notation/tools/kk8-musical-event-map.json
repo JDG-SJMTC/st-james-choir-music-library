@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "ALL_40_UPPER_STAFF_PITCH_DRAFTS_PRESENT_UNVERIFIED",
+  "status": "SYSTEM1_PITCH_DRAFT_REVISED_ALL_MUSICAL_LINKS_UNVERIFIED",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -28,14 +28,14 @@
           },
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 1,
           "provisionalDurationBeats": 2,
           "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
           "visualPitchDraft": [
             "E♭4",
-            "G4"
+            "F4"
           ],
           "pitchEvidence": {
             "reference": "kk8_system_1.png",
@@ -50,6 +50,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              139,
+              128
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -68,13 +84,13 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 1,
           "provisionalDurationBeats": 1,
           "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
           "visualPitchDraft": [
-            "D4",
+            "C4",
             "G4"
           ],
           "pitchEvidence": {
@@ -90,6 +106,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              151,
+              117
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -108,13 +140,13 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 1,
           "provisionalDurationBeats": 1,
           "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
           "visualPitchDraft": [
-            "D4",
+            "C4",
             "E♭4"
           ],
           "pitchEvidence": {
@@ -130,6 +162,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              151,
+              139
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -148,7 +196,7 @@
           },
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 2,
           "provisionalDurationBeats": 2,
@@ -169,6 +217,21 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              139
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -187,7 +250,7 @@
           },
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 2,
           "provisionalDurationBeats": 2,
@@ -209,6 +272,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              139,
+              94
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -227,7 +306,7 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 3,
           "provisionalDurationBeats": 1,
@@ -249,6 +328,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              139,
+              83
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -267,14 +362,14 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 3,
           "provisionalDurationBeats": 1,
           "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
           "visualPitchDraft": [
-            "D4",
-            "D5"
+            "C4",
+            "E♭5"
           ],
           "pitchEvidence": {
             "reference": "kk8_system_1.png",
@@ -289,6 +384,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              151,
+              94
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -307,13 +418,13 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 3,
           "provisionalDurationBeats": 1,
           "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
           "visualPitchDraft": [
-            "E♭4",
+            "C4",
             "D5"
           ],
           "pitchEvidence": {
@@ -329,6 +440,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              151,
+              94
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -347,14 +474,14 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 3,
           "provisionalDurationBeats": 1,
           "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
           "visualPitchDraft": [
-            "E♭4",
-            "D5"
+            "F4",
+            "B♭4"
           ],
           "pitchEvidence": {
             "reference": "kk8_system_1.png",
@@ -369,6 +496,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              128,
+              105
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -387,7 +530,7 @@
           },
           "visualDurationClass": "whole",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 4,
           "provisionalDurationBeats": 4,
@@ -409,6 +552,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              139,
+              117
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -427,7 +586,7 @@
           },
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 5,
           "provisionalDurationBeats": 2,
@@ -449,6 +608,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              139,
+              117
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -467,14 +642,14 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 5,
           "provisionalDurationBeats": 1,
           "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
           "visualPitchDraft": [
             "E♭4",
-            "C5"
+            "B♭4"
           ],
           "pitchEvidence": {
             "reference": "kk8_system_1.png",
@@ -489,6 +664,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              139,
+              105
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         },
         {
@@ -507,7 +698,7 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
+          "pitchEvidenceStatus": "REVISED_AFTER_ACTUAL_IMAGE_RECHECK_UNVERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 5,
           "provisionalDurationBeats": 1,
@@ -529,6 +720,22 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually read notehead heights from first enlarged system; chord voices and accidentals not independently validated",
             "verified": false
+          },
+          "staffCoordinateAudit": {
+            "image": "kk8_system_1.png",
+            "staffLineYs": [
+              49,
+              72,
+              94,
+              117,
+              139
+            ],
+            "noteheadCenterYsApprox": [
+              139,
+              94
+            ],
+            "status": "VISUAL_RECHECK_PROVISIONAL",
+            "note": "Read noteheads from enlarged score; coordinates approximate and chord voices unverified"
           }
         }
       ],
@@ -3225,7 +3432,90 @@
       "explicitNaturalAt": "S2-E06",
       "note": "12 note/chord groups checked against five staff lines. No verified pitches released."
     },
-    "system3UnisonCaution": "S3-E05 and S3-E15 appear to have adjacent open noteheads at the same staff height; do not infer two sequential syllable onsets. Review voice notation and whether earlier whole-note interpretation is correct."
+    "system3UnisonCaution": "S3-E05 and S3-E15 appear to have adjacent open noteheads at the same staff height; do not infer two sequential syllable onsets. Review voice notation and whether earlier whole-note interpretation is correct.",
+    "system1ImageRecheck": {
+      "changedEntries": [
+        {
+          "id": "S1-E01",
+          "previous": [
+            "E♭4",
+            "G4"
+          ],
+          "revised": [
+            "E♭4",
+            "F4"
+          ]
+        },
+        {
+          "id": "S1-E02",
+          "previous": [
+            "D4",
+            "G4"
+          ],
+          "revised": [
+            "C4",
+            "G4"
+          ]
+        },
+        {
+          "id": "S1-E03",
+          "previous": [
+            "D4",
+            "E♭4"
+          ],
+          "revised": [
+            "C4",
+            "E♭4"
+          ]
+        },
+        {
+          "id": "S1-E07",
+          "previous": [
+            "D4",
+            "D5"
+          ],
+          "revised": [
+            "C4",
+            "E♭5"
+          ]
+        },
+        {
+          "id": "S1-E08",
+          "previous": [
+            "E♭4",
+            "D5"
+          ],
+          "revised": [
+            "C4",
+            "D5"
+          ]
+        },
+        {
+          "id": "S1-E09",
+          "previous": [
+            "E♭4",
+            "D5"
+          ],
+          "revised": [
+            "F4",
+            "B♭4"
+          ]
+        },
+        {
+          "id": "S1-E12",
+          "previous": [
+            "E♭4",
+            "C5"
+          ],
+          "revised": [
+            "E♭4",
+            "B♭4"
+          ]
+        }
+      ],
+      "reason": "Earlier pitch drafts were not reliably grounded in observed notehead positions; direct crop inspection revealed several discrepancies",
+      "verifiedCount": 0
+    }
   },
   "bassStaffAudit": {
     "status": "PARTIAL_VISUAL_INSPECTION",
