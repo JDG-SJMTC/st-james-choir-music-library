@@ -64,3 +64,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Preview renders locked production Manglish text for all seven stanzas. It distributes full word/whitespace tokens across the three score systems using a proportional draft based on stanza-one fragment counts; this is **not** musical alignment evidence.
 - Exact text round-trip is checked at runtime. Musical system boundaries, note anchors, melismas, glyph overlay coordinates and visual collision checks remain unverified. The overlay must not be approved or linked as a production score.
 - The previous `song-8/index.html` and production choir page remain unchanged.
+
+## Runtime layout diagnostics
+- Added rendered-element bounding-box overlap detection to `tools/kk8-seven-stanza-preview.html` (commit `d6a4a454`). It reports the visible fragment count and intersecting lyric-label pairs for the selected stanza after rendering.
+- The check is browser-side; no browser execution results were collected in this commit. Text collisions and musical accuracy are not yet signed off. Existing phrase boundaries and x positions remain draft.
+- All modifications remain within `interactive-notation/` and do not alter the production root page.
