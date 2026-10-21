@@ -100,3 +100,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Independently matched each 1710×300 enlarged system crop against the 878×1241 original PNG using normalized image template correlation after downscaling 3×. Confirmed crop origins: system 1 `(195,290)`, system 2 `(195,465)`, system 3 `(195,650)`, with correlations approximately 0.9891, 0.9892 and 0.9886.
 - Added original-coordinate candidate notehead x values and deltas from provisional lyric x anchors to `tools/kk8-notehead-verification-ledger.json` (commit `2f75b83`). 13 of 40 absolute deltas exceed 25 original-image pixels. **These differences are diagnostic flags, not proof of errors**: crop candidate positions and pairing remain approximate.
 - No verified note-to-syllable assignments or melisma sign-off yet; production untouched.
+
+## Discrepancy triage (2026-10-21)
+- Screened all 40 candidate notehead-vs-lyric horizontal offsets using a 25 original-pixel threshold. Exactly 13 candidates flagged: system 1: 1; system 2: 8; system 3: 4.
+- Concentrations: system 2 indices 3–10 (`nu`, `paar`, `kka`, `De`, `vaa`, `Aa`, `shra`, `yam`) and system 3 indices 11–14 (`laa`, `koo`, `dey`, `paar`). Largest absolute delta: 62.33 px (`shra`, system 2).
+- Saved per-item discrepancy details in `tools/kk8-notehead-verification-ledger.json`. The 25-pixel screening is **not** a musical acceptance threshold; no notes have been verified. Do not auto-correct lyric positions based on unverified candidates.
