@@ -30,3 +30,9 @@ Test the rules against KK 8, KK 30 and KK 150, including their differing stanza 
 - Record the *observed notation symbol* (filled/open notehead, stem, flags, dot, tie, adjacent noteheads) separately from an interpreted rhythmic duration. A provisional quarter/half/whole classification is not a verified duration until clef, metre, ties and measure totals have been checked.
 - In KK 8 system 3, some adjacent open stemless noteheads need explicit review; do not silently reduce them to a single ordinary whole note or infer melismas.
 - Never populate a release-gate `duration` field with an unverified visual classification. Keep visual classes under `visualDurationClass` and leave verified `duration` null.
+
+## KK 8 metre and measure-grouping evidence
+
+- Read the printed 4/4 time signature and group onset events by visible barlines *before* assigning rhythmic values. The KK 8 reference has 16 measures across systems 1/2/3: 5/5/6.
+- The visually interpreted beat groupings per system are: S1 `2+1+1 | 2+2 | 1+1+1+1 | 4 | 2+1+1`; S2 `2+2 | 1+1+1+1 | 4 | 2+1+1 | 2+2`; S3 `1+1+1+1 | 4 | 2+1+1 | 1+1+1+1 | 2+2 | 4`. Each measure sums to four quarter-note beats.
+- Treat multiple simultaneous open noteheads as a chord at one onset; never split them into separate sequential events to satisfy lyric counts. Keep these durations **provisional** until independent pitch, tie, and lyric verification.
