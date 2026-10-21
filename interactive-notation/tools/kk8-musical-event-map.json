@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "IMAGE_PITCH_DRAFTS_REVIEWED_X_DISTANCE_AUDIT_NO_VERIFIED_LYRIC_LINKS",
+  "status": "LYRIC_ASSOCIATION_REVIEW_QUEUE_OPEN_NO_VERIFIED_LINKS",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -3988,5 +3988,665 @@
       }
     ],
     "releaseImplication": "No glyph links approved from nearest-neighbour matching. Requires note onset/lyric-centre and phrase review."
+  },
+  "lyricAssociationReviewQueue": {
+    "method": "Triaged index-assigned event versus nearest score onset; flags only, not musical evidence",
+    "cases": [
+      {
+        "system": 1,
+        "glyphId": "S1-L02",
+        "manglish": "dey",
+        "malayalamDraft": "ടെ",
+        "printedLyricX": 279,
+        "existingCandidateEventId": "S1-E02",
+        "existingCandidateDeltaPx": 19,
+        "nearestEvents": [
+          {
+            "id": "S1-E02",
+            "x": 298,
+            "deltaPx": 19
+          },
+          {
+            "id": "S1-E01",
+            "x": 254,
+            "deltaPx": -25
+          },
+          {
+            "id": "S1-E03",
+            "x": 320,
+            "deltaPx": 41
+          }
+        ],
+        "reasons": [
+          "NEAREST_EVENT_AMBIGUOUS_WITHIN_10PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 1,
+        "glyphId": "S1-L06",
+        "manglish": "ram",
+        "malayalamDraft": "രം",
+        "printedLyricX": 442,
+        "existingCandidateEventId": "S1-E06",
+        "existingCandidateDeltaPx": 29.33,
+        "nearestEvents": [
+          {
+            "id": "S1-E05",
+            "x": 414,
+            "deltaPx": -28
+          },
+          {
+            "id": "S1-E06",
+            "x": 471.33,
+            "deltaPx": 29.33
+          },
+          {
+            "id": "S1-E07",
+            "x": 499.33,
+            "deltaPx": 57.33
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX",
+          "NEAREST_EVENT_AMBIGUOUS_WITHIN_10PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 1,
+        "glyphId": "S1-L07",
+        "manglish": "vai",
+        "malayalamDraft": "വൈ",
+        "printedLyricX": 479,
+        "existingCandidateEventId": "S1-E07",
+        "existingCandidateDeltaPx": 20.33,
+        "nearestEvents": [
+          {
+            "id": "S1-E06",
+            "x": 471.33,
+            "deltaPx": -7.67
+          },
+          {
+            "id": "S1-E07",
+            "x": 499.33,
+            "deltaPx": 20.33
+          },
+          {
+            "id": "S1-E08",
+            "x": 529.33,
+            "deltaPx": 50.33
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 1,
+        "glyphId": "S1-L08",
+        "manglish": "kun",
+        "malayalamDraft": "കു",
+        "printedLyricX": 512,
+        "existingCandidateEventId": "S1-E08",
+        "existingCandidateDeltaPx": 17.33,
+        "nearestEvents": [
+          {
+            "id": "S1-E07",
+            "x": 499.33,
+            "deltaPx": -12.67
+          },
+          {
+            "id": "S1-E08",
+            "x": 529.33,
+            "deltaPx": 17.33
+          },
+          {
+            "id": "S1-E06",
+            "x": 471.33,
+            "deltaPx": -40.67
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "NEAREST_EVENT_AMBIGUOUS_WITHIN_10PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 1,
+        "glyphId": "S1-L09",
+        "manglish": "ni",
+        "malayalamDraft": "ന്നി",
+        "printedLyricX": 543,
+        "existingCandidateEventId": "S1-E09",
+        "existingCandidateDeltaPx": 12,
+        "nearestEvents": [
+          {
+            "id": "S1-E09",
+            "x": 555,
+            "deltaPx": 12
+          },
+          {
+            "id": "S1-E08",
+            "x": 529.33,
+            "deltaPx": -13.67
+          },
+          {
+            "id": "S1-E07",
+            "x": 499.33,
+            "deltaPx": -43.67
+          }
+        ],
+        "reasons": [
+          "NEAREST_EVENT_AMBIGUOUS_WITHIN_10PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 1,
+        "glyphId": "S1-L10",
+        "manglish": "thaa",
+        "malayalamDraft": "താ",
+        "printedLyricX": 580,
+        "existingCandidateEventId": "S1-E10",
+        "existingCandidateDeltaPx": 18.33,
+        "nearestEvents": [
+          {
+            "id": "S1-E10",
+            "x": 598.33,
+            "deltaPx": 18.33
+          },
+          {
+            "id": "S1-E09",
+            "x": 555,
+            "deltaPx": -25
+          },
+          {
+            "id": "S1-E08",
+            "x": 529.33,
+            "deltaPx": -50.67
+          }
+        ],
+        "reasons": [
+          "NEAREST_EVENT_AMBIGUOUS_WITHIN_10PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 2,
+        "glyphId": "S2-L03",
+        "manglish": "nu",
+        "malayalamDraft": "ന്നു",
+        "printedLyricX": 298,
+        "existingCandidateEventId": "S2-E03",
+        "existingCandidateDeltaPx": 45.33,
+        "nearestEvents": [
+          {
+            "id": "S2-E02",
+            "x": 279,
+            "deltaPx": -19
+          },
+          {
+            "id": "S2-E03",
+            "x": 343.33,
+            "deltaPx": 45.33
+          },
+          {
+            "id": "S2-E04",
+            "x": 367,
+            "deltaPx": 69
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 2,
+        "glyphId": "S2-L04",
+        "manglish": "paar",
+        "malayalamDraft": "പാ",
+        "printedLyricX": 331,
+        "existingCandidateEventId": "S2-E04",
+        "existingCandidateDeltaPx": 36,
+        "nearestEvents": [
+          {
+            "id": "S2-E03",
+            "x": 343.33,
+            "deltaPx": 12.33
+          },
+          {
+            "id": "S2-E04",
+            "x": 367,
+            "deltaPx": 36
+          },
+          {
+            "id": "S2-E02",
+            "x": 279,
+            "deltaPx": -52
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 2,
+        "glyphId": "S2-L05",
+        "manglish": "kka",
+        "malayalamDraft": "ർക്ക",
+        "printedLyricX": 367,
+        "existingCandidateEventId": "S2-E05",
+        "existingCandidateDeltaPx": 28,
+        "nearestEvents": [
+          {
+            "id": "S2-E04",
+            "x": 367,
+            "deltaPx": 0
+          },
+          {
+            "id": "S2-E03",
+            "x": 343.33,
+            "deltaPx": -23.67
+          },
+          {
+            "id": "S2-E05",
+            "x": 395,
+            "deltaPx": 28
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 2,
+        "glyphId": "S2-L06",
+        "manglish": "De",
+        "malayalamDraft": "ദേ",
+        "printedLyricX": 401,
+        "existingCandidateEventId": "S2-E06",
+        "existingCandidateDeltaPx": 31,
+        "nearestEvents": [
+          {
+            "id": "S2-E05",
+            "x": 395,
+            "deltaPx": -6
+          },
+          {
+            "id": "S2-E06",
+            "x": 432,
+            "deltaPx": 31
+          },
+          {
+            "id": "S2-E04",
+            "x": 367,
+            "deltaPx": -34
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 2,
+        "glyphId": "S2-L07",
+        "manglish": "vaa",
+        "malayalamDraft": "വാ",
+        "printedLyricX": 443,
+        "existingCandidateEventId": "S2-E07",
+        "existingCandidateDeltaPx": 27.33,
+        "nearestEvents": [
+          {
+            "id": "S2-E06",
+            "x": 432,
+            "deltaPx": -11
+          },
+          {
+            "id": "S2-E07",
+            "x": 470.33,
+            "deltaPx": 27.33
+          },
+          {
+            "id": "S2-E05",
+            "x": 395,
+            "deltaPx": -48
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 2,
+        "glyphId": "S2-L08",
+        "manglish": "Aa",
+        "malayalamDraft": "ആ",
+        "printedLyricX": 486,
+        "existingCandidateEventId": "S2-E08",
+        "existingCandidateDeltaPx": 52.67,
+        "nearestEvents": [
+          {
+            "id": "S2-E07",
+            "x": 470.33,
+            "deltaPx": -15.67
+          },
+          {
+            "id": "S2-E08",
+            "x": 538.67,
+            "deltaPx": 52.67
+          },
+          {
+            "id": "S2-E06",
+            "x": 432,
+            "deltaPx": -54
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 2,
+        "glyphId": "S2-L09",
+        "manglish": "shra",
+        "malayalamDraft": "ശ്ര",
+        "printedLyricX": 529,
+        "existingCandidateEventId": "S2-E09",
+        "existingCandidateDeltaPx": 62,
+        "nearestEvents": [
+          {
+            "id": "S2-E08",
+            "x": 538.67,
+            "deltaPx": 9.67
+          },
+          {
+            "id": "S2-E07",
+            "x": 470.33,
+            "deltaPx": -58.67
+          },
+          {
+            "id": "S2-E09",
+            "x": 591,
+            "deltaPx": 62
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 2,
+        "glyphId": "S2-L10",
+        "manglish": "yam",
+        "malayalamDraft": "യം",
+        "printedLyricX": 573,
+        "existingCandidateEventId": "S2-E10",
+        "existingCandidateDeltaPx": 42,
+        "nearestEvents": [
+          {
+            "id": "S2-E09",
+            "x": 591,
+            "deltaPx": 18
+          },
+          {
+            "id": "S2-E08",
+            "x": 538.67,
+            "deltaPx": -34.33
+          },
+          {
+            "id": "S2-E10",
+            "x": 615,
+            "deltaPx": 42
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 3,
+        "glyphId": "S3-L08",
+        "manglish": "tha",
+        "malayalamDraft": "ത",
+        "printedLyricX": 478,
+        "existingCandidateEventId": "S3-E08",
+        "existingCandidateDeltaPx": -12.67,
+        "nearestEvents": [
+          {
+            "id": "S3-E08",
+            "x": 465.33,
+            "deltaPx": -12.67
+          },
+          {
+            "id": "S3-E09",
+            "x": 494.67,
+            "deltaPx": 16.67
+          },
+          {
+            "id": "S3-E07",
+            "x": 441.33,
+            "deltaPx": -36.67
+          }
+        ],
+        "reasons": [
+          "NEAREST_EVENT_AMBIGUOUS_WITHIN_10PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 3,
+        "glyphId": "S3-L09",
+        "manglish": "va",
+        "malayalamDraft": "വ",
+        "printedLyricX": 511,
+        "existingCandidateEventId": "S3-E09",
+        "existingCandidateDeltaPx": -16.33,
+        "nearestEvents": [
+          {
+            "id": "S3-E10",
+            "x": 519.67,
+            "deltaPx": 8.67
+          },
+          {
+            "id": "S3-E09",
+            "x": 494.67,
+            "deltaPx": -16.33
+          },
+          {
+            "id": "S3-E11",
+            "x": 548.67,
+            "deltaPx": 37.67
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "NEAREST_EVENT_AMBIGUOUS_WITHIN_10PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 3,
+        "glyphId": "S3-L10",
+        "manglish": "thsa",
+        "malayalamDraft": "ത്സ",
+        "printedLyricX": 543,
+        "existingCandidateEventId": "S3-E10",
+        "existingCandidateDeltaPx": -23.33,
+        "nearestEvents": [
+          {
+            "id": "S3-E11",
+            "x": 548.67,
+            "deltaPx": 5.67
+          },
+          {
+            "id": "S3-E10",
+            "x": 519.67,
+            "deltaPx": -23.33
+          },
+          {
+            "id": "S3-E12",
+            "x": 573.33,
+            "deltaPx": 30.33
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 3,
+        "glyphId": "S3-L11",
+        "manglish": "laa",
+        "malayalamDraft": "ലാ",
+        "printedLyricX": 578,
+        "existingCandidateEventId": "S3-E11",
+        "existingCandidateDeltaPx": -29.33,
+        "nearestEvents": [
+          {
+            "id": "S3-E12",
+            "x": 573.33,
+            "deltaPx": -4.67
+          },
+          {
+            "id": "S3-E13",
+            "x": 606.67,
+            "deltaPx": 28.67
+          },
+          {
+            "id": "S3-E11",
+            "x": 548.67,
+            "deltaPx": -29.33
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 3,
+        "glyphId": "S3-L12",
+        "manglish": "koo",
+        "malayalamDraft": "കൂ",
+        "printedLyricX": 616,
+        "existingCandidateEventId": "S3-E12",
+        "existingCandidateDeltaPx": -42.67,
+        "nearestEvents": [
+          {
+            "id": "S3-E13",
+            "x": 606.67,
+            "deltaPx": -9.33
+          },
+          {
+            "id": "S3-E14",
+            "x": 648.67,
+            "deltaPx": 32.67
+          },
+          {
+            "id": "S3-E12",
+            "x": 573.33,
+            "deltaPx": -42.67
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 3,
+        "glyphId": "S3-L13",
+        "manglish": "dey",
+        "malayalamDraft": "ടെ",
+        "printedLyricX": 647,
+        "existingCandidateEventId": "S3-E13",
+        "existingCandidateDeltaPx": -40.33,
+        "nearestEvents": [
+          {
+            "id": "S3-E14",
+            "x": 648.67,
+            "deltaPx": 1.67
+          },
+          {
+            "id": "S3-E13",
+            "x": 606.67,
+            "deltaPx": -40.33
+          },
+          {
+            "id": "S3-E15",
+            "x": 708.67,
+            "deltaPx": 61.67
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_DIFFERS_FROM_NEAREST",
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      },
+      {
+        "system": 3,
+        "glyphId": "S3-L14",
+        "manglish": "paar",
+        "malayalamDraft": "പാ",
+        "printedLyricX": 678,
+        "existingCandidateEventId": "S3-E14",
+        "existingCandidateDeltaPx": -29.33,
+        "nearestEvents": [
+          {
+            "id": "S3-E14",
+            "x": 648.67,
+            "deltaPx": -29.33
+          },
+          {
+            "id": "S3-E15",
+            "x": 708.67,
+            "deltaPx": 30.67
+          },
+          {
+            "id": "S3-E13",
+            "x": 606.67,
+            "deltaPx": -71.33
+          }
+        ],
+        "reasons": [
+          "INDEX_CANDIDATE_OFFSET_OVER_25PX",
+          "NEAREST_EVENT_AMBIGUOUS_WITHIN_10PX"
+        ],
+        "status": "REQUIRES_MANUAL_SCORE_REVIEW"
+      }
+    ],
+    "caseCount": 21,
+    "bySystem": {
+      "1": 6,
+      "2": 8,
+      "3": 7
+    },
+    "verificationRule": "Only mark glyph linkedEventIds after confirming printed Malayalam glyph and singing melody onset/tie in score; proximity and sequence index are insufficient",
+    "approvedLinks": 0,
+    "status": "OPEN"
   }
 }
