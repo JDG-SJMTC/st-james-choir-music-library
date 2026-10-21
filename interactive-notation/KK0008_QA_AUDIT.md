@@ -135,3 +135,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Inspected enlarged system-one and system-three treble notation; added provisional pitches for 13 and 15 events respectively (`ffce08e`, `833f2fb`). All 40 candidate upper-staff events now contain `visualPitchDraft`, but **none** are verified and `noteheadPitches` remains empty.
 - System three includes an E-natural accidental and two instances of side-by-side open noteheads at the same height; these may reflect separate voices sharing an onset and require careful inspection. They must not be treated as two lyric syllables.
 - Next QA gate is independent notehead-position, accidental-by-measure and voice review, followed by actual melody-to-printed-lyric association. Bass-staff transcription and phrase boundary sign-off remain outstanding. No production files changed.
+
+## Direct enlarged-image recheck — system 1
+- Directly inspected `kk8_system_1.png` and full `song08_work/page1.png` against provisional upper-staff readings. Seven of thirteen system-one event pitch drafts changed. The event map now stores revised pitches and approximate y coordinates, with previous readings retained in `pitchAudit.system1ImageRecheck` (commit `644bf4f`).
+- The full page clearly shows three flats at the treble clef; the enlarged cropped system begins after most of the key signature, so cropped staff images alone are insufficient for identifying clef/key.
+- These findings reveal a material reliability issue with the prior pitch drafts. All musical events remain **unverified**; do not use these drafts to approve lyric-to-note alignment or promote Release 2.
