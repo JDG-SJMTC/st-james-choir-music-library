@@ -161,3 +161,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Visually estimated centers for 12 glyphs saved separately in `kk8-musical-event-map.json` under `system2ImageCoordinateReaudit`; these are approximate, with 10–20px uncertainty and **not verified links**. Original data retained.
 - The earlier statement that eight syllables are nearer the preceding event was a property of faulty coordinate drafts, not confirmed score alignment. Treat the proposed one-event shift as **invalidated**, pending independent musical verification.
 - No lyric position edits, note-to-syllable approvals or production changes.
+
+## Direct note-shape transcription — system 2
+- Inspected the actual enlarged 1710×300 score crop and recorded twelve visible candidate onset shapes in `system2VoiceTranscriptionDraft` (event map). E01/E02/E08/E12 show open shared-stem pairs; E03/E05/E06/E09/E10 show filled shared-stem pairs; E07 shows stemless open heads; E04 and E11 show single downward-stem notes.
+- **Crucial caution:** stem direction alone does not prove voice identity, and the twelve geometric glyph/event pairs do not constitute twelve verified melody syllable attacks. Durations are notation-shape drafts only; pitch and voice mapping unverified.
+- Continue by reconstructing complete measures and independent voices using the full original score, then align syllable onsets. Production unchanged.
