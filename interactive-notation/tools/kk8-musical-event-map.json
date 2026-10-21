@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "LYRIC_ASSOCIATION_REVIEW_QUEUE_OPEN_NO_VERIFIED_LINKS",
+  "status": "LYRIC_ASSOCIATION_PHRASE_BATCHES_TRIAGED_NO_MUSICAL_SIGNOFF",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -4647,6 +4647,137 @@
     },
     "verificationRule": "Only mark glyph linkedEventIds after confirming printed Malayalam glyph and singing melody onset/tie in score; proximity and sequence index are insufficient",
     "approvedLinks": 0,
-    "status": "OPEN"
+    "status": "OPEN",
+    "reviewBatches": [
+      {
+        "system": 1,
+        "glyphIds": [
+          "S1-L02"
+        ],
+        "manglishFragments": [
+          "dey"
+        ],
+        "existingCandidateEvents": [
+          "S1-E02"
+        ],
+        "offsetRangePx": [
+          19,
+          19
+        ],
+        "offsetDirection": "POSITIVE",
+        "diagnostic": "ISOLATED_AMBIGUITY_CHECK_GLYPH_AND_EVENT",
+        "musicalLinksVerified": 0
+      },
+      {
+        "system": 1,
+        "glyphIds": [
+          "S1-L06",
+          "S1-L07",
+          "S1-L08",
+          "S1-L09",
+          "S1-L10"
+        ],
+        "manglishFragments": [
+          "ram",
+          "vai",
+          "kun",
+          "ni",
+          "thaa"
+        ],
+        "existingCandidateEvents": [
+          "S1-E06",
+          "S1-E07",
+          "S1-E08",
+          "S1-E09",
+          "S1-E10"
+        ],
+        "offsetRangePx": [
+          12,
+          29.33
+        ],
+        "offsetDirection": "POSITIVE",
+        "diagnostic": "CONTIGUOUS_OFFSET_PATTERN_CHECK_SYSTEM_COORDINATE_OR_PHRASE_ALIGNMENT",
+        "musicalLinksVerified": 0
+      },
+      {
+        "system": 2,
+        "glyphIds": [
+          "S2-L03",
+          "S2-L04",
+          "S2-L05",
+          "S2-L06",
+          "S2-L07",
+          "S2-L08",
+          "S2-L09",
+          "S2-L10"
+        ],
+        "manglishFragments": [
+          "nu",
+          "paar",
+          "kka",
+          "De",
+          "vaa",
+          "Aa",
+          "shra",
+          "yam"
+        ],
+        "existingCandidateEvents": [
+          "S2-E03",
+          "S2-E04",
+          "S2-E05",
+          "S2-E06",
+          "S2-E07",
+          "S2-E08",
+          "S2-E09",
+          "S2-E10"
+        ],
+        "offsetRangePx": [
+          27.33,
+          62
+        ],
+        "offsetDirection": "POSITIVE",
+        "diagnostic": "CONTIGUOUS_OFFSET_PATTERN_CHECK_SYSTEM_COORDINATE_OR_PHRASE_ALIGNMENT",
+        "musicalLinksVerified": 0
+      },
+      {
+        "system": 3,
+        "glyphIds": [
+          "S3-L08",
+          "S3-L09",
+          "S3-L10",
+          "S3-L11",
+          "S3-L12",
+          "S3-L13",
+          "S3-L14"
+        ],
+        "manglishFragments": [
+          "tha",
+          "va",
+          "thsa",
+          "laa",
+          "koo",
+          "dey",
+          "paar"
+        ],
+        "existingCandidateEvents": [
+          "S3-E08",
+          "S3-E09",
+          "S3-E10",
+          "S3-E11",
+          "S3-E12",
+          "S3-E13",
+          "S3-E14"
+        ],
+        "offsetRangePx": [
+          -42.67,
+          -12.67
+        ],
+        "offsetDirection": "NEGATIVE",
+        "diagnostic": "CONTIGUOUS_OFFSET_PATTERN_CHECK_SYSTEM_COORDINATE_OR_PHRASE_ALIGNMENT",
+        "musicalLinksVerified": 0
+      }
+    ],
+    "reviewMethod": "Review contiguous fragments as phrases before any isolated syllable reassignment; compare image crop origin/scale, notehead onset, printed glyph extent, melody voice, and melisma evidence.",
+    "reviewBatchesStatus": "DIAGNOSTIC_ONLY"
   }
 }
