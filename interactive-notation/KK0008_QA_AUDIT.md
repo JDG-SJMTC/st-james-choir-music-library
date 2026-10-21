@@ -115,3 +115,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Direct inspection of all three enlarged systems confirms the printed 4/4 signature and 16 visible measures (5+5+6). All provisional duration groupings sum to 4 quarter-note beats per bar.
 - Updated `tools/kk8-musical-event-map.json` with per-measure event IDs, provisional beat values, and visual evidence (commit `3992438`). Adjacent open noteheads are grouped as chord events rather than separate onsets.
 - This **does not** confirm note pitches, voice assignments, ties, melismas, or syllable-event links; musical release gate remains blocked. No production edits.
+
+## Pitch reading begins — system 2
+- Recorded provisional treble-clef pitches for all 12 system-two note/chord events, accounting for three-flat key signature and visible natural accidental (commit `bddeb9a`). Verified pitch count remains zero.
+- Original score also has a bass-clef staff; lower-staff note events and ties have not been transcribed. Treble-only event mapping is insufficient for full musical verification.
+- Printed lyric-to-note relationships and melismas are still unverified. Release blocked; production unchanged.
