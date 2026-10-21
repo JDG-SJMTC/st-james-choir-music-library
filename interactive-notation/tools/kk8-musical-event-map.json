@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "VISUAL_RHYTHM_CLASSES_DRAFTED_MUSICAL_VALIDATION_PENDING",
+  "status": "ALL_16_MEASURES_VISUALLY_RHYTHM_CHECKED_PITCHES_AND_LYRIC_LINKS_PENDING",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -29,7 +29,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 1,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E02",
@@ -48,7 +51,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 1,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E03",
@@ -67,7 +73,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 1,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E04",
@@ -86,7 +95,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 2,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E05",
@@ -105,7 +117,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 2,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E06",
@@ -124,7 +139,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 3,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E07",
@@ -143,7 +161,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 3,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E08",
@@ -162,7 +183,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 3,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E09",
@@ -181,7 +205,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 3,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E10",
@@ -200,7 +227,10 @@
           "visualDurationClass": "whole",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 4,
+          "provisionalDurationBeats": 4,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E11",
@@ -219,7 +249,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 5,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E12",
@@ -238,7 +271,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 5,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S1-E13",
@@ -257,7 +293,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 5,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         }
       ],
       "lyricGlyphs": [
@@ -511,7 +550,57 @@
           "notAssignedToLyric": true
         }
       ],
-      "phraseBoundaries": []
+      "phraseBoundaries": [],
+      "measures": [
+        {
+          "number": 1,
+          "eventIds": [
+            "S1-E01",
+            "S1-E02",
+            "S1-E03"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 2,
+          "eventIds": [
+            "S1-E04",
+            "S1-E05"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 3,
+          "eventIds": [
+            "S1-E06",
+            "S1-E07",
+            "S1-E08",
+            "S1-E09"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 4,
+          "eventIds": [
+            "S1-E10"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 5,
+          "eventIds": [
+            "S1-E11",
+            "S1-E12",
+            "S1-E13"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        }
+      ]
     },
     {
       "system": 2,
@@ -541,7 +630,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 1,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E02",
@@ -568,7 +660,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 1,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E03",
@@ -595,7 +690,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 2,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E04",
@@ -622,7 +720,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 2,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E05",
@@ -649,7 +750,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 2,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E06",
@@ -676,7 +780,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 2,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E07",
@@ -703,7 +810,10 @@
           "visualDurationClass": "whole",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 3,
+          "provisionalDurationBeats": 4,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E08",
@@ -730,7 +840,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 4,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E09",
@@ -757,7 +870,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 4,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E10",
@@ -784,7 +900,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 4,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E11",
@@ -811,7 +930,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 5,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S2-E12",
@@ -838,7 +960,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 5,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         }
       ],
       "lyricGlyphs": [
@@ -1073,7 +1198,56 @@
           "notAssignedToLyric": true
         }
       ],
-      "phraseBoundaries": []
+      "phraseBoundaries": [],
+      "measures": [
+        {
+          "number": 1,
+          "eventIds": [
+            "S2-E01",
+            "S2-E02"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 2,
+          "eventIds": [
+            "S2-E03",
+            "S2-E04",
+            "S2-E05",
+            "S2-E06"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 3,
+          "eventIds": [
+            "S2-E07"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 4,
+          "eventIds": [
+            "S2-E08",
+            "S2-E09",
+            "S2-E10"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 5,
+          "eventIds": [
+            "S2-E11",
+            "S2-E12"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        }
+      ]
     },
     {
       "system": 3,
@@ -1095,7 +1269,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 1,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E02",
@@ -1114,7 +1291,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 1,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E03",
@@ -1133,7 +1313,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 1,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E04",
@@ -1152,7 +1335,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 1,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E05",
@@ -1172,7 +1358,10 @@
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
           "lyricLinkStatus": "UNVERIFIED",
-          "visualNoteheadShape": "two adjacent open stemless noteheads (exact notation requires review)"
+          "visualNoteheadShape": "two adjacent open stemless noteheads (exact notation requires review)",
+          "measureIndex": 2,
+          "provisionalDurationBeats": 4,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E06",
@@ -1191,7 +1380,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 3,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E07",
@@ -1210,7 +1402,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 3,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E08",
@@ -1229,7 +1424,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 3,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E09",
@@ -1248,7 +1446,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 4,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E10",
@@ -1267,7 +1468,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 4,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E11",
@@ -1286,7 +1490,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 4,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E12",
@@ -1305,7 +1512,10 @@
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 4,
+          "provisionalDurationBeats": 1,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E13",
@@ -1324,7 +1534,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 5,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E14",
@@ -1343,7 +1556,10 @@
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
-          "lyricLinkStatus": "UNVERIFIED"
+          "lyricLinkStatus": "UNVERIFIED",
+          "measureIndex": 5,
+          "provisionalDurationBeats": 2,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         },
         {
           "id": "S3-E15",
@@ -1363,7 +1579,10 @@
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
           "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
           "lyricLinkStatus": "UNVERIFIED",
-          "visualNoteheadShape": "two adjacent open stemless noteheads (exact notation requires review)"
+          "visualNoteheadShape": "two adjacent open stemless noteheads (exact notation requires review)",
+          "measureIndex": 6,
+          "provisionalDurationBeats": 4,
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
         }
       ],
       "lyricGlyphs": [
@@ -1655,7 +1874,66 @@
           "notAssignedToLyric": true
         }
       ],
-      "phraseBoundaries": []
+      "phraseBoundaries": [],
+      "measures": [
+        {
+          "number": 1,
+          "eventIds": [
+            "S3-E01",
+            "S3-E02",
+            "S3-E03",
+            "S3-E04"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 2,
+          "eventIds": [
+            "S3-E05"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 3,
+          "eventIds": [
+            "S3-E06",
+            "S3-E07",
+            "S3-E08"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 4,
+          "eventIds": [
+            "S3-E09",
+            "S3-E10",
+            "S3-E11",
+            "S3-E12"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 5,
+          "eventIds": [
+            "S3-E13",
+            "S3-E14"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        },
+        {
+          "number": 6,
+          "eventIds": [
+            "S3-E15"
+          ],
+          "provisionalBeatSum": 4,
+          "visualRhythmStatus": "CONSISTENT_WITH_4_4_UNAPPROVED"
+        }
+      ]
     }
   ],
   "eventSchema": {
@@ -1685,58 +1963,100 @@
     "verifiedLyricLinks": 0,
     "verifiedMelismas": 0,
     "verifiedPhraseBoundaries": 0,
-    "candidateMusicalEvents": 40
+    "candidateMusicalEvents": 40,
+    "visuallyMeterConsistentMeasures": 16
   },
   "releaseApproved": false,
   "eventObservation": "All 40 candidate onset groups now have provisional visual notehead-shape observations. These are not proven 1:1 lyric associations. Open/filled noteheads, stems and accidentals observed visually; exact pitches, durations, voices, measures, melismas and phrase boundaries remain unverified.",
   "visualDurationSummary": {
-    "system1": [
-      "half",
-      "quarter",
-      "quarter",
-      "half",
-      "half",
-      "quarter",
-      "quarter",
-      "quarter",
-      "quarter",
-      "whole",
-      "half",
-      "quarter",
-      "quarter"
+    "systems": [
+      [
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4
+        ],
+        [
+          2,
+          1,
+          1
+        ]
+      ],
+      [
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      [
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          4
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          4
+        ]
+      ]
     ],
-    "system2": [
-      "half",
-      "half",
-      "quarter",
-      "quarter",
-      "quarter",
-      "quarter",
-      "whole",
-      "half",
-      "quarter",
-      "quarter",
-      "half",
-      "half"
-    ],
-    "system3": [
-      "quarter",
-      "quarter",
-      "quarter",
-      "quarter",
-      "whole",
-      "half",
-      "quarter",
-      "quarter",
-      "quarter",
-      "quarter",
-      "quarter",
-      "quarter",
-      "half",
-      "half",
-      "whole"
-    ],
-    "confidence": "DRAFT_VISUAL_ONLY",
-    "caution": "Some adjacent open noteheads are unusual; no meter-based validation or exact rhythm assigned."
+    "unit": "quarter-note beats",
+    "confidence": "VISUAL_4_4_MEASURE_CONSISTENCY",
+    "caution": "Open stemless dyads indicate whole-note chord, not two separate duration events. No pitches or lyric links approved."
+  },
+  "timeSignature": {
+    "numerator": 4,
+    "denominator": 4,
+    "evidence": "4/4 printed at beginning of system 1; visually inspected score image",
+    "status": "VISUALLY_CONFIRMED"
   }
 }
