@@ -1,0 +1,368 @@
+{
+  "song": "KK-0008",
+  "stanza": 1,
+  "status": "UNVERIFIED_DRAFT",
+  "sourceText": "Koodey paarkka neram vaikunnithaa\nKoorirulherunnu paarkka Devaa\nAashrayam verillaa neram thannil\nAashrithavathsalaa koodey paarkka",
+  "sourceExactRoundTrip": true,
+  "coordinateSystem": {
+    "width": 878,
+    "height": 1241,
+    "units": "original-score-pixels"
+  },
+  "method": "Manually segmented Manglish to the 13/12/15 provisional printed-Malayalam lyric fragments; preserves exact spaces/newlines in each fragment; neither syllabification nor note association independently verified.",
+  "systems": [
+    {
+      "system": 1,
+      "lyricY": 371,
+      "fragments": [
+        {
+          "raw": "Koo",
+          "display": "Koo",
+          "x": 249,
+          "malayalamDraft": "കൂ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "dey",
+          "display": "dey",
+          "x": 279,
+          "malayalamDraft": "ടെ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " paar",
+          "display": "paar",
+          "x": 315,
+          "malayalamDraft": "പാ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "kka",
+          "display": "kka",
+          "x": 350,
+          "malayalamDraft": "ർക്ക",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " ne",
+          "display": "ne",
+          "x": 401,
+          "malayalamDraft": "നേ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "ram",
+          "display": "ram",
+          "x": 442,
+          "malayalamDraft": "രം",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " vai",
+          "display": "vai",
+          "x": 479,
+          "malayalamDraft": "വൈ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "kun",
+          "display": "kun",
+          "x": 512,
+          "malayalamDraft": "കു",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "ni",
+          "display": "ni",
+          "x": 543,
+          "malayalamDraft": "ന്നി",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "thaa",
+          "display": "thaa",
+          "x": 580,
+          "malayalamDraft": "താ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "\nKoo",
+          "display": "Koo",
+          "x": 652,
+          "malayalamDraft": "കൂ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "ri",
+          "display": "ri",
+          "x": 691,
+          "malayalamDraft": "രി",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "ru",
+          "display": "ru",
+          "x": 726,
+          "malayalamDraft": "രു",
+          "noteVerified": false,
+          "syllableVerified": false
+        }
+      ],
+      "exactText": "Koodey paarkka neram vaikunnithaa\nKooriru",
+      "phraseBoundaryVerified": false
+    },
+    {
+      "system": 2,
+      "lyricY": 552,
+      "fragments": [
+        {
+          "raw": "lhe",
+          "display": "lhe",
+          "x": 223,
+          "malayalamDraft": "ളേ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "run",
+          "display": "run",
+          "x": 259,
+          "malayalamDraft": "രു",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "nu",
+          "display": "nu",
+          "x": 298,
+          "malayalamDraft": "ന്നു",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " paar",
+          "display": "paar",
+          "x": 331,
+          "malayalamDraft": "പാ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "kka",
+          "display": "kka",
+          "x": 367,
+          "malayalamDraft": "ർക്ക",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " De",
+          "display": "De",
+          "x": 401,
+          "malayalamDraft": "ദേ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "vaa",
+          "display": "vaa",
+          "x": 443,
+          "malayalamDraft": "വാ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "\nAa",
+          "display": "Aa",
+          "x": 486,
+          "malayalamDraft": "ആ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "shra",
+          "display": "shra",
+          "x": 529,
+          "malayalamDraft": "ശ്ര",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "yam",
+          "display": "yam",
+          "x": 573,
+          "malayalamDraft": "യം",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " ve",
+          "display": "ve",
+          "x": 641,
+          "malayalamDraft": "വേ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "ri",
+          "display": "ri",
+          "x": 705,
+          "malayalamDraft": "രി",
+          "noteVerified": false,
+          "syllableVerified": false
+        }
+      ],
+      "exactText": "lherunnu paarkka Devaa\nAashrayam veri",
+      "phraseBoundaryVerified": false
+    },
+    {
+      "system": 3,
+      "lyricY": 731,
+      "fragments": [
+        {
+          "raw": "llaa",
+          "display": "llaa",
+          "x": 218,
+          "malayalamDraft": "ല്ലാ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " ne",
+          "display": "ne",
+          "x": 253,
+          "malayalamDraft": "നേ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "ram",
+          "display": "ram",
+          "x": 286,
+          "malayalamDraft": "രം",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " than",
+          "display": "than",
+          "x": 320,
+          "malayalamDraft": "ത",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "nil",
+          "display": "nil",
+          "x": 357,
+          "malayalamDraft": "ന്നിൽ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "\nAa",
+          "display": "Aa",
+          "x": 407,
+          "malayalamDraft": "ആ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "shri",
+          "display": "shri",
+          "x": 445,
+          "malayalamDraft": "ശ്രി",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "tha",
+          "display": "tha",
+          "x": 478,
+          "malayalamDraft": "ത",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "va",
+          "display": "va",
+          "x": 511,
+          "malayalamDraft": "വ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "thsa",
+          "display": "thsa",
+          "x": 543,
+          "malayalamDraft": "ത്സ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "laa",
+          "display": "laa",
+          "x": 578,
+          "malayalamDraft": "ലാ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " koo",
+          "display": "koo",
+          "x": 616,
+          "malayalamDraft": "കൂ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "dey",
+          "display": "dey",
+          "x": 647,
+          "malayalamDraft": "ടെ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": " paar",
+          "display": "paar",
+          "x": 678,
+          "malayalamDraft": "പാ",
+          "noteVerified": false,
+          "syllableVerified": false
+        },
+        {
+          "raw": "kka",
+          "display": "kka",
+          "x": 716,
+          "malayalamDraft": "ർക്ക",
+          "noteVerified": false,
+          "syllableVerified": false
+        }
+      ],
+      "exactText": "llaa neram thannil\nAashrithavathsalaa koodey paarkka",
+      "phraseBoundaryVerified": false
+    }
+  ],
+  "verification": {
+    "sourceRoundTrip": true,
+    "printedMalayalam": false,
+    "noteToSyllable": false,
+    "melismas": false,
+    "collisions": false,
+    "musicalApproval": false
+  },
+  "releaseApproved": false
+}
