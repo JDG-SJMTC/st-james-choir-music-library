@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "SYSTEM2_KEY_SIGNATURE_DRAFT_CORRECTED_FURTHER_PITCH_VERIFICATION_PENDING",
+  "status": "SYSTEM2_KEY_SIGNATURE_CORRECTED_BASS_TIE_VISUALLY_FLAGGED",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -2388,5 +2388,28 @@
     "otherPitchesRequireStaffReview": true,
     "bassStaffNotTranscribed": true,
     "verifiedPitchCount": 0
+  },
+  "bassStaffAudit": {
+    "status": "PARTIAL_VISUAL_INSPECTION",
+    "scoreEvidence": "original.png, bass-clef staff beneath each treble system",
+    "observations": [
+      {
+        "system": 2,
+        "location": "last measure / transition toward system 3",
+        "feature": "bass-staff upper note has visible curved tie between adjacent notes",
+        "confidence": "VISUAL_CANDIDATE",
+        "implication": "Bass note sustain must not be mistaken for a lyric melisma or an additional treble lyric onset"
+      },
+      {
+        "system": 3,
+        "location": "first measure",
+        "feature": "bass part contains independently stemmed notes and rests/durations distinct from treble",
+        "confidence": "VISUAL_OBSERVATION",
+        "implication": "Separate bass events are required for full-score transcription"
+      }
+    ],
+    "verifiedBassPitches": 0,
+    "verifiedBassDurations": 0,
+    "lyricMelismasVerified": 0
   }
 }
