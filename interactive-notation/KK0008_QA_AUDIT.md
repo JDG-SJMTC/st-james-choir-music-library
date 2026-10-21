@@ -166,3 +166,9 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Inspected the actual enlarged 1710×300 score crop and recorded twelve visible candidate onset shapes in `system2VoiceTranscriptionDraft` (event map). E01/E02/E08/E12 show open shared-stem pairs; E03/E05/E06/E09/E10 show filled shared-stem pairs; E07 shows stemless open heads; E04 and E11 show single downward-stem notes.
 - **Crucial caution:** stem direction alone does not prove voice identity, and the twelve geometric glyph/event pairs do not constitute twelve verified melody syllable attacks. Durations are notation-shape drafts only; pitch and voice mapping unverified.
 - Continue by reconstructing complete measures and independent voices using the full original score, then align syllable onsets. Production unchanged.
+
+## KK 8 system 2 — five-measure rhythmic reconstruction
+- Using original full-score image plus enlarged system 2 crop, documented 12 event records across five 4/4 measures (2+2; 1+1+1+1; 4; 2+1+1; 2+2) in `system2MeasureReconstruction`.
+- Records now carry provisional beat start, duration, upper-staff pitch draft and same-index printed glyph candidate. All measure totals equal four beats.
+- The rhythmic consistency is a **structural check only**: no sung melody voice or syllable onset has been verified, and score contains multiple simultaneous noteheads. The event ledger explicitly leaves `melodyPitch` and `melodyVoice` null, and the release gate fails.
+- Next: independently read bass-staff voices and determine whether melody is top note, lower note, or changes voices; verify lyric underlay against full score. Production remains untouched.
