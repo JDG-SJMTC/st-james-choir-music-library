@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "SYSTEM2_EVENT_SHAPES_DRAFTED_NO_VERIFIED_LINKS",
+  "status": "ALL_THREE_SYSTEMS_EVENT_SHAPES_DRAFTED_UNVERIFIED",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -11,7 +11,203 @@
   "systems": [
     {
       "system": 1,
-      "events": [],
+      "events": [
+        {
+          "id": "S1-E01",
+          "system": 1,
+          "onsetX": 254,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E02",
+          "system": 1,
+          "onsetX": 298,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E03",
+          "system": 1,
+          "onsetX": 320,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E04",
+          "system": 1,
+          "onsetX": 362,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "open single note with stem",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E05",
+          "system": 1,
+          "onsetX": 414,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E06",
+          "system": 1,
+          "onsetX": 471.33,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E07",
+          "system": 1,
+          "onsetX": 499.33,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E08",
+          "system": 1,
+          "onsetX": 529.33,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E09",
+          "system": 1,
+          "onsetX": 555,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E10",
+          "system": 1,
+          "onsetX": 598.33,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "open stemless dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E11",
+          "system": 1,
+          "onsetX": 656,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E12",
+          "system": 1,
+          "onsetX": 706,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S1-E13",
+          "system": 1,
+          "onsetX": 731.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_1.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        }
+      ],
       "lyricGlyphs": [
         {
           "id": "S1-L01",
@@ -21,7 +217,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E01",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L02",
@@ -31,7 +229,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E02",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L03",
@@ -41,7 +241,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E03",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L04",
@@ -51,7 +253,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E04",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L05",
@@ -61,7 +265,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E05",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L06",
@@ -71,7 +277,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E06",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L07",
@@ -81,7 +289,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E07",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L08",
@@ -91,7 +301,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E08",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L09",
@@ -101,7 +313,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E09",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L10",
@@ -111,7 +325,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E10",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L11",
@@ -121,7 +337,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E11",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L12",
@@ -131,7 +349,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E12",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S1-L13",
@@ -141,7 +361,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S1-E13",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         }
       ],
       "candidateOnsets": [
@@ -755,7 +977,233 @@
     },
     {
       "system": 3,
-      "events": [],
+      "events": [
+        {
+          "id": "S3-E01",
+          "system": 3,
+          "onsetX": 228.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E02",
+          "system": 3,
+          "onsetX": 256,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E03",
+          "system": 3,
+          "onsetX": 285.33,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled-stemmed dyad with accidental",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E04",
+          "system": 3,
+          "onsetX": 308.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E05",
+          "system": 3,
+          "onsetX": 351.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "open stemless dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E06",
+          "system": 3,
+          "onsetX": 408.33,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E07",
+          "system": 3,
+          "onsetX": 441.33,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E08",
+          "system": 3,
+          "onsetX": 465.33,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E09",
+          "system": 3,
+          "onsetX": 494.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E10",
+          "system": 3,
+          "onsetX": 519.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E11",
+          "system": 3,
+          "onsetX": 548.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled single note with stem",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E12",
+          "system": 3,
+          "onsetX": 573.33,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E13",
+          "system": 3,
+          "onsetX": 606.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E14",
+          "system": 3,
+          "onsetX": 648.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S3-E15",
+          "system": 3,
+          "onsetX": 708.67,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_3.png",
+            "visualNoteheadShape": "open stemless dyad",
+            "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
+            "status": "VISUAL_DRAFT"
+          }
+        }
+      ],
       "lyricGlyphs": [
         {
           "id": "S3-L01",
@@ -765,7 +1213,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E01",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L02",
@@ -775,7 +1225,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E02",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L03",
@@ -785,7 +1237,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E03",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L04",
@@ -795,7 +1249,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E04",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L05",
@@ -805,7 +1261,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E05",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L06",
@@ -815,7 +1273,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E06",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L07",
@@ -825,7 +1285,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E07",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L08",
@@ -835,7 +1297,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E08",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L09",
@@ -845,7 +1309,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E09",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L10",
@@ -855,7 +1321,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E10",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L11",
@@ -865,7 +1333,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E11",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L12",
@@ -875,7 +1345,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E12",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L13",
@@ -885,7 +1357,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E13",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L14",
@@ -895,7 +1369,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E14",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S3-L15",
@@ -905,7 +1381,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S3-E15",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         }
       ],
       "candidateOnsets": [
@@ -1045,8 +1523,8 @@
     "verifiedLyricLinks": 0,
     "verifiedMelismas": 0,
     "verifiedPhraseBoundaries": 0,
-    "candidateMusicalEvents": 12
+    "candidateMusicalEvents": 40
   },
   "releaseApproved": false,
-  "eventObservation": "System 2 contains twelve visually distinguishable note/chord onset groups; open vs filled noteheads and stem presence recorded. Exact pitch, note duration, measure, voice, melismas and musical link evidence still pending. Candidate event indices are not verified syllable links."
+  "eventObservation": "All 40 candidate onset groups now have provisional visual notehead-shape observations. These are not proven 1:1 lyric associations. Open/filled noteheads, stems and accidentals observed visually; exact pitches, durations, voices, measures, melismas and phrase boundaries remain unverified."
 }
