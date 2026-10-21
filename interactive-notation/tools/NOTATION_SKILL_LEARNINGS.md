@@ -36,3 +36,9 @@ Test the rules against KK 8, KK 30 and KK 150, including their differing stanza 
 - Read the printed 4/4 time signature and group onset events by visible barlines *before* assigning rhythmic values. The KK 8 reference has 16 measures across systems 1/2/3: 5/5/6.
 - The visually interpreted beat groupings per system are: S1 `2+1+1 | 2+2 | 1+1+1+1 | 4 | 2+1+1`; S2 `2+2 | 1+1+1+1 | 4 | 2+1+1 | 2+2`; S3 `1+1+1+1 | 4 | 2+1+1 | 1+1+1+1 | 2+2 | 4`. Each measure sums to four quarter-note beats.
 - Treat multiple simultaneous open noteheads as a chord at one onset; never split them into separate sequential events to satisfy lyric counts. Keep these durations **provisional** until independent pitch, tie, and lyric verification.
+
+## Staff/voice separation and pitch verification
+
+- KK 8 contains a treble-clef upper staff and a bass-clef lower staff. A treble-only transcription is **not** full-score transcription. Keep upper and lower voice evidence separate, especially when ties or chord onsets occur in only one staff.
+- The score has three flats (B♭, E♭, A♭); accidentals within a measure may override them. Derive pitches from staff position plus clef/key/accidentals, not x position.
+- Provisional visually read pitches belong in `visualPitchDraft`, never `noteheadPitches` until independently checked. Preserve a distinction between score evidence and musical approval.
