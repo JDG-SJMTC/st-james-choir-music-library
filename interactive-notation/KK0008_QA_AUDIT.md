@@ -145,3 +145,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Reviewed the second system against `kk8_system_2.png` (12 treble events; visual review only, no independent musical approval). Corrected the last two third-system event pitch drafts from the enlarged score: `S3-E14` D4/F4 → E♭4/G4, `S3-E15` E♭4/E♭4 → F4/F4 (adjacent open unison noteheads), commit `caf1693`.
 - Calculated **nearest-horizontal-onset diagnostics**, without assigning lyric links: system 1 has 1 printed glyph more than 25px from its nearest candidate onset and 5 ambiguous nearest-neighbour comparisons; system 2 has 0 and 0; system 3 has 1 and 3. This is not musical alignment evidence; lyric centres, note onsets and durations can differ and chords can share an onset (commit `9f4ad85`).
 - **Zero verified lyric links, zero approved musical events**. Printed Malayalam text and all seven Manglish stanzas remain unchanged. Bass staff and full voice review remain outstanding; Release 2 is not ready for promotion. Production untouched.
+
+## Lyric-to-event exception triage
+- Created `lyricAssociationReviewQueue` in `tools/kk8-musical-event-map.json` with 21 printed-glyph review cases: system 1: 6, system 2: 8, system 3: 7 (commit `4753a0f`). Each case retains the original index candidate, its signed x offset, three nearest events, and reason codes.
+- The flags are **not** 21 proven musical errors. They prioritise manual comparison of the printed Malayalam with the melody and voice notation; no `linkedEventIds` were populated, and no melisma was marked verified.
+- Follow-up: review flagged cases against score with notehead/voice evidence, then check unflagged cases too. Never autoapprove unflagged links from horizontal proximity. Production unchanged.
