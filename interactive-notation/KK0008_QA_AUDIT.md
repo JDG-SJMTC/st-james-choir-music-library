@@ -110,3 +110,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Added `tools/kk8-musical-event-map.json` with separate printed lyric glyphs (40), candidate notehead onsets (40), and **zero verified scored musical events**. Each printed glyph has an empty `linkedEventIds` list pending direct visual score evidence.
 - Added `tools/kk8-musical-event-gate.js` to reject dangling links, malformed event evidence, missing lyric association, and absent verified phrase boundaries. It separates structural validation from musical approval.
 - Next task: transcribe scored events with voice, onset, pitch set, duration and measure, then link printed glyphs and melismas using evidence. No fabricated note associations or production changes.
+
+## Measure-by-measure visual rhythm pass
+- Direct inspection of all three enlarged systems confirms the printed 4/4 signature and 16 visible measures (5+5+6). All provisional duration groupings sum to 4 quarter-note beats per bar.
+- Updated `tools/kk8-musical-event-map.json` with per-measure event IDs, provisional beat values, and visual evidence (commit `3992438`). Adjacent open noteheads are grouped as chord events rather than separate onsets.
+- This **does not** confirm note pitches, voice assignments, ties, melismas, or syllable-event links; musical release gate remains blocked. No production edits.
