@@ -120,3 +120,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Recorded provisional treble-clef pitches for all 12 system-two note/chord events, accounting for three-flat key signature and visible natural accidental (commit `bddeb9a`). Verified pitch count remains zero.
 - Original score also has a bass-clef staff; lower-staff note events and ties have not been transcribed. Treble-only event mapping is insufficient for full musical verification.
 - Printed lyric-to-note relationships and melismas are still unverified. Release blocked; production unchanged.
+
+## Pitch and bass-staff inspection correction
+- Rechecked the system-two pitch draft against the three-flat key signature. Corrected eight provisional `E4` entries to `E♭4` (commit `7a6b2ab`); **no pitches promoted to verified**.
+- Original page inspection identifies a candidate bass-staff tie near the end of system two and separate lower-staff rhythmic events. Bass tie must not be treated as a melody melisma. Evidence recorded in musical-event map (commit `3974107`).
+- Remaining: full staff-position review, accidental persistence by measure, bass pitches/rhythm, treble lyric-event links and melismas. Production unchanged.
