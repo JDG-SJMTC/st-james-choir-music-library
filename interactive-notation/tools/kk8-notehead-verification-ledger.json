@@ -26,7 +26,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 177,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 2,
@@ -38,7 +41,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 309,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 3,
@@ -50,7 +56,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 375,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 4,
@@ -62,7 +71,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 501,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 5,
@@ -74,7 +86,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 657,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 6,
@@ -86,7 +101,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 829,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 7,
@@ -98,7 +116,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 913,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 8,
@@ -110,7 +131,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1003,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 9,
@@ -122,7 +146,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1080,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 10,
@@ -134,7 +161,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1210,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 11,
@@ -146,7 +176,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1383,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 12,
@@ -158,7 +191,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1533,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 13,
@@ -170,7 +206,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1610,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         }
       ]
     },
@@ -189,7 +228,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 101,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 2,
@@ -201,7 +243,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 252,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 3,
@@ -213,7 +258,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 446,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 4,
@@ -225,7 +273,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 517,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 5,
@@ -237,7 +288,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 601,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 6,
@@ -249,7 +303,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 711,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 7,
@@ -261,7 +318,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 826,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 8,
@@ -273,7 +333,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1030,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 9,
@@ -285,7 +348,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1189,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 10,
@@ -297,7 +363,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1260,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 11,
@@ -309,7 +378,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1380,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 12,
@@ -321,7 +393,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1520,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         }
       ]
     },
@@ -340,7 +415,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 101,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 2,
@@ -352,7 +430,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 183,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 3,
@@ -364,7 +445,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 271,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 4,
@@ -376,7 +460,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 341,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 5,
@@ -388,7 +475,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 470,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 6,
@@ -400,7 +490,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 640,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 7,
@@ -412,7 +505,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 739,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 8,
@@ -424,7 +520,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 811,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 9,
@@ -436,7 +535,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 899,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 10,
@@ -448,7 +550,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 974,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 11,
@@ -460,7 +565,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1061,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 12,
@@ -472,7 +580,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1135,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 13,
@@ -484,7 +595,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1235,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 14,
@@ -496,7 +610,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1361,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         },
         {
           "index": 15,
@@ -508,7 +625,10 @@
           "noteheadPitch": null,
           "notatedDuration": null,
           "melismaStatus": "NOT_ASSESSED",
-          "reviewStatus": "PENDING"
+          "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
+          "candidateNoteheadCropX": 1541,
+          "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
+          "candidateUncertaintyCropPixels": 15
         }
       ]
     }
@@ -521,7 +641,13 @@
     "Verify phrase/system breaks against notation, not equal word allocation",
     "Do not mark noteVerified or syllableVerified until evidence recorded"
   ],
-  "status": "PENDING_NOTEHEAD_EVIDENCE",
+  "status": "CANDIDATE_NOTEHEAD_ONSETS_RECORDED_UNVERIFIED",
   "verifiedNoteheadCount": 0,
-  "approved": false
+  "approved": false,
+  "cropDimensions": {
+    "width": 1710,
+    "height": 300
+  },
+  "candidateNoteheadCount": 40,
+  "limitations": "Candidate x coordinates estimated visually in resized/cropped staff images. No exact crop-to-original transform recorded; do not compare candidateNoteheadCropX directly to original-image lyricX. Chord pitches, durations, lyric-to-note musical semantics, and melismas remain unverified."
 }
