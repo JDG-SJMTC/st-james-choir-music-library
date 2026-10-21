@@ -58,3 +58,9 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Integrated `tools/phrase-stretch.js` to show non-approved visual spacing proposals, without the fixed 40-slot mapping.
 - Workbench exports draft mapping JSON, but no system boundaries or musical associations are automatically approved. No new KK8 choir score is published.
 - Next required evidence: stanza 1 musical phrase boundary identification and manually verified note/lyric anchor mapping, then apply the same melody phrases to the other six stanzas.
+
+## Seven-stanza layout preview (21 October 2026)
+- Added `tools/kk8-seven-stanza-preview.html` as a standalone, clearly unverified seven-stanza engineering preview with stanza navigation, zoom and original score image.
+- Preview renders locked production Manglish text for all seven stanzas. It distributes full word/whitespace tokens across the three score systems using a proportional draft based on stanza-one fragment counts; this is **not** musical alignment evidence.
+- Exact text round-trip is checked at runtime. Musical system boundaries, note anchors, melismas, glyph overlay coordinates and visual collision checks remain unverified. The overlay must not be approved or linked as a production score.
+- The previous `song-8/index.html` and production choir page remain unchanged.
