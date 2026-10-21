@@ -15,31 +15,32 @@
 <p class="eyebrow">St James Mar Thoma Church, London</p><h1>Choir Music Library</h1>
 <p class="subtitle">Interactive Notation · Team Testing</p>
 <p><a class="backlink" href="../">← Return to production library</a></p></div>
-<span class="verified-pill">2 songs · Beta preview</span></div></header>
+<span class="verified-pill">3 songs · Beta preview</span></div></header>
 <main><section class="finder-section"><div class="wrap"><div class="finder-card"><div class="finder-copy">
 <p class="section-kicker">St James Choir Music Library</p><h2>Explore interactive notation</h2>
-<p>Try the same library-style experience with two test songs. Change stanzas, switch Malayalam and Manglish, and zoom the full score. The existing choir library is unchanged.</p>
-</div><label class="pilot-search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search 30, 150, Malayalam, Manglish or title" aria-label="Search beta songs"></label>
+<p>Try the same library-style experience with three test songs. Change stanzas, switch Malayalam and Manglish, and zoom the full score. The existing choir library is unchanged.</p>
+</div><label class="pilot-search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search 8, 30, 150, Malayalam, Manglish or title" aria-label="Search beta songs"></label>
 <div class="finder-help"><span>Number</span><span>Interactive notation</span><span>Malayalam &amp; Manglish</span></div>
 </div></div></section>
 <div class="library-content wrap"><div class="beta-strip"><strong>Team testing only</strong>
 <p>These are draft interactive scores. Please report any missing syllables, notation alignment problems, mobile display issues or navigation feedback before production rollout.</p></div>
 <section class="catalogue-section" style="margin-bottom:26px"><div class="results-header"><div><p class="section-kicker">Version 2 feature preview</p><h2>Service Song Lists</h2><p>Create a two-song service list and share a link that opens it already populated.</p></div><a class="pilot-link" href="service.html">Try Service List Demo →</a></div></section><section class="catalogue-section"><div class="results-header"><div><p class="section-kicker">Beta catalogue</p>
-<h2>Kristheeya Keerthanangal</h2></div><p id="count" class="pilot-count" aria-live="polite">2 songs available</p></div>
+<h2>Kristheeya Keerthanangal</h2></div><p id="count" class="pilot-count" aria-live="polite">3 songs available</p></div>
 <div class="results" id="results">
+<article class="song-card" data-search="8 kk0008 koodey paarkka neram vaikunnithaa malayalam manglish"><div class="song-no">8</div><div class="song-title"><p class="english">Song 8 · Koodey Paarkka Neram Vaikunnithaa <span class="beta-tag">Beta</span></p><p class="english">Original Malayalam score · Seven stanzas</p></div><div class="pilot-actions"><a class="pilot-link" href="choir.html?id=KK-0008">Choir View →</a></div></article>
 <article class="song-card" data-search="30 kk0030 anpu thingum dayaparane malayalam manglish">
 <div class="song-no">30</div><div class="song-title"><p class="malayalam" lang="ml">അൻപു തിങ്ങും ദയാപരനേ</p><p class="english">Song 30 · Interactive Notation <span class="beta-tag">Beta</span></p></div>
 <div class="pilot-actions"><a class="pilot-link" href="choir.html?id=KK-0030">Choir View →</a></div></article>
 <article class="song-card" data-search="150 kk0150 mahathwa prabhu maricha malayalam manglish two tunes">
 <div class="song-no">150</div><div class="song-title"><p class="english">Song 150 · Mahathwa Prabhu Maricha <span class="beta-tag">Beta</span></p><p class="english">Two tunes · Four stanzas</p></div>
 <div class="pilot-actions"><a class="pilot-link" href="choir.html?id=KK-0150">Choir View →</a></div></article>
-</div><p id="empty" class="pilot-empty" hidden>No beta songs match your search. Only Songs 30 and 150 are included.</p></section></div></main>
+</div><p id="empty" class="pilot-empty" hidden>No beta songs match your search. Only Songs 8, 30 and 150 are included.</p></section></div></main>
 <footer class="wrap footer"><p>St James Choir Music Library · Interactive Notation Team Preview · Not the production catalogue</p></footer>
 <script>
 const search=document.getElementById('search'), cards=[...document.querySelectorAll('.song-card')];
 search.addEventListener('input',()=>{const q=search.value.toLocaleLowerCase().trim();let n=0;
 cards.forEach(c=>{const ok=!q||c.dataset.search.includes(q)||c.textContent.toLocaleLowerCase().includes(q);c.hidden=!ok;if(ok)n++;});
-document.getElementById('count').textContent=n+' of 2 songs';
+document.getElementById('count').textContent=n+' of 3 songs';
 document.getElementById('empty').hidden=n!==0;});
 search.addEventListener('keydown',e=>{if(e.key==='Enter'){const c=cards.find(x=>!x.hidden);if(c)location.href=c.querySelector('a').href;}});
-</script><div style="margin:18px;padding:15px;border:2px solid #b28a31;border-radius:10px;background:#fff7df"><strong>KK 8 — Alignment workbench (NOT QA approved)</strong><p>Seven production-verified Manglish stanzas; syllable positions are editable drafts.</p><a href="choir.html?id=KK-0008">Open KK 8 workbench →</a></div></body></html>
+</script></body></html>
