@@ -80,3 +80,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Provisional stanza-one source splits at system boundaries: `Kooriru` / `lherunnu`, and `veri` / `llaa`. These are literal transcript continuations, not verified note/phrase divisions.
 - Gate distinguishes `structurePass` from `releasePass`. Note association, printed Malayalam fragment transcription, melismas, and musical approval remain explicitly unverified. No musical validation or browser QA has been claimed.
 - No root production files changed. Release 2 beta remains blocked pending musical checks.
+
+## Direct score-image visual verification (2026-10-21)
+- Inspected all three systems on the original 878×1241 score image at enlarged scale. The printed lyric-unit counts visibly match the draft: system 1 = 13, system 2 = 12, system 3 = 15 (40 total). Printed order and cross-system word continuations are visually consistent.
+- Evidence recorded in `tools/kk8-stanza1-visual-verification.json`. This is a PARTIAL verification only. Individual x coordinates, exact Malayalam glyph transcription, note associations, melismas, and rhythm remain unverified. Do not promote to musically approved.
+- Release 2 beta only; production untouched.
