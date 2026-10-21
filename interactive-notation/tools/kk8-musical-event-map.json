@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "SYSTEM1_AND_2_UPPER_STAFF_PITCH_DRAFTS_NO_VERIFIED_LYRIC_LINKS",
+  "status": "ALL_40_UPPER_STAFF_PITCH_DRAFTS_PRESENT_UNVERIFIED",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -2043,11 +2043,29 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 1,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "E♭4",
+            "B♭4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E02",
@@ -2065,11 +2083,29 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 1,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "E♭4",
+            "A♭4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E03",
@@ -2087,11 +2123,29 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 1,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "E♮4",
+            "A♭4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E04",
@@ -2109,11 +2163,29 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 1,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "E♭4",
+            "G4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E05",
@@ -2131,12 +2203,30 @@
           },
           "visualDurationClass": "whole",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "visualNoteheadShape": "two adjacent open stemless noteheads (exact notation requires review)",
           "measureIndex": 2,
           "provisionalDurationBeats": 4,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "F4",
+            "F4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E06",
@@ -2154,11 +2244,29 @@
           },
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 3,
           "provisionalDurationBeats": 2,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "D4",
+            "F4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E07",
@@ -2176,11 +2284,29 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 3,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "E♭4",
+            "G4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E08",
@@ -2198,11 +2324,29 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 3,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "D4",
+            "A♭4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E09",
@@ -2220,11 +2364,29 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 4,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "E♭4",
+            "G4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E10",
@@ -2242,11 +2404,29 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 4,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "D4",
+            "F4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E11",
@@ -2264,11 +2444,28 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 4,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "E♭4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E12",
@@ -2286,11 +2483,29 @@
           },
           "visualDurationClass": "quarter",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 4,
           "provisionalDurationBeats": 1,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "F4",
+            "A♭4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E13",
@@ -2308,11 +2523,29 @@
           },
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 5,
           "provisionalDurationBeats": 2,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "E♭4",
+            "G4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E14",
@@ -2330,11 +2563,29 @@
           },
           "visualDurationClass": "half",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "measureIndex": 5,
           "provisionalDurationBeats": 2,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "D4",
+            "F4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         },
         {
           "id": "S3-E15",
@@ -2352,12 +2603,30 @@
           },
           "visualDurationClass": "whole",
           "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
-          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "pitchEvidenceStatus": "MANUAL_STAFF_POSITION_DRAFT_NOT_VERIFIED",
           "lyricLinkStatus": "UNVERIFIED",
           "visualNoteheadShape": "two adjacent open stemless noteheads (exact notation requires review)",
           "measureIndex": 6,
           "provisionalDurationBeats": 4,
-          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off"
+          "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
+          "visualPitchDraft": [
+            "E♭4",
+            "E♭4"
+          ],
+          "pitchEvidence": {
+            "reference": "kk8_system_3.png",
+            "staffLinesCropY": [
+              47,
+              70,
+              93,
+              116,
+              139
+            ],
+            "clef": "treble",
+            "keySignature": "B♭ E♭ A♭",
+            "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
+            "verified": false
+          }
         }
       ],
       "lyricGlyphs": [
@@ -2741,7 +3010,8 @@
     "candidateMusicalEvents": 40,
     "visuallyMeterConsistentMeasures": 16,
     "system2DraftPitchEvents": 12,
-    "system1DraftPitchEvents": 13
+    "system1DraftPitchEvents": 13,
+    "system3DraftPitchEvents": 15
   },
   "releaseApproved": false,
   "eventObservation": "All 40 candidate onset groups now have provisional visual notehead-shape observations. These are not proven 1:1 lyric associations. Open/filled noteheads, stems and accidentals observed visually; exact pitches, durations, voices, measures, melismas and phrase boundaries remain unverified.",
@@ -2954,7 +3224,8 @@
       "status": "DRAFT_READ_FROM_VISIBLE_NOTEHEAD_CENTRES",
       "explicitNaturalAt": "S2-E06",
       "note": "12 note/chord groups checked against five staff lines. No verified pitches released."
-    }
+    },
+    "system3UnisonCaution": "S3-E05 and S3-E15 appear to have adjacent open noteheads at the same staff height; do not infer two sequential syllable onsets. Review voice notation and whether earlier whole-note interpretation is correct."
   },
   "bassStaffAudit": {
     "status": "PARTIAL_VISUAL_INSPECTION",
