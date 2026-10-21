@@ -4883,5 +4883,135 @@
         "verified": false
       }
     ]
+  },
+  "system2ImageCoordinateReaudit": {
+    "source": "interactive-notation/tools/kk8_system_2.png (1710x300 image crop available for direct inspection)",
+    "status": "MANUAL_VISUAL_ESTIMATES_NOT_VERIFIED",
+    "method": "Approximate glyph-cluster horizontal centers visually read from enlarged crop. Coordinates retain ~10-20px uncertainty; do not overwrite source or mark lyric links approved.",
+    "cropOriginOriginalX": 195,
+    "scale": 3,
+    "rows": [
+      {
+        "glyphId": "S2-L01",
+        "text": "lhe",
+        "priorOriginalX": 223,
+        "priorProjectedCropX": 84,
+        "estimatedVisibleCropX": 80,
+        "estimatedOriginalX": 221.7,
+        "candidateOnsetCropX": 99,
+        "estimatedVisibleMinusCandidateCropPx": -19
+      },
+      {
+        "glyphId": "S2-L02",
+        "text": "run",
+        "priorOriginalX": 259,
+        "priorProjectedCropX": 192,
+        "estimatedVisibleCropX": 236,
+        "estimatedOriginalX": 273.7,
+        "candidateOnsetCropX": 252,
+        "estimatedVisibleMinusCandidateCropPx": -16
+      },
+      {
+        "glyphId": "S2-L03",
+        "text": "nu",
+        "priorOriginalX": 298,
+        "priorProjectedCropX": 309,
+        "estimatedVisibleCropX": 420,
+        "estimatedOriginalX": 335,
+        "candidateOnsetCropX": 445,
+        "estimatedVisibleMinusCandidateCropPx": -25
+      },
+      {
+        "glyphId": "S2-L04",
+        "text": "paar",
+        "priorOriginalX": 331,
+        "priorProjectedCropX": 408,
+        "estimatedVisibleCropX": 510,
+        "estimatedOriginalX": 365,
+        "candidateOnsetCropX": 516,
+        "estimatedVisibleMinusCandidateCropPx": -6
+      },
+      {
+        "glyphId": "S2-L05",
+        "text": "kka",
+        "priorOriginalX": 367,
+        "priorProjectedCropX": 516,
+        "estimatedVisibleCropX": 594,
+        "estimatedOriginalX": 393,
+        "candidateOnsetCropX": 600,
+        "estimatedVisibleMinusCandidateCropPx": -6
+      },
+      {
+        "glyphId": "S2-L06",
+        "text": "De",
+        "priorOriginalX": 401,
+        "priorProjectedCropX": 618,
+        "estimatedVisibleCropX": 708,
+        "estimatedOriginalX": 431,
+        "candidateOnsetCropX": 711,
+        "estimatedVisibleMinusCandidateCropPx": -3
+      },
+      {
+        "glyphId": "S2-L07",
+        "text": "vaa",
+        "priorOriginalX": 443,
+        "priorProjectedCropX": 744,
+        "estimatedVisibleCropX": 819,
+        "estimatedOriginalX": 468,
+        "candidateOnsetCropX": 826,
+        "estimatedVisibleMinusCandidateCropPx": -7
+      },
+      {
+        "glyphId": "S2-L08",
+        "text": "Aa",
+        "priorOriginalX": 486,
+        "priorProjectedCropX": 873,
+        "estimatedVisibleCropX": 1013,
+        "estimatedOriginalX": 532.7,
+        "candidateOnsetCropX": 1031,
+        "estimatedVisibleMinusCandidateCropPx": -18
+      },
+      {
+        "glyphId": "S2-L09",
+        "text": "shra",
+        "priorOriginalX": 529,
+        "priorProjectedCropX": 1002,
+        "estimatedVisibleCropX": 1173,
+        "estimatedOriginalX": 586,
+        "candidateOnsetCropX": 1188,
+        "estimatedVisibleMinusCandidateCropPx": -15
+      },
+      {
+        "glyphId": "S2-L10",
+        "text": "yam",
+        "priorOriginalX": 573,
+        "priorProjectedCropX": 1134,
+        "estimatedVisibleCropX": 1256,
+        "estimatedOriginalX": 613.7,
+        "candidateOnsetCropX": 1260,
+        "estimatedVisibleMinusCandidateCropPx": -4
+      },
+      {
+        "glyphId": "S2-L11",
+        "text": "ve",
+        "priorOriginalX": 641,
+        "priorProjectedCropX": 1338,
+        "estimatedVisibleCropX": 1381,
+        "estimatedOriginalX": 655.3,
+        "candidateOnsetCropX": 1380,
+        "estimatedVisibleMinusCandidateCropPx": 1
+      },
+      {
+        "glyphId": "S2-L12",
+        "text": "ri",
+        "priorOriginalX": 705,
+        "priorProjectedCropX": 1530,
+        "estimatedVisibleCropX": 1522,
+        "estimatedOriginalX": 702.3,
+        "candidateOnsetCropX": 1520,
+        "estimatedVisibleMinusCandidateCropPx": 2
+      }
+    ],
+    "conclusion": "Previously reported one-event shift is likely confounded by incorrect lyric x-coordinate drafts. Re-evaluate geometry using actual printed glyph centers before inferring musical reassignment. These estimates are not authoritative."
   }
 }
