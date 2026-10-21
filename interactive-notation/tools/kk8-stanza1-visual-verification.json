@@ -1,0 +1,53 @@
+{
+  "song": "KK-0008",
+  "date": "2026-10-21",
+  "sourceImage": "interactive-notation/song-8/original.png",
+  "imageSize": {
+    "width": 878,
+    "height": 1241
+  },
+  "scope": "Direct visual comparison of the three printed soprano lyric systems against provisional stanza-one anchor draft.",
+  "result": "PARTIAL_VERIFICATION",
+  "observations": [
+    {
+      "system": 1,
+      "printedLyricUnits": 13,
+      "draftUnits": 13,
+      "visuallyConsistentSequence": true,
+      "systemEnd": "കൂ രി രു",
+      "notes": "Printed text starts with കൂ ടെ പാ ർക്ക and continues through the first part of കൂരിരുളേറുന്നു."
+    },
+    {
+      "system": 2,
+      "printedLyricUnits": 12,
+      "draftUnits": 12,
+      "visuallyConsistentSequence": true,
+      "systemStart": "ളേ രു ന്നു",
+      "systemEnd": "വേ രി",
+      "notes": "Printed lyric units continue the preceding word and end partway through വേരില്ലാ."
+    },
+    {
+      "system": 3,
+      "printedLyricUnits": 15,
+      "draftUnits": 15,
+      "visuallyConsistentSequence": true,
+      "systemStart": "ല്ലാ നേ രം",
+      "systemEnd": "പാ ർക്ക",
+      "notes": "Printed line ends at the final cadence."
+    }
+  ],
+  "checks": {
+    "originalImageDimensions": "PASS",
+    "printedLyricUnitCounts": "PASS_VISUAL",
+    "systemOrder": "PASS_VISUAL",
+    "sourceManglishRoundTrip": "PASS",
+    "individualAnchorCoordinates": "NOT_VERIFIED",
+    "printedMalayalamExactTranscription": "NOT_VERIFIED",
+    "notesAndRhythmPerSyllable": "NOT_VERIFIED",
+    "melismaAndHeldNotes": "NOT_VERIFIED",
+    "stanzas2To7MusicalPhrasing": "NOT_VERIFIED",
+    "musicalApproval": "BLOCKED"
+  },
+  "limitations": "Printed lyric-unit counts and sequence can be compared visually, but precise glyph-to-note positions, Malayalam transcription fidelity, musical durations and other stanzas need separate verification. Do not treat 40 matching printed fragments as 40 independently verified musical anchors.",
+  "productionChanged": false
+}
