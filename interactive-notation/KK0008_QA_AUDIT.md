@@ -105,3 +105,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Screened all 40 candidate notehead-vs-lyric horizontal offsets using a 25 original-pixel threshold. Exactly 13 candidates flagged: system 1: 1; system 2: 8; system 3: 4.
 - Concentrations: system 2 indices 3–10 (`nu`, `paar`, `kka`, `De`, `vaa`, `Aa`, `shra`, `yam`) and system 3 indices 11–14 (`laa`, `koo`, `dey`, `paar`). Largest absolute delta: 62.33 px (`shra`, system 2).
 - Saved per-item discrepancy details in `tools/kk8-notehead-verification-ledger.json`. The 25-pixel screening is **not** a musical acceptance threshold; no notes have been verified. Do not auto-correct lyric positions based on unverified candidates.
+
+## Musical-event mapping model
+- Added `tools/kk8-musical-event-map.json` with separate printed lyric glyphs (40), candidate notehead onsets (40), and **zero verified scored musical events**. Each printed glyph has an empty `linkedEventIds` list pending direct visual score evidence.
+- Added `tools/kk8-musical-event-gate.js` to reject dangling links, malformed event evidence, missing lyric association, and absent verified phrase boundaries. It separates structural validation from musical approval.
+- Next task: transcribe scored events with voice, onset, pitch set, duration and measure, then link printed glyphs and melismas using evidence. No fabricated note associations or production changes.
