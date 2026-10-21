@@ -1,0 +1,749 @@
+{
+  "song": "KK-0008",
+  "schemaVersion": 1,
+  "status": "AWAITING_SCORE_EVENT_TRANSCRIPTION",
+  "image": {
+    "path": "../song-8/original.png",
+    "width": 878,
+    "height": 1241
+  },
+  "method": "Do not equate sequential noteheads with sequential lyric units. Create scored musical events with unique IDs; link printed lyric glyphs to event IDs only after visual evidence.",
+  "systems": [
+    {
+      "system": 1,
+      "events": [],
+      "lyricGlyphs": [
+        {
+          "id": "S1-L01",
+          "manglish": "Koo",
+          "malayalamDraft": "കൂ",
+          "printedLyricX": 249,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L02",
+          "manglish": "dey",
+          "malayalamDraft": "ടെ",
+          "printedLyricX": 279,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L03",
+          "manglish": "paar",
+          "malayalamDraft": "പാ",
+          "printedLyricX": 315,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L04",
+          "manglish": "kka",
+          "malayalamDraft": "ർക്ക",
+          "printedLyricX": 350,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L05",
+          "manglish": "ne",
+          "malayalamDraft": "നേ",
+          "printedLyricX": 401,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L06",
+          "manglish": "ram",
+          "malayalamDraft": "രം",
+          "printedLyricX": 442,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L07",
+          "manglish": "vai",
+          "malayalamDraft": "വൈ",
+          "printedLyricX": 479,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L08",
+          "manglish": "kun",
+          "malayalamDraft": "കു",
+          "printedLyricX": 512,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L09",
+          "manglish": "ni",
+          "malayalamDraft": "ന്നി",
+          "printedLyricX": 543,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L10",
+          "manglish": "thaa",
+          "malayalamDraft": "താ",
+          "printedLyricX": 580,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L11",
+          "manglish": "Koo",
+          "malayalamDraft": "കൂ",
+          "printedLyricX": 652,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L12",
+          "manglish": "ri",
+          "malayalamDraft": "രി",
+          "printedLyricX": 691,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S1-L13",
+          "manglish": "ru",
+          "malayalamDraft": "രു",
+          "printedLyricX": 726,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        }
+      ],
+      "candidateOnsets": [
+        {
+          "id": "S1-C01",
+          "x": 254,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C02",
+          "x": 298,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C03",
+          "x": 320,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C04",
+          "x": 362,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C05",
+          "x": 414,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C06",
+          "x": 471.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C07",
+          "x": 499.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C08",
+          "x": 529.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C09",
+          "x": 555,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C10",
+          "x": 598.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C11",
+          "x": 656,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C12",
+          "x": 706,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S1-C13",
+          "x": 731.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        }
+      ],
+      "phraseBoundaries": []
+    },
+    {
+      "system": 2,
+      "events": [],
+      "lyricGlyphs": [
+        {
+          "id": "S2-L01",
+          "manglish": "lhe",
+          "malayalamDraft": "ളേ",
+          "printedLyricX": 223,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L02",
+          "manglish": "run",
+          "malayalamDraft": "രു",
+          "printedLyricX": 259,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L03",
+          "manglish": "nu",
+          "malayalamDraft": "ന്നു",
+          "printedLyricX": 298,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L04",
+          "manglish": "paar",
+          "malayalamDraft": "പാ",
+          "printedLyricX": 331,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L05",
+          "manglish": "kka",
+          "malayalamDraft": "ർക്ക",
+          "printedLyricX": 367,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L06",
+          "manglish": "De",
+          "malayalamDraft": "ദേ",
+          "printedLyricX": 401,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L07",
+          "manglish": "vaa",
+          "malayalamDraft": "വാ",
+          "printedLyricX": 443,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L08",
+          "manglish": "Aa",
+          "malayalamDraft": "ആ",
+          "printedLyricX": 486,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L09",
+          "manglish": "shra",
+          "malayalamDraft": "ശ്ര",
+          "printedLyricX": 529,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L10",
+          "manglish": "yam",
+          "malayalamDraft": "യം",
+          "printedLyricX": 573,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L11",
+          "manglish": "ve",
+          "malayalamDraft": "വേ",
+          "printedLyricX": 641,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S2-L12",
+          "manglish": "ri",
+          "malayalamDraft": "രി",
+          "printedLyricX": 705,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        }
+      ],
+      "candidateOnsets": [
+        {
+          "id": "S2-C01",
+          "x": 228.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C02",
+          "x": 279,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C03",
+          "x": 343.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C04",
+          "x": 367.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C05",
+          "x": 395.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C06",
+          "x": 432,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C07",
+          "x": 470.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C08",
+          "x": 538.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C09",
+          "x": 591.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C10",
+          "x": 615,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C11",
+          "x": 655,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S2-C12",
+          "x": 701.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        }
+      ],
+      "phraseBoundaries": []
+    },
+    {
+      "system": 3,
+      "events": [],
+      "lyricGlyphs": [
+        {
+          "id": "S3-L01",
+          "manglish": "llaa",
+          "malayalamDraft": "ല്ലാ",
+          "printedLyricX": 218,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L02",
+          "manglish": "ne",
+          "malayalamDraft": "നേ",
+          "printedLyricX": 253,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L03",
+          "manglish": "ram",
+          "malayalamDraft": "രം",
+          "printedLyricX": 286,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L04",
+          "manglish": "than",
+          "malayalamDraft": "ത",
+          "printedLyricX": 320,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L05",
+          "manglish": "nil",
+          "malayalamDraft": "ന്നിൽ",
+          "printedLyricX": 357,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L06",
+          "manglish": "Aa",
+          "malayalamDraft": "ആ",
+          "printedLyricX": 407,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L07",
+          "manglish": "shri",
+          "malayalamDraft": "ശ്രി",
+          "printedLyricX": 445,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L08",
+          "manglish": "tha",
+          "malayalamDraft": "ത",
+          "printedLyricX": 478,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L09",
+          "manglish": "va",
+          "malayalamDraft": "വ",
+          "printedLyricX": 511,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L10",
+          "manglish": "thsa",
+          "malayalamDraft": "ത്സ",
+          "printedLyricX": 543,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L11",
+          "manglish": "laa",
+          "malayalamDraft": "ലാ",
+          "printedLyricX": 578,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L12",
+          "manglish": "koo",
+          "malayalamDraft": "കൂ",
+          "printedLyricX": 616,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L13",
+          "manglish": "dey",
+          "malayalamDraft": "ടെ",
+          "printedLyricX": 647,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L14",
+          "manglish": "paar",
+          "malayalamDraft": "പാ",
+          "printedLyricX": 678,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        },
+        {
+          "id": "S3-L15",
+          "manglish": "kka",
+          "malayalamDraft": "ർക്ക",
+          "printedLyricX": 716,
+          "linkedEventIds": [],
+          "linkEvidence": null,
+          "melisma": "UNASSESSED",
+          "status": "UNVERIFIED"
+        }
+      ],
+      "candidateOnsets": [
+        {
+          "id": "S3-C01",
+          "x": 228.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C02",
+          "x": 256,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C03",
+          "x": 285.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C04",
+          "x": 308.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C05",
+          "x": 351.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C06",
+          "x": 408.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C07",
+          "x": 441.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C08",
+          "x": 465.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C09",
+          "x": 494.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C10",
+          "x": 519.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C11",
+          "x": 548.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C12",
+          "x": 573.33,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C13",
+          "x": 606.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C14",
+          "x": 648.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        },
+        {
+          "id": "S3-C15",
+          "x": 708.67,
+          "uncertaintyPx": 5,
+          "status": "UNVERIFIED_VISUAL_CANDIDATE",
+          "notAssignedToLyric": true
+        }
+      ],
+      "phraseBoundaries": []
+    }
+  ],
+  "eventSchema": {
+    "required": [
+      "id",
+      "system",
+      "onsetX",
+      "voice",
+      "noteheadPitches",
+      "duration",
+      "measure",
+      "evidence"
+    ],
+    "allowedVoice": [
+      "melody",
+      "harmony",
+      "unknown"
+    ],
+    "duration": "Notated duration as rational value or null until verified",
+    "noteheadPitches": "Array of verified pitch names, empty until verified",
+    "evidence": "Human-inspected score coordinates or crop reference"
+  },
+  "checks": {
+    "lyricCount": 40,
+    "candidateCount": 40,
+    "verifiedEvents": 0,
+    "verifiedLyricLinks": 0,
+    "verifiedMelismas": 0,
+    "verifiedPhraseBoundaries": 0
+  },
+  "releaseApproved": false
+}
