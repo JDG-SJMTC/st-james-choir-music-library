@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "ALL_THREE_SYSTEMS_EVENT_SHAPES_DRAFTED_UNVERIFIED",
+  "status": "VISUAL_RHYTHM_CLASSES_DRAFTED_MUSICAL_VALIDATION_PENDING",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -25,7 +25,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E02",
@@ -40,7 +44,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E03",
@@ -55,7 +63,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E04",
@@ -70,7 +82,11 @@
             "visualNoteheadShape": "open single note with stem",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E05",
@@ -85,7 +101,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E06",
@@ -100,7 +120,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E07",
@@ -115,7 +139,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E08",
@@ -130,7 +158,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E09",
@@ -145,7 +177,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E10",
@@ -160,7 +196,11 @@
             "visualNoteheadShape": "open stemless dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "whole",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E11",
@@ -175,7 +215,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E12",
@@ -190,7 +234,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S1-E13",
@@ -205,7 +253,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         }
       ],
       "lyricGlyphs": [
@@ -485,7 +537,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E02",
@@ -508,7 +564,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E03",
@@ -531,7 +591,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E04",
@@ -554,7 +618,11 @@
             "visualNoteheadShape": "filled single note",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E05",
@@ -577,7 +645,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E06",
@@ -600,7 +672,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E07",
@@ -623,7 +699,11 @@
             "visualNoteheadShape": "open stemless dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "whole",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E08",
@@ -646,7 +726,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E09",
@@ -669,7 +753,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E10",
@@ -692,7 +780,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E11",
@@ -715,7 +807,11 @@
             "visualNoteheadShape": "open single note with stem",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S2-E12",
@@ -738,7 +834,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         }
       ],
       "lyricGlyphs": [
@@ -991,7 +1091,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E02",
@@ -1006,7 +1110,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E03",
@@ -1021,7 +1129,11 @@
             "visualNoteheadShape": "filled-stemmed dyad with accidental",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E04",
@@ -1036,7 +1148,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E05",
@@ -1051,7 +1167,12 @@
             "visualNoteheadShape": "open stemless dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "whole",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED",
+          "visualNoteheadShape": "two adjacent open stemless noteheads (exact notation requires review)"
         },
         {
           "id": "S3-E06",
@@ -1066,7 +1187,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E07",
@@ -1081,7 +1206,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E08",
@@ -1096,7 +1225,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E09",
@@ -1111,7 +1244,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E10",
@@ -1126,7 +1263,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E11",
@@ -1141,7 +1282,11 @@
             "visualNoteheadShape": "filled single note with stem",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E12",
@@ -1156,7 +1301,11 @@
             "visualNoteheadShape": "filled-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "quarter",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E13",
@@ -1171,7 +1320,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E14",
@@ -1186,7 +1339,11 @@
             "visualNoteheadShape": "open-stemmed dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "half",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED"
         },
         {
           "id": "S3-E15",
@@ -1201,7 +1358,12 @@
             "visualNoteheadShape": "open stemless dyad",
             "observation": "Draft visual event group from enlarged score; event onset and shape require detailed verification",
             "status": "VISUAL_DRAFT"
-          }
+          },
+          "visualDurationClass": "whole",
+          "durationEvidence": "Observed notehead fill and stem on enlarged source crop; classification is provisional and not rhythmically verified",
+          "pitchEvidenceStatus": "PENDING_CLEF_STAFF_POSITION_REVIEW",
+          "lyricLinkStatus": "UNVERIFIED",
+          "visualNoteheadShape": "two adjacent open stemless noteheads (exact notation requires review)"
         }
       ],
       "lyricGlyphs": [
@@ -1526,5 +1688,55 @@
     "candidateMusicalEvents": 40
   },
   "releaseApproved": false,
-  "eventObservation": "All 40 candidate onset groups now have provisional visual notehead-shape observations. These are not proven 1:1 lyric associations. Open/filled noteheads, stems and accidentals observed visually; exact pitches, durations, voices, measures, melismas and phrase boundaries remain unverified."
+  "eventObservation": "All 40 candidate onset groups now have provisional visual notehead-shape observations. These are not proven 1:1 lyric associations. Open/filled noteheads, stems and accidentals observed visually; exact pitches, durations, voices, measures, melismas and phrase boundaries remain unverified.",
+  "visualDurationSummary": {
+    "system1": [
+      "half",
+      "quarter",
+      "quarter",
+      "half",
+      "half",
+      "quarter",
+      "quarter",
+      "quarter",
+      "quarter",
+      "whole",
+      "half",
+      "quarter",
+      "quarter"
+    ],
+    "system2": [
+      "half",
+      "half",
+      "quarter",
+      "quarter",
+      "quarter",
+      "quarter",
+      "whole",
+      "half",
+      "quarter",
+      "quarter",
+      "half",
+      "half"
+    ],
+    "system3": [
+      "quarter",
+      "quarter",
+      "quarter",
+      "quarter",
+      "whole",
+      "half",
+      "quarter",
+      "quarter",
+      "quarter",
+      "quarter",
+      "quarter",
+      "quarter",
+      "half",
+      "half",
+      "whole"
+    ],
+    "confidence": "DRAFT_VISUAL_ONLY",
+    "caution": "Some adjacent open noteheads are unusual; no meter-based validation or exact rhythm assigned."
+  }
 }
