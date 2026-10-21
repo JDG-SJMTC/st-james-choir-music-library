@@ -4800,6 +4800,88 @@
       -3.33
     ],
     "findings": "Both coordinates use original-score pixel units. Differences are not evidence for a single translation: offsets vary and pairing is unverified. Do not shift lyrics.",
-    "approvedLinks": 0
+    "approvedLinks": 0,
+    "eightFragmentReview": [
+      {
+        "glyphId": "S2-L03",
+        "text": "nu",
+        "existingIndexCandidate": "S2-E03",
+        "nearestEvent": "S2-E02",
+        "nearestDistancePx": 19,
+        "secondNearest": "S2-E03",
+        "reviewPriority": "CHECK_EVENT_ASSIGNMENT",
+        "verified": false
+      },
+      {
+        "glyphId": "S2-L04",
+        "text": "paar",
+        "existingIndexCandidate": "S2-E04",
+        "nearestEvent": "S2-E03",
+        "nearestDistancePx": 12.33,
+        "secondNearest": "S2-E04",
+        "reviewPriority": "CHECK_EVENT_ASSIGNMENT",
+        "verified": false
+      },
+      {
+        "glyphId": "S2-L05",
+        "text": "kka",
+        "existingIndexCandidate": "S2-E05",
+        "nearestEvent": "S2-E04",
+        "nearestDistancePx": 0,
+        "secondNearest": "S2-E03",
+        "reviewPriority": "CHECK_EVENT_ASSIGNMENT",
+        "verified": false
+      },
+      {
+        "glyphId": "S2-L06",
+        "text": "De",
+        "existingIndexCandidate": "S2-E06",
+        "nearestEvent": "S2-E05",
+        "nearestDistancePx": 6,
+        "secondNearest": "S2-E06",
+        "reviewPriority": "CHECK_EVENT_ASSIGNMENT",
+        "verified": false
+      },
+      {
+        "glyphId": "S2-L07",
+        "text": "vaa",
+        "existingIndexCandidate": "S2-E07",
+        "nearestEvent": "S2-E06",
+        "nearestDistancePx": 11,
+        "secondNearest": "S2-E07",
+        "reviewPriority": "CHECK_EVENT_ASSIGNMENT",
+        "verified": false
+      },
+      {
+        "glyphId": "S2-L08",
+        "text": "Aa",
+        "existingIndexCandidate": "S2-E08",
+        "nearestEvent": "S2-E07",
+        "nearestDistancePx": 15.67,
+        "secondNearest": "S2-E08",
+        "reviewPriority": "CHECK_EVENT_ASSIGNMENT",
+        "verified": false
+      },
+      {
+        "glyphId": "S2-L09",
+        "text": "shra",
+        "existingIndexCandidate": "S2-E09",
+        "nearestEvent": "S2-E08",
+        "nearestDistancePx": 9.67,
+        "secondNearest": "S2-E07",
+        "reviewPriority": "CHECK_EVENT_ASSIGNMENT",
+        "verified": false
+      },
+      {
+        "glyphId": "S2-L10",
+        "text": "yam",
+        "existingIndexCandidate": "S2-E10",
+        "nearestEvent": "S2-E09",
+        "nearestDistancePx": 18,
+        "secondNearest": "S2-E08",
+        "reviewPriority": "CHECK_EVENT_ASSIGNMENT",
+        "verified": false
+      }
+    ]
   }
 }
