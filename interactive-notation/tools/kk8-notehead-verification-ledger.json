@@ -661,7 +661,15 @@
             "deltaOriginalPixels": -3.33
           }
         }
-      ]
+      ],
+      "inspection": {
+        "date": "2026-10-21",
+        "source": "Enlarged score system 2 (1710×300 crop)",
+        "finding": "The notation contains simultaneous noteheads/chords, tied lyric spacing and an isolated stemmed note between chords. Treating successive visually picked notehead x coordinates as one-to-one with successive printed lyric fragments is not a valid pairing rule.",
+        "implication": "System 2's cluster of positive horizontal deltas cannot be corrected by shifting each lyric to the indexed candidate. Need score-event grouping and assignment by printed glyph-to-note vertical relationship, with voice and duration accounted for.",
+        "status": "PAIRING_MODEL_REJECTED",
+        "musicalVerification": false
+      }
     },
     {
       "system": 3,
@@ -1041,7 +1049,14 @@
             "deltaOriginalPixels": -7.33
           }
         }
-      ]
+      ],
+      "inspection": {
+        "date": "2026-10-21",
+        "source": "Enlarged score system 3",
+        "finding": "Final phrase flagged as a cluster. Candidate x values were indexed sequentially without proof that every note/chord onset corresponds to exactly one lyric fragment.",
+        "status": "PAIRING_MODEL_REJECTED_PENDING_EVENT_GROUPING",
+        "musicalVerification": false
+      }
     }
   ],
   "reviewRules": [
@@ -1052,7 +1067,7 @@
     "Verify phrase/system breaks against notation, not equal word allocation",
     "Do not mark noteVerified or syllableVerified until evidence recorded"
   ],
-  "status": "DISCREPANCIES_TRIAGED_MUSICAL_VERIFICATION_PENDING",
+  "status": "INDEX_PAIRING_INVALIDATED_REQUIRES_EVENT_LEVEL_REVIEW",
   "verifiedNoteheadCount": 0,
   "approved": false,
   "cropDimensions": {
@@ -1174,6 +1189,7 @@
         "delta": -29.33
       }
     ],
-    "notEvidenceOfMisalignment": true
+    "notEvidenceOfMisalignment": true,
+    "interpretation": "13 deltas are screening anomalies in an unverified index-based note pairing, not 13 confirmed wrong lyric anchors."
   }
 }
