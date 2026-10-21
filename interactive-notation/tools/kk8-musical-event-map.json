@@ -4779,5 +4779,27 @@
     ],
     "reviewMethod": "Review contiguous fragments as phrases before any isolated syllable reassignment; compare image crop origin/scale, notehead onset, printed glyph extent, melody voice, and melisma evidence.",
     "reviewBatchesStatus": "DIAGNOSTIC_ONLY"
+  },
+  "system2GeometryInvestigation": {
+    "status": "DIAGNOSTIC_ONLY",
+    "imageBasisWidth": 878,
+    "cropOriginX": 195,
+    "cropScale": 3,
+    "indexPairedOffsetsPx": [
+      5,
+      20,
+      45.33,
+      36,
+      28,
+      31,
+      27.33,
+      52.67,
+      62,
+      42,
+      14,
+      -3.33
+    ],
+    "findings": "Both coordinates use original-score pixel units. Differences are not evidence for a single translation: offsets vary and pairing is unverified. Do not shift lyrics.",
+    "approvedLinks": 0
   }
 }
