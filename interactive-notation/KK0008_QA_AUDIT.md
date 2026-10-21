@@ -150,3 +150,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Created `lyricAssociationReviewQueue` in `tools/kk8-musical-event-map.json` with 21 printed-glyph review cases: system 1: 6, system 2: 8, system 3: 7 (commit `4753a0f`). Each case retains the original index candidate, its signed x offset, three nearest events, and reason codes.
 - The flags are **not** 21 proven musical errors. They prioritise manual comparison of the printed Malayalam with the melody and voice notation; no `linkedEventIds` were populated, and no melisma was marked verified.
 - Follow-up: review flagged cases against score with notehead/voice evidence, then check unflagged cases too. Never autoapprove unflagged links from horizontal proximity. Production unchanged.
+
+## Phrase-level exception triage (21 flagged glyphs)
+- Grouped 21 flagged glyphs into four contiguous review batches, saved as `lyricAssociationReviewQueue.reviewBatches` (commit `b7f02e5`): S1 L02 alone; S1 L06–L10 (positive 12–29.33px); S2 L03–L10 (positive 27.33–62px); S3 L08–L14 (negative 12.67–42.67px).
+- The runs of same-direction offsets may reflect different crop coordinate origins, alignment assumptions, or phrase-level placement, rather than individual wrong syllables. **Do not apply a bulk offset** without checking score crop geometry and musical onset evidence.
+- No syllable links, melody voice or melismas verified. Next action is score-grounded review of these four batches, starting with S2 L03–L10, and then independent review of all unflagged fragments. Production untouched.
