@@ -85,3 +85,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Inspected all three systems on the original 878×1241 score image at enlarged scale. The printed lyric-unit counts visibly match the draft: system 1 = 13, system 2 = 12, system 3 = 15 (40 total). Printed order and cross-system word continuations are visually consistent.
 - Evidence recorded in `tools/kk8-stanza1-visual-verification.json`. This is a PARTIAL verification only. Individual x coordinates, exact Malayalam glyph transcription, note associations, melismas, and rhythm remain unverified. Do not promote to musically approved.
 - Release 2 beta only; production untouched.
+
+## Notehead evidence ledger
+- Added `tools/kk8-notehead-verification-ledger.json`: 40 individual stanza-one lyric entries, each requiring visually verified notehead/chord onset, pitch, duration, and melisma assessment.
+- Inspected enlarged images of all three score systems. No notehead coordinate or melisma has yet been recorded as verified; the 40 provisional x values refer to printed lyric positions, **not** independently verified notehead coordinates.
+- Musical sign-off remains blocked until this ledger is completed and the resulting alignment is checked in the beta preview. Production root remains untouched.
