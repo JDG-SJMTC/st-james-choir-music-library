@@ -172,3 +172,9 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Records now carry provisional beat start, duration, upper-staff pitch draft and same-index printed glyph candidate. All measure totals equal four beats.
 - The rhythmic consistency is a **structural check only**: no sung melody voice or syllable onset has been verified, and score contains multiple simultaneous noteheads. The event ledger explicitly leaves `melodyPitch` and `melodyVoice` null, and the release gate fails.
 - Next: independently read bass-staff voices and determine whether melody is top note, lower note, or changes voices; verify lyric underlay against full score. Production remains untouched.
+
+## KK8 system 2 — full two-staff review
+- Opened `song-8/original.png` (878×1241) and examined the second treble+bass system together. Five measures remain consistent with the prior treble duration ledger.
+- Corrected prior inference: E04 and E11 downward stems do not establish separate voices. They are single treble notes, and melody continuity must be determined independently.
+- Bass staff has its own moving notes and curved tie/slur marks in later measures; do not transfer these into treble melisma assumptions. The score has two staves and dyads, but no verified assignment of the sung melody pitch among treble dyad tones.
+- New `system2FullScoreVoiceAudit` records measure-level observations. No pitch voice or lyric association marked verified. Production untouched.
