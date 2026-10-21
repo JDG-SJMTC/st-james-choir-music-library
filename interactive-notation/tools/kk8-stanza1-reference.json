@@ -1,0 +1,82 @@
+{
+  "song": "KK-0008",
+  "source": "KK-0008.pdf",
+  "referenceImage": "../song-8/original.png",
+  "referenceImageDimensions": {
+    "width": 878,
+    "height": 1241
+  },
+  "status": "visual-coordinate-draft",
+  "note": "Reference anchors manually estimated from original score image. These are x positions of printed Malayalam lyric fragments, not approved syllable-to-note alignment. Image coordinate basis: page1.png 878x1241; original.png may have different dimensions, so scaling is required.",
+  "systems": [
+    {
+      "system": 1,
+      "staffY": 305,
+      "lyricY": 370,
+      "anchorsX": [
+        250,
+        288,
+        322,
+        363,
+        421,
+        459,
+        501,
+        534,
+        567,
+        606,
+        665,
+        701,
+        728
+      ]
+    },
+    {
+      "system": 2,
+      "staffY": 486,
+      "lyricY": 551,
+      "anchorsX": [
+        219,
+        264,
+        306,
+        333,
+        365,
+        399,
+        431,
+        485,
+        536,
+        579,
+        618,
+        665,
+        710
+      ]
+    },
+    {
+      "system": 3,
+      "staffY": 665,
+      "lyricY": 731,
+      "anchorsX": [
+        219,
+        252,
+        285,
+        319,
+        367,
+        414,
+        449,
+        484,
+        519,
+        551,
+        583,
+        613,
+        643,
+        679,
+        712
+      ]
+    }
+  ],
+  "verification": {
+    "imageAnchorsChecked": false,
+    "sourceSyllablesChecked": false,
+    "melismaChecked": false,
+    "stanza1Approved": false
+  },
+  "reusableRule": "Later stanzas may stretch/reflow across verified musical phrases with differing syllable counts; do not enforce fixed counts."
+}
