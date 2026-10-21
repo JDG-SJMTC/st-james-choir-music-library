@@ -42,3 +42,8 @@ Test the rules against KK 8, KK 30 and KK 150, including their differing stanza 
 - KK 8 contains a treble-clef upper staff and a bass-clef lower staff. A treble-only transcription is **not** full-score transcription. Keep upper and lower voice evidence separate, especially when ties or chord onsets occur in only one staff.
 - The score has three flats (B♭, E♭, A♭); accidentals within a measure may override them. Derive pitches from staff position plus clef/key/accidentals, not x position.
 - Provisional visually read pitches belong in `visualPitchDraft`, never `noteheadPitches` until independently checked. Preserve a distinction between score evidence and musical approval.
+
+## Key signature and tie correction from KK 8
+
+- A key signature must be applied to every provisional staff pitch before presenting a pitch label. The initial KK 8 system-two draft mistakenly labelled eight E pitches as E-natural; they were corrected to E-flat pending independent pitch review.
+- Distinguish a bass-staff tie (sustained instrumental/harmonic pitch) from a **lyric melisma** (one sung syllable spanning multiple melody notes). The existence of a tie below the melody does not prove a sung syllable is sustained.
