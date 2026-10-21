@@ -95,3 +95,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Manually inspected 1710×300 crop images for all three systems; entered 40 approximate horizontal note/chord-onset candidates in `tools/kk8-notehead-verification-ledger.json` (commit `33f9a99`). Each candidate has a ±15 crop-pixel uncertainty estimate and is explicitly `CANDIDATE_ONSET_NEEDS_CONFIRMATION`.
 - **Verified musical associations: 0.** Candidate crop coordinates are not the original image coordinates and cannot yet be compared numerically with draft lyric anchors. Note durations, chord pitches, melismas and musical phrase verification are outstanding.
 - Release gate remains blocked; production root unchanged.
+
+## Crop-to-original coordinate reconciliation
+- Independently matched each 1710×300 enlarged system crop against the 878×1241 original PNG using normalized image template correlation after downscaling 3×. Confirmed crop origins: system 1 `(195,290)`, system 2 `(195,465)`, system 3 `(195,650)`, with correlations approximately 0.9891, 0.9892 and 0.9886.
+- Added original-coordinate candidate notehead x values and deltas from provisional lyric x anchors to `tools/kk8-notehead-verification-ledger.json` (commit `2f75b83`). 13 of 40 absolute deltas exceed 25 original-image pixels. **These differences are diagnostic flags, not proof of errors**: crop candidate positions and pairing remain approximate.
+- No verified note-to-syllable assignments or melisma sign-off yet; production untouched.
