@@ -5176,5 +5176,108 @@
     ],
     "approvedMusicalLinks": 0,
     "conclusion": "One-event global shift is contradicted by direct score group geometry. Retain same-index glyph/onset groups as visually plausible candidates, pending voice and rhythm transcription."
+  },
+  "system2VoiceTranscriptionDraft": {
+    "status": "VISUAL_VOICE_PARTIAL_NOT_MUSICAL_APPROVAL",
+    "source": "kk8_system_2.png",
+    "sourceDimensionsPx": [
+      1710,
+      300
+    ],
+    "scope": "Visible upper staff only, crop starts mid-staff; clef, complete barlines and ties not all visible",
+    "observations": [
+      {
+        "eventId": "S2-E01",
+        "x": 99,
+        "notation": "two vertically separated open noteheads on same upward stem",
+        "provisionalValue": "half",
+        "voiceAssessment": "chord or shared-stem voices, unresolved"
+      },
+      {
+        "eventId": "S2-E02",
+        "x": 252,
+        "notation": "two open noteheads on upward stem",
+        "provisionalValue": "half",
+        "voiceAssessment": "chord or shared-stem voices, unresolved"
+      },
+      {
+        "eventId": "S2-E03",
+        "x": 445,
+        "notation": "two filled noteheads on upward stem",
+        "provisionalValue": "quarter",
+        "voiceAssessment": "upper voice candidate"
+      },
+      {
+        "eventId": "S2-E04",
+        "x": 516,
+        "notation": "single filled notehead on downward stem",
+        "provisionalValue": "quarter",
+        "voiceAssessment": "separate lower-stem voice candidate; NOT proven sequential melody onset"
+      },
+      {
+        "eventId": "S2-E05",
+        "x": 600,
+        "notation": "two filled noteheads on upward stem",
+        "provisionalValue": "quarter",
+        "voiceAssessment": "upper voice candidate"
+      },
+      {
+        "eventId": "S2-E06",
+        "x": 711,
+        "notation": "two filled noteheads on upward stem; natural accidental on upper tone",
+        "provisionalValue": "quarter",
+        "voiceAssessment": "upper voice candidate"
+      },
+      {
+        "eventId": "S2-E07",
+        "x": 826,
+        "notation": "two open stemless noteheads",
+        "provisionalValue": "whole",
+        "voiceAssessment": "chord or two voices unresolved"
+      },
+      {
+        "eventId": "S2-E08",
+        "x": 1031,
+        "notation": "two close open noteheads with upward stem",
+        "provisionalValue": "half",
+        "voiceAssessment": "chord or shared-stem voices unresolved"
+      },
+      {
+        "eventId": "S2-E09",
+        "x": 1188,
+        "notation": "two filled noteheads on upward stem",
+        "provisionalValue": "quarter",
+        "voiceAssessment": "upper voice candidate"
+      },
+      {
+        "eventId": "S2-E10",
+        "x": 1260,
+        "notation": "two filled noteheads on upward stem",
+        "provisionalValue": "quarter",
+        "voiceAssessment": "upper voice candidate"
+      },
+      {
+        "eventId": "S2-E11",
+        "x": 1380,
+        "notation": "single open notehead with downward stem",
+        "provisionalValue": "half",
+        "voiceAssessment": "separate lower-stem voice candidate; NOT proven sequential melody onset"
+      },
+      {
+        "eventId": "S2-E12",
+        "x": 1520,
+        "notation": "two open noteheads on upward stem",
+        "provisionalValue": "half",
+        "voiceAssessment": "chord or shared-stem voices unresolved"
+      }
+    ],
+    "warnings": [
+      "Vertical staff voice assignment cannot be inferred solely from stem direction; opposing stems are evidence of possible independent voices.",
+      "Previous 12-to-12 glyph-to-event correspondence is geometric only and cannot establish sung melody mapping.",
+      "Do not label E04 or E11 as definite melody notes until measure/voice context is resolved.",
+      "Pitch drafts and durations remain unapproved."
+    ],
+    "verifiedSungMelodyEvents": 0,
+    "verifiedSyllableLinks": 0
   }
 }
