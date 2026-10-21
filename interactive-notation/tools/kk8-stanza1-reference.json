@@ -85,11 +85,11 @@
       "system": 3,
       "staffY": 665,
       "lyricY": 731,
-      "printedMalayalamApprox": "ല്ലാ നേ ര ത ന്നിൽ ആ ശ്രി ത വ ത്സ ലാ കൂ ടെ പാ ർക്ക",
+      "printedMalayalamApprox": "ല്ലാ നേ രം ത ന്നിൽ ആ ശ്രി ത വ ത്സ ലാ കൂ ടെ പാ ർക്ക",
       "lyricFragments": [
         "ല്ലാ",
         "നേ",
-        "ര",
+        "രം",
         "ത",
         "ന്നിൽ",
         "ആ",
@@ -130,5 +130,16 @@
     "stanza1Approved": false,
     "printedFragmentsVisuallyDrafted": true
   },
-  "reusableRule": "Later stanzas may stretch/reflow across verified musical phrases with differing syllable counts; do not enforce fixed counts."
+  "reusableRule": "Later stanzas may stretch/reflow across verified musical phrases with differing syllable counts; do not enforce fixed counts.",
+  "review": {
+    "date": "2026-10-21",
+    "source": "local page1.png, enlarged crops of all three musical systems",
+    "findings": [
+      "Verified visually that the printed lyric crosses musical system boundaries, including the split of 'കൂരിരുളേറുന്നു' between systems 1 and 2.",
+      "Corrected system 3 preliminary token from 'ര' to 'രം'; prior rough transcription should not be treated as authoritative.",
+      "Staff has chords and sustained notes, so raw notehead x coordinates alone cannot establish syllable association or melisma.",
+      "The previous anchorsX arrays are approximate and have not been individually validated; stanza 1 is NOT approved."
+    ],
+    "releaseStatus": "BLOCKED"
+  }
 }
