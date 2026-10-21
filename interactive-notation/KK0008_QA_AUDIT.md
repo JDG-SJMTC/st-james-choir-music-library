@@ -155,3 +155,9 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Grouped 21 flagged glyphs into four contiguous review batches, saved as `lyricAssociationReviewQueue.reviewBatches` (commit `b7f02e5`): S1 L02 alone; S1 L06–L10 (positive 12–29.33px); S2 L03–L10 (positive 27.33–62px); S3 L08–L14 (negative 12.67–42.67px).
 - The runs of same-direction offsets may reflect different crop coordinate origins, alignment assumptions, or phrase-level placement, rather than individual wrong syllables. **Do not apply a bulk offset** without checking score crop geometry and musical onset evidence.
 - No syllable links, melody voice or melismas verified. Next action is score-grounded review of these four batches, starting with S2 L03–L10, and then independent review of all unflagged fragments. Production untouched.
+
+## 2026-10-21 — Direct image inspection changes system 2 diagnosis
+- Opened actual 1710×300 `kk8_system_2.png` crop. Previously recorded lyric x values for S2-L03 onward do **not** match the visually printed glyph centers. For example S2-L05 stored original x=367 projects to crop x=516, whereas printed glyph center is approximately crop x=594, near the fifth candidate onset at x=600.
+- Visually estimated centers for 12 glyphs saved separately in `kk8-musical-event-map.json` under `system2ImageCoordinateReaudit`; these are approximate, with 10–20px uncertainty and **not verified links**. Original data retained.
+- The earlier statement that eight syllables are nearer the preceding event was a property of faulty coordinate drafts, not confirmed score alignment. Treat the proposed one-event shift as **invalidated**, pending independent musical verification.
+- No lyric position edits, note-to-syllable approvals or production changes.
