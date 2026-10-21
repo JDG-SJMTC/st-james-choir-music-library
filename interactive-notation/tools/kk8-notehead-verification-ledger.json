@@ -29,7 +29,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 177,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 254,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 5,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 2,
@@ -44,7 +48,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 309,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 298,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 19,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 3,
@@ -59,7 +67,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 375,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 320,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 5,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 4,
@@ -74,7 +86,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 501,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 362,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 12,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 5,
@@ -89,7 +105,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 657,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 414,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 13,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 6,
@@ -104,7 +124,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 829,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 471.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 29.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 7,
@@ -119,7 +143,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 913,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 499.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 20.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 8,
@@ -134,7 +162,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1003,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 529.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 17.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 9,
@@ -149,7 +181,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1080,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 555,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 12,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 10,
@@ -164,7 +200,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1210,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 598.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 18.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 11,
@@ -179,7 +219,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1383,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 656,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 4,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 12,
@@ -194,7 +238,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1533,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 706,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 15,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 13,
@@ -209,7 +257,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1610,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 731.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 5.67,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         }
       ]
     },
@@ -231,7 +283,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 101,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 228.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 5.67,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 2,
@@ -246,7 +302,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 252,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 279,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 20,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 3,
@@ -261,7 +321,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 446,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 343.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 45.67,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 4,
@@ -276,7 +340,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 517,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 367.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 36.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 5,
@@ -291,7 +359,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 601,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 395.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 28.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 6,
@@ -306,7 +378,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 711,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 432,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 31,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 7,
@@ -321,7 +397,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 826,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 470.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 27.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 8,
@@ -336,7 +416,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1030,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 538.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 52.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 9,
@@ -351,7 +435,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1189,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 591.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 62.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 10,
@@ -366,7 +454,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1260,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 615,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 42,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 11,
@@ -381,7 +473,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1380,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 655,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 14,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 12,
@@ -396,7 +492,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1520,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 701.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -3.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         }
       ]
     },
@@ -418,7 +518,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 101,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 228.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 10.67,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 2,
@@ -433,7 +537,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 183,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 256,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 3,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 3,
@@ -448,7 +556,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 271,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 285.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -0.67,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 4,
@@ -463,7 +575,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 341,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 308.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -11.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 5,
@@ -478,7 +594,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 470,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 351.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -5.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 6,
@@ -493,7 +613,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 640,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 408.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": 1.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 7,
@@ -508,7 +632,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 739,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 441.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -3.67,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 8,
@@ -523,7 +651,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 811,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 465.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -12.67,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 9,
@@ -538,7 +670,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 899,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 494.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -16.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 10,
@@ -553,7 +689,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 974,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 519.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -23.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 11,
@@ -568,7 +708,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1061,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 548.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -29.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 12,
@@ -583,7 +727,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1135,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 573.33,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -42.67,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 13,
@@ -598,7 +746,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1235,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 606.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -40.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 14,
@@ -613,7 +765,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1361,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 648.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -29.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         },
         {
           "index": 15,
@@ -628,7 +784,11 @@
           "reviewStatus": "CANDIDATE_ONSET_NEEDS_CONFIRMATION",
           "candidateNoteheadCropX": 1541,
           "candidateSource": "Manual inspection of 1710×300 enlarged staff crop; approximate horizontal note/chord onset, not yet verified in original image coordinate space",
-          "candidateUncertaintyCropPixels": 15
+          "candidateUncertaintyCropPixels": 15,
+          "candidateOriginalX": 708.67,
+          "candidateOriginalUncertaintyPx": 5,
+          "lyricToCandidateDx": -7.33,
+          "coordinateTransformStatus": "IMAGE_MATCH_CONFIRMED_NOTEHEAD_CANDIDATE_UNVERIFIED"
         }
       ]
     }
@@ -641,7 +801,7 @@
     "Verify phrase/system breaks against notation, not equal word allocation",
     "Do not mark noteVerified or syllableVerified until evidence recorded"
   ],
-  "status": "CANDIDATE_NOTEHEAD_ONSETS_RECORDED_UNVERIFIED",
+  "status": "CROP_COORDINATES_RECONCILED_NOTE_ASSOCIATIONS_UNVERIFIED",
   "verifiedNoteheadCount": 0,
   "approved": false,
   "cropDimensions": {
@@ -649,5 +809,35 @@
     "height": 300
   },
   "candidateNoteheadCount": 40,
-  "limitations": "Candidate x coordinates estimated visually in resized/cropped staff images. No exact crop-to-original transform recorded; do not compare candidateNoteheadCropX directly to original-image lyricX. Chord pitches, durations, lyric-to-note musical semantics, and melismas remain unverified."
+  "limitations": "Crop transform is confirmed by template matching. Candidate notehead locations were manually approximated, and some are substantially offset from printed lyric positions. The candidate-to-fragment pairing itself has not been established musically. No notehead, pitch, duration or melisma is verified.",
+  "cropToOriginalTransforms": [
+    {
+      "system": 1,
+      "scaleFactor": 3,
+      "cropOriginX": 195,
+      "cropOriginY": 290,
+      "formula": "originalX=cropOriginX+cropX/3; originalY=cropOriginY+cropY/3",
+      "evidence": "OpenCV normalized cross-correlation template match against original page image",
+      "matchScoreApprox": 0.98909
+    },
+    {
+      "system": 2,
+      "scaleFactor": 3,
+      "cropOriginX": 195,
+      "cropOriginY": 465,
+      "formula": "originalX=cropOriginX+cropX/3; originalY=cropOriginY+cropY/3",
+      "evidence": "OpenCV normalized cross-correlation template match against original page image",
+      "matchScoreApprox": 0.98923
+    },
+    {
+      "system": 3,
+      "scaleFactor": 3,
+      "cropOriginX": 195,
+      "cropOriginY": 650,
+      "formula": "originalX=cropOriginX+cropX/3; originalY=cropOriginY+cropY/3",
+      "evidence": "OpenCV normalized cross-correlation template match against original page image",
+      "matchScoreApprox": 0.98856
+    }
+  ],
+  "coordinateReconciliation": "CONFIRMED_CROP_TRANSFORMS"
 }
