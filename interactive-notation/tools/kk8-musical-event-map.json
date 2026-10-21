@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "SYSTEM1_PITCH_DRAFT_REVISED_ALL_MUSICAL_LINKS_UNVERIFIED",
+  "status": "SYSTEM2_VISUALLY_REVIEWED_SYSTEM3_TAIL_CORRECTED_MELODY_LINKS_PENDING",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -1119,6 +1119,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1195,6 +1200,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1271,6 +1281,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1343,6 +1358,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1419,6 +1439,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1495,6 +1520,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1570,6 +1600,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1646,6 +1681,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1721,6 +1761,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1796,6 +1841,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1869,6 +1919,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         },
         {
@@ -1945,6 +2000,11 @@
             ],
             "status": "STAFF_COORDINATE_CROSSCHECK_DRAFT",
             "reviewedAgainst": "Enlarged staff crop; pitches require second independent review"
+          },
+          "pitchReview": {
+            "status": "REVIEWED_AGAINST_VISIBLE_TREBLE_CROP_PROVISIONAL",
+            "source": "kk8_system_2.png",
+            "limitation": "Single-pass image inspection, not independent musical approval"
           }
         }
       ],
@@ -2776,8 +2836,8 @@
           "provisionalDurationBeats": 2,
           "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
           "visualPitchDraft": [
-            "D4",
-            "F4"
+            "E♭4",
+            "G4"
           ],
           "pitchEvidence": {
             "reference": "kk8_system_3.png",
@@ -2792,6 +2852,11 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
             "verified": false
+          },
+          "pitchReview": {
+            "status": "CORRECTED_FROM_ENLARGED_IMAGE_STILL_PROVISIONAL",
+            "source": "kk8_system_3.png",
+            "reason": "The penultimate open dyad sits on the bottom E line and G line, not below the staff."
           }
         },
         {
@@ -2817,8 +2882,8 @@
           "provisionalDurationBeats": 4,
           "rhythmEvidence": "Notehead fill/stem and barline grouping checked against 4/4; still requires independent musical sign-off",
           "visualPitchDraft": [
-            "E♭4",
-            "E♭4"
+            "F4",
+            "F4"
           ],
           "pitchEvidence": {
             "reference": "kk8_system_3.png",
@@ -2833,6 +2898,11 @@
             "keySignature": "B♭ E♭ A♭",
             "observation": "Visually estimated notehead positions; adjacent unison whole-note heads may belong to distinct voices; verify against original",
             "verified": false
+          },
+          "pitchReview": {
+            "status": "CORRECTED_FROM_ENLARGED_IMAGE_STILL_PROVISIONAL",
+            "source": "kk8_system_3.png",
+            "reason": "Two adjacent open noteheads share the F-space; simultaneous unison notation, not two sequential syllables."
           }
         }
       ],
@@ -3515,6 +3585,38 @@
       ],
       "reason": "Earlier pitch drafts were not reliably grounded in observed notehead positions; direct crop inspection revealed several discrepancies",
       "verifiedCount": 0
+    },
+    "system3DirectImageCorrections": [
+      {
+        "event": "S3-E14",
+        "old": [
+          "D4",
+          "F4"
+        ],
+        "new": [
+          "E♭4",
+          "G4"
+        ],
+        "reason": "The penultimate open dyad sits on the bottom E line and G line, not below the staff."
+      },
+      {
+        "event": "S3-E15",
+        "old": [
+          "E♭4",
+          "E♭4"
+        ],
+        "new": [
+          "F4",
+          "F4"
+        ],
+        "reason": "Two adjacent open noteheads share the F-space; simultaneous unison notation, not two sequential syllables."
+      }
+    ],
+    "system2DirectImagePass": {
+      "eventsReviewed": 12,
+      "verified": 0,
+      "source": "kk8_system_2.png",
+      "status": "VISUAL_REVIEW_ONLY"
     }
   },
   "bassStaffAudit": {
