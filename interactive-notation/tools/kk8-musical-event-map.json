@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "SYSTEM2_VISUALLY_REVIEWED_SYSTEM3_TAIL_CORRECTED_MELODY_LINKS_PENDING",
+  "status": "IMAGE_PITCH_DRAFTS_REVIEWED_X_DISTANCE_AUDIT_NO_VERIFIED_LYRIC_LINKS",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -3641,5 +3641,352 @@
     "verifiedBassPitches": 0,
     "verifiedBassDurations": 0,
     "lyricMelismasVerified": 0
+  },
+  "lyricAlignmentDistanceAudit": {
+    "method": "Nearest event onset by x; exploratory only, not a valid syllable-to-note association model",
+    "systems": [
+      {
+        "system": 1,
+        "nearestMatches": [
+          {
+            "glyph": "S1-L01",
+            "text": "Koo",
+            "printedX": 249,
+            "nearestEvent": "S1-E01",
+            "offsetPx": 5,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S1-L02",
+            "text": "dey",
+            "printedX": 279,
+            "nearestEvent": "S1-E02",
+            "offsetPx": 19,
+            "ambiguous": true
+          },
+          {
+            "glyph": "S1-L03",
+            "text": "paar",
+            "printedX": 315,
+            "nearestEvent": "S1-E03",
+            "offsetPx": 5,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S1-L04",
+            "text": "kka",
+            "printedX": 350,
+            "nearestEvent": "S1-E04",
+            "offsetPx": 12,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S1-L05",
+            "text": "ne",
+            "printedX": 401,
+            "nearestEvent": "S1-E05",
+            "offsetPx": 13,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S1-L06",
+            "text": "ram",
+            "printedX": 442,
+            "nearestEvent": "S1-E05",
+            "offsetPx": -28,
+            "ambiguous": true
+          },
+          {
+            "glyph": "S1-L07",
+            "text": "vai",
+            "printedX": 479,
+            "nearestEvent": "S1-E06",
+            "offsetPx": -7.7,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S1-L08",
+            "text": "kun",
+            "printedX": 512,
+            "nearestEvent": "S1-E07",
+            "offsetPx": -12.7,
+            "ambiguous": true
+          },
+          {
+            "glyph": "S1-L09",
+            "text": "ni",
+            "printedX": 543,
+            "nearestEvent": "S1-E09",
+            "offsetPx": 12,
+            "ambiguous": true
+          },
+          {
+            "glyph": "S1-L10",
+            "text": "thaa",
+            "printedX": 580,
+            "nearestEvent": "S1-E10",
+            "offsetPx": 18.3,
+            "ambiguous": true
+          },
+          {
+            "glyph": "S1-L11",
+            "text": "Koo",
+            "printedX": 652,
+            "nearestEvent": "S1-E11",
+            "offsetPx": 4,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S1-L12",
+            "text": "ri",
+            "printedX": 691,
+            "nearestEvent": "S1-E12",
+            "offsetPx": 15,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S1-L13",
+            "text": "ru",
+            "printedX": 726,
+            "nearestEvent": "S1-E13",
+            "offsetPx": 5.7,
+            "ambiguous": false
+          }
+        ],
+        "largeOffsets": 1,
+        "ambiguous": 5
+      },
+      {
+        "system": 2,
+        "nearestMatches": [
+          {
+            "glyph": "S2-L01",
+            "text": "lhe",
+            "printedX": 223,
+            "nearestEvent": "S2-E01",
+            "offsetPx": 5,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L02",
+            "text": "run",
+            "printedX": 259,
+            "nearestEvent": "S2-E02",
+            "offsetPx": 20,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L03",
+            "text": "nu",
+            "printedX": 298,
+            "nearestEvent": "S2-E02",
+            "offsetPx": -19,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L04",
+            "text": "paar",
+            "printedX": 331,
+            "nearestEvent": "S2-E03",
+            "offsetPx": 12.3,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L05",
+            "text": "kka",
+            "printedX": 367,
+            "nearestEvent": "S2-E04",
+            "offsetPx": 0,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L06",
+            "text": "De",
+            "printedX": 401,
+            "nearestEvent": "S2-E05",
+            "offsetPx": -6,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L07",
+            "text": "vaa",
+            "printedX": 443,
+            "nearestEvent": "S2-E06",
+            "offsetPx": -11,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L08",
+            "text": "Aa",
+            "printedX": 486,
+            "nearestEvent": "S2-E07",
+            "offsetPx": -15.7,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L09",
+            "text": "shra",
+            "printedX": 529,
+            "nearestEvent": "S2-E08",
+            "offsetPx": 9.7,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L10",
+            "text": "yam",
+            "printedX": 573,
+            "nearestEvent": "S2-E09",
+            "offsetPx": 18,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L11",
+            "text": "ve",
+            "printedX": 641,
+            "nearestEvent": "S2-E11",
+            "offsetPx": 14,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S2-L12",
+            "text": "ri",
+            "printedX": 705,
+            "nearestEvent": "S2-E12",
+            "offsetPx": -3.3,
+            "ambiguous": false
+          }
+        ],
+        "largeOffsets": 0,
+        "ambiguous": 0
+      },
+      {
+        "system": 3,
+        "nearestMatches": [
+          {
+            "glyph": "S3-L01",
+            "text": "llaa",
+            "printedX": 218,
+            "nearestEvent": "S3-E01",
+            "offsetPx": 10.7,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L02",
+            "text": "ne",
+            "printedX": 253,
+            "nearestEvent": "S3-E02",
+            "offsetPx": 3,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L03",
+            "text": "ram",
+            "printedX": 286,
+            "nearestEvent": "S3-E03",
+            "offsetPx": -0.7,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L04",
+            "text": "than",
+            "printedX": 320,
+            "nearestEvent": "S3-E04",
+            "offsetPx": -11.3,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L05",
+            "text": "nil",
+            "printedX": 357,
+            "nearestEvent": "S3-E05",
+            "offsetPx": -5.3,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L06",
+            "text": "Aa",
+            "printedX": 407,
+            "nearestEvent": "S3-E06",
+            "offsetPx": 1.3,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L07",
+            "text": "shri",
+            "printedX": 445,
+            "nearestEvent": "S3-E07",
+            "offsetPx": -3.7,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L08",
+            "text": "tha",
+            "printedX": 478,
+            "nearestEvent": "S3-E08",
+            "offsetPx": -12.7,
+            "ambiguous": true
+          },
+          {
+            "glyph": "S3-L09",
+            "text": "va",
+            "printedX": 511,
+            "nearestEvent": "S3-E10",
+            "offsetPx": 8.7,
+            "ambiguous": true
+          },
+          {
+            "glyph": "S3-L10",
+            "text": "thsa",
+            "printedX": 543,
+            "nearestEvent": "S3-E11",
+            "offsetPx": 5.7,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L11",
+            "text": "laa",
+            "printedX": 578,
+            "nearestEvent": "S3-E12",
+            "offsetPx": -4.7,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L12",
+            "text": "koo",
+            "printedX": 616,
+            "nearestEvent": "S3-E13",
+            "offsetPx": -9.3,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L13",
+            "text": "dey",
+            "printedX": 647,
+            "nearestEvent": "S3-E14",
+            "offsetPx": 1.7,
+            "ambiguous": false
+          },
+          {
+            "glyph": "S3-L14",
+            "text": "paar",
+            "printedX": 678,
+            "nearestEvent": "S3-E14",
+            "offsetPx": -29.3,
+            "ambiguous": true
+          },
+          {
+            "glyph": "S3-L15",
+            "text": "kka",
+            "printedX": 716,
+            "nearestEvent": "S3-E15",
+            "offsetPx": -7.3,
+            "ambiguous": false
+          }
+        ],
+        "largeOffsets": 1,
+        "ambiguous": 3
+      }
+    ],
+    "releaseImplication": "No glyph links approved from nearest-neighbour matching. Requires note onset/lyric-centre and phrase review."
   }
 }
