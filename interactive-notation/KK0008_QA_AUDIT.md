@@ -69,3 +69,8 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Added rendered-element bounding-box overlap detection to `tools/kk8-seven-stanza-preview.html` (commit `d6a4a454`). It reports the visible fragment count and intersecting lyric-label pairs for the selected stanza after rendering.
 - The check is browser-side; no browser execution results were collected in this commit. Text collisions and musical accuracy are not yet signed off. Existing phrase boundaries and x positions remain draft.
 - All modifications remain within `interactive-notation/` and do not alter the production root page.
+
+## Browser-measured collision mitigation
+- Verified repository `song-8/original.png` is 878×1241 pixels, matching the stanza-one draft coordinate basis. `stanza1-draft.png` is 878×1337 and must not be substituted without recalibration.
+- Beta-only seven-stanza preview now runs browser-measured horizontal collision relaxation per musical system and reports shifted lyric fragments / insufficient room (commit `0dc4831`). Visual shifting does not verify syllable-to-note associations and must be musically checked before approval.
+- Browser execution and visual QA remain outstanding. Release 2 remains unapproved and production root unchanged.
