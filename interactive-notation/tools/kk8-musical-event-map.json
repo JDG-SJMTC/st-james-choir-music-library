@@ -1,7 +1,7 @@
 {
   "song": "KK-0008",
   "schemaVersion": 1,
-  "status": "AWAITING_SCORE_EVENT_TRANSCRIPTION",
+  "status": "SYSTEM2_EVENT_SHAPES_DRAFTED_NO_VERIFIED_LINKS",
   "image": {
     "path": "../song-8/original.png",
     "width": 878,
@@ -241,7 +241,284 @@
     },
     {
       "system": 2,
-      "events": [],
+      "events": [
+        {
+          "id": "S2-E01",
+          "system": 2,
+          "onsetX": 228,
+          "onsetCropX": 99,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E02",
+          "system": 2,
+          "onsetX": 279,
+          "onsetCropX": 252,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E03",
+          "system": 2,
+          "onsetX": 343.33,
+          "onsetCropX": 445,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E04",
+          "system": 2,
+          "onsetX": 367,
+          "onsetCropX": 516,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "filled single note",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E05",
+          "system": 2,
+          "onsetX": 395,
+          "onsetCropX": 600,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E06",
+          "system": 2,
+          "onsetX": 432,
+          "onsetCropX": 711,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E07",
+          "system": 2,
+          "onsetX": 470.33,
+          "onsetCropX": 826,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "open stemless dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E08",
+          "system": 2,
+          "onsetX": 538.67,
+          "onsetCropX": 1031,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E09",
+          "system": 2,
+          "onsetX": 591,
+          "onsetCropX": 1188,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E10",
+          "system": 2,
+          "onsetX": 615,
+          "onsetCropX": 1260,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "filled-stemmed dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E11",
+          "system": 2,
+          "onsetX": 655,
+          "onsetCropX": 1380,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "open single note with stem",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        },
+        {
+          "id": "S2-E12",
+          "system": 2,
+          "onsetX": 701.67,
+          "onsetCropX": 1520,
+          "voice": "unknown",
+          "noteheadPitches": [],
+          "duration": null,
+          "measure": null,
+          "evidence": {
+            "image": "kk8_system_2.png",
+            "cropWidth": 1710,
+            "cropHeight": 300,
+            "cropOriginOriginal": {
+              "x": 195,
+              "y": 465
+            },
+            "scale": 3,
+            "visualNoteheadShape": "open-stemmed dyad",
+            "observation": "Approximate horizontal event onset read from enlarged staff; shape is visually identifiable, but voice, pitch and duration not transcribed",
+            "status": "VISUAL_DRAFT"
+          }
+        }
+      ],
       "lyricGlyphs": [
         {
           "id": "S2-L01",
@@ -251,7 +528,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E01",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L02",
@@ -261,7 +540,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E02",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L03",
@@ -271,7 +552,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E03",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L04",
@@ -281,7 +564,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E04",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L05",
@@ -291,7 +576,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E05",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L06",
@@ -301,7 +588,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E06",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L07",
@@ -311,7 +600,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E07",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L08",
@@ -321,7 +612,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E08",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L09",
@@ -331,7 +624,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E09",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L10",
@@ -341,7 +636,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E10",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L11",
@@ -351,7 +648,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E11",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         },
         {
           "id": "S2-L12",
@@ -361,7 +660,9 @@
           "linkedEventIds": [],
           "linkEvidence": null,
           "melisma": "UNASSESSED",
-          "status": "UNVERIFIED"
+          "status": "UNVERIFIED",
+          "candidateEventId": "S2-E12",
+          "candidateLinkStatus": "HORIZONTAL_VISUAL_CORRESPONDENCE_ONLY"
         }
       ],
       "candidateOnsets": [
@@ -743,7 +1044,9 @@
     "verifiedEvents": 0,
     "verifiedLyricLinks": 0,
     "verifiedMelismas": 0,
-    "verifiedPhraseBoundaries": 0
+    "verifiedPhraseBoundaries": 0,
+    "candidateMusicalEvents": 12
   },
-  "releaseApproved": false
+  "releaseApproved": false,
+  "eventObservation": "System 2 contains twelve visually distinguishable note/chord onset groups; open vs filled noteheads and stem presence recorded. Exact pitch, note duration, measure, voice, melismas and musical link evidence still pending. Candidate event indices are not verified syllable links."
 }
