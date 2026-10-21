@@ -74,3 +74,9 @@ The v2 skill also warns that the KK30 stanza 2 Version 12 arrays are **not appro
 - Verified repository `song-8/original.png` is 878×1241 pixels, matching the stanza-one draft coordinate basis. `stanza1-draft.png` is 878×1337 and must not be substituted without recalibration.
 - Beta-only seven-stanza preview now runs browser-measured horizontal collision relaxation per musical system and reports shifted lyric fragments / insufficient room (commit `0dc4831`). Visual shifting does not verify syllable-to-note associations and must be musically checked before approval.
 - Browser execution and visual QA remain outstanding. Release 2 remains unapproved and production root unchanged.
+
+## Stanza-one alignment structural gate (2026-10-21)
+- Added `tools/kk8-alignment-gate.js` and wired it into the seven-stanza beta preview. Invalid source round-trip, wrong 878×1241 coordinate basis, unexpected 13/12/15 fragment counts, unordered x anchors, or malformed fragments block draft loading.
+- Provisional stanza-one source splits at system boundaries: `Kooriru` / `lherunnu`, and `veri` / `llaa`. These are literal transcript continuations, not verified note/phrase divisions.
+- Gate distinguishes `structurePass` from `releasePass`. Note association, printed Malayalam fragment transcription, melismas, and musical approval remain explicitly unverified. No musical validation or browser QA has been claimed.
+- No root production files changed. Release 2 beta remains blocked pending musical checks.
