@@ -5489,5 +5489,53 @@
       "Use full bass staff and lyric underlay for independent confirmation before approving pitch and syllable onsets."
     ],
     "releaseGate": "FAIL_UNVERIFIED_MELODY_AND_LYRIC_ASSOCIATIONS"
+  },
+  "system2FullScoreVoiceAudit": {
+    "status": "DIRECT_FULL_SCORE_VISUAL_REVIEW_NOT_COMPLETE_TRANSCRIPTION",
+    "source": "interactive-notation/song-8/original.png",
+    "sourceDimensions": [
+      878,
+      1241
+    ],
+    "scoreLayout": "Treble and bass staves bracketed as one two-staff system; 5 visible measures",
+    "observations": [
+      {
+        "measure": 1,
+        "treble": "Two half-note dyads; no evident extra onset between them",
+        "bass": "Separate bass-staff half-note groups; rhythm visually aligns with two half-note beats",
+        "finding": "Treble and bass are separate parts; shared beat positions do not imply same lyric voice"
+      },
+      {
+        "measure": 2,
+        "treble": "Four quarter-note onset groups; second is a single down-stem note",
+        "bass": "Four bass-staff onset groups with chord tones in some groups",
+        "finding": "Down-stem treble E04 can be a normal stem-direction choice; not sufficient evidence of a different sung voice"
+      },
+      {
+        "measure": 3,
+        "treble": "One whole-note dyad",
+        "bass": "One whole-note dyad",
+        "finding": "Whole-measure sustain is visually consistent, but which dyad pitch is sung is not indicated"
+      },
+      {
+        "measure": 4,
+        "treble": "Half-note dyad then two quarter-note dyads",
+        "bass": "Multiple stem-separated upper bass notes including visible curved tie/slur across adjacent notes; independent rhythm/voice possible",
+        "finding": "Bass voice movement cannot be copied into treble lyric timing"
+      },
+      {
+        "measure": 5,
+        "treble": "Single down-stem half note followed by half-note dyad",
+        "bass": "Bass half-note structure with additional upper noteheads and curved tie/slur near system end",
+        "finding": "E11 downward stem does not alone establish voice switch; melody selection remains unresolved"
+      }
+    ],
+    "revisionsToPriorAssumptions": [
+      "Do not classify E04 or E11 as a separate musical voice based solely on stem direction; they are visually single treble noteheads.",
+      "There is no defensible inference from a two-staff SATB-style layout that the highest note of each treble dyad is always the melody without part labels or singing evidence."
+    ],
+    "verifiedMelodyVoice": 0,
+    "verifiedLyricAssociations": 0,
+    "releaseGate": "FAIL_MELODY_VOICE_UNVERIFIED"
   }
 }
