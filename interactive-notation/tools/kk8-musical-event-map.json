@@ -5013,5 +5013,168 @@
       }
     ],
     "conclusion": "Previously reported one-event shift is likely confounded by incorrect lyric x-coordinate drafts. Re-evaluate geometry using actual printed glyph centers before inferring musical reassignment. These estimates are not authoritative."
+  },
+  "system2ScoreGroundedAssociationReview": {
+    "sourceImage": "kk8_system_2.png",
+    "status": "PRINTED_GLYPH_TO_VERTICAL_NOTE_GROUP_VISUALLY_SUPPORTED_MELODY_VOICE_UNVERIFIED",
+    "method": "Read 12 printed Malayalam groups and 12 vertically corresponding score onset groups directly in the 1710x300 enlarged image. Do not infer melody pitch or note-to-syllable approval from geometric correspondence alone.",
+    "candidatePairs": [
+      {
+        "glyphId": "S2-L01",
+        "eventId": "S2-E01",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 80,
+        "eventOnsetCropX": 99,
+        "absoluteDeltaPx": 19,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L02",
+        "eventId": "S2-E02",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 236,
+        "eventOnsetCropX": 252,
+        "absoluteDeltaPx": 16,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L03",
+        "eventId": "S2-E03",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 420,
+        "eventOnsetCropX": 445,
+        "absoluteDeltaPx": 25,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L04",
+        "eventId": "S2-E04",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 510,
+        "eventOnsetCropX": 516,
+        "absoluteDeltaPx": 6,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L05",
+        "eventId": "S2-E05",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 594,
+        "eventOnsetCropX": 600,
+        "absoluteDeltaPx": 6,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L06",
+        "eventId": "S2-E06",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 708,
+        "eventOnsetCropX": 711,
+        "absoluteDeltaPx": 3,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L07",
+        "eventId": "S2-E07",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 819,
+        "eventOnsetCropX": 826,
+        "absoluteDeltaPx": 7,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L08",
+        "eventId": "S2-E08",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 1013,
+        "eventOnsetCropX": 1031,
+        "absoluteDeltaPx": 18,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L09",
+        "eventId": "S2-E09",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 1173,
+        "eventOnsetCropX": 1188,
+        "absoluteDeltaPx": 15,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L10",
+        "eventId": "S2-E10",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 1256,
+        "eventOnsetCropX": 1260,
+        "absoluteDeltaPx": 4,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L11",
+        "eventId": "S2-E11",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 1381,
+        "eventOnsetCropX": 1380,
+        "absoluteDeltaPx": 1,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      },
+      {
+        "glyphId": "S2-L12",
+        "eventId": "S2-E12",
+        "source": "DIRECT_SCORE_IMAGE",
+        "estimatedGlyphCenterCropX": 1522,
+        "eventOnsetCropX": 1520,
+        "absoluteDeltaPx": 2,
+        "visualGroupAlignment": "PLAUSIBLE",
+        "melodyVoice": "UNVERIFIED",
+        "lyricTiming": "UNVERIFIED",
+        "status": "CANDIDATE_NOT_APPROVED"
+      }
+    ],
+    "notableVoiceComplexity": [
+      {
+        "eventId": "S2-E04",
+        "issue": "single filled note with downward stem between chord attacks; melodic voice not yet identified"
+      },
+      {
+        "eventId": "S2-E11",
+        "issue": "open lower note with downward stem, followed by dyad; melodic voice continuity uncertain"
+      }
+    ],
+    "approvedMusicalLinks": 0,
+    "conclusion": "One-event global shift is contradicted by direct score group geometry. Retain same-index glyph/onset groups as visually plausible candidates, pending voice and rhythm transcription."
   }
 }
