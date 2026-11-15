@@ -3,7 +3,8 @@ const $=id=>document.getElementById(id);const NS='http://www.w3.org/2000/svg';le
 // Inserted bands belong INSIDE each musical system, below its printed Malayalam row.
 // Crop the immutable original score at each lyric-to-lower-staff boundary; move the
 // entire remainder of the score down. These boundaries require visual QA.
-// Measured against original.png (878 × 1241): Malayalam rows ~360–377, 540–557, 720–737; bass staff begins ~414, 594, 769.\nconst cuts=[386,566,746],band=38,sourceBottom=818;
+// Measured against original.png (878 × 1241): Malayalam rows ~360–377, 540–557, 720–737; bass staff begins ~414, 594, 769.
+const cuts=[386,566,746],band=38,sourceBottom=818;
 function svg(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs||{}))e.setAttribute(k,v);(parent||$('score')).append(e);return e}
 function render(){const root=$('score');root.replaceChildren();root.setAttribute('viewBox','0 0 878 '+(sourceBottom+cuts.length*band));const defs=svg('defs');let top=0;for(let i=0;i<=cuts.length;i++){const bottom=i<cuts.length?cuts[i]:sourceBottom;const clip=svg('clipPath',{id:'kk8clip'+i},defs);svg('rect',{x:0,y:top+i*band,width:878,height:bottom-top},clip);svg('image',{href:'original.png',x:0,y:i*band,width:878,height:1241,'clip-path':'url(#kk8clip'+i+')'});if(i<cuts.length){const line=svg('g',{'data-lyric-row':i+1});for(const p of drafts[current].filter(p=>p.system===i+1)){const t=svg('text',{x:p.x,y:cuts[i]+i*band+25,class:'lyric'},line);t.textContent=p.text}}top=bottom}
 $('stanza').value=current;$('prev').disabled=current===0;$('next').disabled=current===verses.length-1;root.style.width=zoom+'%';$('reset').textContent=zoom+'%'}
