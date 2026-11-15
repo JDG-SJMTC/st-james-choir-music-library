@@ -76,14 +76,21 @@ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/p
  }return true;};
  const safe=cuts.slice(1,-1).every(blank);
 function drawDraftRefrain(gap){
- // FIRST SYSTEM ONLY. Nine candidate notehead centres, exact production
- // Manglish spelling. This is not a complete or approved refrain alignment.
- const texts=['Haa!','koo','di','naa','me','llaa','rum','chèr','nnu'];
- const xs=[260,323,365,390,431,475,501,528,566];
- const ratio=src.width/1191, y=cuts[1]+gap*.56;
+ // Full FIRST refrain system. Exact production lyric round-trip is required.
+ // Candidate ink-group centres; note-to-syllable alignment NOT verified.
+ const syllables=['Haa!','koo','di','naa','me','llaa','rum','chèr','nnu','pu','kalh','kon','daa','de','nham','swar','gga'];
+ const expected='Haa! koodi naamellaarum chèrnnu pukalh kondaadenham – swargga';
+ const norm=x=>x.normalize('NFC').replace(/[\\s\\-–—.,!?;:'"()]/g,'').toLocaleLowerCase();
+ if(norm(syllables.join(''))!==norm(expected)){
+  console.error('KK40 RELEASE BLOCKED: first-system text fidelity failed');
+  return;
+ }
+ // Coordinates are provisional; never claim note-level verification.
+ const xs=[313,381,423,468,511,553,598,640,679,727,765,810,850,892,939,1011,1083];
+ const ratio=src.width/1191,y=cuts[1]+gap*.53;
  ctx.save();ctx.fillStyle='#155fcd';ctx.textAlign='center';ctx.textBaseline='middle';
- ctx.font=Math.round(11*ratio)+'px Arial, sans-serif';
- texts.forEach((t,i)=>ctx.fillText(t,xs[i]*ratio,y));
+ ctx.font=Math.round(12*ratio)+'px Arial, sans-serif';
+ syllables.forEach((t,i)=>ctx.fillText(t,xs[i]*ratio,y));
  ctx.restore();
 }
 
@@ -98,7 +105,7 @@ function drawDraftRefrain(gap){
    ctx.drawImage(src,0,top,src.width,h,0,y,src.width,h);
    y+=h+(i<5?gap:0);
   }
-  $('notice').innerHTML='<strong>Draft system 1 only:</strong> Nine blue Manglish syllables are placed at candidate notehead centres. Remaining refrain systems are intentionally unmapped. This is NOT visually approved.';
+  $('notice').innerHTML='<strong>Draft system 1 only:</strong> The full first refrain lyric line is now provisionally segmented beneath musical system 1. Remaining systems are intentionally unmapped. This is NOT visually approved.';
   drawDraftRefrain(gap);
  }
  baseWidth=canvas.width;baseHeight=canvas.height;setZoom(zoom);update();
