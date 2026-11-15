@@ -142,10 +142,16 @@ function drawDraftRefrain(gap){
   const selected=Number(stanza.value);
   const status={4:'WITHHELD',5:'WITHHELD',6:'WITHHELD'};
   if(selected===2 && lockedSource){
-   // Stanza 2 only: candidate note positions. The second lyrical line
-   // repeats IN FULL in both systems 5 and 6; never divide it.
+   // Stanza 2: the full second lyrical line repeats in systems 5 and 6.
+   // Its pickup word 'dushta' is printed at the end of system 4 and
+   // repeated after system 5 (as 'vannu' is for stanza 1); system 6
+   // has no appended pickup. This is a musical-boundary requirement,
+   // NOT permission to modify the locked production second line.
+   // All stanza 2 blue overlays remain blocked pending independent
+   // score-to-syllable boundary verification.
    const first=['Maa','na','var','vaazh','ththi','paa','dun','na','Kar','ththa','naa','ya','Thaan','du','sh','ta'];
    const last=['maa','na','van','ee','dè','ru','vaan','o','ra','di','ma','yaa','yi','thaa'];
+   const system5Pickup=['du','sh','ta']; // repeated 'dushta'; score-only, NOT part of second-line source
    const positions={
     4:[271,315,355,395,438,491,530,572,615,657,699,746,789,833,921,969],
     5:[272,314,355,396,438,479,520,563,604,644,684,725,769,812],
