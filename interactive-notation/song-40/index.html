@@ -16,7 +16,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <div class="tools" aria-label="Notation controls">
 <select id="stanza" aria-label="Stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option><option value="5">Stanza 5</option><option value="6">Stanza 6</option></select>
 <button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
-<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show Manglish (systems 1–4 approved; 5–6 drafts)</label>
+<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show Manglish (stanza 1 approved; stanza 2 draft)</label>
 </div>
 <div class="notice" id="notice"><strong>Measured spacing active.</strong> Whitespace is inserted only at verified blank horizontal cuts, with runtime ink checks. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
 <p id="qa-status" class="muted small" role="status">Detailed refrain evidence QA pending; unapproved visual drafts are allowed for inspection only.</p>
@@ -139,9 +139,38 @@ function drawDraftRefrain(gap){
  // overlay under another selected stanza. Each stanza needs its own
  // independently validated note-to-syllable mapping.
  if(Number(stanza.value)!==1){
+  const selected=Number(stanza.value);
+  const status={4:'WITHHELD',5:'WITHHELD',6:'WITHHELD'};
+  if(selected===2 && lockedSource){
+   // Stanza 2 only: candidate note positions. The second lyrical line
+   // repeats IN FULL in both systems 5 and 6; never divide it.
+   const first=['Maa','na','var','vaazh','ththi','paa','dun','na','Kar','ththa','naa','ya','Thaan','du','sh','ta'];
+   const last=['maa','na','van','ee','dè','ru','vaan','o','ra','di','ma','yaa','yi','thaa'];
+   const positions={
+    4:[271,315,355,395,438,491,530,572,615,657,699,746,789,833,921,969],
+    5:[272,314,355,396,438,479,520,563,604,644,684,725,769,812],
+    6:[272,318,361,405,450,498,541,585,630,677,721,772,818,873]
+   };
+   const sources=lockedSource.stanzas[1];
+   if(clean(first.join(''))===clean(sources[0])&&clean(last.join(''))===clean(sources[1])){
+    for(const system of [4,5,6]){
+     const tokens=system===4?first:last,anchors=positions[system];
+     const start=cuts[system]+(system-1)*gap,y=start+gap*.54;
+     const fontPx=Math.round(12*ratio),conflicts=[];
+     if(y-fontPx/2<start+2*ratio||y+fontPx/2>start+gap-2*ratio)conflicts.push('vertical band');
+     for(let i=1;i<tokens.length;i++){
+      const right=anchors[i-1]*ratio+ctx.measureText(tokens[i-1]).width/2;
+      const left=anchors[i]*ratio-ctx.measureText(tokens[i]).width/2;
+      if(left-right<2*ratio)conflicts.push('horizontal '+i);
+     }
+     if(conflicts.length)status[system]='WITHHELD: '+conflicts.join(', ');
+     else {tokens.forEach((t,i)=>ctx.fillText(t,anchors[i]*ratio,y));status[system]=tokens.length+' unapproved fragments drawn';}
+    }
+   }else status[4]=status[5]=status[6]='WITHHELD: exact source mismatch';
+  }
   ctx.restore();
   return {drawn:true,count:fragments.length,system2:'accepted',system3:'approved',
-   system4:'WITHHELD for selected stanza',system5:'WITHHELD',system6:'WITHHELD'};
+   system4:status[4],system5:status[5],system6:status[6]};
  }
   // Stanza 1 / system 4: first musical-system candidate only.
  // The printed first-stanza lyric line belongs to system 4; systems 5/6
