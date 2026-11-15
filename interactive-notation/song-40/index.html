@@ -173,7 +173,16 @@ function drawDraftRefrain(gap){
    const anchors=system===5?positions[5].concat([908,956]):positions[6];
    // cuts[5] is the start of system 6; system 5 starts at cuts[4].
    // Five gaps follow the first five systems.
-   const y=cuts[system-1]+(system-1)*gap+gap*.54;
+   const y=cuts[system]+(system-1)*gap+gap*.54; // below this system, not at its staff start
+   // Release-blocking vertical check: target must sit in the inserted
+   // whitespace below the original system, not over its notes or lyrics.
+   const bandStart=cuts[system]+(system-1)*gap;
+   const bandEnd=bandStart+gap;
+   const fontPx=Math.round(12*ratio);
+   if(y-fontPx/2<bandStart+2*ratio||y+fontPx/2>bandEnd-2*ratio){
+    continuationStatus[system]='WITHHELD: vertical lyric band violation';
+    continue;
+   }
    const collision=[];
    for(let i=1;i<tokens.length;i++){
     const right=anchors[i-1]*ratio+ctx.measureText(tokens[i-1]).width/2;
