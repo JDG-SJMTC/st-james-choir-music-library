@@ -4,7 +4,7 @@ const $=id=>document.getElementById(id);const NS='http://www.w3.org/2000/svg';le
 // Crop the immutable original score at each lyric-to-lower-staff boundary; move the
 // entire remainder of the score down. These boundaries require visual QA.
 // Measured against original.png (878 × 1241): Malayalam rows ~360–377, 540–557, 720–737; bass staff begins ~414, 594, 769.
-const cuts=[386,557,746],band=38,sourceBottom=840;
+const cuts=[386,557,742],band=38,sourceBottom=840;
 // Score integrity invariant: each source interval is displayed exactly once,
 // with its original pixel dimensions. The final standalone stanza block is excluded.
 function qaSourceSlices(){const spans=[0,...cuts,sourceBottom];const issues=[];for(let i=1;i<spans.length;i++)if(spans[i]<=spans[i-1])issues.push('Non-increasing source crop');if(sourceBottom>1241)issues.push('Crop extends past source image');return issues}
