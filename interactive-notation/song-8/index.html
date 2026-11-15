@@ -135,6 +135,34 @@ function qaMusicalAssignmentCoverage(){
 }
 const kk8MusicalPending=qaMusicalAssignmentCoverage();
 console.info('KK8 musical assignment QA: '+kk8MusicalPending.length+' systems pending independent verification',kk8MusicalPending);
+
+// Structural correspondence check for KK8: stanza 1 and stanza 2 each
+// have 10 source syllables per poetic line. Preserve those exact source
+// phrase boundaries at indices 10,20,30; musical system breaks are 13,25.
+// This is a structural check, NOT a claim of visually verified note mapping.
+function qaStanza2StructuralMapping(){
+ const issues=[];
+ const sourceLines=verses[1].split('\\n').map(x=>x.replace(/\\s/g,''));
+ const parts=drafts[1];
+ const boundaries=[10,20,30];
+ let previous=0;
+ for(let i=0;i<sourceLines.length;i++){
+  const segment=parts.slice(previous,boundaries[i]||parts.length).map(p=>p.text).join('');
+  if(segment!==sourceLines[i])issues.push('Stanza 2 source line '+(i+1)+' does not match mapped syllables');
+  previous=boundaries[i]||parts.length;
+ }
+ const systemCounts=[1,2,3].map(k=>parts.filter(p=>p.system===k).length);
+ if(systemCounts.join('/')!=='13/12/15')issues.push('Stanza 2 system slot counts differ from master');
+ const master=drafts[0];
+ for(let i=0;i<parts.length;i++){
+  if(parts[i].system!==master[i].system||parts[i].x!==master[i].x)
+   issues.push('Stanza 2 syllable '+(i+1)+' not on master slot');
+ }
+ return issues;
+}
+const kk8Stanza2StructuralIssues=qaStanza2StructuralMapping();
+if(kk8Stanza2StructuralIssues.length)console.error('KK8 stanza 2 structural QA FAILED',kk8Stanza2StructuralIssues);
+else console.info('KK8 stanza 2 structural QA passed: exact source lines and master slot indices. Musical alignment still requires visual approval.');
 function qaSourceLineBoundaries(){
  // Verify each stanza uses the same three musical lines and ordered anchors.
  // A claim about a specific Malayalam word crossing a line is NOT established
