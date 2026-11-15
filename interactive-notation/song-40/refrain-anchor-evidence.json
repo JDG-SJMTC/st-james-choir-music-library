@@ -1,0 +1,350 @@
+{
+  "song": "KK-0040",
+  "source": "production-manglish-source.json",
+  "status": "blocked-pending-per-syllable-evidence",
+  "endingDifferenceVerified": true,
+  "systems": [
+    {
+      "number": 1,
+      "sourceLine": "Haa! koodi naamellaarum chèrnnu pukalh kondaadenham – swargga",
+      "systemBoundaryVerified": false,
+      "visualCollisionCheckPassed": false,
+      "extraPrintedPickup": null,
+      "fragments": [
+        {
+          "manglish": "Haa!",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "koo",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "di",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "naa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "me",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "llaa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "rum",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "chèr",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "nnu",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "pu",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "kalh",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "kon",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "daa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "de",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "nham",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "swar",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "gga",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "sourceLine": "Vaathilaakum Yeshu naathaney vaazhththippaadenham",
+      "systemBoundaryVerified": false,
+      "visualCollisionCheckPassed": false,
+      "extraPrintedPickup": "സ്വർഗ്ഗ",
+      "fragments": [
+        {
+          "manglish": "Vaa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "thi",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "laa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "kum",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "Ye",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "shu",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "naa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "tha",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "ney",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "vaazh",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "ththi",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "ppaa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "de",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "nham",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "sourceLine": "Vaathilaakum Yeshu naathaney vaazhththippaadenham",
+      "systemBoundaryVerified": false,
+      "visualCollisionCheckPassed": false,
+      "extraPrintedPickup": null,
+      "fragments": [
+        {
+          "manglish": "Vaa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "thi",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "laa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "kum",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "Ye",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "shu",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "naa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "tha",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "ney",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "vaazh",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "ththi",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "ppaa",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "de",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        },
+        {
+          "manglish": "nham",
+          "malayalam": null,
+          "noteX": null,
+          "glyphCentreX": null,
+          "verified": false
+        }
+      ]
+    }
+  ]
+}
