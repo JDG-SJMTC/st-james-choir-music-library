@@ -88,6 +88,37 @@ const score=$('score'), tune=$('tune'),lang=$('lang'),stanza=$('stanza');
 function svgEl(tag,attrs){const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);return e;}
 function addImage(data,x,y,width,height){score.appendChild(svgEl('image',{href:'data:image/png;base64,'+data,x,y,width,height,preserveAspectRatio:'xMidYMid meet'}));}
 function addText(value,x,y,sz=14){const e=svgEl('text',{x,y,'text-anchor':'middle',fill:'#105bca','font-size':sz,'font-family':'DejaVu Sans,Arial,sans-serif'});e.textContent=value;score.appendChild(e);}
+// KK8/KK30 lesson: musical-system boundaries are independent of lyric lines.
+// This is a non-destructive QA inventory. Candidate mappings below are NOT
+// independently approved boundaries. Never infer approval from row counts.
+const kk150BoundaryCandidates={
+ '1':[['Ma','rya'],['kroo','bha'],['dam','nen']],
+ '2':[['Pra','shu'],['vin','ryam'],['sar','nen']],
+ '3':[['Thri','kun'],['ney','dham'],['ath','shtam']],
+ '4':[['Pra','kki'],['lum','ha'],['ththi','nham']]
+};
+function qaKK150SystemBoundaries(){
+ const issues=[];
+ for(const t of ['1','2']){
+  if(!DATA.scores[t]||!DATA.anchors[t]||DATA.anchors[t].length!==3)
+   issues.push('Tune '+t+': missing original score or three musical systems');
+ }
+ for(const st of ['1','2','3','4']){
+  const rows=st==='1'?DATA.first:DATA.mapped[st],candidates=kk150BoundaryCandidates[st];
+  if(!rows||rows.length!==3){issues.push('Stanza '+st+': missing musical systems');continue;}
+  for(let i=0;i<3;i++){
+   const row=rows[i],pair=candidates[i];
+   if(row[0]!==pair[0]||row[row.length-1]!==pair[1])
+    issues.push('Stanza '+st+' system '+(i+1)+': boundary changed from candidate '+pair.join(' ... '));
+   for(const t of ['1','2'])if(row.length!==DATA.anchors[t][i].length)
+    issues.push('Stanza '+st+' tune '+t+' system '+(i+1)+': '+row.length+' syllables vs '+DATA.anchors[t][i].length+' anchors');
+  }
+  issues.push('Stanza '+st+': musical/lyric boundary placement not independently verified for both tunes');
+ }
+ return issues;
+}
+const kk150BoundaryQA=qaKK150SystemBoundaries();
+if(kk150BoundaryQA.length)console.warn('KK150 NOT APPROVED — musical boundary QA',kk150BoundaryQA);
 function render(){
  const t=tune.value,s=Number(stanza.value),l=lang.value;
  score.replaceChildren();addImage(DATA.scores[t],0,0,893,1150);
