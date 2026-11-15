@@ -50,7 +50,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/p
  // AFTER each staff row, never over the original notes or Malayalam.
  // Page-relative cut positions derived from page-1 visual inspection;
  // these are presentation cuts, NOT verified syllable anchors.
- const cuts=[0,.259,.338,.420,.503,.586,1],gap=Math.round(src.width*.048);
+ const cuts=[0,.190,.260,.330,.400,.470,1],gap=Math.round(src.width*.048);
  canvas.width=src.width;canvas.height=src.height+gap*5;
  ctx.fillStyle='white';ctx.fillRect(0,0,canvas.width,canvas.height);
  let out=0;for(let i=0;i<6;i++){
