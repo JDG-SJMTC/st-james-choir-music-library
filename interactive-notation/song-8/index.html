@@ -119,6 +119,22 @@ function qaSourcePhraseMap(){
 }
 const kk8PhraseIssues=qaSourcePhraseMap();
 if(kk8PhraseIssues.length)console.error('KK8 source lyric boundary QA FAILED',kk8PhraseIssues);
+
+// Musical assignment gate: matching source text and avoiding overlaps do NOT
+// certify note-to-syllable alignment. The only visually accepted region so far
+// is stanza 1 system 2. All other regions remain provisional.
+const kk8MusicalVerification={approved:[{stanza:1,system:2}],status:'incomplete'};
+function qaMusicalAssignmentCoverage(){
+ const approved=new Set(kk8MusicalVerification.approved.map(x=>x.stanza+':'+x.system));
+ const pending=[];
+ for(let stanza=1;stanza<=drafts.length;stanza++)
+  for(let system=1;system<=3;system++)
+   if(!approved.has(stanza+':'+system))
+    pending.push('Stanza '+stanza+', system '+system+': note-to-syllable mapping not approved');
+ return pending;
+}
+const kk8MusicalPending=qaMusicalAssignmentCoverage();
+console.info('KK8 musical assignment QA: '+kk8MusicalPending.length+' systems pending independent verification',kk8MusicalPending);
 function qaSourceLineBoundaries(){
  // Verify each stanza uses the same three musical lines and ordered anchors.
  // A claim about a specific Malayalam word crossing a line is NOT established
