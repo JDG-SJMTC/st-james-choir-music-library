@@ -1,0 +1,86 @@
+{
+  "song": "KK-0040",
+  "system": 1,
+  "sourcePdf": "notation/KK-0040.pdf",
+  "renderBasis": {
+    "width": 1191,
+    "height": 1684,
+    "dpi": 144
+  },
+  "printedMalayalamBand": {
+    "yStart": 473,
+    "yEndExclusive": 496,
+    "thresholdGrayscale": 150
+  },
+  "method": "Horizontal ink projection on printed Malayalam row; adjacent ink components merged only when horizontal gap <=4 pixels. This is an ink inventory, NOT a verified syllable grouping.",
+  "inkGroups": [
+    [
+      299,
+      330
+    ],
+    [
+      381,
+      404
+    ],
+    [
+      434,
+      448
+    ],
+    [
+      460,
+      484
+    ],
+    [
+      509,
+      532
+    ],
+    [
+      556,
+      578
+    ],
+    [
+      584,
+      609
+    ],
+    [
+      616,
+      641
+    ],
+    [
+      646,
+      686
+    ],
+    [
+      703,
+      724
+    ],
+    [
+      730,
+      804
+    ],
+    [
+      809,
+      841
+    ],
+    [
+      849,
+      859
+    ],
+    [
+      879,
+      928
+    ],
+    [
+      939,
+      964
+    ],
+    [
+      970,
+      997
+    ]
+  ],
+  "draftManglishTokenCount": 17,
+  "groupCount": 16,
+  "qa": "BLOCKED: 17 draft Manglish tokens versus 16 provisional ink groups; grouping and segmentation must be manually resolved before centring",
+  "approved": false
+}
