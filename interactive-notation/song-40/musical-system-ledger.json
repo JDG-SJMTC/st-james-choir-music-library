@@ -66,5 +66,135 @@
       "status": "unverified whether repeat or alternate notation; do not concatenate systems 5 and 6"
     },
     "criticalRule": "Six printed systems do not establish six sequential lyric lines. Confirm whether 2/3 and 5/6 are alternative continuations before assigning syllables."
-  }
+  },
+  "lyricalBoundaryInventory": {
+    "refrain": {
+      "lines": [
+        {
+          "line": 1,
+          "exactText": "Haa! koodi naamellaarum chèrnnu pukalh kondaadenham – swargga",
+          "firstWord": "Haa!",
+          "lastWord": "swargga"
+        },
+        {
+          "line": 2,
+          "exactText": "Vaathilaakum Yeshu naathaney vaazhththippaadenham",
+          "firstWord": "Vaathilaakum",
+          "lastWord": "vaazhththippaadenham"
+        }
+      ],
+      "systemAssignments": "NOT VERIFIED"
+    },
+    "stanzas": [
+      {
+        "stanza": 1,
+        "lines": [
+          {
+            "line": 1,
+            "exactText": "Vèdanappedum èzhakalhkkazhalu theeruvaan – vannu",
+            "firstWord": "Vèdanappedum",
+            "lastWord": "vannu"
+          },
+          {
+            "line": 2,
+            "exactText": "Mèthiniyathil maanushyaavathaaram aarnnithaa",
+            "firstWord": "Mèthiniyathil",
+            "lastWord": "aarnnithaa"
+          }
+        ],
+        "systemAssignments": "NOT VERIFIED"
+      },
+      {
+        "stanza": 2,
+        "lines": [
+          {
+            "line": 1,
+            "exactText": "Maanavar vaazhththi paadunna Karththanaaya Thaan – dushta",
+            "firstWord": "Maanavar",
+            "lastWord": "dushta"
+          },
+          {
+            "line": 2,
+            "exactText": "maanavan eedèruvaan oradimayaayithaa",
+            "firstWord": "maanavan",
+            "lastWord": "oradimayaayithaa"
+          }
+        ],
+        "systemAssignments": "NOT VERIFIED"
+      },
+      {
+        "stanza": 3,
+        "lines": [
+          {
+            "line": 1,
+            "exactText": "Aadaravattu bhoomiyil veriyaraam narar – mara",
+            "firstWord": "Aadaravattu",
+            "lastWord": "mara"
+          },
+          {
+            "line": 2,
+            "exactText": "nhaadhikalh ozhivathinnu thaanhu Dèvanum",
+            "firstWord": "nhaadhikalh",
+            "lastWord": "Dèvanum"
+          }
+        ],
+        "systemAssignments": "NOT VERIFIED"
+      },
+      {
+        "stanza": 4,
+        "lines": [
+          {
+            "line": 1,
+            "exactText": "Sènakalhin adhipathi Avanennaakilum – nara",
+            "firstWord": "Sènakalhin",
+            "lastWord": "nara"
+          },
+          {
+            "line": 2,
+            "exactText": "jeevaney meelhaanavan thannuyiriney vittaal",
+            "firstWord": "jeevaney",
+            "lastWord": "vittaal"
+          }
+        ],
+        "systemAssignments": "NOT VERIFIED"
+      },
+      {
+        "stanza": 5,
+        "lines": [
+          {
+            "line": 1,
+            "exactText": "Daarunha maranhaadhiye marichchamarththinaan – bhoo-",
+            "firstWord": "Daarunha",
+            "lastWord": "bhoo-"
+          },
+          {
+            "line": 2,
+            "exactText": "mandalaththil ninnuyirththu vinnhileththinaan",
+            "firstWord": "mandalaththil",
+            "lastWord": "vinnhileththinaan"
+          }
+        ],
+        "systemAssignments": "NOT VERIFIED"
+      },
+      {
+        "stanza": 6,
+        "lines": [
+          {
+            "line": 1,
+            "exactText": "Paapikalhkku Pithaavinodirannu mochanam – nija",
+            "firstWord": "Paapikalhkku",
+            "lastWord": "nija"
+          },
+          {
+            "line": 2,
+            "exactText": "Paadasevaka jananghalhey rakshacheyyunnon",
+            "firstWord": "Paadasevaka",
+            "lastWord": "rakshacheyyunnon"
+          }
+        ],
+        "systemAssignments": "NOT VERIFIED"
+      }
+    ]
+  },
+  "criticalNextStep": "For refrain and each stanza, map source lyric lines to repeated score-system candidates without concatenating repeated notation; visually verify note/printed Malayalam group anchors before rendering."
 }
