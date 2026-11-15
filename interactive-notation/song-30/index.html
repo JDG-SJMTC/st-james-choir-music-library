@@ -103,6 +103,34 @@ function qaKK30MusicalBoundary(){
   errors.push('BLOCKER: stanza 3 system 1 must end Yen ni; system 2 must begin ye nj');
  return errors;
 }
+// MANDATORY, fail-closed musical-boundary gate (KK8 lesson).
+// Only independently confirmed musical-system syllable sequences may be
+// marked verified. No count-based interpolation or self-derived "expected"
+// boundary is sufficient. Unreviewed stanzas are BLOCKED, not passed.
+const kk30MusicalBoundaryReference={
+ '1':{verified:true,ends:['mba','ri','kka'],starts:['A','me','taa']},
+ '2':{verified:true,ends:['nni','du','ne'],starts:['On','dhaa','vil']},
+ '3':{verified:true,ends:['ni',null,null],starts:['Nin','ye',null]},
+ '4':{verified:false,ends:[null,null,null],starts:[null,null,null]}
+};
+function qaKK30MandatoryBoundaries(){
+ const failures=[];
+ for(const [stanza,ref] of Object.entries(kk30MusicalBoundaryReference)){
+  const rows=DATA.rows[stanza];
+  if(!ref.verified)failures.push('Stanza '+stanza+': musical boundaries not independently verified');
+  if(!rows||rows.length!==3){failures.push('Stanza '+stanza+': missing musical systems');continue;}
+  for(let system=0;system<3;system++){
+   const first=ref.starts[system],last=ref.ends[system],row=rows[system];
+   if(first===null||last===null){failures.push('Stanza '+stanza+' system '+(system+1)+': boundary reference missing');continue;}
+   if(row[0]?.text!==first||row[row.length-1]?.text!==last)
+    failures.push('Stanza '+stanza+' system '+(system+1)+': expected '+first+' ... '+last+', found '+row[0]?.text+' ... '+row[row.length-1]?.text);
+  }
+ }
+ return failures;
+}
+const kk30MandatoryBoundaryFailures=qaKK30MandatoryBoundaries();
+if(kk30MandatoryBoundaryFailures.length)console.error('KK30 RELEASE BLOCKED — mandatory musical-system boundaries',kk30MandatoryBoundaryFailures);
+else console.info('KK30 mandatory musical-system boundary gate passed.');
 const kk30MusicalBoundaryErrors=qaKK30MusicalBoundary();
 if(kk30MusicalBoundaryErrors.length)console.error('KK30 RELEASE BLOCKED: musical boundary mismatch',kk30MusicalBoundaryErrors);
 const kk30PhraseIssues=qaKK30PhraseIntegrity();
