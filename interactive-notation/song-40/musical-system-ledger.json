@@ -1,6 +1,6 @@
 {
   "song": "KK-0040",
-  "status": "refrain printed trailing word confirmed on system 2; musical function and syllable anchors pending",
+  "status": "refrain continuation ending difference verified visually; note anchors pending",
   "score": "notation/KK-0040.pdf",
   "pageCount": 1,
   "systems": [
@@ -198,7 +198,7 @@
   },
   "criticalNextStep": "For refrain and each stanza, map source lyric lines to repeated score-system candidates without concatenating repeated notation; visually verify note/printed Malayalam group anchors before rendering.",
   "refrainPrintedScoreAudit": {
-    "basis": "Direct inspection of original KK-0040.pdf, first and second printed musical systems",
+    "basis": "Direct side-by-side inspection of original KK-0040.pdf systems 2 and 3 at 240 DPI",
     "system1": {
       "lyricLine": "Haa! koodi naamellaarum chèrnnu pukalh kondaadenham – swargga",
       "sourceTextVerified": true,
@@ -210,15 +210,18 @@
       "trailingManglishCandidate": "swargga",
       "trailingWordPresentOnScore": true,
       "belongsToProductionSecondLine": false,
-      "musicalFunction": "unverified repeat/pickup candidate",
+      "musicalFunction": "possible repeat pickup, not independently confirmed",
       "syllableNoteAlignmentVerified": false
     },
     "system3": {
-      "continuation": "similar to system 2",
-      "trailingWordAndMusicalFunction": "not independently verified",
+      "continuation": "same main lyric phrase as system 2",
+      "printedTrailingMalayalam": "none after final നം",
+      "trailingWordPresentOnScore": false,
+      "sourceCorrespondence": "production refrain line 2 without extra swargga",
+      "musicalFunction": "alternate ending candidate, not independently confirmed",
       "syllableNoteAlignmentVerified": false
     },
-    "rule": "Never force printed trailing സ്വർഗ്ഗ into the production second line or omit it from score. Treat as distinct score event until musical function verified.",
+    "rule": "System 2 has additional printed സ്വർഗ്ഗ; system 3 does not. Preserve both endings distinctly; never append swargga to production refrain line 2.",
     "verified": false
   }
 }
