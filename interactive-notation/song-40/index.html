@@ -18,7 +18,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
 <button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button>
 </div>
-<div class="notice" id="notice"><strong>Boundary QA pending.</strong> Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
+<div class="notice" id="notice"><strong>Layout rollback active.</strong> Unsafe whitespace insertion was removed after visual QA failure. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
 <div id="frame" tabindex="0" aria-label="KK40 notation"><div id="sheet"><canvas id="score"></canvas></div></div>
 <p id="status" class="muted" role="status">Loading original notation…</p>
 <p class="small"><a href="../../notation/KK-0040.pdf" target="_blank" rel="noopener">Original PDF</a> · Beta only · No changes to approved KK8, KK30 or KK150</p>
@@ -46,18 +46,10 @@ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/p
  const doc=await pdfjsLib.getDocument(pdf).promise,page=await doc.getPage(1),view=page.getViewport({scale:2});
  const src=document.createElement('canvas');src.width=Math.ceil(view.width);src.height=Math.ceil(view.height);
  await page.render({canvasContext:src.getContext('2d'),viewport:view}).promise;
- // Six staff systems: preserve all source ink, inserting uniform white bands
- // AFTER each staff row, never over the original notes or Malayalam.
- // Page-relative cut positions derived from page-1 visual inspection;
- // these are presentation cuts, NOT verified syllable anchors.
- const cuts=[0,.190,.260,.330,.400,.470,1],gap=Math.round(src.width*.048);
- canvas.width=src.width;canvas.height=src.height+gap*5;
- ctx.fillStyle='white';ctx.fillRect(0,0,canvas.width,canvas.height);
- let out=0;for(let i=0;i<6;i++){
-  const top=Math.round(src.height*cuts[i]),bottom=Math.round(src.height*cuts[i+1]);
-  ctx.drawImage(src,0,top,src.width,bottom-top,0,out,src.width,bottom-top);
-  out+=bottom-top;if(i<5)out+=gap;
- }
+ // Safety rollback: preserve the complete source PDF with no raster slicing.
+ // Whitespace insertion is disabled until an ink-safe segmentation is verified.
+ canvas.width=src.width;canvas.height=src.height;
+ ctx.drawImage(src,0,0);
  baseWidth=canvas.width;baseHeight=canvas.height;setZoom(zoom);update();
  }catch(e){setStatus('Could not render the original PDF: '+e.message+'. Use the PDF link below.');}
 })();
