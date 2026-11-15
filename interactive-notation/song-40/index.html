@@ -65,7 +65,8 @@ function update(){
   $('stanza-text').textContent=lockedSource.stanzas[Number(stanza.value)-1].join('\n');
   $('repeat-text').textContent=lockedSource.refrainAfterEach;
  }
- setStatus('Stanza '+stanza.value+' of 6 · exact production Manglish shown below · score overlay withheld pending note-to-syllable verification');
+ setStatus('Stanza '+stanza.value+' of 6 · production lyrics locked · systems 5 and 6 repeat the second stanza line');
+ if(renderDraft)renderDraft();
 }
 stanza.onchange=update;$('prev').onclick=()=>move(-1);$('next').onclick=()=>move(1);update();
 let touch=null;frame.addEventListener('touchstart',e=>{if(e.touches.length===1)touch={x:e.touches[0].clientX,y:e.touches[0].clientY};},{passive:true});
@@ -134,7 +135,15 @@ function drawDraftRefrain(gap){
   if(left-right<2*ratio)overlaps3.push(i);
  }
  if(!overlaps3.length)second.forEach((text,i)=>ctx.fillText(text,x3[i]*ratio,y3));
- // Stanza 1 / system 4: first musical-system candidate only.
+ // Stanzas 2–6: retain approved refrain, but never display stanza 1's
+ // overlay under another selected stanza. Each stanza needs its own
+ // independently validated note-to-syllable mapping.
+ if(Number(stanza.value)!==1){
+  ctx.restore();
+  return {drawn:true,count:fragments.length,system2:'accepted',system3:'approved',
+   system4:'WITHHELD for selected stanza',system5:'WITHHELD',system6:'WITHHELD'};
+ }
+  // Stanza 1 / system 4: first musical-system candidate only.
  // The printed first-stanza lyric line belongs to system 4; systems 5/6
  // are alternative continuations. Refrain positions above are unchanged.
  const stanza4=['Vè','da','na','ppe','dum','è','zha','kalh','kka','zha','lu','thee','ru','vaan','van','nu'];
@@ -221,7 +230,7 @@ function drawDraftRefrain(gap){
    if($('draft').checked){
     try{
      const result=drawDraftRefrain(gap);
-     $('notice').textContent=result.drawn?'System 1 approved by user ('+result.count+' fragments, unchanged). System 2 accepted as structurally correct (alignment approximate): '+result.system2+'. System 3 approved: '+result.system3+'. System 4 approved: '+result.system4+'. Systems 5 and 6 NEW DRAFTS: '+result.system5+' / '+result.system6+'.':'Blue draft NOT rendered: '+result.reason;
+     $('notice').textContent=result.drawn?'System 1 approved by user ('+result.count+' fragments, unchanged). System 2 accepted as structurally correct (alignment approximate): '+result.system2+'. System 3 approved: '+result.system3+'. Selected stanza '+stanza.value+': system 4 '+result.system4+'; system 5 '+result.system5+'; system 6 '+result.system6+'.':'Blue draft NOT rendered: '+result.reason;
     }catch(e){console.error('KK40 draft failed',e);$('notice').textContent='Blue draft NOT rendered: '+e.message;}
    }else{
     $('notice').textContent='Original score only. Unverified blue syllable draft hidden. All source ink preserved.';
