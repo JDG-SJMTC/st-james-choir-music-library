@@ -76,21 +76,32 @@ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/p
  }return true;};
  const safe=cuts.slice(1,-1).every(blank);
 function drawDraftRefrain(gap){
- // Full FIRST refrain system. Exact production lyric round-trip is required.
- // Candidate ink-group centres; note-to-syllable alignment NOT verified.
- const syllables=['Haa!','koo','di','naa','me','llaa','rum','chèr','nnu','pu','kalh','kon','daa','de','nham','swar','gga'];
- const expected='Haa! koodi naamellaarum chèrnnu pukalh kondaadenham – swargga';
+ // Candidate note/Malayalam-group anchors only; NOT approved.
+ // Refrain line 2 appears in BOTH continuation systems, not split between them.
  const norm=x=>x.normalize('NFC').replace(/[\\s\\-–—.,!?;:'"()]/g,'').toLocaleLowerCase();
- if(norm(syllables.join(''))!==norm(expected)){
-  console.error('KK40 RELEASE BLOCKED: first-system text fidelity failed');
+ const lines=[
+  {system:0,expected:'Haa! koodi naamellaarum chèrnnu pukalh kondaadenham – swargga',
+   tokens:['Haa!','koo','di','naa','me','llaa','rum','chèr','nnu','pu','kalh','kon','daa','de','nham','swar','gga'],
+   xs:[313,381,423,468,511,553,598,640,679,727,765,810,850,892,939,1011,1083]},
+  {system:1,expected:'Vaathilaakum Yeshu naathaney vaazhththippaadenham',
+   tokens:['Vaa','thi','laa','kum','Ye','shu','naa','tha','ney','vaazh','ththi','ppaa','de','nham'],
+   xs:[280,313,353,418,475,516,560,606,648,701,745,791,836,887]},
+  {system:2,expected:'Vaathilaakum Yeshu naathaney vaazhththippaadenham',
+   tokens:['Vaa','thi','laa','kum','Ye','shu','naa','tha','ney','vaazh','ththi','ppaa','de','nham'],
+   xs:[280,313,353,418,475,516,560,606,648,701,745,791,836,887]}
+ ];
+ if(lines.some(line=>norm(line.tokens.join(''))!==norm(line.expected))){
+  console.error('KK40 RELEASE BLOCKED: refrain syllable/source mismatch');
+  $('notice').textContent='KK40 QA BLOCKED: refrain source mismatch. No draft overlay rendered.';
   return;
  }
- // Coordinates are provisional; never claim note-level verification.
- const xs=[313,381,423,468,511,553,598,640,679,727,765,810,850,892,939,1011,1083];
- const ratio=src.width/1191,y=cuts[1]+gap*.53;
+ const ratio=src.width/1191;
  ctx.save();ctx.fillStyle='#155fcd';ctx.textAlign='center';ctx.textBaseline='middle';
  ctx.font=Math.round(12*ratio)+'px Arial, sans-serif';
- syllables.forEach((t,i)=>ctx.fillText(t,xs[i]*ratio,y));
+ for(const line of lines){
+  const y=cuts[line.system+1]+line.system*gap+gap*.53;
+  line.tokens.forEach((token,i)=>ctx.fillText(token,line.xs[i]*ratio,y));
+ }
  ctx.restore();
 }
 
@@ -105,7 +116,7 @@ function drawDraftRefrain(gap){
    ctx.drawImage(src,0,top,src.width,h,0,y,src.width,h);
    y+=h+(i<5?gap:0);
   }
-  $('notice').innerHTML='<strong>Draft system 1 only:</strong> The full first refrain lyric line is now provisionally segmented beneath musical system 1. Remaining systems are intentionally unmapped. This is NOT visually approved.';
+  $('notice').innerHTML='<strong>Refrain draft (systems 1–3):</strong> Both continuation systems now show the same second lyric line as provisional blue syllables. Note-level alignment, the extra ending in system 2, and visual QA remain UNVERIFIED.';
   drawDraftRefrain(gap);
  }
  baseWidth=canvas.width;baseHeight=canvas.height;setZoom(zoom);update();
