@@ -5,6 +5,10 @@ const $=id=>document.getElementById(id);const NS='http://www.w3.org/2000/svg';le
 // entire remainder of the score down. These boundaries require visual QA.
 // Measured against original.png (878 × 1241): Malayalam rows ~360–377, 540–557, 720–737; bass staff begins ~414, 594, 769.
 const cuts=[386,566,746],band=38,sourceBottom=840;
+// Score integrity invariant: each source interval is displayed exactly once,
+// with its original pixel dimensions. The final standalone stanza block is excluded.
+function qaSourceSlices(){const spans=[0,...cuts,sourceBottom];const issues=[];for(let i=1;i<spans.length;i++)if(spans[i]<=spans[i-1])issues.push('Non-increasing source crop');if(sourceBottom>1241)issues.push('Crop extends past source image');return issues}
+
 function svg(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs||{}))e.setAttribute(k,v);(parent||$('score')).append(e);return e}
 function render(){const root=$('score');root.replaceChildren();root.setAttribute('viewBox','0 0 878 '+(sourceBottom+cuts.length*band));const defs=svg('defs');let top=0;for(let i=0;i<=cuts.length;i++){const bottom=i<cuts.length?cuts[i]:sourceBottom;const clip=svg('clipPath',{id:'kk8clip'+i},defs);svg('rect',{x:0,y:top+i*band,width:878,height:bottom-top},clip);svg('image',{href:'original.png',x:0,y:i*band,width:878,height:1241,'clip-path':'url(#kk8clip'+i+')'});if(i<cuts.length){const line=svg('g',{'data-lyric-row':i+1});for(const p of drafts[current].filter(p=>p.system===i+1)){const t=svg('text',{x:p.x,y:cuts[i]+i*band+25,class:'lyric'},line);t.textContent=p.text}}top=bottom}
 $('stanza').value=current;$('prev').disabled=current===0;$('next').disabled=current===verses.length-1;root.style.width=zoom+'%';$('reset').textContent=zoom+'%';const overlaps=qaVisibleStanza();if(overlaps.length)console.warn('KK8 visual-text collision QA: '+overlaps.length+' issue(s)',overlaps)}
@@ -33,6 +37,7 @@ function qaVisibleStanza(){
  }
  return issues;
 }
+const qaSliceErrors=qaSourceSlices();if(qaSliceErrors.length)console.error('KK8 score crop QA FAILED',qaSliceErrors);
 const qaErrors=qaAllStanzas();if(qaErrors.length)console.error('KK8 lyric integrity QA FAILED',qaErrors);else console.info('KK8 lyric integrity QA passed for 7 stanzas');
 function change(n){current=Math.max(0,Math.min(verses.length-1,n));render()}$('prev').onclick=()=>change(current-1);$('next').onclick=()=>change(current+1);$('stanza').onchange=()=>change(Number($('stanza').value));$('out').onclick=()=>{zoom=Math.max(25,zoom-25);render()};$('in').onclick=()=>{zoom=Math.min(300,zoom+25);render()};$('reset').onclick=()=>{zoom=100;render()};addEventListener('message',e=>{if(e.origin===location.origin&&e.data?.type==='sjmtc-beta-set-stanza')change(Number(e.data.stanza)-1)});render();
 </script></body></html>
