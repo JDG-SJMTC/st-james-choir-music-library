@@ -1,0 +1,36 @@
+{
+  "song": "KK-0040",
+  "status": "draft-only",
+  "scoreBasis": {
+    "width": 1191,
+    "height": 1684
+  },
+  "system": 1,
+  "lyricSpan": "Haa! koodi naamellaarum chèrnnu",
+  "syllables": [
+    "Haa!",
+    "koo",
+    "di",
+    "naa",
+    "me",
+    "llaa",
+    "rum",
+    "chèr",
+    "nnu"
+  ],
+  "x": [
+    260,
+    323,
+    365,
+    390,
+    431,
+    475,
+    501,
+    528,
+    566
+  ],
+  "notePositions": "candidate notehead centres from source score; manual visual verification required",
+  "lyricFidelity": "join segmented words to source span; do not modify accents or spellings",
+  "musicalSystemEndVerified": false,
+  "approval": false
+}
