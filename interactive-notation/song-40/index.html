@@ -16,7 +16,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <div class="tools" aria-label="Notation controls">
 <select id="stanza" aria-label="Stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option><option value="5">Stanza 5</option><option value="6">Stanza 6</option></select>
 <button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
-<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show refrain draft (system 1 approved; system 2 accepted; system 3 draft)</label>
+<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show blue Manglish (refrain approved; stanza 1 system 4 draft)</label>
 </div>
 <div class="notice" id="notice"><strong>Measured spacing active.</strong> Whitespace is inserted only at verified blank horizontal cuts, with runtime ink checks. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
 <p id="qa-status" class="muted small" role="status">Detailed refrain evidence QA pending; unapproved visual drafts are allowed for inspection only.</p>
@@ -134,8 +134,28 @@ function drawDraftRefrain(gap){
   if(left-right<2*ratio)overlaps3.push(i);
  }
  if(!overlaps3.length)second.forEach((text,i)=>ctx.fillText(text,x3[i]*ratio,y3));
+ // Stanza 1 / system 4: first musical-system candidate only.
+ // The printed first-stanza lyric line belongs to system 4; systems 5/6
+ // are alternative continuations. Refrain positions above are unchanged.
+ const stanza4=['Vè','da','na','ppe','dum','è','zha','kalh','kka','zha','lu','thee','ru','vaan','van','nu'];
+ const stanza4Source='Vèdanappedum èzhakalhkkazhalu theeruvaan – vannu';
+ let system4='WITHHELD';
+ if(clean(stanza4.join(''))===clean(stanza4Source)){
+  const x4=[271,315,355,395,438,491,530,572,615,657,699,746,789,833,921,969];
+  const y4=cuts[4]+gap*3.54;
+  const collision4=[];
+  for(let i=1;i<stanza4.length;i++){
+   const right=x4[i-1]*ratio+ctx.measureText(stanza4[i-1]).width/2;
+   const left=x4[i]*ratio-ctx.measureText(stanza4[i]).width/2;
+   if(left-right<2*ratio)collision4.push(i);
+  }
+  if(!collision4.length){
+   stanza4.forEach((text,i)=>ctx.fillText(text,x4[i]*ratio,y4));
+   system4='16 provisional syllables drawn; visual review required';
+  }else system4='WITHHELD due to '+collision4.length+' adjacent collisions';
+ }else system4='WITHHELD: source reconstruction mismatch';
  ctx.restore();
- return {drawn:true,count:fragments.length,
+ return {drawn:true,system4,count:fragments.length,
   system2:overlaps.length?'WITHHELD: overlap at '+overlaps.join(', '):'16 draft fragments drawn (including score-only swargga)',
   system3:overlaps3.length?'WITHHELD: overlap at '+overlaps3.join(', '):'14 draft fragments drawn (no extra swargga)'};
 
@@ -158,7 +178,7 @@ function drawDraftRefrain(gap){
    if($('draft').checked){
     try{
      const result=drawDraftRefrain(gap);
-     $('notice').textContent=result.drawn?'System 1 approved by user ('+result.count+' fragments, unchanged). System 2 accepted as structurally correct (alignment approximate): '+result.system2+'. System 3 UNAPPROVED: '+result.system3+'.':'Blue draft NOT rendered: '+result.reason;
+     $('notice').textContent=result.drawn?'System 1 approved by user ('+result.count+' fragments, unchanged). System 2 accepted as structurally correct (alignment approximate): '+result.system2+'. System 3 approved: '+result.system3+'. System 4 stanza 1 DRAFT: '+result.system4+'.':'Blue draft NOT rendered: '+result.reason;
     }catch(e){console.error('KK40 draft failed',e);$('notice').textContent='Blue draft NOT rendered: '+e.message;}
    }else{
     $('notice').textContent='Original score only. Unverified blue syllable draft hidden. All source ink preserved.';
