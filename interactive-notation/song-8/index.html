@@ -24,6 +24,18 @@ function qaAllStanzas(){
  });
  return errors;
 }
+// Source-score line-boundary audit: stanza 1's printed third system begins
+// with the continuation 'laa ne'. Do not certify alignment until reassigned.
+function qaSourceLineBoundaries(){
+ const issues=[];
+ const v=drafts[0];
+ for(const syllable of ['laa','ne']){
+  const p=v.find(q=>q.text===syllable&&q.system===2);
+  if(p)issues.push('Stanza 1: '+syllable+' assigned to system 2; source score continues it in system 3');
+ }
+ return issues;
+}
+
 // Detect horizontal collisions using actual browser font measurements; report
 // rather than moving syllables away from their measured Malayalam anchors.
 function qaVisibleStanza(){
@@ -80,7 +92,7 @@ function runLayoutQa(){
  }
  current=original;render();
  const failures=results.flatMap(r=>[...r.collisions,...r.outside].map(e=>'Stanza '+r.stanza+': '+e));
- window.kk8QaReport={sourceCropChecks:qaSourceSlices(),lyricIntegrityChecks:qaAllStanzas(),results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED'};
+ window.kk8QaReport={sourceCropChecks:qaSourceSlices(),lyricIntegrityChecks:qaAllStanzas(),sourceLineBoundaryChecks:qaSourceLineBoundaries(),results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED'};
  console.table(results.map(r=>({stanza:r.stanza,fragments:r.fragments,collisions:r.collisions.length,outside:r.outside.length})));
  if(failures.length)console.warn('KK8 QA layout failures',failures);
  const output=$('qaOutput');if(output){output.textContent=JSON.stringify(window.kk8QaReport,null,2);output.hidden=false}
