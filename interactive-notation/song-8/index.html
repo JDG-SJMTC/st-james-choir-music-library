@@ -74,20 +74,20 @@ const qaErrors=qaAllStanzas();if(qaErrors.length)console.error('KK8 lyric integr
 // Stanza 1 is the line-span master. Other stanzas should occupy approximately
 // the same horizontal span, independently for each of the three systems.
 function qaLineSpanFit(tolerance=24){
- // Measure visible glyph extents, not merely text-anchor centres.
- // Stanza 1 is rendered temporarily to establish each line's master bounds.
+ // Compare actual rendered glyph edges with the stanza-1 master line.
  const root=$('score'),original=current;
  const measure=()=>[1,2,3].map(system=>{
   const row=root.querySelector('[data-lyric-row="'+system+'"]');
   const boxes=[...row.querySelectorAll('text')].map(el=>el.getBBox());
+  if(!boxes.length)return null;
   return {start:Math.min(...boxes.map(b=>b.x)),end:Math.max(...boxes.map(b=>b.x+b.width))};
  });
  const actual=measure();
- if(current!==0){current=0;render();}
+ if(original!==0){current=0;render();}
  const master=measure();
- if(current!==original){current=original;render();}
- return actual.map((span,i)=>({system:i+1,master,actual:span,tolerance,
-  pass:Math.abs(span.start-master[i].start)<=tolerance&&Math.abs(span.end-master[i].end)<=tolerance})).map(r=>({...r,master:r.master[r.system-1]}));
+ if(original!==0){current=original;render();}
+ return actual.map((span,i)=>({system:i+1,master:master[i],actual:span,tolerance,
+  pass:!!span&&!!master[i]&&Math.abs(span.start-master[i].start)<=tolerance&&Math.abs(span.end-master[i].end)<=tolerance}));
 }
 
 function runLayoutQa(){
