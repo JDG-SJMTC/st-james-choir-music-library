@@ -157,7 +157,7 @@ function drawDraftRefrain(gap){
  // Systems 5 and 6 deliberately withheld: the printed "vannu" at the
  // system 5 boundary invalidates the previous assumption that both systems
  // contain only stanza lyric line 2. Do not publish speculative mapping.
- const continuationStatus={5:'WITHHELD: printed vannu ending must be reconciled with source',6:'WITHHELD: continuation must be mapped independently; bottom whitespace now available'};
+ const continuationStatus={5:'WITHHELD: printed vannu ending must be reconciled with source',6:'WITHHELD: continuation must be mapped independently; trailing page padding is not a verified staff-adjacent lyric band'};
  ctx.restore();
  return {drawn:true,system4,system5:continuationStatus[5],system6:continuationStatus[6],count:fragments.length,
   system2:overlaps.length?'WITHHELD: overlap at '+overlaps.join(', '):'16 draft fragments drawn (including score-only swargga)',
