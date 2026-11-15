@@ -75,9 +75,8 @@ async function qaSourceSeams(){
  const canvas=document.createElement('canvas');canvas.width=878;canvas.height=img.naturalHeight;
  const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);
  const results=cuts.map(y=>{
-  const data=ctx.getImageData(150,y,600,1).data;let ink=0;
-  for(let i=0;i<data.length;i+=4)if((data[i]+data[i+1]+data[i+2])/3<180)ink++;
-  return {cut:y,sourceInkPixelsOnSeam:ink,pass:ink===0};
+  const counts=[];for(let dy=-2;dy<=2;dy++){const data=ctx.getImageData(150,y+dy,600,1).data;let ink=0;for(let i=0;i<data.length;i+=4)if((data[i]+data[i+1]+data[i+2])/3<180)ink++;counts.push(ink)}
+  return {cut:y,sourceInkPixelsOnSeam:counts[2],nearbyRows:counts,pass:counts.every(n=>n===0)};
  });
  window.kk8SeamQa=results;
  if(results.some(r=>!r.pass))console.error('KK8 source seam QA FAILED',results);
