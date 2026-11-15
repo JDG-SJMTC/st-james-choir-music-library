@@ -71,12 +71,29 @@ const qaErrors=qaAllStanzas();if(qaErrors.length)console.error('KK8 lyric integr
 // Explicit beta QA report: open song-8/index.html?qa=1 to test all seven
 // stanza layouts with the browser's actual font metrics. This reports failures;
 // it does not silently alter approved text or declare source-image QA passed.
+// Stanza 1 is the line-span master. Other stanzas should occupy approximately
+// the same horizontal span, independently for each of the three systems.
+function qaLineSpanFit(tolerance=24){
+ const master=[1,2,3].map(system=>{
+  const ps=drafts[0].filter(p=>p.system===system);
+  return {start:Math.min(...ps.map(p=>p.x)),end:Math.max(...ps.map(p=>p.x))};
+ });
+ return [1,2,3].map((system,i)=>{
+  const ps=drafts[current].filter(p=>p.system===system);
+  if(!ps.length)return {system,pass:false,reason:'No syllables',master:master[i]};
+  const start=Math.min(...ps.map(p=>p.x)),end=Math.max(...ps.map(p=>p.x));
+  return {system,master:master[i],actual:{start,end},tolerance,
+    pass:Math.abs(start-master[i].start)<=tolerance&&Math.abs(end-master[i].end)<=tolerance};
+ });
+}
+
 function runLayoutQa(){
  const original=current,results=[];
  for(let i=0;i<verses.length;i++){
   current=i;render();
   const collisions=qaVisibleStanza();
   const tightGaps=qaTightSyllableGaps();
+  const lineSpanFit=qaLineSpanFit();
   const rows=[...$('score').querySelectorAll('[data-lyric-row]')];
   const outside=[];
   for(const row of rows){
@@ -88,10 +105,10 @@ function runLayoutQa(){
       outside.push('Row '+(n+1)+': '+el.textContent+' extends outside lyric band');
    }
   }
-  results.push({stanza:i+1,fragments:drafts[i].length,collisions,tightGaps,outside});
+  results.push({stanza:i+1,fragments:drafts[i].length,collisions,tightGaps,lineSpanFit,outside});
  }
  current=original;render();
- const failures=results.flatMap(r=>[...r.collisions,...r.outside].map(e=>'Stanza '+r.stanza+': '+e));
+ const failures=results.flatMap(r=>[...r.collisions,...r.outside,...r.lineSpanFit.filter(x=>!x.pass).map(x=>'System '+x.system+' outside stanza 1 line span')].map(e=>'Stanza '+r.stanza+': '+e));
  window.kk8QaReport={sourceCropChecks:qaSourceSlices(),lyricIntegrityChecks:qaAllStanzas(),sourceLineBoundaryChecks:qaSourceLineBoundaries(),results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED'};
  console.table(results.map(r=>({stanza:r.stanza,fragments:r.fragments,collisions:r.collisions.length,outside:r.outside.length})));
  if(failures.length)console.warn('KK8 QA layout failures',failures);
