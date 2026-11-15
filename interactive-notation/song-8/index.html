@@ -87,6 +87,38 @@ function qaMasterTemplate(){
 }
 const kk8MasterIssues=qaMasterTemplate();
 if(kk8MasterIssues.length)console.error('KK8 master template QA FAILED',kk8MasterIssues);
+
+// Derive source lyric-line transitions from the exact Manglish text, without
+// guessing musical note assignments or moving existing syllables.
+function qaSourcePhraseMap(){
+ const findings=[];
+ const normalize=t=>t.replace(/\\s/g,'');
+ verses.forEach((verse,i)=>{
+  const sourceLines=verse.split('\\n').map(normalize);
+  const parts=drafts[i];
+  let cumulative=0;
+  const ends=[];
+  for(const line of sourceLines){cumulative+=line.length;ends.push(cumulative)}
+  let position=0;
+  const boundaries=[];
+  for(let j=0;j<parts.length;j++){
+   const previous=position;
+   position+=normalize(parts[j].text).length;
+   for(let k=0;k<ends.length-1;k++){
+    if(previous<ends[k]&&position>=ends[k]){
+     const exact=position===ends[k];
+     boundaries.push({sourceLine:k+1,afterSyllable:j+1,system:parts[j].system,syllable:parts[j].text,exact});
+     if(!exact)findings.push('Stanza '+(i+1)+' source line '+(k+1)+' ends INSIDE syllable '+parts[j].text+' (system '+parts[j].system+')');
+    }
+   }
+  }
+  if(boundaries.length!==3)findings.push('Stanza '+(i+1)+': expected 3 source lyric-line boundaries, got '+boundaries.length);
+  console.info('KK8 source lyric boundaries stanza '+(i+1),boundaries);
+ });
+ return findings;
+}
+const kk8PhraseIssues=qaSourcePhraseMap();
+if(kk8PhraseIssues.length)console.error('KK8 source lyric boundary QA FAILED',kk8PhraseIssues);
 function qaSourceLineBoundaries(){
  // Verify each stanza uses the same three musical lines and ordered anchors.
  // A claim about a specific Malayalam word crossing a line is NOT established
