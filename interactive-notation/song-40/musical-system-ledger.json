@@ -1,0 +1,51 @@
+{
+  "song": "KK-0040",
+  "status": "source-structure-audit-in-progress",
+  "score": "notation/KK-0040.pdf",
+  "pageCount": 1,
+  "systems": [
+    {
+      "index": 1,
+      "role": "refrain",
+      "source": "printed Malayalam beneath first staff",
+      "lyricLineCandidate": 1,
+      "verifiedSyllableBoundary": false
+    },
+    {
+      "index": 2,
+      "role": "refrain",
+      "source": "printed Malayalam beneath second staff",
+      "lyricLineCandidate": 2,
+      "verifiedSyllableBoundary": false
+    },
+    {
+      "index": 3,
+      "role": "refrain",
+      "source": "printed Malayalam beneath third staff; visually resembles second staff",
+      "lyricLineCandidate": 2,
+      "verifiedSyllableBoundary": false
+    },
+    {
+      "index": 4,
+      "role": "stanza",
+      "source": "printed Malayalam beneath fourth staff",
+      "lyricLineCandidate": 1,
+      "verifiedSyllableBoundary": false
+    },
+    {
+      "index": 5,
+      "role": "stanza",
+      "source": "printed Malayalam beneath fifth staff",
+      "lyricLineCandidate": 2,
+      "verifiedSyllableBoundary": false
+    },
+    {
+      "index": 6,
+      "role": "stanza",
+      "source": "printed Malayalam beneath sixth staff; visually resembles fifth staff",
+      "lyricLineCandidate": 2,
+      "verifiedSyllableBoundary": false
+    }
+  ],
+  "note": "System roles inferred by inspecting original page; duplicated-looking systems require independent musical confirmation. Do not infer six independent stanza lyric lines. No alignment anchors approved."
+}
