@@ -90,6 +90,21 @@ function qaKK30PhraseIntegrity(){
   errors.push('Chorus source/Malayalam mapping changed');
  return errors;
 }
+// Release-blocking musical-system boundary test, separate from source line counts.
+// This is an independently reviewed phrase anchor, not a guessed row count.
+// Stanza 3: the first two syllables of its second lyric line ("Yen ni")
+// belong at the END of the first musical system, as "I mba" do in stanza 1.
+// Do not add unverified stanza 4 boundaries or silently declare them approved.
+function qaKK30MusicalBoundary(){
+ const errors=[];
+ const first=DATA.rows['3'][0].map(p=>p.text);
+ const second=DATA.rows['3'][1].map(p=>p.text);
+ if(first.slice(-2).join(' ')!=='Yen ni'||second.slice(0,2).join(' ')!=='ye nj')
+  errors.push('BLOCKER: stanza 3 system 1 must end Yen ni; system 2 must begin ye nj');
+ return errors;
+}
+const kk30MusicalBoundaryErrors=qaKK30MusicalBoundary();
+if(kk30MusicalBoundaryErrors.length)console.error('KK30 RELEASE BLOCKED: musical boundary mismatch',kk30MusicalBoundaryErrors);
 const kk30PhraseIssues=qaKK30PhraseIntegrity();
 if(kk30PhraseIssues.length)console.error('KK30 phrase integrity QA FAILED',kk30PhraseIssues);
 else console.info('KK30 phrase integrity QA passed; visual ink-centre alignment remains separate.');
