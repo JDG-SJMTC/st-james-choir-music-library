@@ -41,6 +41,19 @@ function qaVisibleStanza(){
  return issues;
 }
 
+// Readability audit: report cramped pairs without silently shifting Malayalam-aligned anchors.
+function qaTightSyllableGaps(minGap=2){
+ const warnings=[];
+ for(const row of $('score').querySelectorAll('[data-lyric-row]')){
+  const texts=[...row.querySelectorAll('text')].map(el=>({text:el.textContent,box:el.getBBox()})).sort((a,b)=>a.box.x-b.box.x);
+  for(let i=1;i<texts.length;i++){
+   const left=texts[i-1],right=texts[i],gap=right.box.x-(left.box.x+left.box.width);
+   if(gap<minGap)warnings.push('Row '+row.dataset.lyricRow+': '+left.text+' / '+right.text+' gap '+gap.toFixed(1)+'px');
+  }
+ }
+ return warnings;
+}
+
 const qaSliceErrors=qaSourceSlices();if(qaSliceErrors.length)console.error('KK8 score crop QA FAILED',qaSliceErrors);
 const qaErrors=qaAllStanzas();if(qaErrors.length)console.error('KK8 lyric integrity QA FAILED',qaErrors);else console.info('KK8 lyric integrity QA passed for 7 stanzas');
 // Explicit beta QA report: open song-8/index.html?qa=1 to test all seven
@@ -51,6 +64,7 @@ function runLayoutQa(){
  for(let i=0;i<verses.length;i++){
   current=i;render();
   const collisions=qaVisibleStanza();
+  const tightGaps=qaTightSyllableGaps();
   const rows=[...$('score').querySelectorAll('[data-lyric-row]')];
   const outside=[];
   for(const row of rows){
@@ -62,7 +76,7 @@ function runLayoutQa(){
       outside.push('Row '+(n+1)+': '+el.textContent+' extends outside lyric band');
    }
   }
-  results.push({stanza:i+1,fragments:drafts[i].length,collisions,outside});
+  results.push({stanza:i+1,fragments:drafts[i].length,collisions,tightGaps,outside});
  }
  current=original;render();
  const failures=results.flatMap(r=>[...r.collisions,...r.outside].map(e=>'Stanza '+r.stanza+': '+e));
