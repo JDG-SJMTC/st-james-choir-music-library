@@ -16,7 +16,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <div class="tools" aria-label="Notation controls">
 <select id="stanza" aria-label="Stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option><option value="5">Stanza 5</option><option value="6">Stanza 6</option></select>
 <button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
-<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show unverified first-line draft</label>
+<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show refrain alignment draft (system 1 approved; system 2 candidate)</label>
 </div>
 <div class="notice" id="notice"><strong>Measured spacing active.</strong> Whitespace is inserted only at verified blank horizontal cuts, with runtime ink checks. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
 <p id="qa-status" class="muted small" role="status">Detailed refrain evidence QA pending; unapproved visual drafts are allowed for inspection only.</p>
@@ -106,8 +106,24 @@ function drawDraftRefrain(gap){
  }
  if(bad.length){ctx.restore();console.warn('KK40 system 1 collision candidates',bad);return {drawn:false,reason:'Collision candidates at positions '+bad.join(', ')};}
  fragments.forEach((text,i)=>ctx.fillText(text,xs[i]*ratio,y));
+ // System 2 is a SEPARATE, explicitly unapproved draft. It includes the
+ // score's additional swargga pickup; production line 2 remains unchanged.
+ const second=['Vaa','thi','laa','kum','Ye','shu','naa','tha','ney','vaazh','ththi','ppaa','de','nham'];
+ const sourceSecond='Vaathilaakum Yeshu naathaney vaazhththippaadenham';
+ if(clean(second.join(''))!==clean(sourceSecond)){ctx.restore();throw Error('KK40 system 2 source fidelity failed');}
+ const x2=[279,315,356,411,471,510,557,601,644,698,743,792,838,888];
+ const pickup=['swar','gga'],pickupX=[970,1022];
+ const y2=cuts[2]+gap*1.54;
+ const allTokens=second.concat(pickup),allX=x2.concat(pickupX);
+ const overlaps=[];
+ for(let i=1;i<allTokens.length;i++){
+  const right=allX[i-1]*ratio+ctx.measureText(allTokens[i-1]).width/2;
+  const left=allX[i]*ratio-ctx.measureText(allTokens[i]).width/2;
+  if(left-right<2*ratio)overlaps.push(i);
+ }
+ if(!overlaps.length)allTokens.forEach((text,i)=>ctx.fillText(text,allX[i]*ratio,y2));
  ctx.restore();
- return {drawn:true,count:fragments.length};
+ return {drawn:true,count:fragments.length,system2:overlaps.length?'WITHHELD: overlap at '+overlaps.join(', '):'16 draft fragments drawn (including score-only swargga)'};
 }
 
  if(!safe){canvas.width=src.width;canvas.height=src.height;ctx.drawImage(src,0,0);
@@ -127,7 +143,7 @@ function drawDraftRefrain(gap){
    if($('draft').checked){
     try{
      const result=drawDraftRefrain(gap);
-     $('notice').textContent=result.drawn?'UNAPPROVED first-system draft: '+result.count+' blue fragments drawn. Note-to-Malayalam alignment not verified.':'Blue draft NOT rendered: '+result.reason;
+     $('notice').textContent=result.drawn?'System 1 approved by user ('+result.count+' fragments, unchanged). System 2 UNAPPROVED candidate: '+result.system2+'. Individual anchors require visual review.':'Blue draft NOT rendered: '+result.reason;
     }catch(e){console.error('KK40 draft failed',e);$('notice').textContent='Blue draft NOT rendered: '+e.message;}
    }else{
     $('notice').textContent='Original score only. Unverified blue syllable draft hidden. All source ink preserved.';
