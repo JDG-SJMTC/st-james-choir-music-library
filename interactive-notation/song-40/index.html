@@ -16,7 +16,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <div class="tools" aria-label="Notation controls">
 <select id="stanza" aria-label="Stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option><option value="5">Stanza 5</option><option value="6">Stanza 6</option></select>
 <button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
-<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show refrain alignment draft (system 1 approved; system 2 candidate)</label>
+<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show refrain draft (system 1 approved; system 2 accepted; system 3 draft)</label>
 </div>
 <div class="notice" id="notice"><strong>Measured spacing active.</strong> Whitespace is inserted only at verified blank horizontal cuts, with runtime ink checks. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
 <p id="qa-status" class="muted small" role="status">Detailed refrain evidence QA pending; unapproved visual drafts are allowed for inspection only.</p>
@@ -122,8 +122,23 @@ function drawDraftRefrain(gap){
   if(left-right<2*ratio)overlaps.push(i);
  }
  if(!overlaps.length)allTokens.forEach((text,i)=>ctx.fillText(text,allX[i]*ratio,y2));
+ // System 3: alternative continuation, same production second refrain line,
+ // but NO extra score-only swargga ending. Positions independently assigned
+ // to the third printed system (not inherited from system 2).
+ const x3=[279,316,356,411,471,510,557,601,644,698,743,792,838,888];
+ const y3=cuts[3]+gap*2.54;
+ const overlaps3=[];
+ for(let i=1;i<second.length;i++){
+  const right=x3[i-1]*ratio+ctx.measureText(second[i-1]).width/2;
+  const left=x3[i]*ratio-ctx.measureText(second[i]).width/2;
+  if(left-right<2*ratio)overlaps3.push(i);
+ }
+ if(!overlaps3.length)second.forEach((text,i)=>ctx.fillText(text,x3[i]*ratio,y3));
  ctx.restore();
- return {drawn:true,count:fragments.length,system2:overlaps.length?'WITHHELD: overlap at '+overlaps.join(', '):'16 draft fragments drawn (including score-only swargga)'};
+ return {drawn:true,count:fragments.length,
+  system2:overlaps.length?'WITHHELD: overlap at '+overlaps.join(', '):'16 draft fragments drawn (including score-only swargga)',
+  system3:overlaps3.length?'WITHHELD: overlap at '+overlaps3.join(', '):'14 draft fragments drawn (no extra swargga)'};
+
 }
 
  if(!safe){canvas.width=src.width;canvas.height=src.height;ctx.drawImage(src,0,0);
@@ -143,7 +158,7 @@ function drawDraftRefrain(gap){
    if($('draft').checked){
     try{
      const result=drawDraftRefrain(gap);
-     $('notice').textContent=result.drawn?'System 1 approved by user ('+result.count+' fragments, unchanged). System 2 UNAPPROVED candidate: '+result.system2+'. Individual anchors require visual review.':'Blue draft NOT rendered: '+result.reason;
+     $('notice').textContent=result.drawn?'System 1 approved by user ('+result.count+' fragments, unchanged). System 2 accepted as structurally correct (alignment approximate): '+result.system2+'. System 3 UNAPPROVED: '+result.system3+'.':'Blue draft NOT rendered: '+result.reason;
     }catch(e){console.error('KK40 draft failed',e);$('notice').textContent='Blue draft NOT rendered: '+e.message;}
    }else{
     $('notice').textContent='Original score only. Unverified blue syllable draft hidden. All source ink preserved.';
