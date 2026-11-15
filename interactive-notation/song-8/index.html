@@ -15,7 +15,7 @@ $('stanza').value=current;$('prev').disabled=current===0;$('next').disabled=curr
 // Browser-side QA: every stanza must retain its exact letters and remain inside
 // its assigned musical system. This check is deliberately independent of rendering.
 function qaAllStanzas(){
- const normalize=t=>t.toLowerCase().replace(/[^a-zà-ž]/g,'');
+ const normalize=t=>t.replace(/\s/g,'');
  const errors=[];
  verses.forEach((verse,i)=>{
   const parts=drafts[i];
