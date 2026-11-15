@@ -16,7 +16,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <div class="tools" aria-label="Notation controls">
 <select id="stanza" aria-label="Stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option><option value="5">Stanza 5</option><option value="6">Stanza 6</option></select>
 <button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
-<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show Manglish (stanza 1 approved; stanza 2 draft)</label>
+<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show Manglish (stanza 1 approved; stanza 2 boundary QA pending)</label>
 </div>
 <div class="notice" id="notice"><strong>Measured spacing active.</strong> Whitespace is inserted only at verified blank horizontal cuts, with runtime ink checks. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
 <p id="qa-status" class="muted small" role="status">Detailed refrain evidence QA pending; unapproved visual drafts are allowed for inspection only.</p>
@@ -151,6 +151,16 @@ function drawDraftRefrain(gap){
     5:[272,314,355,396,438,479,520,563,604,644,684,725,769,812],
     6:[272,318,361,405,450,498,541,585,630,677,721,772,818,873]
    };
+   // MANDATORY boundary gate: source-line round-trip is not proof of
+   // printed staff boundary correctness. No system 4/5/6 overlay until
+   // first/last printed Malayalam and pickup events are verified per system.
+   const printedBoundaryEvidence={4:false,5:false,6:false};
+   if([4,5,6].some(system=>printedBoundaryEvidence[system]!==true)){
+    status[4]=status[5]=status[6]='WITHHELD: printed system start/end and pickup boundary QA incomplete';
+    ctx.restore();
+    return {drawn:true,count:fragments.length,system2:'accepted',system3:'approved',
+     system4:status[4],system5:status[5],system6:status[6]};
+   }
    const sources=lockedSource.stanzas[1];
    if(clean(first.join(''))===clean(sources[0])&&clean(last.join(''))===clean(sources[1])){
     for(const system of [4,5,6]){
