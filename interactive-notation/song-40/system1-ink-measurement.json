@@ -81,6 +81,14 @@
   ],
   "draftManglishTokenCount": 17,
   "groupCount": 16,
-  "qa": "BLOCKED: 17 draft Manglish tokens versus 16 provisional ink groups; grouping and segmentation must be manually resolved before centring",
-  "approved": false
+  "qa": "NOT A COUNT MISMATCH: 16 connected-ink components cannot be equated with 17 sung syllables. Require verified correspondence per fragment; all remain unapproved.",
+  "approved": false,
+  "componentCountIsSyllableCount": false,
+  "verificationCriteria": [
+    "Compare each source Manglish fragment with original printed Malayalam glyph cluster",
+    "Account for connected Malayalam characters and multi-component graphemes",
+    "Verify the associated musical event and system boundary",
+    "Measure glyph-group centre after semantic grouping, not connected-component count",
+    "Verify full-page collision-free rendering"
+  ]
 }
