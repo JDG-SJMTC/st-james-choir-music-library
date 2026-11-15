@@ -68,5 +68,21 @@ function runLayoutQa(){
  const output=$('qaOutput');if(output){output.textContent=JSON.stringify(window.kk8QaReport,null,2);output.hidden=false}
  return window.kk8QaReport;
 }
-function change(n){current=Math.max(0,Math.min(verses.length-1,n));render()}$('prev').onclick=()=>change(current-1);$('next').onclick=()=>change(current+1);$('stanza').onchange=()=>change(Number($('stanza').value));$('out').onclick=()=>{zoom=Math.max(25,zoom-25);render()};$('in').onclick=()=>{zoom=Math.min(300,zoom+25);render()};$('reset').onclick=()=>{zoom=100;render()};addEventListener('message',e=>{if(e.origin===location.origin&&e.data?.type==='sjmtc-beta-set-stanza')change(Number(e.data.stanza)-1)});render();if(new URLSearchParams(location.search).has('qa'))requestAnimationFrame(()=>runLayoutQa());
+// Pixel-level seam QA. Inspect the immutable source image at every cut;
+// the system brace is deliberately excluded from the music-content region.
+async function qaSourceSeams(){
+ const img=new Image();img.src='original.png';await img.decode();
+ const canvas=document.createElement('canvas');canvas.width=878;canvas.height=img.naturalHeight;
+ const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);
+ const results=cuts.map(y=>{
+  const data=ctx.getImageData(150,y,600,1).data;let ink=0;
+  for(let i=0;i<data.length;i+=4)if((data[i]+data[i+1]+data[i+2])/3<180)ink++;
+  return {cut:y,sourceInkPixelsOnSeam:ink,pass:ink===0};
+ });
+ window.kk8SeamQa=results;
+ if(results.some(r=>!r.pass))console.error('KK8 source seam QA FAILED',results);
+ else console.info('KK8 source seam QA PASSED',results);
+ return results;
+}
+function change(n){current=Math.max(0,Math.min(verses.length-1,n));render()}$('prev').onclick=()=>change(current-1);$('next').onclick=()=>change(current+1);$('stanza').onchange=()=>change(Number($('stanza').value));$('out').onclick=()=>{zoom=Math.max(25,zoom-25);render()};$('in').onclick=()=>{zoom=Math.min(300,zoom+25);render()};$('reset').onclick=()=>{zoom=100;render()};addEventListener('message',e=>{if(e.origin===location.origin&&e.data?.type==='sjmtc-beta-set-stanza')change(Number(e.data.stanza)-1)});render();if(new URLSearchParams(location.search).has('qa')){requestAnimationFrame(()=>runLayoutQa());qaSourceSeams().then(r=>{const out=$('qaOutput');if(out)out.textContent+='\n\nSource seam pixels:\n'+JSON.stringify(r,null,2)}).catch(console.error)}
 </script></body></html>
