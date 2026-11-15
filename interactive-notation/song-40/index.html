@@ -19,6 +19,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show unverified first-line draft</label>
 </div>
 <div class="notice" id="notice"><strong>Measured spacing active.</strong> Whitespace is inserted only at verified blank horizontal cuts, with runtime ink checks. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
+<p id="qa-status" class="muted small" role="status">Detailed refrain evidence QA pending; unapproved visual drafts are allowed for inspection only.</p>
 <div id="frame" tabindex="0" aria-label="KK40 notation"><div id="sheet"><canvas id="score"></canvas></div></div>
 <section id="source-panel" aria-label="Locked production Manglish" style="background:#fff;border:1px solid #d5dfea;border-radius:10px;padding:14px;margin:12px 0">
 <strong>Production Manglish — exact source, alignment pending</strong>
@@ -44,7 +45,7 @@ function checkRefrainEvidence(){
  if(!lockedSource||!refrainEvidence)return;
  const report=window.KK40RefrainAnchorGate.validate(refrainEvidence,lockedSource);
  console.info('KK40 refrain per-fragment evidence gate',report.pass?'PASS':'BLOCKED',report.errors);
- if(report.pass!==true)$('notice').textContent='KK40 refrain QA BLOCKED: '+report.errors.length+' missing syllable-to-Malayalam, note or collision verifications. Original score preserved; unapproved overlay hidden.';
+ if(report.pass!==true)$('qa-status').textContent='Final approval BLOCKED: '+report.errors.length+' outstanding per-fragment evidence checks. This does not prevent displaying the clearly labelled draft.';else $('qa-status').textContent='Refrain evidence gate passed.';
 }
 
 fetch('./production-manglish-source.json').then(r=>{if(!r.ok)throw Error('source missing');return r.json()}).then(d=>{if(d.song!=='KK-0040'||d.stanzas?.length!==6||d.refrain?.length!==2)throw Error('source structure mismatch');lockedSource=d;update();checkRefrainEvidence();}).catch(e=>{console.error('KK40 source QA blocked',e);$('source-panel').textContent='Source QA blocked: '+e.message;});
