@@ -78,7 +78,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/p
 function drawDraftRefrain(gap){
  // Candidate note/Malayalam-group anchors only; NOT approved.
  // Refrain line 2 appears in BOTH continuation systems, not split between them.
- const norm=x=>x.normalize('NFC').replace(/[\\s\\-–—.,!?;:'"()]/g,'').toLocaleLowerCase();
+ const norm=x=>x.normalize('NFC').replace(/[\s\-–—.,!?;:'"()]/g,'').toLocaleLowerCase();
  const lines=[
   {system:0,expected:'Haa! koodi naamellaarum chèrnnu pukalh kondaadenham – swargga',
    tokens:['Haa!','koo','di','naa','me','llaa','rum','chèr','nnu','pu','kalh','kon','daa','de','nham','swar','gga'],
