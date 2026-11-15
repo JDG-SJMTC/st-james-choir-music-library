@@ -30,6 +30,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <p class="small"><a href="../../notation/KK-0040.pdf" target="_blank" rel="noopener">Original PDF</a> · Beta only · No changes to approved KK8, KK30 or KK150</p>
 </main>
 <script src="../tools/kk40-boundary-gate.js"></script>
+<script src="./refrain-anchor-gate.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
 (()=>{
@@ -37,7 +38,16 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 const $=id=>document.getElementById(id),pdf='../../notation/KK-0040.pdf';
 const frame=$('frame'),sheet=$('sheet'),canvas=$('score'),ctx=canvas.getContext('2d'),stanza=$('stanza');
 let lockedSource=null;
-fetch('./production-manglish-source.json').then(r=>{if(!r.ok)throw Error('source missing');return r.json()}).then(d=>{if(d.song!=='KK-0040'||d.stanzas?.length!==6||d.refrain?.length!==2)throw Error('source structure mismatch');lockedSource=d;update();}).catch(e=>{console.error('KK40 source QA blocked',e);$('source-panel').textContent='Source QA blocked: '+e.message;});
+let refrainEvidence=null;
+fetch('./refrain-anchor-evidence.json').then(r=>{if(!r.ok)throw Error('missing evidence');return r.json()}).then(d=>{refrainEvidence=d;checkRefrainEvidence();}).catch(e=>console.error('KK40 evidence unavailable',e));
+function checkRefrainEvidence(){
+ if(!lockedSource||!refrainEvidence)return;
+ const report=window.KK40RefrainAnchorGate.validate(refrainEvidence,lockedSource);
+ console.info('KK40 refrain per-fragment evidence gate',report.pass?'PASS':'BLOCKED',report.errors);
+ if(report.pass!==true)$('notice').textContent='KK40 refrain QA BLOCKED: '+report.errors.length+' missing syllable-to-Malayalam, note or collision verifications. Original score preserved; unapproved overlay hidden.';
+}
+
+fetch('./production-manglish-source.json').then(r=>{if(!r.ok)throw Error('source missing');return r.json()}).then(d=>{if(d.song!=='KK-0040'||d.stanzas?.length!==6||d.refrain?.length!==2)throw Error('source structure mismatch');lockedSource=d;update();checkRefrainEvidence();}).catch(e=>{console.error('KK40 source QA blocked',e);$('source-panel').textContent='Source QA blocked: '+e.message;});
 const boundaryQA=window.SJMTCKK40BoundaryGate?.validate({song:'KK-0040',stanzas:[],originalScorePixelPreserved:false});
 if(!boundaryQA||boundaryQA.pass)throw Error('KK40 fail-closed QA not active');
 console.info('KK40 Manglish release blocked until source and boundary evidence exists:',boundaryQA.errors);
