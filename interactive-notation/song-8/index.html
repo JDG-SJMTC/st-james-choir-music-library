@@ -204,6 +204,32 @@ function qaSourceLineBoundaries(){
 
 // Detect horizontal collisions using actual browser font measurements; report
 // rather than moving syllables away from their measured Malayalam anchors.
+// Phrase-boundary diagnostic for stanzas 5-7. The source Manglish
+// line endings are the authoritative lyric boundaries (10/20/30/40).
+// They are NOT equivalent to musical-system boundaries (13/25/40).
+// Never reflow a phrase solely to force it onto a new staff system.
+function qaPhraseBoundaries(){
+ const issues=[];
+ for(let stanza=4;stanza<=6;stanza++){
+  const parts=drafts[stanza],lines=verses[stanza].split('\\n').map(v=>v.replace(/\\s/g,''));
+  if(parts.length!==40){issues.push('Stanza '+(stanza+1)+': expected 40 source syllables');continue;}
+  for(let line=0;line<4;line++){
+   const group=parts.slice(line*10,(line+1)*10);
+   if(group.map(p=>p.text).join('')!==lines[line])
+    issues.push('Stanza '+(stanza+1)+' lyric line '+(line+1)+' source boundary mismatch');
+  }
+  for(const index of [10,20,30]){
+   const left=parts[index-1],right=parts[index];
+   if(!left||!right)issues.push('Stanza '+(stanza+1)+': missing phrase boundary '+index);
+   else if(left.system!==drafts[0][index-1].system||right.system!==drafts[0][index].system)
+    issues.push('Stanza '+(stanza+1)+': phrase boundary '+index+' shifted to wrong musical system');
+  }
+ }
+ return issues;
+}
+const kk8PhraseIssues=qaPhraseBoundaries();
+if(kk8PhraseIssues.length)console.error('KK8 source phrase QA FAILED',kk8PhraseIssues);
+else console.info('KK8 stanza 5-7 source phrase boundaries preserved at positions 10/20/30; visual note mapping remains unverified.');
 function qaVisibleStanza(){
  const issues=[];
  for(const row of $('score').querySelectorAll('[data-lyric-row]')){
