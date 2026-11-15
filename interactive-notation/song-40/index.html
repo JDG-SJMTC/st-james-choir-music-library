@@ -204,12 +204,16 @@ function drawDraftRefrain(gap){
   $('notice').innerHTML='<strong>Layout QA blocked.</strong> Expected blank musical-system boundaries could not be verified. Displaying the original intact score.';
  }else{
   const gap=Math.round(src.height*76/1684);
-  canvas.width=src.width;canvas.height=src.height+6*gap; // six blank bands, including one before printed stanza text
+  // Deliberately omit the printed Malayalam stanza block below system 6
+  // from the INTERACTIVE view only. The source PDF remains unchanged.
+  // cuts[6] is the verified blank cut immediately after system 6.
+  const scoreEnd=cuts[6];
+  canvas.width=src.width;canvas.height=scoreEnd+6*gap;
   ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);
-  let y=0;for(let i=0;i<7;i++){
+  let y=0;for(let i=0;i<6;i++){
    const top=cuts[i],h=cuts[i+1]-top;
    ctx.drawImage(src,0,top,src.width,h,0,y,src.width,h);
-   y+=h+(i<6?gap:0);
+   y+=h+gap;
   }
   const pristine=ctx.getImageData(0,0,canvas.width,canvas.height);
   renderDraft=()=>{
