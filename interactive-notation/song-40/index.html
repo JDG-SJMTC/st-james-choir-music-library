@@ -18,8 +18,14 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
 <button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button>
 </div>
-<div class="notice" id="notice"><strong>Layout rollback active.</strong> Unsafe whitespace insertion was removed after visual QA failure. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
+<div class="notice" id="notice"><strong>Measured spacing active.</strong> Whitespace is inserted only at verified blank horizontal cuts, with runtime ink checks. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
 <div id="frame" tabindex="0" aria-label="KK40 notation"><div id="sheet"><canvas id="score"></canvas></div></div>
+<section id="source-panel" aria-label="Locked production Manglish" style="background:#fff;border:1px solid #d5dfea;border-radius:10px;padding:14px;margin:12px 0">
+<strong>Production Manglish — exact source, alignment pending</strong>
+<div id="refrain-text" style="white-space:pre-line;line-height:1.7;margin:10px 0"></div>
+<div id="stanza-text" style="white-space:pre-line;line-height:1.7;color:#105bca;font-weight:600"></div>
+<div id="repeat-text" class="muted" style="margin-top:8px"></div>
+</section>
 <p id="status" class="muted" role="status">Loading original notation…</p>
 <p class="small"><a href="../../notation/KK-0040.pdf" target="_blank" rel="noopener">Original PDF</a> · Beta only · No changes to approved KK8, KK30 or KK150</p>
 </main>
@@ -30,6 +36,8 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 'use strict';
 const $=id=>document.getElementById(id),pdf='../../notation/KK-0040.pdf';
 const frame=$('frame'),sheet=$('sheet'),canvas=$('score'),ctx=canvas.getContext('2d'),stanza=$('stanza');
+let lockedSource=null;
+fetch('./production-manglish-source.json').then(r=>{if(!r.ok)throw Error('source missing');return r.json()}).then(d=>{if(d.song!=='KK-0040'||d.stanzas?.length!==6||d.refrain?.length!==2)throw Error('source structure mismatch');lockedSource=d;update();}).catch(e=>{console.error('KK40 source QA blocked',e);$('source-panel').textContent='Source QA blocked: '+e.message;});
 const boundaryQA=window.SJMTCKK40BoundaryGate?.validate({song:'KK-0040',stanzas:[],originalScorePixelPreserved:false});
 if(!boundaryQA||boundaryQA.pass)throw Error('KK40 fail-closed QA not active');
 console.info('KK40 Manglish release blocked until source and boundary evidence exists:',boundaryQA.errors);
@@ -38,7 +46,15 @@ const setStatus=msg=>$('status').textContent=msg;
 function setZoom(v){zoom=Math.max(25,Math.min(300,v));$('zoomlabel').textContent=zoom+'%';if(baseWidth){sheet.style.width=(zoom)+'%';} }
 $('minus').onclick=()=>setZoom(zoom-25);$('plus').onclick=()=>setZoom(zoom+25);$('reset').onclick=()=>setZoom(100);
 function move(n){stanza.value=String(Math.max(1,Math.min(6,Number(stanza.value)+n)));update();}
-function update(){$('prev').disabled=stanza.value==='1';$('next').disabled=stanza.value==='6';setStatus('Stanza '+stanza.value+' of 6 · original notation only · Manglish boundary verification pending');}
+function update(){
+ $('prev').disabled=stanza.value==='1';$('next').disabled=stanza.value==='6';
+ if(lockedSource){
+  $('refrain-text').textContent=lockedSource.refrain.join('\n');
+  $('stanza-text').textContent=lockedSource.stanzas[Number(stanza.value)-1].join('\n');
+  $('repeat-text').textContent=lockedSource.refrainAfterEach;
+ }
+ setStatus('Stanza '+stanza.value+' of 6 · exact production Manglish shown below · score overlay withheld pending note-to-syllable verification');
+}
 stanza.onchange=update;$('prev').onclick=()=>move(-1);$('next').onclick=()=>move(1);update();
 let touch=null;frame.addEventListener('touchstart',e=>{if(e.touches.length===1)touch={x:e.touches[0].clientX,y:e.touches[0].clientY};},{passive:true});
 frame.addEventListener('touchend',e=>{if(!touch||zoom!==100||!e.changedTouches.length)return;const dx=e.changedTouches[0].clientX-touch.x,dy=e.changedTouches[0].clientY-touch.y;touch=null;if(Math.abs(dx)>80&&Math.abs(dx)>Math.abs(dy)*1.5)move(dx<0?1:-1);},{passive:true});
