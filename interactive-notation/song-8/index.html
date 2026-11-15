@@ -2,6 +2,16 @@
 // transcribed and checked against the source PDF. Never infer it from Manglish.
 // Each stanza will use [{text,x,y,system}] with the same three line spans.
 const malayalamDrafts=Array.from({length:7},()=>[]);
+// Source-backed stanza-1 lyric-group counts from the provisional reference.
+// A mismatch is a review flag, NOT permission to redistribute lyric text.
+const stanza1SourceGroupCounts=[13,12,15];
+function qaStanza1GroupCorrespondence(){
+ return stanza1SourceGroupCounts.map((expected,i)=>{
+  const actual=drafts[0].filter(p=>p.system===i+1).length;
+  return {system:i+1,sourcePrintedGroups:expected,manglishFragments:actual,
+   match:expected===actual,status:expected===actual?'COUNT_MATCH_UNVERIFIED':'REQUIRES_SOURCE_REVIEW'};
+ });
+}
 function qaMalayalamDrafts(){
  return malayalamDrafts.map((parts,i)=>({stanza:i+1,ready:[1,2,3].every(system=>parts.some(p=>p.system===system)),fragments:parts.length}));
 }
@@ -125,7 +135,7 @@ function runLayoutQa(){
  }
  current=original;render();
  const failures=results.flatMap(r=>[...r.collisions,...r.outside,...r.lineSpanFit.filter(x=>!x.pass).map(x=>'System '+x.system+' outside stanza 1 line span')].map(e=>'Stanza '+r.stanza+': '+e));
- window.kk8QaReport={sourceCropChecks:qaSourceSlices(),lyricIntegrityChecks:qaAllStanzas(),sourceLineBoundaryChecks:qaSourceLineBoundaries(),results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED',malayalamDraftReadiness:qaMalayalamDrafts()};
+ window.kk8QaReport={sourceCropChecks:qaSourceSlices(),lyricIntegrityChecks:qaAllStanzas(),sourceLineBoundaryChecks:qaSourceLineBoundaries(),results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED',malayalamDraftReadiness:qaMalayalamDrafts(),stanza1GroupCorrespondence:qaStanza1GroupCorrespondence()};
  console.table(results.map(r=>({stanza:r.stanza,fragments:r.fragments,collisions:r.collisions.length,outside:r.outside.length})));
  if(failures.length)console.warn('KK8 QA layout failures',failures);
  const output=$('qaOutput');if(output){output.textContent=JSON.stringify(window.kk8QaReport,null,2);output.hidden=false}
