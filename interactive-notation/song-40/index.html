@@ -16,7 +16,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <div class="tools" aria-label="Notation controls">
 <select id="stanza" aria-label="Stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option><option value="5">Stanza 5</option><option value="6">Stanza 6</option></select>
 <button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
-<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show approved systems 1–4 (5–6 withheld)</label>
+<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show Manglish (systems 1–4 approved; 5–6 drafts)</label>
 </div>
 <div class="notice" id="notice"><strong>Measured spacing active.</strong> Whitespace is inserted only at verified blank horizontal cuts, with runtime ink checks. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
 <p id="qa-status" class="muted small" role="status">Detailed refrain evidence QA pending; unapproved visual drafts are allowed for inspection only.</p>
@@ -157,7 +157,33 @@ function drawDraftRefrain(gap){
  // Systems 5 and 6 deliberately withheld: the printed "vannu" at the
  // system 5 boundary invalidates the previous assumption that both systems
  // contain only stanza lyric line 2. Do not publish speculative mapping.
- const continuationStatus={5:'WITHHELD: printed vannu ending must be reconciled with source',6:'WITHHELD: continuation must be mapped independently; trailing page padding is not a verified staff-adjacent lyric band'};
+ // Stanza continuations are alternative endings, just like refrain systems 2/3.
+ // System 5 includes a printed score-only "vannu"; system 6 does not.
+ // Never append that word to the locked production second stanza line.
+ const continuation=['Mè','thi','ni','ya','thil','maa','nu','shyaa','va','thaa','ram','aar','nni','thaa'];
+ const continuationSource='Mèthiniyathil maanushyaavathaaram aarnnithaa';
+ const continuationStatus={5:'WITHHELD',6:'WITHHELD'};
+ if(clean(continuation.join(''))===clean(continuationSource)){
+  const positions={
+   5:[272,314,355,396,438,479,520,563,604,644,684,725,769,812],
+   6:[272,318,361,405,450,498,541,585,630,677,721,772,818,873]
+  };
+  for(const system of [5,6]){
+   const tokens=system===5?continuation.concat(['van','nu']):continuation;
+   const anchors=system===5?positions[5].concat([908,956]):positions[6];
+   // cuts[5] is the start of system 6; system 5 starts at cuts[4].
+   // Five gaps follow the first five systems.
+   const y=cuts[system-1]+(system-1)*gap+gap*.54;
+   const collision=[];
+   for(let i=1;i<tokens.length;i++){
+    const right=anchors[i-1]*ratio+ctx.measureText(tokens[i-1]).width/2;
+    const left=anchors[i]*ratio-ctx.measureText(tokens[i]).width/2;
+    if(left-right<2*ratio)collision.push(i);
+   }
+   if(collision.length)continuationStatus[system]='WITHHELD: '+collision.length+' collisions';
+   else {tokens.forEach((t,i)=>ctx.fillText(t,anchors[i]*ratio,y));continuationStatus[system]=tokens.length+' draft fragments drawn'+(system===5?' (including score-only vannu)':'');}
+  }
+ }else continuationStatus[5]=continuationStatus[6]='WITHHELD: source fidelity mismatch';
  ctx.restore();
  return {drawn:true,system4,system5:continuationStatus[5],system6:continuationStatus[6],count:fragments.length,
   system2:overlaps.length?'WITHHELD: overlap at '+overlaps.join(', '):'16 draft fragments drawn (including score-only swargga)',
@@ -182,7 +208,7 @@ function drawDraftRefrain(gap){
    if($('draft').checked){
     try{
      const result=drawDraftRefrain(gap);
-     $('notice').textContent=result.drawn?'System 1 approved by user ('+result.count+' fragments, unchanged). System 2 accepted as structurally correct (alignment approximate): '+result.system2+'. System 3 approved: '+result.system3+'. System 4 approved: '+result.system4+'. Systems 5 and 6 WITHHELD after boundary QA: '+result.system5+' / '+result.system6+'.':'Blue draft NOT rendered: '+result.reason;
+     $('notice').textContent=result.drawn?'System 1 approved by user ('+result.count+' fragments, unchanged). System 2 accepted as structurally correct (alignment approximate): '+result.system2+'. System 3 approved: '+result.system3+'. System 4 approved: '+result.system4+'. Systems 5 and 6 NEW DRAFTS: '+result.system5+' / '+result.system6+'.':'Blue draft NOT rendered: '+result.reason;
     }catch(e){console.error('KK40 draft failed',e);$('notice').textContent='Blue draft NOT rendered: '+e.message;}
    }else{
     $('notice').textContent='Original score only. Unverified blue syllable draft hidden. All source ink preserved.';
