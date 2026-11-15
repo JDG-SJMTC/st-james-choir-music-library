@@ -30,13 +30,17 @@ function qaVisibleStanza(){
  const issues=[];
  for(const row of $('score').querySelectorAll('[data-lyric-row]')){
   const boxes=[...row.querySelectorAll('text')].map(t=>({text:t.textContent,box:t.getBBox()}));
-  for(let i=1;i<boxes.length;i++){
-   const a=boxes[i-1],b=boxes[i];
-   if(a.box.x+a.box.width>b.box.x+1)issues.push('Row '+row.dataset.lyricRow+': '+a.text+' / '+b.text+' overlap');
+  // Test all pairs, not just neighbours: wide syllables can overlap multiple anchors.
+  for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){
+   const a=boxes[i],b=boxes[j];
+   const horizontal=a.box.x < b.box.x+b.box.width-1 && b.box.x < a.box.x+a.box.width-1;
+   const vertical=a.box.y < b.box.y+b.box.height && b.box.y < a.box.y+a.box.height;
+   if(horizontal&&vertical)issues.push('Row '+row.dataset.lyricRow+': '+a.text+' / '+b.text+' overlap');
   }
  }
  return issues;
 }
+
 const qaSliceErrors=qaSourceSlices();if(qaSliceErrors.length)console.error('KK8 score crop QA FAILED',qaSliceErrors);
 const qaErrors=qaAllStanzas();if(qaErrors.length)console.error('KK8 lyric integrity QA FAILED',qaErrors);else console.info('KK8 lyric integrity QA passed for 7 stanzas');
 // Explicit beta QA report: open song-8/index.html?qa=1 to test all seven
