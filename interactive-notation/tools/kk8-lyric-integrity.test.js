@@ -11,5 +11,5 @@ for(let i=0;i<7;i++){
  for(const p of parts){assert([1,2,3].includes(p.system),'Bad musical system');assert(Number.isFinite(p.x)&&p.x>=0&&p.x<=878,'Bad horizontal anchor');}
  console.log('PASS stanza '+(i+1)+': '+parts.length+' fragments; letter completeness and anchor bounds');
 }
-assert(html.includes('const cuts=[386,557,746],band=38,sourceBottom=840;'),'Unexpected score geometry');
+assert(html.includes('const cuts=[386,557,742],band=38,sourceBottom=840;'),'Unexpected score geometry');
 console.log('PASS score geometry constants; manual visual QA still required');
