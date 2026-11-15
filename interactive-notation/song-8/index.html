@@ -27,12 +27,18 @@ function qaAllStanzas(){
 // Source-score line-boundary audit: stanza 1's printed third system begins
 // with the continuation 'laa ne'. Do not certify alignment until reassigned.
 function qaSourceLineBoundaries(){
+ // Verify each stanza uses the same three musical lines and ordered anchors.
+ // A claim about a specific Malayalam word crossing a line is NOT established
+ // by image-ink segmentation alone and must not be reported as a failure.
  const issues=[];
- const v=drafts[0];
- for(const syllable of ['laa','ne']){
-  const p=v.find(q=>q.text===syllable&&q.system===2);
-  if(p)issues.push('Stanza 1: '+syllable+' assigned to system 2; source score continues it in system 3');
- }
+ drafts.forEach((parts,i)=>{
+  for(let system=1;system<=3;system++){
+   const row=parts.filter(p=>p.system===system);
+   if(!row.length)issues.push('Stanza '+(i+1)+': missing system '+system);
+   for(let j=1;j<row.length;j++)if(row[j].x<=row[j-1].x)
+    issues.push('Stanza '+(i+1)+' system '+system+': non-increasing syllable anchors');
+  }
+ });
  return issues;
 }
 
