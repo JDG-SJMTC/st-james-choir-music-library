@@ -95,13 +95,14 @@ function drawDraftRefrain(gap){
   $('notice').textContent='KK40 QA BLOCKED: refrain source mismatch. No draft overlay rendered.';
   return;
  }
- // Independently measured first-system Malayalam ink inventory has 16
- // candidate groups, versus 17 Manglish fragments in this draft.
- // Do not display a knowingly ambiguous note-to-syllable alignment.
- const measuredFirstSystemGroups=16;
- if(lines[0].tokens.length!==measuredFirstSystemGroups){
-  console.warn('KK40 RELEASE BLOCKED: system 1 has '+lines[0].tokens.length+' draft syllables but '+measuredFirstSystemGroups+' provisional printed ink groups. Grouping must be resolved manually.');
-  $('notice').textContent='KK40 QA BLOCKED: first-system Malayalam ink groups do not yet match the draft Manglish syllable segmentation. Original notation preserved; unverified blue overlay withheld.';
+ // Ink connected-component counts are NOT syllable counts. Malayalam
+ // grapheme clusters may join or split visually; never gate on equality.
+ // Until every fragment has an independently verified printed-Malayalam
+ // correspondence and note anchor, keep unapproved blue overlays hidden.
+ const syllableLedgerVerified=false;
+ if(!syllableLedgerVerified){
+  console.warn('KK40 RELEASE BLOCKED: per-fragment Malayalam/note mapping not independently verified');
+  $('notice').textContent='KK40 QA BLOCKED: exact lyrics are locked, but individual Malayalam syllable groups and note anchors remain unverified. Original score is displayed without speculative blue overlays.';
   return;
  }
  const ratio=src.width/1191;
