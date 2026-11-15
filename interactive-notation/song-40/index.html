@@ -1,10 +1,65 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>KK 40 · Boundary-first notation beta</title>
-<style>body{font:16px system-ui,Arial,sans-serif;margin:0;background:#f5f7fb;color:#243247}main{max-width:1050px;margin:24px auto;padding:0 16px}h1{font-size:1.4rem}p{line-height:1.5}.notice{padding:14px;background:#fff8e7;border:1px solid #e8c78a;border-radius:8px}.sheet{background:white;border:1px solid #ccd6e2;border-radius:8px;padding:8px}iframe{display:block;width:100%;height:min(85vh,1100px);border:0}a{color:#165ab0}</style></head><body><main>
+<title>KK 40 · Interactive notation beta</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fb;color:#243247;font:15px system-ui,Arial,sans-serif}
+main{max-width:1050px;margin:0 auto;padding:18px}h1{font-size:1.35rem;margin:0 0 5px}
+p{line-height:1.5}.muted{color:#617084}.tools{position:sticky;top:6px;z-index:3;display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff;border:1px solid #d5dfea;padding:10px;border-radius:10px;margin:12px 0}
+button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7px;background:white;color:#243247}button:disabled{opacity:.45}
+#frame{overflow:auto;background:white;border:1px solid #d5dfea;border-radius:10px;padding:8px;touch-action:pan-x pan-y}
+#sheet{position:relative;width:100%;transform-origin:top left}#sheet canvas{display:block;width:100%;height:auto}
+.notice{padding:12px;border:1px solid #e8d3a2;background:#fff9e9;border-radius:8px;margin:12px 0}
+#status{font-size:.9rem}.small{font-size:.82rem}
+</style></head><body><main>
 <h1>KK 40 · ഹാ കൂടി നാമെല്ലാരും ചേർന്നു</h1>
-<p>Haa Koodi Naamellaarum Chernnu · boundary-first engineering beta</p>
-<div class="notice"><strong>NOT APPROVED — source review required.</strong> This view preserves the original PDF only. Manglish overlays are intentionally withheld until exact source syllables, lyrical-line boundaries, and musical-system transitions have been inspected and verified. No guessed positions are presented as approved.</div>
-<p><a href="../../notation/KK-0040.pdf" target="_blank" rel="noopener">Open original KK40 score PDF</a></p>
-<div class="sheet"><iframe title="Original KK40 sheet music" src="../../notation/KK-0040.pdf"></iframe></div>
-</main></body></html>
+<div class="muted">Haa Koodi Naamellaarum Chernnu · interactive beta workbench</div>
+<div class="tools" aria-label="Notation controls">
+<select id="stanza" aria-label="Stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option><option value="5">Stanza 5</option><option value="6">Stanza 6</option></select>
+<button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
+<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button>
+</div>
+<div class="notice" id="notice"><strong>Boundary QA pending.</strong> Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
+<div id="frame" tabindex="0" aria-label="KK40 notation"><div id="sheet"><canvas id="score"></canvas></div></div>
+<p id="status" class="muted" role="status">Loading original notation…</p>
+<p class="small"><a href="../../notation/KK-0040.pdf" target="_blank" rel="noopener">Original PDF</a> · Beta only · No changes to approved KK8, KK30 or KK150</p>
+</main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id),pdf='../../notation/KK-0040.pdf';
+const frame=$('frame'),sheet=$('sheet'),canvas=$('score'),ctx=canvas.getContext('2d'),stanza=$('stanza');
+let zoom=100,baseWidth=0,baseHeight=0;
+const setStatus=msg=>$('status').textContent=msg;
+function setZoom(v){zoom=Math.max(25,Math.min(300,v));$('zoomlabel').textContent=zoom+'%';if(baseWidth){sheet.style.width=(zoom)+'%';} }
+$('minus').onclick=()=>setZoom(zoom-25);$('plus').onclick=()=>setZoom(zoom+25);$('reset').onclick=()=>setZoom(100);
+function move(n){stanza.value=String(Math.max(1,Math.min(6,Number(stanza.value)+n)));update();}
+function update(){$('prev').disabled=stanza.value==='1';$('next').disabled=stanza.value==='6';setStatus('Stanza '+stanza.value+' of 6 · original notation only · Manglish boundary verification pending');}
+stanza.onchange=update;$('prev').onclick=()=>move(-1);$('next').onclick=()=>move(1);update();
+let touch=null;frame.addEventListener('touchstart',e=>{if(e.touches.length===1)touch={x:e.touches[0].clientX,y:e.touches[0].clientY};},{passive:true});
+frame.addEventListener('touchend',e=>{if(!touch||zoom!==100||!e.changedTouches.length)return;const dx=e.changedTouches[0].clientX-touch.x,dy=e.changedTouches[0].clientY-touch.y;touch=null;if(Math.abs(dx)>80&&Math.abs(dx)>Math.abs(dy)*1.5)move(dx<0?1:-1);},{passive:true});
+frame.addEventListener('keydown',e=>{if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});
+if(!window.pdfjsLib){setStatus('PDF renderer unavailable. Open the original PDF using the link below.');return;}
+pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+(async()=>{
+ try{
+ const doc=await pdfjsLib.getDocument(pdf).promise,page=await doc.getPage(1),view=page.getViewport({scale:2});
+ const src=document.createElement('canvas');src.width=Math.ceil(view.width);src.height=Math.ceil(view.height);
+ await page.render({canvasContext:src.getContext('2d'),viewport:view}).promise;
+ // Six staff systems: preserve all source ink, inserting uniform white bands
+ // AFTER each staff row, never over the original notes or Malayalam.
+ // Page-relative cut positions derived from page-1 visual inspection;
+ // these are presentation cuts, NOT verified syllable anchors.
+ const cuts=[0,.259,.338,.420,.503,.586,1],gap=Math.round(src.width*.048);
+ canvas.width=src.width;canvas.height=src.height+gap*5;
+ ctx.fillStyle='white';ctx.fillRect(0,0,canvas.width,canvas.height);
+ let out=0;for(let i=0;i<6;i++){
+  const top=Math.round(src.height*cuts[i]),bottom=Math.round(src.height*cuts[i+1]);
+  ctx.drawImage(src,0,top,src.width,bottom-top,0,out,src.width,bottom-top);
+  out+=bottom-top;if(i<5)out+=gap;
+ }
+ baseWidth=canvas.width;baseHeight=canvas.height;setZoom(zoom);update();
+ }catch(e){setStatus('Could not render the original PDF: '+e.message+'. Use the PDF link below.');}
+})();
+})();
+</script></body></html>
