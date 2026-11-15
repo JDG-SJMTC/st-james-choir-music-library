@@ -157,7 +157,7 @@ function drawDraftRefrain(gap){
  // Systems 5 and 6 deliberately withheld: the printed "vannu" at the
  // system 5 boundary invalidates the previous assumption that both systems
  // contain only stanza lyric line 2. Do not publish speculative mapping.
- const continuationStatus={5:'WITHHELD: first-line vannu boundary needs verification',6:'WITHHELD: continuation mapping and bottom whitespace pending'};
+ const continuationStatus={5:'WITHHELD: printed vannu ending must be reconciled with source',6:'WITHHELD: continuation must be mapped independently; bottom whitespace now available'};
  ctx.restore();
  return {drawn:true,system4,system5:continuationStatus[5],system6:continuationStatus[6],count:fragments.length,
   system2:overlaps.length?'WITHHELD: overlap at '+overlaps.join(', '):'16 draft fragments drawn (including score-only swargga)',
@@ -169,7 +169,7 @@ function drawDraftRefrain(gap){
   $('notice').innerHTML='<strong>Layout QA blocked.</strong> Expected blank musical-system boundaries could not be verified. Displaying the original intact score.';
  }else{
   const gap=Math.round(src.height*76/1684);
-  canvas.width=src.width;canvas.height=src.height+5*gap;
+  canvas.width=src.width;canvas.height=src.height+5*gap+gap; // one extra blank band AFTER the final original pixel
   ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);
   let y=0;for(let i=0;i<6;i++){
    const top=cuts[i],h=cuts[i+1]-top;
