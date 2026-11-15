@@ -7,6 +7,32 @@ const $=id=>document.getElementById(id);const NS='http://www.w3.org/2000/svg';le
 const cuts=[386,566,746],band=38,sourceBottom=818;
 function svg(tag,attrs,parent){const e=document.createElementNS(NS,tag);for(const [k,v] of Object.entries(attrs||{}))e.setAttribute(k,v);(parent||$('score')).append(e);return e}
 function render(){const root=$('score');root.replaceChildren();root.setAttribute('viewBox','0 0 878 '+(sourceBottom+cuts.length*band));const defs=svg('defs');let top=0;for(let i=0;i<=cuts.length;i++){const bottom=i<cuts.length?cuts[i]:sourceBottom;const clip=svg('clipPath',{id:'kk8clip'+i},defs);svg('rect',{x:0,y:top+i*band,width:878,height:bottom-top},clip);svg('image',{href:'original.png',x:0,y:i*band,width:878,height:1241,'clip-path':'url(#kk8clip'+i+')'});if(i<cuts.length){const line=svg('g',{'data-lyric-row':i+1});for(const p of drafts[current].filter(p=>p.system===i+1)){const t=svg('text',{x:p.x,y:cuts[i]+i*band+25,class:'lyric'},line);t.textContent=p.text}}top=bottom}
-$('stanza').value=current;$('prev').disabled=current===0;$('next').disabled=current===verses.length-1;root.style.width=zoom+'%';$('reset').textContent=zoom+'%'}
+$('stanza').value=current;$('prev').disabled=current===0;$('next').disabled=current===verses.length-1;root.style.width=zoom+'%';$('reset').textContent=zoom+'%';const overlaps=qaVisibleStanza();if(overlaps.length)console.warn('KK8 visual-text collision QA: '+overlaps.length+' issue(s)',overlaps)}
+// Browser-side QA: every stanza must retain its exact letters and remain inside
+// its assigned musical system. This check is deliberately independent of rendering.
+function qaAllStanzas(){
+ const normalize=t=>t.toLowerCase().replace(/[^a-zà-ž]/g,'');
+ const errors=[];
+ verses.forEach((verse,i)=>{
+  const parts=drafts[i];
+  if(normalize(parts.map(p=>p.text).join(''))!==normalize(verse))errors.push('Stanza '+(i+1)+': text mismatch');
+  for(const p of parts){if(![1,2,3].includes(p.system)||!Number.isFinite(p.x)||p.x<0||p.x>878)errors.push('Stanza '+(i+1)+': invalid position')}
+ });
+ return errors;
+}
+// Detect horizontal collisions using actual browser font measurements; report
+// rather than moving syllables away from their measured Malayalam anchors.
+function qaVisibleStanza(){
+ const issues=[];
+ for(const row of $('score').querySelectorAll('[data-lyric-row]')){
+  const boxes=[...row.querySelectorAll('text')].map(t=>({text:t.textContent,box:t.getBBox()}));
+  for(let i=1;i<boxes.length;i++){
+   const a=boxes[i-1],b=boxes[i];
+   if(a.box.x+a.box.width>b.box.x+1)issues.push('Row '+row.dataset.lyricRow+': '+a.text+' / '+b.text+' overlap');
+  }
+ }
+ return issues;
+}
+const qaErrors=qaAllStanzas();if(qaErrors.length)console.error('KK8 lyric integrity QA FAILED',qaErrors);else console.info('KK8 lyric integrity QA passed for 7 stanzas');
 function change(n){current=Math.max(0,Math.min(verses.length-1,n));render()}$('prev').onclick=()=>change(current-1);$('next').onclick=()=>change(current+1);$('stanza').onchange=()=>change(Number($('stanza').value));$('out').onclick=()=>{zoom=Math.max(25,zoom-25);render()};$('in').onclick=()=>{zoom=Math.min(300,zoom+25);render()};$('reset').onclick=()=>{zoom=100;render()};addEventListener('message',e=>{if(e.origin===location.origin&&e.data?.type==='sjmtc-beta-set-stanza')change(Number(e.data.stanza)-1)});render();
 </script></body></html>
