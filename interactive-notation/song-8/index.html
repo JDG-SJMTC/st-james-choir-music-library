@@ -103,7 +103,7 @@ function qaVisibleStanza(){
 }
 
 // Readability audit: report cramped pairs without silently shifting Malayalam-aligned anchors.
-function qaTightSyllableGaps(minGap=2){
+function qaTightSyllableGaps(minGap=5){
  const warnings=[];
  for(const row of $('score').querySelectorAll('[data-lyric-row]')){
   const texts=[...row.querySelectorAll('text')].map(el=>({text:el.textContent,box:el.getBBox()})).sort((a,b)=>a.box.x-b.box.x);
@@ -160,10 +160,10 @@ function runLayoutQa(){
   results.push({stanza:i+1,fragments:drafts[i].length,collisions,tightGaps,lineSpanFit,outside});
  }
  current=original;render();
- const failures=results.flatMap(r=>[...r.collisions,...r.outside,...r.lineSpanFit.filter(x=>!x.pass).map(x=>'System '+x.system+' outside stanza 1 line span')].map(e=>'Stanza '+r.stanza+': '+e));
+ const failures=results.flatMap(r=>[...r.collisions,...r.tightGaps,...r.outside,...r.lineSpanFit.filter(x=>!x.pass).map(x=>'System '+x.system+' outside stanza 1 line span')].map(e=>'Stanza '+r.stanza+': '+e));
  window.kk8QaReport={sourceCropChecks:qaSourceSlices(),lyricIntegrityChecks:qaAllStanzas(),sourceLineBoundaryChecks:qaSourceLineBoundaries(),results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED',malayalamDraftReadiness:qaMalayalamDrafts(),stanza1GroupCorrespondence:qaStanza1GroupCorrespondence(),stanza1SyllablePairs:qaStanza1SyllablePairs()};
- console.table(results.map(r=>({stanza:r.stanza,fragments:r.fragments,collisions:r.collisions.length,outside:r.outside.length})));
- if(failures.length)console.warn('KK8 QA layout failures',failures);
+ console.table(results.map(r=>({stanza:r.stanza,fragments:r.fragments,collisions:r.collisions.length,tightGaps:r.tightGaps.length,outside:r.outside.length})));
+ if(failures.length)console.error('KK8 QA layout failures (including cramped syllable spacing)',failures);
  const output=$('qaOutput');if(output){output.textContent=JSON.stringify(window.kk8QaReport,null,2);output.hidden=false}
  return window.kk8QaReport;
 }
