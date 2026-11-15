@@ -69,6 +69,24 @@ function qaAllStanzas(){
 }
 // Source-score line-boundary audit: stanza 1's printed third system begins
 // with the continuation 'laa ne'. Do not certify alignment until reassigned.
+// Master-template guard: stanza 1 is the approved source-score reference.
+// Every other stanza must be mapped against these same three systems, not
+// wrapped automatically by width or by the number of words.
+const kk8MasterSystemEnds=['rul','ril','ka'];
+function qaMasterTemplate(){
+ const issues=[];
+ const master=drafts[0];
+ for(let system=1;system<=3;system++){
+  const row=master.filter(p=>p.system===system);
+  if(!row.length||row[row.length-1].text!==kk8MasterSystemEnds[system-1])
+   issues.push('Master system '+system+' endpoint changed');
+ }
+ // Do not certify other stanza boundaries without an independently verified
+ // source-to-note mapping. Existing coordinates are provisional.
+ return issues;
+}
+const kk8MasterIssues=qaMasterTemplate();
+if(kk8MasterIssues.length)console.error('KK8 master template QA FAILED',kk8MasterIssues);
 function qaSourceLineBoundaries(){
  // Verify each stanza uses the same three musical lines and ordered anchors.
  // A claim about a specific Malayalam word crossing a line is NOT established
