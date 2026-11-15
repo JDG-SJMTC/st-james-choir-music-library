@@ -82,7 +82,7 @@ function drawDraftRefrain(gap){
  const xs=[260,323,365,390,431,475,501,528,566];
  const ratio=src.width/1191, y=cuts[1]+gap*.56;
  ctx.save();ctx.fillStyle='#155fcd';ctx.textAlign='center';ctx.textBaseline='middle';
- ctx.font=Math.round(15*ratio)+'px Arial, sans-serif';
+ ctx.font=Math.round(11*ratio)+'px Arial, sans-serif';
  texts.forEach((t,i)=>ctx.fillText(t,xs[i]*ratio,y));
  ctx.restore();
 }
