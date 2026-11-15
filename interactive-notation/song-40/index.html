@@ -98,6 +98,24 @@ function drawDraftRefrain(gap){
  const ratio=src.width/1191;
  ctx.save();ctx.fillStyle='#155fcd';ctx.textAlign='center';ctx.textBaseline='middle';
  ctx.font=Math.round(12*ratio)+'px Arial, sans-serif';
+ const collisions=[];
+ for(const line of lines){
+  if(line.tokens.length!==line.xs.length)collisions.push('System '+(line.system+1)+': missing syllable anchors');
+  for(let i=0;i<line.xs.length;i++){
+   if(line.xs[i]<240||line.xs[i]>900)collisions.push('System '+(line.system+1)+': anchor '+(i+1)+' outside printed staff');
+   if(i>0){
+    const left=line.xs[i-1]*ratio+ctx.measureText(line.tokens[i-1]).width/2;
+    const right=line.xs[i]*ratio-ctx.measureText(line.tokens[i]).width/2;
+    if(left+3*ratio>right)collisions.push('System '+(line.system+1)+': overlap at syllables '+i+' / '+(i+1));
+   }
+  }
+ }
+ if(collisions.length){
+  ctx.restore();
+  console.error('KK40 RELEASE BLOCKED: measured draft alignment failures',collisions);
+  $('notice').textContent='KK40 alignment QA blocked: '+collisions.length+' out-of-staff or overlapping syllable positions. Original score retained; blue overlay suppressed.';
+  return;
+ }
  for(const line of lines){
   const y=cuts[line.system+1]+line.system*gap+gap*.53;
   line.tokens.forEach((token,i)=>ctx.fillText(token,line.xs[i]*ratio,y));
