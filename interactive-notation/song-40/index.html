@@ -91,7 +91,7 @@ function drawDraftRefrain(gap){
  // original printed Malayalam at 3x; NOT certified note/group matches.
  const fragments=['Haa!','koo','di','naa','me','llaa','rum','chèr','nnu','pu','kalh','kon','daa','de','nham','swar','gga'];
  const expected='Haa! koodi naamellaarum chèrnnu pukalh kondaadenham – swargga';
- const clean=s=>s.normalize('NFC').replace(/[\\s\\-–—.,!?;:'"()]/g,'').toLocaleLowerCase();
+ const clean=s=>s.normalize('NFC').replace(/[\s\-–—.,!?;:'"()]/g,'').toLocaleLowerCase();
  if(clean(fragments.join(''))!==clean(expected))throw Error('KK40 source fidelity failed');
  const xs=[313,393,434,472,517,559,596,633,671,709,743,777,812,839,876,923,973];
  const ratio=src.width/1191, y=cuts[1]+gap*.54;
@@ -103,9 +103,10 @@ function drawDraftRefrain(gap){
   const next=xs[i]*ratio-ctx.measureText(fragments[i]).width/2;
   if(next-previous<2*ratio)bad.push(i);
  }
- if(bad.length){ctx.restore();console.warn('KK40 system 1 collision candidates',bad);return;}
+ if(bad.length){ctx.restore();console.warn('KK40 system 1 collision candidates',bad);return {drawn:false,reason:'Collision candidates at positions '+bad.join(', ')};}
  fragments.forEach((text,i)=>ctx.fillText(text,xs[i]*ratio,y));
  ctx.restore();
+ return {drawn:true,count:fragments.length};
 }
 
  if(!safe){canvas.width=src.width;canvas.height=src.height;ctx.drawImage(src,0,0);
@@ -123,8 +124,10 @@ function drawDraftRefrain(gap){
   renderDraft=()=>{
    ctx.putImageData(pristine,0,0);
    if($('draft').checked){
-    drawDraftRefrain(gap);
-    $('notice').textContent='UNAPPROVED first-system draft only. The blue syllables are candidate positions, not independently verified Malayalam/note anchors. Systems 2–6 remain unmapped.';
+    try{
+     const result=drawDraftRefrain(gap);
+     $('notice').textContent=result.drawn?'UNAPPROVED first-system draft: '+result.count+' blue fragments drawn. Note-to-Malayalam alignment not verified.':'Blue draft NOT rendered: '+result.reason;
+    }catch(e){console.error('KK40 draft failed',e);$('notice').textContent='Blue draft NOT rendered: '+e.message;}
    }else{
     $('notice').textContent='Original score only. Unverified blue syllable draft hidden. All source ink preserved.';
    }
