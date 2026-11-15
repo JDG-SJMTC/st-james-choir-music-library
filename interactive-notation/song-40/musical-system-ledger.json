@@ -1,6 +1,6 @@
 {
   "song": "KK-0040",
-  "status": "source-structure-audit-in-progress",
+  "status": "musical form requires verification; alignment blocked",
   "score": "notation/KK-0040.pdf",
   "pageCount": 1,
   "systems": [
@@ -47,5 +47,24 @@
       "verifiedSyllableBoundary": false
     }
   ],
-  "note": "System roles inferred by inspecting original page; duplicated-looking systems require independent musical confirmation. Do not infer six independent stanza lyric lines. No alignment anchors approved."
+  "note": "System roles inferred by inspecting original page; duplicated-looking systems require independent musical confirmation. Do not infer six independent stanza lyric lines. No alignment anchors approved.",
+  "scoreStructure": {
+    "refrain": {
+      "openingSystem": 1,
+      "alternateContinuationCandidates": [
+        2,
+        3
+      ],
+      "status": "unverified whether repeat or alternate notation; do not concatenate systems 2 and 3"
+    },
+    "stanza": {
+      "openingSystem": 4,
+      "alternateContinuationCandidates": [
+        5,
+        6
+      ],
+      "status": "unverified whether repeat or alternate notation; do not concatenate systems 5 and 6"
+    },
+    "criticalRule": "Six printed systems do not establish six sequential lyric lines. Confirm whether 2/3 and 5/6 are alternative continuations before assigning syllables."
+  }
 }
