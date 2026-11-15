@@ -68,7 +68,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/p
  await page.render({canvasContext:src.getContext('2d'),viewport:view}).promise;
  // Measured against original PDF at 2x (1191 x 1684): all five cuts
  // lie in seven-row all-white bands. Preserve each source pixel unchanged.
- const measured=[345,503,631,757,883];
+ const measured=[503,631,757,883,1009];
  const cuts=[0,...measured.map(y=>Math.round(y*src.height/1684)),src.height];
  const pixels=src.getContext('2d').getImageData(0,0,src.width,src.height).data;
  const blank=y=>{for(let row=Math.max(0,y-2);row<=Math.min(src.height-1,y+2);row++)for(let x=0;x<src.width;x++){
@@ -76,24 +76,15 @@ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/p
  }return true;};
  const safe=cuts.slice(1,-1).every(blank);
 function drawDraftRefrain(gap){
- // Provisional phrase anchors only: no invented syllable-level verification.
- // The same second refrain phrase is shown on both alternative continuation systems.
- // Positions use 1191x1684 source coordinate basis and inserted whitespace.
- const ratio=srcWidthRatio();
- const guide=[
-  {system:0,text:'Haa! koodi naamellaarum chèrnnu',x:150},
-  {system:1,text:'pukalh kondaadenham – swargga',x:190},
-  {system:2,text:'Vaathilaakum Yeshu naathaney vaazhththippaadenham',x:110}
- ];
- ctx.save();ctx.fillStyle='#155fcd';ctx.textBaseline='middle';ctx.font=Math.round(19*ratio)+'px Arial, sans-serif';
- for(const g of guide){
-  const cut=cuts[g.system+1]+g.system*gap;
-  const baseline=cut+gap*.5;
-  const maxWidth=src.width-100*ratio;
-  ctx.fillText(g.text,g.x*ratio,baseline,maxWidth);
- }
+ // FIRST SYSTEM ONLY. Nine candidate notehead centres, exact production
+ // Manglish spelling. This is not a complete or approved refrain alignment.
+ const texts=['Haa!','koo','di','naa','me','llaa','rum','chèr','nnu'];
+ const xs=[260,323,365,390,431,475,501,528,566];
+ const ratio=src.width/1191, y=cuts[1]+gap*.56;
+ ctx.save();ctx.fillStyle='#155fcd';ctx.textAlign='center';ctx.textBaseline='middle';
+ ctx.font=Math.round(15*ratio)+'px Arial, sans-serif';
+ texts.forEach((t,i)=>ctx.fillText(t,xs[i]*ratio,y));
  ctx.restore();
- function srcWidthRatio(){return src.width/1191;}
 }
 
  if(!safe){canvas.width=src.width;canvas.height=src.height;ctx.drawImage(src,0,0);
@@ -107,7 +98,7 @@ function drawDraftRefrain(gap){
    ctx.drawImage(src,0,top,src.width,h,0,y,src.width,h);
    y+=h+(i<5?gap:0);
   }
-  $('notice').innerHTML='<strong>Draft refrain overlay:</strong> Blue text is a provisional phrase-placement guide, NOT note-to-syllable aligned. Both refrain continuation systems are shown. Musical boundaries and full visual QA remain unverified.';
+  $('notice').innerHTML='<strong>Draft system 1 only:</strong> Nine blue Manglish syllables are placed at candidate notehead centres. Remaining refrain systems are intentionally unmapped. This is NOT visually approved.';
   drawDraftRefrain(gap);
  }
  baseWidth=canvas.width;baseHeight=canvas.height;setZoom(zoom);update();
