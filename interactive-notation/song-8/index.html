@@ -5,6 +5,19 @@ const malayalamDrafts=Array.from({length:7},()=>[]);
 // Source-backed stanza-1 lyric-group counts from the provisional reference.
 // A mismatch is a review flag, NOT permission to redistribute lyric text.
 const stanza1SourceGroupCounts=[13,12,15];
+// Provisional source-image transcription. This is a one-to-one correspondence
+// aid, not proof of note alignment or an approved Malayalam transcription.
+const stanza1PrintedMalayalamGroups=[["കൂ","ടെ","പാ","ർക്ക","നേ","രം","വൈ","കു","ന്നി","താ","കൂ","രി","രു"],["ളേ","രു","ന്നു","പാ","ർക്ക","ദേ","വാ","ആ","ശ്ര","യം","വേ","രി"],["ല്ലാ","നേ","രം","ത","ന്നിൽ","ആ","ശ്രി","ത","വ","ത്സ","ലാ","കൂ","ടെ","പാ","ർക്ക"]];
+function qaStanza1SyllablePairs(){
+ return stanza1PrintedMalayalamGroups.map((groups,i)=>{
+  const row=drafts[0].filter(p=>p.system===i+1);
+  return {system:i+1,sourceStatus:'PROVISIONAL_VISUAL_TRANSCRIPTION',
+   pairs:groups.map((malayalam,j)=>({malayalam,manglish:row[j]?.text??null,x:row[j]?.x??null,
+    status:row[j]?'PAIR_BY_SEQUENCE_NOT_NOTE_VERIFIED':'MISSING_MANGLISH'})),
+   unmatchedManglish:row.slice(groups.length).map(p=>p.text)};
+ });
+}
+
 function qaStanza1GroupCorrespondence(){
  return stanza1SourceGroupCounts.map((expected,i)=>{
   const actual=drafts[0].filter(p=>p.system===i+1).length;
@@ -135,7 +148,7 @@ function runLayoutQa(){
  }
  current=original;render();
  const failures=results.flatMap(r=>[...r.collisions,...r.outside,...r.lineSpanFit.filter(x=>!x.pass).map(x=>'System '+x.system+' outside stanza 1 line span')].map(e=>'Stanza '+r.stanza+': '+e));
- window.kk8QaReport={sourceCropChecks:qaSourceSlices(),lyricIntegrityChecks:qaAllStanzas(),sourceLineBoundaryChecks:qaSourceLineBoundaries(),results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED',malayalamDraftReadiness:qaMalayalamDrafts(),stanza1GroupCorrespondence:qaStanza1GroupCorrespondence()};
+ window.kk8QaReport={sourceCropChecks:qaSourceSlices(),lyricIntegrityChecks:qaAllStanzas(),sourceLineBoundaryChecks:qaSourceLineBoundaries(),results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED',malayalamDraftReadiness:qaMalayalamDrafts(),stanza1GroupCorrespondence:qaStanza1GroupCorrespondence(),stanza1SyllablePairs:qaStanza1SyllablePairs()};
  console.table(results.map(r=>({stanza:r.stanza,fragments:r.fragments,collisions:r.collisions.length,outside:r.outside.length})));
  if(failures.length)console.warn('KK8 QA layout failures',failures);
  const output=$('qaOutput');if(output){output.textContent=JSON.stringify(window.kk8QaReport,null,2);output.hidden=false}
