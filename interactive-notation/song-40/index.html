@@ -23,12 +23,16 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <p id="status" class="muted" role="status">Loading original notation…</p>
 <p class="small"><a href="../../notation/KK-0040.pdf" target="_blank" rel="noopener">Original PDF</a> · Beta only · No changes to approved KK8, KK30 or KK150</p>
 </main>
+<script src="../tools/kk40-boundary-gate.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script>
 (()=>{
 'use strict';
 const $=id=>document.getElementById(id),pdf='../../notation/KK-0040.pdf';
 const frame=$('frame'),sheet=$('sheet'),canvas=$('score'),ctx=canvas.getContext('2d'),stanza=$('stanza');
+const boundaryQA=window.SJMTCKK40BoundaryGate?.validate({song:'KK-0040',stanzas:[],originalScorePixelPreserved:false});
+if(!boundaryQA||boundaryQA.pass)throw Error('KK40 fail-closed QA not active');
+console.info('KK40 Manglish release blocked until source and boundary evidence exists:',boundaryQA.errors);
 let zoom=100,baseWidth=0,baseHeight=0;
 const setStatus=msg=>$('status').textContent=msg;
 function setZoom(v){zoom=Math.max(25,Math.min(300,v));$('zoomlabel').textContent=zoom+'%';if(baseWidth){sheet.style.width=(zoom)+'%';} }
