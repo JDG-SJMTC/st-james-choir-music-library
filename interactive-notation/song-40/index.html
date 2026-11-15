@@ -80,7 +80,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/p
  await page.render({canvasContext:src.getContext('2d'),viewport:view}).promise;
  // Measured against original PDF at 2x (1191 x 1684): all five cuts
  // lie in seven-row all-white bands. Preserve each source pixel unchanged.
- const measured=[503,631,757,883,1009];
+ const measured=[503,631,757,883,1009,1135]; // last cut separates system 6 from printed stanza block
  const cuts=[0,...measured.map(y=>Math.round(y*src.height/1684)),src.height];
  const pixels=src.getContext('2d').getImageData(0,0,src.width,src.height).data;
  const blank=y=>{for(let row=Math.max(0,y-2);row<=Math.min(src.height-1,y+2);row++)for(let x=0;x<src.width;x++){
@@ -204,12 +204,12 @@ function drawDraftRefrain(gap){
   $('notice').innerHTML='<strong>Layout QA blocked.</strong> Expected blank musical-system boundaries could not be verified. Displaying the original intact score.';
  }else{
   const gap=Math.round(src.height*76/1684);
-  canvas.width=src.width;canvas.height=src.height+5*gap+gap; // one extra blank band AFTER the final original pixel
+  canvas.width=src.width;canvas.height=src.height+6*gap; // six blank bands, including one before printed stanza text
   ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);
-  let y=0;for(let i=0;i<6;i++){
+  let y=0;for(let i=0;i<7;i++){
    const top=cuts[i],h=cuts[i+1]-top;
    ctx.drawImage(src,0,top,src.width,h,0,y,src.width,h);
-   y+=h+(i<5?gap:0);
+   y+=h+(i<6?gap:0);
   }
   const pristine=ctx.getImageData(0,0,canvas.width,canvas.height);
   renderDraft=()=>{
