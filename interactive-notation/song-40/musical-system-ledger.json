@@ -1,6 +1,6 @@
 {
   "song": "KK-0040",
-  "status": "musical form requires verification; alignment blocked",
+  "status": "refrain pickup discrepancy identified; note-to-syllable alignment blocked",
   "score": "notation/KK-0040.pdf",
   "pageCount": 1,
   "systems": [
@@ -196,5 +196,25 @@
       }
     ]
   },
-  "criticalNextStep": "For refrain and each stanza, map source lyric lines to repeated score-system candidates without concatenating repeated notation; visually verify note/printed Malayalam group anchors before rendering."
+  "criticalNextStep": "For refrain and each stanza, map source lyric lines to repeated score-system candidates without concatenating repeated notation; visually verify note/printed Malayalam group anchors before rendering.",
+  "refrainPrintedScoreAudit": {
+    "basis": "Direct visual inspection of original KK-0040.pdf page 1 at 180 DPI, first two staves",
+    "system1": {
+      "printedBeginning": "ഹാ",
+      "printedEnding": "സ്വർഗ്ഗ (split across final groups)",
+      "sourceCorrespondence": "Production refrain line 1; exact syllable division remains unverified"
+    },
+    "system2": {
+      "printedBeginning": "വാ തി ലാ കും",
+      "printedEnding": "visible additional സ്വർഗ്ഗ-like pickup after refrain ending",
+      "sourceCorrespondence": "Production refrain line 2 plus apparent additional printed pickup; NOT exact match to supplied line 2"
+    },
+    "system3": {
+      "printedBeginning": "വാ തി ലാ കും",
+      "printedEnding": "visible additional സ്വർഗ്ഗ-like pickup after refrain ending",
+      "sourceCorrespondence": "Likely repeated/alternate continuation; needs note-level confirmation"
+    },
+    "critical": "Do not force the last printed pickup into the exact production line 2. Treat it as a musical repeat/lead-in candidate until independently checked.",
+    "verified": false
+  }
 }
