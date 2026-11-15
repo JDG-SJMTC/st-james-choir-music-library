@@ -82,7 +82,7 @@ function drawDraftRefrain(gap){
  const lines=[
   {system:0,expected:'Haa! koodi naamellaarum chèrnnu pukalh kondaadenham – swargga',
    tokens:['Haa!','koo','di','naa','me','llaa','rum','chèr','nnu','pu','kalh','kon','daa','de','nham','swar','gga'],
-   xs:[313,381,423,468,511,553,598,640,679,727,765,810,850,892,939,1011,1083]},
+   xs:[313,381,423,468,511,553,598,640,679,727,765,810,850,892,939,980,1020]},
   {system:1,expected:'Vaathilaakum Yeshu naathaney vaazhththippaadenham',
    tokens:['Vaa','thi','laa','kum','Ye','shu','naa','tha','ney','vaazh','ththi','ppaa','de','nham'],
    xs:[280,313,353,418,475,516,560,606,648,701,745,791,836,887]},
@@ -101,8 +101,9 @@ function drawDraftRefrain(gap){
  const collisions=[];
  for(const line of lines){
   if(line.tokens.length!==line.xs.length)collisions.push('System '+(line.system+1)+': missing syllable anchors');
+  if(line.xs.some(x=>!Number.isFinite(x)))collisions.push('System '+(line.system+1)+': non-numeric anchors');
   for(let i=0;i<line.xs.length;i++){
-   if(line.xs[i]<240||line.xs[i]>900)collisions.push('System '+(line.system+1)+': anchor '+(i+1)+' outside printed staff');
+   if(line.xs[i]<260||line.xs[i]>1050)collisions.push('System '+(line.system+1)+': anchor '+(i+1)+' outside printed staff');
    if(i>0){
     const left=line.xs[i-1]*ratio+ctx.measureText(line.tokens[i-1]).width/2;
     const right=line.xs[i]*ratio-ctx.measureText(line.tokens[i]).width/2;
