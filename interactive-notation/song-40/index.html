@@ -16,7 +16,7 @@ button,select{font:inherit;padding:8px;border:1px solid #b7c6d9;border-radius:7p
 <div class="tools" aria-label="Notation controls">
 <select id="stanza" aria-label="Stanza"><option value="1">Stanza 1</option><option value="2">Stanza 2</option><option value="3">Stanza 3</option><option value="4">Stanza 4</option><option value="5">Stanza 5</option><option value="6">Stanza 6</option></select>
 <button id="prev" aria-label="Previous stanza">‹</button><button id="next" aria-label="Next stanza">›</button>
-<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show Manglish (stanza 1 approved; stanza 2 boundary QA pending)</label>
+<button id="minus" aria-label="Zoom out">−</button><span id="zoomlabel">100%</span><button id="plus" aria-label="Zoom in">+</button><button id="reset">Reset</button><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="draft" checked> Show Manglish (stanza 1 approved; stanza 2 boundary QA pending)</label><label style="display:flex;align-items:center;gap:5px"><input type="checkbox" id="preview2"> Preview unverified Stanza 2 alignment</label>
 </div>
 <div class="notice" id="notice"><strong>Measured spacing active.</strong> Whitespace is inserted only at verified blank horizontal cuts, with runtime ink checks. Original music and printed Malayalam are preserved. Blue Manglish overlay is not enabled until verified stanza-by-stanza source syllables and musical-system boundaries are supplied. This is not an alignment-approved release.</div>
 <p id="qa-status" class="muted small" role="status">Detailed refrain evidence QA pending; unapproved visual drafts are allowed for inspection only.</p>
@@ -55,6 +55,7 @@ console.info('KK40 Manglish release blocked until source and boundary evidence e
 let zoom=100,baseWidth=0,baseHeight=0,renderDraft=null;
 const setStatus=msg=>$('status').textContent=msg;
 $('draft').addEventListener('change',()=>{if(renderDraft)renderDraft();});
+$('preview2').addEventListener('change',()=>{if(renderDraft)renderDraft();});
 function setZoom(v){zoom=Math.max(25,Math.min(300,v));$('zoomlabel').textContent=zoom+'%';if(baseWidth){sheet.style.width=(zoom)+'%';} }
 $('minus').onclick=()=>setZoom(zoom-25);$('plus').onclick=()=>setZoom(zoom+25);$('reset').onclick=()=>setZoom(100);
 function move(n){stanza.value=String(Math.max(1,Math.min(6,Number(stanza.value)+n)));update();}
@@ -161,7 +162,7 @@ function drawDraftRefrain(gap){
    // printed staff boundary correctness. No system 4/5/6 overlay until
    // first/last printed Malayalam and pickup events are verified per system.
    const printedBoundaryEvidence={4:false,5:false,6:false};
-   if([4,5,6].some(system=>printedBoundaryEvidence[system]!==true)){
+   if([4,5,6].some(system=>printedBoundaryEvidence[system]!==true) && !$('preview2').checked){
     status[4]=status[5]=status[6]='WITHHELD: printed system start/end and pickup boundary QA incomplete';
     ctx.restore();
     return {drawn:true,count:fragments.length,system2:'accepted',system3:'approved',
@@ -170,7 +171,8 @@ function drawDraftRefrain(gap){
    const sources=lockedSource.stanzas[1];
    if(clean(first.join(''))===clean(sources[0])&&clean(last.join(''))===clean(sources[1])){
     for(const system of [4,5,6]){
-     const tokens=system===4?first:last,anchors=positions[system];
+     const tokens=system===4?first:(system===5?last.concat(system5Pickup):last);
+     const anchors=system===5?positions[5].concat([904,946,991]):positions[system];
      const start=cuts[system]+(system-1)*gap,y=start+gap*.54;
      const fontPx=Math.round(12*ratio),conflicts=[];
      if(y-fontPx/2<start+2*ratio||y+fontPx/2>start+gap-2*ratio)conflicts.push('vertical band');
@@ -180,7 +182,7 @@ function drawDraftRefrain(gap){
       if(left-right<2*ratio)conflicts.push('horizontal '+i);
      }
      if(conflicts.length)status[system]='WITHHELD: '+conflicts.join(', ');
-     else {tokens.forEach((t,i)=>ctx.fillText(t,anchors[i]*ratio,y));status[system]=tokens.length+' unapproved fragments drawn';}
+     else {tokens.forEach((t,i)=>ctx.fillText(t,anchors[i]*ratio,y));status[system]=tokens.length+' UNVERIFIED preview fragments drawn';}
     }
    }else status[4]=status[5]=status[6]='WITHHELD: exact source mismatch';
   }
