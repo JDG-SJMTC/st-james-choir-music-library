@@ -303,8 +303,17 @@ function runLayoutQa(){
   results.push({stanza:i+1,fragments:drafts[i].length,collisions,tightGaps,lineSpanFit,outside});
  }
  current=original;render();
- const failures=results.flatMap(r=>[...r.collisions,...r.tightGaps,...r.outside,...r.lineSpanFit.filter(x=>!x.pass).map(x=>'System '+x.system+' outside stanza 1 line span')].map(e=>'Stanza '+r.stanza+': '+e));
- window.kk8QaReport={sourceCropChecks:qaSourceSlices(),lyricIntegrityChecks:qaAllStanzas(),sourceLineBoundaryChecks:qaSourceLineBoundaries(),results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED',malayalamDraftReadiness:qaMalayalamDrafts(),stanza1GroupCorrespondence:qaStanza1GroupCorrespondence(),stanza1SyllablePairs:qaStanza1SyllablePairs()};
+ const structuralChecks={
+  sourceCrop:qaSourceSlices(),
+  lyricIntegrity:qaAllStanzas(),
+  sourceLineBoundaries:qaSourceLineBoundaries(),
+  phraseBoundariesStanzas5to7:qaPhraseBoundaries(),
+  masterTemplate:qaMasterTemplate(),
+  stanza2Structure:qaStanza2StructuralMapping()
+ };
+ const structuralFailures=Object.entries(structuralChecks).flatMap(([name,issues])=>issues.map(issue=>name+': '+issue));
+ const failures=[...structuralFailures,...results.flatMap(r=>[...r.collisions,...r.tightGaps,...r.outside,...r.lineSpanFit.filter(x=>!x.pass).map(x=>'System '+x.system+' outside stanza 1 line span')].map(e=>'Stanza '+r.stanza+': '+e))];
+ window.kk8QaReport={releaseStatus:'BLOCKED until all structural and visual checks pass',structuralChecks,sourceCropChecks:structuralChecks.sourceCrop,lyricIntegrityChecks:structuralChecks.lyricIntegrity,sourceLineBoundaryChecks:structuralChecks.sourceLineBoundaries,results,failures,visualSourceIntegrity:'NOT VERIFIED',malayalamGlyphAlignment:'NOT VERIFIED',malayalamDraftReadiness:qaMalayalamDrafts(),stanza1GroupCorrespondence:qaStanza1GroupCorrespondence(),stanza1SyllablePairs:qaStanza1SyllablePairs()};
  console.table(results.map(r=>({stanza:r.stanza,fragments:r.fragments,collisions:r.collisions.length,tightGaps:r.tightGaps.length,outside:r.outside.length})));
  if(failures.length)console.error('KK8 QA layout failures (including cramped syllable spacing)',failures);
  const output=$('qaOutput');if(output){output.textContent=JSON.stringify(window.kk8QaReport,null,2);output.hidden=false}
