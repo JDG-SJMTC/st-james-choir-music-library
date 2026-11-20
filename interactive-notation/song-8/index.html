@@ -92,9 +92,9 @@ if(kk8MasterIssues.length)console.error('KK8 master template QA FAILED',kk8Maste
 // guessing musical note assignments or moving existing syllables.
 function qaSourcePhraseMap(){
  const findings=[];
- const normalize=t=>t.replace(/\\s/g,'');
+ const normalize=t=>t.replace(/\s/g,'');
  verses.forEach((verse,i)=>{
-  const sourceLines=verse.split('\\n').map(normalize);
+  const sourceLines=verse.split('\n').map(normalize);
   const parts=drafts[i];
   let cumulative=0;
   const ends=[];
@@ -152,7 +152,7 @@ function qaAllMasterSlotMappings(){
    if(!master[j]||p.system!==master[j].system||p.x!==master[j].x||p.y!==master[j].y)
     issues.push('Stanza '+(i+1)+' slot '+(j+1)+': differs from master');
   });
-  const lines=verses[i].split('\\n').map(x=>x.replace(/\\s/g,''));
+  const lines=verses[i].split('\n').map(x=>x.replace(/\s/g,''));
   for(let line=0;line<4;line++){
    if(parts.slice(line*10,(line+1)*10).map(p=>p.text).join('')!==lines[line])
     issues.push('Stanza '+(i+1)+' source lyric line '+(line+1)+' mismatch');
@@ -165,7 +165,7 @@ if(kk8AllSlotIssues.length)console.error('KK8 all-stanza master slot QA FAILED',
 else console.info('KK8 all-stanza master slot and exact source line QA passed; musical/visual verification remains separate.');
 function qaStanza2StructuralMapping(){
  const issues=[];
- const sourceLines=verses[1].split('\\n').map(x=>x.replace(/\\s/g,''));
+ const sourceLines=verses[1].split('\n').map(x=>x.replace(/\s/g,''));
  const parts=drafts[1];
  const boundaries=[10,20,30];
  let previous=0;
@@ -211,7 +211,7 @@ function qaSourceLineBoundaries(){
 function qaPhraseBoundaries(){
  const issues=[];
  for(let stanza=4;stanza<=6;stanza++){
-  const parts=drafts[stanza],lines=verses[stanza].split('\\n').map(v=>v.replace(/\\s/g,''));
+  const parts=drafts[stanza],lines=verses[stanza].split('\n').map(v=>v.replace(/\s/g,''));
   if(parts.length!==40){issues.push('Stanza '+(stanza+1)+': expected 40 source syllables');continue;}
   for(let line=0;line<4;line++){
    const group=parts.slice(line*10,(line+1)*10);
