@@ -227,8 +227,8 @@ function qaPhraseBoundaries(){
  }
  return issues;
 }
-const kk8PhraseIssues=qaPhraseBoundaries();
-if(kk8PhraseIssues.length)console.error('KK8 source phrase QA FAILED',kk8PhraseIssues);
+const kk8Stanza5to7PhraseIssues=qaPhraseBoundaries();
+if(kk8Stanza5to7PhraseIssues.length)console.error('KK8 source phrase QA FAILED',kk8Stanza5to7PhraseIssues);
 else console.info('KK8 stanza 5-7 source phrase boundaries preserved at positions 10/20/30; visual note mapping remains unverified.');
 function qaVisibleStanza(){
  const issues=[];
