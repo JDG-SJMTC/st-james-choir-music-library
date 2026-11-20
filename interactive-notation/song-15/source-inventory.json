@@ -149,7 +149,7 @@
     "page": 1,
     "staffSystems": 3
   },
-  "status": "SOURCE_INVENTORIED_SECTION_II_SELECTED",
+  "status": "SOURCE_INVENTORIED_TWO_TUNE_MODES",
   "qa": {
     "sourcePageInspection": "complete",
     "manglishTranscription": "pending",
@@ -162,10 +162,18 @@
     "Sections I and II are separately numbered lyric sets; do not conflate them with separate tunes without musical evidence.",
     "Keep original score and Malayalam intact.",
     "No Manglish strings are invented or marked verified.",
-    "Interactive target is section II (12 stanzas). Section I is a separate numbered text and must not be included in section II's stanza selector."
+    "Treat the two printed numbered sections as two selectable tune modes, each with its own stanza selector range. Musical tune equivalence is a UI convention pending score verification."
   ],
-  "interactiveTarget": {
-    "section": "II",
-    "stanzas": 12
-  }
+  "interactiveModes": [
+    {
+      "label": "Tune I",
+      "sourceSection": "I",
+      "stanzas": 14
+    },
+    {
+      "label": "Tune II",
+      "sourceSection": "II",
+      "stanzas": 12
+    }
+  ]
 }
