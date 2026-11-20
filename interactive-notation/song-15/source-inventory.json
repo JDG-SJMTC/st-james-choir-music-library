@@ -1,0 +1,166 @@
+{
+  "song": "KK-0015",
+  "titleManglish": "Aadiyumanthavumillathoraadipithave",
+  "source": "notation/KK-0015.pdf",
+  "pages": 2,
+  "sections": [
+    {
+      "id": "I",
+      "stanzas": 14
+    },
+    {
+      "id": "II",
+      "stanzas": 12
+    }
+  ],
+  "printedStanzaLocations": [
+    {
+      "section": "I",
+      "stanza": 1,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 2,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 3,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 4,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 5,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 6,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 7,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 8,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 9,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 10,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 11,
+      "page": 1
+    },
+    {
+      "section": "I",
+      "stanza": 12,
+      "page": 2
+    },
+    {
+      "section": "I",
+      "stanza": 13,
+      "page": 2
+    },
+    {
+      "section": "I",
+      "stanza": 14,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 1,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 2,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 3,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 4,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 5,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 6,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 7,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 8,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 9,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 10,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 11,
+      "page": 2
+    },
+    {
+      "section": "II",
+      "stanza": 12,
+      "page": 2
+    }
+  ],
+  "notation": {
+    "page": 1,
+    "staffSystems": 3
+  },
+  "status": "SOURCE_INVENTORIED_NOT_TRANSCRIBED",
+  "qa": {
+    "sourcePageInspection": "complete",
+    "manglishTranscription": "pending",
+    "malayalamGlyphAnchors": "pending",
+    "perStanzaPhraseMapping": "pending",
+    "browserCollision": "pending",
+    "visualApproval": "pending"
+  },
+  "notes": [
+    "Sections I and II are separately numbered lyric sets; do not conflate them with separate tunes without musical evidence.",
+    "Keep original score and Malayalam intact.",
+    "No Manglish strings are invented or marked verified."
+  ]
+}
