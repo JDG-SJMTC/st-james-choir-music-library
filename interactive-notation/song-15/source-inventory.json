@@ -156,13 +156,15 @@
     "malayalamGlyphAnchors": "pending",
     "perStanzaPhraseMapping": "pending",
     "browserCollision": "pending",
-    "visualApproval": "pending"
+    "visualApproval": "pending",
+    "sourceGeometry": "measured"
   },
   "notes": [
     "Sections I and II are separately numbered lyric sets; do not conflate them with separate tunes without musical evidence.",
     "Keep original score and Malayalam intact.",
     "No Manglish strings are invented or marked verified.",
-    "Treat the two printed numbered sections as two selectable tune modes, each with its own stanza selector range. Musical tune equivalence is a UI convention pending score verification."
+    "Treat the two printed numbered sections as two selectable tune modes, each with its own stanza selector range. Musical tune equivalence is a UI convention pending score verification.",
+    "The score image is embedded on page 1; page 2 contains the remaining printed lyrics. Mapping the two tune modes must not swap notation assets."
   ],
   "interactiveModes": [
     {
@@ -175,5 +177,30 @@
       "sourceSection": "II",
       "stanzas": 12
     }
-  ]
+  ],
+  "sourceGeometry": {
+    "pageSizePoints": {
+      "width": 595.3,
+      "height": 841.9
+    },
+    "notationImage": {
+      "page": 1,
+      "pdfRectPoints": {
+        "x0": 93,
+        "y0": 109.15,
+        "x1": 503.15,
+        "y1": 379.85
+      },
+      "embeddedPixelSize": {
+        "width": 1709,
+        "height": 1128
+      },
+      "imageType": "CCITTFaxDecode"
+    },
+    "lyricBlockStart": {
+      "page": 1,
+      "y": 413.6
+    },
+    "coordinateMethod": "PyMuPDF get_image_rects / get_text blocks on uploaded KK-0015.pdf"
+  }
 }
