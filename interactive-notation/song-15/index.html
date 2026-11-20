@@ -3,14 +3,14 @@
 <title>KK 15 · Two-tune beta</title>
 <style>*{box-sizing:border-box}body{margin:0;background:#f3f6fa;color:#21334a;font:15px system-ui,sans-serif}header{background:white;border-bottom:1px solid #cbd5e1;padding:16px 20px}h1{font-size:21px;margin:0 0 5px}p{line-height:1.5}main{max-width:1100px;margin:20px auto;padding:0 12px}.notice{background:#fff7ed;border:1px solid #f0c68a;border-radius:9px;padding:13px 16px}.controls{display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:14px 0}.controls label{display:flex;align-items:center;gap:7px;font-weight:600}.controls select{font:inherit;padding:9px 12px;border:1px solid #a5b7c8;border-radius:8px;background:white;min-width:120px}.score{background:white;border:1px solid #cbd5e1;border-radius:9px;overflow:hidden;margin-top:10px}iframe{display:block;width:100%;height:85vh;min-height:640px;border:0}a{color:#1356a4}.state{font-size:14px;color:#4b6074}</style></head>
 <body><header><h1>KK 15 · Aadiyumanthavumillathoraadipithave</h1><div>Interactive notation · Release 2 beta · Two-tune preparation</div></header>
-<main><div class="notice"><strong>Source-only beta — Manglish alignment is not ready for approval.</strong><p>Both numbered sections are available as separate tune modes. The original two-page notation PDF is preserved unchanged. The stanza selector is wired, but Manglish overlays are intentionally withheld until exact source transcription and measured alignment pass QA.</p></div>
+<main><div class="notice"><strong>Source-only beta — Manglish alignment is not ready for approval.</strong><p>Both numbered sections are available as separate tune modes. The notation is on page 1 for both tune modes; page 2 contains continuation lyrics, not another score. The stanza selector is wired, but Manglish overlays are intentionally withheld until exact source transcription and measured alignment pass QA.</p></div>
 <div class="controls"><label for="tune">Tune <select id="tune" aria-label="Tune"><option value="I">I</option><option value="II">II</option></select></label><label for="stanza">Stanza <select id="stanza" aria-label="Stanza"></select></label><span class="state" id="state" role="status" aria-live="polite"></span></div>
-<div class="score"><iframe id="source" src="../../notation/KK-0015.pdf#page=1&view=FitH" title="Original KK 15 two-page notation PDF"></iframe></div>
+<p class="state">Original notation (page 1) stays fixed for both tune modes. The lyric reference below opens the source page containing the selected stanza.</p><div class="score"><iframe id="source" src="../../notation/KK-0015.pdf#page=1&view=FitH" title="Original KK 15 notation on page 1"></iframe></div><details style="margin-top:14px"><summary style="cursor:pointer;font-weight:600">Show original printed lyric reference</summary><div class="score"><iframe id="lyrics" src="../../notation/KK-0015.pdf#page=1&view=FitH" title="Original printed lyric reference"></iframe></div></details>
 <p><a href="../../notation/KK-0015.pdf" target="_blank" rel="noopener">Open original KK 15 PDF</a> · <a href="../song-8/">Approved visual reference: KK 8</a></p></main>
 <script>
 'use strict';
 const counts={I:14,II:12};
-const tune=document.getElementById('tune'),stanza=document.getElementById('stanza'),state=document.getElementById('state'),source=document.getElementById('source');
+const tune=document.getElementById('tune'),stanza=document.getElementById('stanza'),state=document.getElementById('state'),lyrics=document.getElementById('lyrics');
 function sync(reset){
  const mode=tune.value,count=counts[mode],previous=Number(stanza.value)||1;
  stanza.replaceChildren();
@@ -21,7 +21,7 @@ function sync(reset){
 function update(){
  const mode=tune.value,n=Number(stanza.value),page=mode==='II'||n>=12?2:1;
  state.textContent='Tune '+mode+' · Stanza '+n+' of '+counts[mode]+' · Manglish mapping pending';
- source.src='../../notation/KK-0015.pdf#page='+page+'&view=FitH';
+ lyrics.src='../../notation/KK-0015.pdf#page='+page+'&view=FitH';
 }
 tune.addEventListener('change',()=>sync(true));
 stanza.addEventListener('change',update);
